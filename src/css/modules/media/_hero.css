@@ -1,0 +1,115 @@
+/* ===========================================
+   HERO
+   Hero section component
+   =========================================== */
+
+.hero {
+  padding-top: var(--bs-header-height);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bs-dark) 0%, var(--bs-gray-800) 100%);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(var(--bs-primary-rgb), 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(var(--bs-teal-rgb), 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: var(--bs-font-size-hero);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.hero .lead {
+  font-size: var(--bs-font-size-lg);
+  color: var(--bs-gray-300);
+  margin-bottom: 1rem;
+  max-width: 680px;
+}
+
+.hero .subtitle {
+  font-size: var(--bs-font-size-md);
+  color: var(--bs-gray-400);
+  margin-bottom: 2.5rem;
+  max-width: 640px;
+}
+
+.hero-actions {
+  margin-bottom: 2rem;
+}
+
+.hero-trust {
+  margin-bottom: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* -------------------------------------------
+   HERO VARIANTS
+   ------------------------------------------- */
+
+/* Light Hero */
+.hero-light {
+  background: linear-gradient(180deg, #ffffff 0%, var(--bs-gray-50) 100%);
+  color: var(--bs-dark);
+}
+
+.hero-light::before {
+  background:
+    radial-gradient(circle at 15% 25%, rgba(var(--bs-primary-rgb), 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 85% 75%, rgba(var(--bs-teal-rgb), 0.04) 0%, transparent 50%);
+}
+
+.hero-light h1 {
+  color: var(--bs-heading-color);
+}
+
+.hero-light .lead {
+  color: var(--bs-gray-600);
+}
+
+.hero-light .subtitle {
+  color: var(--bs-gray-500);
+}
+
+/* Centered Hero */
+.hero-centered {
+  text-align: center;
+}
+
+.hero-centered .lead,
+.hero-centered .subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-centered .hero-buttons {
+  justify-content: center;
+}
+
+/* Compact Hero (not full height) */
+.hero-compact {
+  min-height: auto;
+  padding: calc(var(--bs-header-height) + var(--bs-space-section)) 0 var(--bs-space-section);
+}

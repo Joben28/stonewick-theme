@@ -1,0 +1,259 @@
+/* ===========================================
+   MEDIA LIST
+   Podcast, video, and media item components
+   =========================================== */
+
+/* -------------------------------------------
+   MEDIA-LIST (Light Background)
+   List of media items (podcasts, videos)
+   ------------------------------------------- */
+.media-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bs-space-4);
+}
+
+.media-item {
+  background: #ffffff;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.media-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--bs-shadow-md);
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.media-thumb {
+  width: var(--bs-media-thumb-width);
+  height: var(--bs-media-thumb-height);
+  border-radius: var(--bs-border-radius);
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  background: var(--bs-gray-100);
+}
+
+.media-thumb img,
+.media-thumb iframe,
+.media-thumb video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0;
+}
+
+/* For iframes that need to fill space */
+.media-thumb iframe {
+  object-fit: fill;
+}
+
+/* Play button overlay */
+.media-thumb-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.media-item:hover .media-thumb-play {
+  opacity: 1;
+}
+
+.media-thumb-play i {
+  font-size: 2.5rem;
+  color: #ffffff;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.media-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-title {
+  font-weight: 700;
+  font-size: var(--bs-font-size-h5);
+  color: var(--bs-heading-color);
+  margin-bottom: 0.5rem;
+}
+
+.media-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.media-title a:hover {
+  color: var(--bs-primary);
+}
+
+.media-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-500);
+  margin-bottom: 0.75rem;
+}
+
+.media-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.media-meta i {
+  font-size: 0.9em;
+}
+
+.media-desc {
+  font-size: var(--bs-font-size-sm);
+  color: var(--bs-gray-600);
+  line-height: var(--bs-body-line-height);
+  margin-bottom: 1rem;
+  flex: 1;
+}
+
+.media-player {
+  background: var(--bs-gray-100);
+  border-radius: var(--bs-border-radius);
+  padding: 0.75rem;
+  margin-top: auto;
+}
+
+.media-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+/* Duration badge */
+.media-duration {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--bs-border-radius-sm);
+}
+
+/* -------------------------------------------
+   MEDIA-LIST VARIANTS
+   ------------------------------------------- */
+
+/* Grid layout */
+.media-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--bs-space-4);
+}
+
+.media-list-grid .media-item {
+  flex-direction: column;
+  padding: 0;
+}
+
+.media-list-grid .media-thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: 0;
+}
+
+.media-list-grid .media-thumb iframe,
+.media-list-grid .media-thumb video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.media-list-grid .media-content {
+  padding: 1.25rem;
+}
+
+/* Compact variant */
+.media-list-compact .media-item {
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.media-list-compact .media-thumb {
+  width: 120px;
+  height: 80px;
+}
+
+.media-list-compact .media-title {
+  font-size: var(--bs-font-size-h6);
+}
+
+.media-list-compact .media-desc {
+  display: none;
+}
+
+/* -------------------------------------------
+   MEDIA-LIST-DARK (Dark Background)
+   Dark variant of media list
+   ------------------------------------------- */
+.media-list-dark .media-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.media-list-dark .media-item:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.media-list-dark .media-thumb {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.media-list-dark .media-title {
+  color: #ffffff;
+}
+
+.media-list-dark .media-title a:hover {
+  color: var(--bs-blue-light);
+}
+
+.media-list-dark .media-meta {
+  color: var(--bs-gray-400);
+}
+
+.media-list-dark .media-desc {
+  color: var(--bs-gray-300);
+}
+
+.media-list-dark .media-player {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* -------------------------------------------
+   MEDIA ITEM FEATURED
+   ------------------------------------------- */
+.media-item.featured {
+  border: 2px solid var(--bs-primary);
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.02), transparent);
+}
+
+.media-list-dark .media-item.featured {
+  border: 2px solid var(--bs-primary);
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.1), rgba(255, 255, 255, 0.05));
+}

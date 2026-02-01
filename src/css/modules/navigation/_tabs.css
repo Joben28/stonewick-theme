@@ -1,0 +1,277 @@
+/* ==========================================================================
+   TAB NAVIGATION COMPONENT
+   Themed tabs, pills, underline, and dark variants
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   Standard Tabs (Light)
+   ----------------------------------------------------------------------------- */
+
+.nav-tabs {
+    border-bottom-color: var(--bs-gray-200);
+    gap: var(--bs-space-1);
+}
+
+.nav-tabs .nav-link {
+    color: var(--bs-gray-600);
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: var(--bs-space-3) var(--bs-space-4);
+    font-weight: 500;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover:not(.active):not(.disabled) {
+    color: var(--bs-primary);
+    border-bottom-color: var(--bs-gray-300);
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.15);
+    border-radius: var(--bs-border-radius-sm);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--bs-primary);
+    background-color: transparent;
+    border-bottom-color: var(--bs-primary);
+}
+
+.nav-tabs .nav-link.disabled {
+    color: var(--bs-gray-400);
+    cursor: not-allowed;
+    border-bottom-color: transparent;
+}
+
+/* -----------------------------------------------------------------------------
+   Pill Navigation (Light)
+   ----------------------------------------------------------------------------- */
+
+.nav-pills {
+    gap: var(--bs-space-2);
+}
+
+.nav-pills .nav-link {
+    color: var(--bs-gray-700);
+    background-color: transparent;
+    border-radius: var(--bs-border-radius);
+    padding: var(--bs-space-2) var(--bs-space-4);
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-pills .nav-link:hover:not(.active):not(.disabled) {
+    color: var(--bs-primary);
+    background-color: var(--bs-gray-100);
+}
+
+.nav-pills .nav-link:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.15);
+}
+
+.nav-pills .nav-link.active {
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
+}
+
+.nav-pills .nav-link.disabled {
+    color: var(--bs-gray-400);
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------------------------------------
+   Underline Navigation
+   ----------------------------------------------------------------------------- */
+
+.nav-underline {
+    border-bottom: 1px solid var(--bs-gray-200);
+    gap: var(--bs-space-4);
+}
+
+.nav-underline .nav-link {
+    color: var(--bs-gray-600);
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    padding: var(--bs-space-3) 0;
+    margin-bottom: -1px;
+    font-weight: 500;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-underline .nav-link:hover:not(.active):not(.disabled) {
+    color: var(--bs-primary);
+    border-bottom-color: var(--bs-gray-300);
+}
+
+.nav-underline .nav-link:focus {
+    outline: none;
+    box-shadow: none;
+    color: var(--bs-primary);
+}
+
+.nav-underline .nav-link.active {
+    color: var(--bs-primary);
+    border-bottom-color: var(--bs-primary);
+    background-color: transparent;
+}
+
+.nav-underline .nav-link.disabled {
+    color: var(--bs-gray-400);
+    cursor: not-allowed;
+}
+
+/* -----------------------------------------------------------------------------
+   Vertical Tabs
+   ----------------------------------------------------------------------------- */
+
+.nav-pills.flex-column {
+    gap: var(--bs-space-1);
+    min-width: 180px;
+}
+
+.nav-pills.flex-column .nav-link {
+    text-align: left;
+    border-radius: var(--bs-border-radius);
+}
+
+/* -----------------------------------------------------------------------------
+   Tab Content Transitions
+   ----------------------------------------------------------------------------- */
+
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+.tab-content > .tab-pane.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear;
+}
+
+.tab-content > .tab-pane.fade.show {
+    opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   Tabs with Icons
+   ----------------------------------------------------------------------------- */
+
+.nav-tabs .nav-link i,
+.nav-pills .nav-link i,
+.nav-underline .nav-link i {
+    font-size: 1em;
+    vertical-align: -0.1em;
+}
+
+/* -----------------------------------------------------------------------------
+   Tabs with Badges
+   ----------------------------------------------------------------------------- */
+
+.nav-pills .nav-link .badge {
+    font-size: 0.75em;
+    padding: 0.25em 0.5em;
+    vertical-align: 0.1em;
+}
+
+.nav-pills .nav-link.active .badge.bg-primary {
+    background-color: var(--bs-white) !important;
+    color: var(--bs-primary);
+}
+
+.nav-pills .nav-link.active .badge.bg-light {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: var(--bs-white);
+}
+
+/* -----------------------------------------------------------------------------
+   Dark Tabs
+   ----------------------------------------------------------------------------- */
+
+.nav-tabs-dark {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-tabs-dark .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-tabs-dark .nav-link:hover:not(.active):not(.disabled) {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-tabs-dark .nav-link:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.nav-tabs-dark .nav-link.active {
+    color: var(--bs-white);
+    border-bottom-color: var(--bs-primary);
+    background-color: transparent;
+}
+
+.nav-tabs-dark .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* -----------------------------------------------------------------------------
+   Dark Pills
+   ----------------------------------------------------------------------------- */
+
+.nav-pills-dark .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-pills-dark .nav-link:hover:not(.active):not(.disabled) {
+    color: var(--bs-white);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-pills-dark .nav-link:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+}
+
+.nav-pills-dark .nav-link.active {
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
+}
+
+.nav-pills-dark .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+}
+
+/* -----------------------------------------------------------------------------
+   Dark Underline
+   ----------------------------------------------------------------------------- */
+
+.nav-underline-dark {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-underline-dark .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-underline-dark .nav-link:hover:not(.active):not(.disabled) {
+    color: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-underline-dark .nav-link.active {
+    color: var(--bs-white);
+    border-bottom-color: var(--bs-primary);
+}
+
+.nav-underline-dark .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.3);
+}

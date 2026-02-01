@@ -1,0 +1,265 @@
+/* ===========================================
+   TESTIMONIALS
+   Review/testimonial card components
+   =========================================== */
+
+/* -------------------------------------------
+   CARD-TESTIMONIAL (Light Background)
+   Review card with avatar, rating, quote
+   ------------------------------------------- */
+.card-testimonial {
+  background: #ffffff;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-testimonial:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-lg);
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  flex-shrink: 0;
+}
+
+.testimonial-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: var(--bs-font-size-h6);
+  color: var(--bs-heading-color);
+  margin-bottom: 0.125rem;
+}
+
+.testimonial-title {
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-500);
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-rating {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.testimonial-body {
+  flex: 1;
+}
+
+.testimonial-body blockquote,
+.testimonial-body p {
+  font-size: 1rem;
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-gray-600);
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial-body blockquote::before {
+  content: '"';
+  font-size: 1.5em;
+  color: var(--bs-primary);
+  opacity: 0.5;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-right: 0.125em;
+}
+
+.testimonial-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bs-border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.testimonial-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--bs-border-radius-pill);
+  background: var(--bs-gray-100);
+  color: var(--bs-gray-600);
+}
+
+.testimonial-source i {
+  font-size: 0.875em;
+}
+
+/* Source platform variants */
+.testimonial-source.google {
+  background: rgba(66, 133, 244, 0.1);
+  color: #4285f4;
+}
+
+.testimonial-source.yelp {
+  background: rgba(211, 35, 35, 0.1);
+  color: #d32323;
+}
+
+.testimonial-source.facebook {
+  background: rgba(24, 119, 242, 0.1);
+  color: #1877f2;
+}
+
+.testimonial-source.linkedin {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+}
+
+.testimonial-date {
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-400);
+  margin-left: auto;
+}
+
+/* Featured variant */
+.card-testimonial.featured {
+  border: 2px solid var(--bs-primary);
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.02), rgba(var(--bs-teal-rgb), 0.02));
+  box-shadow: 0 4px 16px rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.card-testimonial.featured:hover {
+  box-shadow: 0 8px 24px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* -------------------------------------------
+   CARD-TESTIMONIAL-DARK (Dark Background)
+   Dark variant of testimonial card
+   ------------------------------------------- */
+.card-testimonial-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 1.75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-testimonial-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.card-testimonial-dark .testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-testimonial-dark .testimonial-name {
+  font-weight: 700;
+  font-size: var(--bs-font-size-h6);
+  color: #ffffff;
+  margin-bottom: 0.125rem;
+}
+
+.card-testimonial-dark .testimonial-title {
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-400);
+  margin-bottom: 0.25rem;
+}
+
+.card-testimonial-dark .testimonial-body blockquote,
+.card-testimonial-dark .testimonial-body p {
+  font-size: 1rem;
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-gray-300);
+  margin: 0;
+  font-style: italic;
+}
+
+.card-testimonial-dark .testimonial-body blockquote::before {
+  content: '"';
+  font-size: 1.5em;
+  color: var(--bs-blue-light);
+  opacity: 0.5;
+  line-height: 0;
+  vertical-align: -0.25em;
+  margin-right: 0.125em;
+}
+
+.card-testimonial-dark .testimonial-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-testimonial-dark .testimonial-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--bs-border-radius-pill);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--bs-gray-300);
+}
+
+.card-testimonial-dark .testimonial-source.google {
+  background: rgba(66, 133, 244, 0.2);
+  color: #93bbfc;
+}
+
+.card-testimonial-dark .testimonial-source.yelp {
+  background: rgba(211, 35, 35, 0.2);
+  color: #f87171;
+}
+
+.card-testimonial-dark .testimonial-date {
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-500);
+  margin-left: auto;
+}
+
+/* -------------------------------------------
+   TESTIMONIAL COMPACT (Both light/dark)
+   Smaller variant for sidebars/footers
+   ------------------------------------------- */
+.card-testimonial-compact {
+  padding: 1.25rem;
+}
+
+.card-testimonial-compact .testimonial-header {
+  margin-bottom: 0.75rem;
+}
+
+.card-testimonial-compact .testimonial-body blockquote,
+.card-testimonial-compact .testimonial-body p {
+  font-size: var(--bs-font-size-sm);
+}
+
+.card-testimonial-compact .testimonial-footer {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+}

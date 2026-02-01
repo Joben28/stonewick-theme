@@ -1,0 +1,362 @@
+/* ===========================================
+   SECTION TRANSITIONS & THEMED BACKGROUNDS
+   Visual flow elements for page sections
+   
+   DESIGN PRINCIPLE: Transitions should be subtle
+   and seamless. They overlap adjacent sections
+   using negative margins to eliminate gaps.
+   =========================================== */
+
+/* -------------------------------------------
+   SECTION DIVIDERS
+   ------------------------------------------- */
+
+/* Simple line divider */
+.section-divider {
+  height: 1px;
+  background: var(--bs-border-color, #dee2e6);
+  margin: 0;
+  opacity: 0.5;
+}
+
+.section-divider.thick {
+  height: 2px;
+  opacity: 0.7;
+}
+
+/* Gradient fade divider */
+.section-divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--bs-primary) 25%, 
+    var(--bs-primary) 75%, 
+    transparent 100%);
+  margin: 0;
+  opacity: 0.3;
+}
+
+.section-divider-gradient.bold {
+  height: 2px;
+  opacity: 0.5;
+}
+
+/* Dot divider */
+.section-divider-dots {
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0;
+}
+
+.section-divider-dots::before {
+  content: '• • •';
+  color: var(--bs-primary);
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  opacity: 0.6;
+}
+
+/* -------------------------------------------
+   WAVE TRANSITIONS
+   
+   Waves use negative margins to overlap sections.
+   The SVG fills with the NEXT section's color.
+   No background needed - waves sit on top of previous section.
+   ------------------------------------------- */
+
+.section-wave {
+  position: relative;
+  padding: 0;
+  height: 40px;
+  overflow: visible;
+  z-index: 1;
+  /* Overlap into previous section */
+  margin-top: -40px;
+  /* No margin-bottom - let next section flow naturally */
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.section-wave svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Wave color variants (color of the NEXT section) */
+.section-wave.wave-light svg path {
+  fill: var(--bs-light, #f8f9fa);
+}
+
+.section-wave.wave-white svg path {
+  fill: #ffffff;
+}
+
+.section-wave.wave-dark svg path {
+  fill: var(--bs-dark, #212529);
+}
+
+.section-wave.wave-trust svg path {
+  fill: #1a1f2e; /* bg-trust base color */
+}
+
+.section-wave.wave-primary svg path {
+  fill: var(--bs-primary);
+}
+
+/* -------------------------------------------
+   ANGLED TRANSITIONS
+   
+   Angles use negative margins and pseudo-elements.
+   The ::before creates the NEXT section's color.
+   ------------------------------------------- */
+
+.section-angle {
+  position: relative;
+  padding: 0;
+  height: 50px;
+  overflow: hidden;
+  z-index: 1;
+  /* Overlap into previous section */
+  margin-top: -50px;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+.section-angle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5%;
+  width: 110%;
+  height: 200%;
+  background: var(--bs-light, #f8f9fa);
+  transform: skewY(1.5deg);
+  transform-origin: top left;
+}
+
+.section-angle.angle-reverse::before {
+  transform: skewY(-1.5deg);
+  transform-origin: top right;
+}
+
+.section-angle.angle-steep::before {
+  transform: skewY(2.5deg);
+}
+
+.section-angle.angle-steep.angle-reverse::before {
+  transform: skewY(-2.5deg);
+}
+
+/* Angle color variants (color of the NEXT section) */
+.section-angle.angle-light::before {
+  background: var(--bs-light, #f8f9fa);
+}
+
+.section-angle.angle-white::before {
+  background: #ffffff;
+}
+
+.section-angle.angle-dark::before {
+  background: var(--bs-dark, #212529);
+}
+
+.section-angle.angle-trust::before {
+  background: #1a1f2e; /* bg-trust base color */
+}
+
+.section-angle.angle-primary::before {
+  background: var(--bs-primary);
+}
+
+/* -------------------------------------------
+   THEMED SECTION BACKGROUNDS
+   ------------------------------------------- */
+
+/* Subtle pattern backgrounds */
+.section-pattern {
+  position: relative;
+  background-color: var(--bs-light, #f8f9fa);
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.03) 10px, rgba(0,0,0,0.03) 11px);
+  background-size: 21px 21px;
+}
+
+.section-pattern.pattern-dots {
+  background-image: 
+    radial-gradient(circle, rgba(0,0,0,0.04) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+
+.section-pattern.pattern-dots-wide {
+  background-image: 
+    radial-gradient(circle, rgba(0,0,0,0.04) 1.5px, transparent 1.5px);
+  background-size: 35px 35px;
+}
+
+.section-pattern.pattern-grid {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Gradient backgrounds */
+.section-gradient {
+  position: relative;
+  background: linear-gradient(135deg, 
+    var(--bs-light) 0%, 
+    var(--bs-white, #ffffff) 100%);
+}
+
+/* Primary gradient - subtle tint that works on white base */
+.section-gradient.gradient-primary {
+  background: 
+    linear-gradient(180deg, 
+      rgba(var(--bs-primary-rgb), 0.12) 0%, 
+      rgba(var(--bs-primary-rgb), 0.04) 60%,
+      transparent 100%),
+    #ffffff;
+}
+
+.section-gradient.gradient-subtle {
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(var(--bs-primary-rgb), 0.08) 50%, 
+    transparent 100%);
+}
+
+/* Overlay backgrounds */
+.section-overlay {
+  position: relative;
+  background-color: var(--bs-light, #f8f9fa);
+}
+
+.section-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(var(--bs-primary-rgb), 0.10) 0%, 
+    rgba(var(--bs-info-rgb), 0.08) 100%);
+  pointer-events: none;
+}
+
+/* Accent border sections */
+.section-accent-border {
+  border-top: 4px solid var(--bs-primary);
+  position: relative;
+}
+
+.section-accent-border.border-bottom {
+  border-bottom: 4px solid var(--bs-primary);
+  border-top: none;
+}
+
+.section-accent-border.border-both {
+  border-top: 4px solid var(--bs-primary);
+  border-bottom: 4px solid var(--bs-primary);
+}
+
+.section-accent-border.border-gradient {
+  border-top: none;
+  border-bottom: none;
+}
+
+.section-accent-border.border-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--bs-primary) 20%, 
+    var(--bs-primary) 80%, 
+    transparent 100%);
+}
+
+.section-accent-border.border-gradient.border-bottom::before {
+  top: auto;
+  bottom: 0;
+}
+
+/* -------------------------------------------
+   CURVED SECTIONS
+   ------------------------------------------- */
+
+.section-curve {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.section-curve::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: inherit;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.section-curve.curve-bottom::before {
+  top: auto;
+  bottom: -50px;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+/* -------------------------------------------
+   RESPONSIVE ADJUSTMENTS
+   ------------------------------------------- */
+
+@media (max-width: 767.98px) {
+  .section-wave {
+    height: 40px;
+  }
+
+  .section-angle {
+    height: 50px;
+  }
+
+  .section-divider-dots {
+    padding: 1.5rem 0;
+  }
+
+  .section-divider-dots::before {
+    font-size: 1.25rem;
+    letter-spacing: 0.75rem;
+  }
+}
+
+/* -------------------------------------------
+   UTILITY HELPERS
+   ------------------------------------------- */
+
+/* Remove top/bottom margin from adjacent sections */
+.section-seamless {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Add extra spacing for transitions */
+.section-spaced {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .section-spaced {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+}

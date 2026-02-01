@@ -1,32 +1,34 @@
 # Linking StoneWick to Another Project
 
-This guide explains how to use StoneWick as a dependency in a separate project.
+This guide explains how to use StoneWick from GitHub in your projects.
+
+**Repository**: https://github.com/Joben28/stonewick-theme
 
 ---
 
-## Method 1: NPM Package (Recommended for Production)
+## Method 1: Install Directly from GitHub (Recommended)
 
-### Publishing to NPM
+### Install the latest version
 
 ```bash
-# In StoneWick directory
-cd /path/to/stonewick
-
-# Login to NPM (first time only)
-npm login
-
-# Build the library
-npm run build
-
-# Publish (updates version automatically)
-npm publish --access public
+# In your project
+npm install github:Joben28/stonewick-theme
 ```
 
-### Installing in Consumer Project
+### Or specify in package.json
+
+```json
+{
+  "dependencies": {
+    "@stonewick/theme": "github:Joben28/stonewick-theme"
+  }
+}
+```
+
+### Install specific release/tag
 
 ```bash
-# In your other project
-npm install @stonewick/theme@^1.0.0
+npm install github:Joben28/stonewick-theme#v1.0.0
 ```
 
 ### Usage
@@ -60,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ---
 
-## Method 2: NPM Link (Best for Development)
+## Method 2: NPM Link (For Active Development)
 
 Use this when actively developing StoneWick alongside another project.
 
@@ -68,7 +70,7 @@ Use this when actively developing StoneWick alongside another project.
 
 ```bash
 # In StoneWick directory
-cd /path/to/stonewick
+cd C:\Users\mrpee\Desktop\StoneWickSite
 npm link
 ```
 
@@ -93,19 +95,21 @@ import { Modal } from '@stonewick/theme';
 npm unlink @stonewick/theme
 
 # Optionally unlink global
-cd /path/to/stonewick
+cd C:\Users\mrpee\Desktop\StoneWickSite
 npm unlink --global
 ```
 
 ---
 
-## Method 3: Git Submodule (For Private Repos)
+## Method 3: Git Submodule
+
+For projects that need direct access to source files.
 
 ### Add as submodule
 
 ```bash
 # In your project root
-git submodule add https://github.com/yourname/stonewick.git lib/stonewick
+git submodule add https://github.com/Joben28/stonewick-theme.git lib/stonewick
 git submodule update --init --recursive
 ```
 
@@ -137,56 +141,31 @@ git commit -m "Update stonewick"
 
 ---
 
-## Method 4: GitHub Package Registry (For Organizations)
+## Creating Releases
 
-### Configure package.json
-
-```json
-{
-  "name": "@yourorg/stonewick",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
-}
-```
-
-### Publish
+When you update StoneWick and want to version it:
 
 ```bash
-npm publish
+# In StoneWick directory
+cd C:\Users\mrpee\Desktop\StoneWickSite
+
+# Build first
+npm run build
+
+# Commit changes
+git add .
+git commit -m "Release v1.0.0"
+
+# Tag the release
+git tag v1.0.0
+git push origin main
+git push origin v1.0.0
 ```
 
-### Install (requires auth)
-
-Create `.npmrc` in consumer project:
-
-```
-@yourorg:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-```
-
-Then install:
+Now others can install that specific version:
 
 ```bash
-npm install @yourorg/stonewick
-```
-
----
-
-## Method 5: Direct File Copy (Simplest, No Versioning)
-
-### Copy dist folder
-
-```bash
-# Copy to your project
-cp -r /path/to/stonewick/dist /path/to/my-project/vendor/stonewick
-```
-
-### Import
-
-```html
-<link rel="stylesheet" href="vendor/stonewick/stonewick.min.css">
-<script src="vendor/stonewick/stonewick.min.js"></script>
+npm install github:Joben28/stonewick-theme#v1.0.0
 ```
 
 ---
@@ -195,22 +174,15 @@ cp -r /path/to/stonewick/dist /path/to/my-project/vendor/stonewick
 
 ### For Active Development
 
-1. Use **npm link** while developing both projects
-2. Changes to StoneWick immediately reflect in consumer
-3. Run `npm run build:watch` in StoneWick for auto-rebuilds
+1. Use **npm link** while developing StoneWick alongside another project
+2. Changes immediately available in consumer project  
+3. Run `npm run build` after CSS/JS changes
 
 ### For Production Deployment
 
-1. Publish to **NPM** with semantic versioning
-2. Pin to minor version: `@stonewick/theme@^1.0.0`
-3. Consumer gets bug fixes automatically
-4. Major updates require explicit upgrade
-
-### For Teams/Organizations
-
-1. Use **GitHub Package Registry** for private packages
-2. Set up CI/CD to publish on tag
-3. Use Renovate/Dependabot for automatic updates
+1. Create **git tags** for releases (v1.0.0, v1.1.0, etc.)
+2. Consumer projects install from GitHub with version tag
+3. Update version in consumer's package.json when ready to upgrade
 
 ---
 
@@ -219,17 +191,14 @@ cp -r /path/to/stonewick/dist /path/to/my-project/vendor/stonewick
 ```json
 {
   "dependencies": {
-    // Exact version (most stable, no auto-updates)
-    "@stonewick/theme": "1.2.3",
+    // Latest from main branch (updates on npm install)
+    "@stonewick/theme": "github:Joben28/stonewick-theme",
     
-    // Patch updates only (bug fixes)
-    "@stonewick/theme": "~1.2.0",
+    // Specific release/tag (locked version)
+    "@stonewick/theme": "github:Joben28/stonewick-theme#v1.0.0",
     
-    // Minor updates (new features, backwards compatible)
-    "@stonewick/theme": "^1.0.0",
-    
-    // Latest (not recommended for production)
-    "@stonewick/theme": "latest"
+    // Specific commit (maximum control)
+    "@stonewick/theme": "github:Joben28/stonewick-theme#abc1234"
   }
 }
 ```
@@ -242,7 +211,7 @@ cp -r /path/to/stonewick/dist /path/to/my-project/vendor/stonewick
 
 - Ensure Bootstrap is imported **before** StoneWick
 - Check import paths are correct
-- Verify `dist/` folder exists (run `npm run build`)
+- Verify `dist/` folder exists (run `npm run build` in StoneWick)
 
 ### JS components not working
 
@@ -261,3 +230,9 @@ cp -r /path/to/stonewick/dist /path/to/my-project/vendor/stonewick
 - Run `npm run build` in StoneWick after changes
 - Clear your bundler's cache
 - Restart your dev server
+
+### GitHub install fails
+
+- Ensure the repo is accessible (public or you have access)
+- Check you're using correct URL: `github:Joben28/stonewick-theme`
+- Try clearing npm cache: `npm cache clean --force`
