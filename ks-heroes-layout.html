@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes & Layout - StoneWick Components</title>
+    <meta name="description" content="Hero sections, transitions, typography, and layout utilities.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="kitchen-sink.html">
+                    <span class="brand-text">Components</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ks-heroes-layout.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-navigation.html">Navigation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-commerce.html">Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================
+         HERO SECTIONS
+         ========================================================== -->
+    
+    <!-- Hero Default (Dark) -->
+    <section id="heroes" class="hero pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO DEFAULT</p>
+                    <h1>Build Something <span class="text-warning">Amazing</span></h1>
+                    <p class="lead">This is the default hero style with dark gradient background.</p>
+                    <p class="subtitle">Additional subtitle text for the hero section.</p>
+                    <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Light -->
+    <section class="hero hero-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO LIGHT</p>
+                    <h1>Light Hero Variant</h1>
+                    <p class="lead">This hero has a lighter background for contrast.</p>
+                    <p class="subtitle">Light variant for different page contexts.</p>
+                    <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Centered -->
+    <section class="hero hero-centered">
+        <div class="container">
+            <div class="hero-content text-center mx-auto" style="max-width: 800px;">
+                <p class="eyebrow text-primary">HERO CENTERED</p>
+                <h1>Centered Hero</h1>
+                <p class="lead">All content is centered in this variant.</p>
+                <p class="subtitle">Centered layout for emphasis and focus.</p>
+                <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Compact -->
+    <section class="hero hero-compact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO COMPACT</p>
+                    <h1>Compact Hero</h1>
+                    <p class="lead">Smaller padding for compact page layouts.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         TYPOGRAPHY & BUTTONS
+         ========================================================== -->
+    <section id="typography" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">TYPOGRAPHY</div>
+            <h2 class="section-heading text-dark">Typography & Headings</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    
+                    <p class="eyebrow text-primary mt-4">EYEBROW TEXT</p>
+                    <p class="lead">Lead paragraph with larger text.</p>
+                    <p>Regular paragraph text for body content.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-3">Buttons (All use btn-lg in heroes)</h4>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <a href="#" class="btn btn-primary btn-lg">Primary LG</a>
+                        <a href="#" class="btn btn-outline-primary btn-lg">Outline LG</a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <a href="#" class="btn btn-primary">Primary</a>
+                        <a href="#" class="btn btn-secondary">Secondary</a>
+                        <a href="#" class="btn btn-success">Success</a>
+                        <a href="#" class="btn btn-warning">Warning</a>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="#" class="btn btn-outline-primary">Outline Primary</a>
+                        <a href="#" class="btn btn-outline-secondary">Outline Secondary</a>
+                        <a href="#" class="btn btn-outline-dark">Outline Dark</a>
+                    </div>
+                    
+                    <h4 class="mb-3 mt-5">Text Highlights</h4>
+                    <p>Use <span class="text-highlight">text-highlight</span> for gradient backgrounds.</p>
+                    <p>Use <span class="text-highlight-underline">text-highlight-underline</span> for underlines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         CONTENT CALLOUT
+         ========================================================== -->
+    <section id="callout" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">CONTENT</div>
+            <h2 class="section-heading text-dark">Content Callout</h2>
+            <p class="section-intro text-muted">Highlighted callout boxes for important information.</p>
+            
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <div class="content-callout">
+                        <strong>Real Performance:</strong> Sites built the right way from the start, not patched together and "optimized" later.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="content-callout">
+                        <strong>Peace of Mind:</strong> Sites that Google loves and hackers can't touch.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         CTA SECTION
+         ========================================================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Build Something Great?</h2>
+                <p>Let's discuss your project and create a website that drives results.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-light btn-lg">Start Your Project</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         SECTION TRANSITIONS & THEMED BACKGROUNDS
+         ========================================================== -->
+    
+    <!-- Simple Dividers -->
+    <section id="dividers" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">SECTION TRANSITIONS</div>
+            <h2 class="section-heading">Dividers & Transitions</h2>
+            <p class="section-intro">Visual elements to create flow between sections</p>
+
+            <div class="row g-5">
+                <div class="col-12">
+                    <h4 class="mb-4">Simple Line Dividers</h4>
+                    <p class="mb-3">Default thin line:</p>
+                    <hr class="section-divider">
+                    <p class="mt-3 mb-3">Thick variant:</p>
+                    <hr class="section-divider thick">
+                </div>
+
+                <div class="col-12">
+                    <h4 class="mb-4">Gradient Fade Dividers</h4>
+                    <p class="mb-3">Subtle gradient:</p>
+                    <hr class="section-divider-gradient">
+                    <p class="mt-3 mb-3">Bold gradient:</p>
+                    <hr class="section-divider-gradient bold">
+                </div>
+
+                <div class="col-12">
+                    <h4 class="mb-4">Decorative Dots</h4>
+                    <div class="section-divider-dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Angled Transition -->
+    <div class="section-angle angle-light"></div>
+
+    <!-- Themed Background Section -->
+    <section class="section-pattern pattern-dots py-section">
+        <div class="container">
+            <h2 class="section-heading">Dot Pattern Background</h2>
+            <p class="section-intro">Subtle dot pattern overlay</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-palette fs-1 mb-3 text-primary opacity-75"></i>
+                        <h5 class="h6 fw-bold text-dark mb-2">Subtle Patterns</h5>
+                        <p class="small mb-0">Add texture without overwhelming content.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-layers fs-1 mb-3 text-primary opacity-75"></i>
+                        <h5 class="h6 fw-bold text-dark mb-2">Visual Depth</h5>
+                        <p class="small mb-0">Create separation between sections.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-eye fs-1 mb-3 text-primary opacity-75"></i>
+                        <h5 class="h6 fw-bold text-dark mb-2">Focus Attention</h5>
+                        <p class="small mb-0">Guide users through page flow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Angled Reverse Transition -->
+    <div class="section-angle angle-reverse angle-white"></div>
+
+    <!-- Gradient Background Section -->
+    <section class="section-gradient gradient-primary py-section">
+        <div class="container">
+            <h2 class="section-heading">Gradient Background</h2>
+            <p class="section-intro">Subtle primary color gradient overlay</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-service">
+                        <div class="service-icon"><i class="bi bi-brush"></i></div>
+                        <h4>Beautiful Aesthetics</h4>
+                        <p>Gradient backgrounds add visual interest while maintaining readability and professionalism.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accent Border Section -->
+    <section class="section-accent-border border-gradient py-section bg-light">
+        <div class="container">
+            <h2 class="section-heading">Accent Border (Gradient)</h2>
+            <p class="section-intro">Gradient border at the top for emphasis</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-feature">
+                        <i class="bi bi-check-circle text-primary fs-4"></i>
+                        <div>
+                            <h5>Clear Separation</h5>
+                            <p>Borders help define distinct content areas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-feature">
+                        <i class="bi bi-stars text-primary fs-4"></i>
+                        <div>
+                            <h5>Visual Polish</h5>
+                            <p>Subtle details elevate overall design quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid Pattern Section -->
+    <section class="section-pattern pattern-grid py-section">
+        <div class="container">
+            <h2 class="section-heading">Grid Pattern Background</h2>
+            <p class="section-intro">Technical aesthetic with subtle grid overlay</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <i class="bi bi-code-slash"></i>
+                        <div class="metric-value">500+</div>
+                        <div class="metric-label">Components</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <i class="bi bi-palette"></i>
+                        <div class="metric-value">50+</div>
+                        <div class="metric-label">Variants</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <i class="bi bi-lightning"></i>
+                        <div class="metric-value">&lt;1s</div>
+                        <div class="metric-label">Load Time</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="metric-item">
+                        <i class="bi bi-heart"></i>
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay Background Section -->
+    <section class="section-overlay py-section">
+        <div class="container">
+            <h2 class="section-heading">Dual Color Overlay</h2>
+            <p class="section-intro">Primary to info gradient overlay</p>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-service">
+                        <div class="service-icon"><i class="bi bi-droplet"></i></div>
+                        <h4>Subtle Blend</h4>
+                        <p>Multiple colors create depth and interest.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-service">
+                        <div class="service-icon"><i class="bi bi-palette2"></i></div>
+                        <h4>Brand Colors</h4>
+                        <p>Reinforce your color palette throughout.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-service">
+                        <div class="service-icon"><i class="bi bi-eye-fill"></i></div>
+                        <h4>Visual Flow</h4>
+                        <p>Guide users through content naturally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagonal Stripe Pattern -->
+    <section class="section-pattern py-section">
+        <div class="container">
+            <h2 class="section-heading">Diagonal Stripe Pattern</h2>
+            <p class="section-intro">Default pattern with diagonal lines</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="content-callout">
+                        <strong>Pro Tip:</strong> Patterns work great for separating long pages into distinct sections without heavy color changes.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Transition Example -->  
+    <div class="section-wave wave-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Dark Section After Wave -->
+    <section class="bg-dark py-section">
+        <div class="container">
+            <h2 class="section-heading text-white">After Wave Transition</h2>
+            <p class="section-intro text-white-70">Smooth wave creates elegant section flow</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card-glass">
+                        <div class="icon-badge blue"><i class="bi bi-water"></i></div>
+                        <h4>Organic Flow</h4>
+                        <p>Wave transitions create natural, fluid page movement.</p>
+                        <div class="card-footer">
+                            <span class="glass-badge blue"><i class="bi bi-droplet-fill"></i> Smooth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Back to Light -->
+    <div class="section-wave wave-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,0 C240,40 480,0 720,20 C960,40 1200,0 1440,20 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- ==========================================================
+         UTILITIES
+         ========================================================== -->
+    <section id="utilities" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">UTILITIES</div>
+            <h2 class="section-heading text-dark">Avatar System</h2>
+            <p class="section-intro text-muted">Avatar components with size variants and color options.</p>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Avatar Sizes</h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-sm avatar-primary">
+                            <span class="avatar-initials">SM</span>
+                        </div>
+                        <div class="avatar avatar-md avatar-success">
+                            <span class="avatar-initials">MD</span>
+                        </div>
+                        <div class="avatar avatar-lg avatar-warning">
+                            <span class="avatar-initials">LG</span>
+                        </div>
+                        <div class="avatar avatar-xl avatar-info">
+                            <span class="avatar-initials">XL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Avatar with Images</h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-sm">
+                            <img src="https://i.pravatar.cc/64?img=1" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-md">
+                            <img src="https://i.pravatar.cc/96?img=2" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-lg">
+                            <img src="https://i.pravatar.cc/128?img=3" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-xl">
+                            <img src="https://i.pravatar.cc/160?img=4" alt="User" class="avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Rating Stars</h2>
+            <p class="section-intro text-muted">Star rating display component.</p>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <h6 class="mb-2">5 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">4.5 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">3 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Meta Row</h2>
+            <p class="section-intro text-muted">Icon + text metadata pairs for cards and lists.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h6 class="mb-2">Default Meta Row</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-calendar3"></i> Jan 28, 2026</span>
+                        <span class="meta-item"><i class="bi bi-geo-alt"></i> Portland, OR</span>
+                        <span class="meta-item"><i class="bi bi-clock"></i> 2:00 PM</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="mb-2">More Examples</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-person"></i> John Doe</span>
+                        <span class="meta-item"><i class="bi bi-eye"></i> 1.2k views</span>
+                        <span class="meta-item"><i class="bi bi-chat"></i> 24 comments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="bg-dark py-section">
+        <div class="container">
+            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">SOCIAL</div>
+            <h2 class="section-heading text-white">Social Links</h2>
+            <p class="section-intro text-white-70">Social media link icons for footer sections.</p>
+            
+            <div class="social-links mb-4">
+                <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-2">&copy; 2026 StoneWick Theme</p>
+                    <p class="small text-muted mb-0">
+                        <a href="kitchen-sink.html">Index</a> · 
+                        <a href="ks-heroes-layout.html">Heroes</a> · 
+                        <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-media.html">Media</a> · 
+                        <a href="ks-data.html">Data</a> · 
+                        <a href="ks-interactive.html">Interactive</a> · 
+                        <a href="ks-navigation.html">Navigation</a> · 
+                        <a href="ks-commerce.html">Commerce</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

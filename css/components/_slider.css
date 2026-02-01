@@ -1,0 +1,544 @@
+/* -------------------------------------------
+   SLIDER COMPONENT
+   Enhanced carousel with thumbnails, autoplay, progress
+   ------------------------------------------- */
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+}
+
+/* Slider Track */
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* Individual Slide */
+.slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.slide-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Slide Content Overlay */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--bs-space-5);
+  padding-bottom: 6rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: var(--bs-white);
+}
+
+.slide-title {
+  margin: 0 0 var(--bs-space-2);
+  font-size: var(--bs-font-size-h3);
+  font-weight: 700;
+}
+
+.slide-description {
+  margin: 0;
+  font-size: var(--bs-font-size-base);
+  opacity: 0.9;
+}
+
+
+/* -------------------------------------------
+   SLIDER CONTROLS
+   ------------------------------------------- */
+.slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  color: var(--bs-gray-700);
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: var(--bs-shadow-md);
+  transition: all var(--bs-transition-base);
+  z-index: 5;
+}
+
+.slider-control:hover {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+  box-shadow: var(--bs-shadow-lg);
+}
+
+.slider-control:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.3);
+}
+
+.slider-control.slider-prev {
+  left: var(--bs-space-3);
+}
+
+.slider-control.slider-next {
+  right: var(--bs-space-3);
+}
+
+/* Hidden controls option */
+.slider-container.hide-controls .slider-control {
+  opacity: 0;
+}
+
+.slider-container.hide-controls:hover .slider-control {
+  opacity: 1;
+}
+
+
+/* -------------------------------------------
+   SLIDER DOTS (Indicators)
+   ------------------------------------------- */
+.slider-dots {
+  position: absolute;
+  bottom: var(--bs-space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--bs-space-2);
+  z-index: 5;
+}
+
+.slider-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--bs-transition-base);
+}
+
+.slider-dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.slider-dot.is-active {
+  background: var(--bs-white);
+  transform: scale(1.2);
+}
+
+/* Dots outside variant */
+.slider-dots-outside {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  justify-content: center;
+  padding: var(--bs-space-3);
+}
+
+.slider-dots-outside .slider-dot {
+  background: var(--bs-gray-300);
+}
+
+.slider-dots-outside .slider-dot:hover {
+  background: var(--bs-gray-400);
+}
+
+.slider-dots-outside .slider-dot.is-active {
+  background: var(--bs-primary);
+}
+
+
+/* -------------------------------------------
+   SLIDER PROGRESS BAR
+   ------------------------------------------- */
+.slider-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 5;
+}
+
+.slider-progress-fill {
+  height: 100%;
+  background: var(--bs-primary);
+  width: 0%;
+  transition: width linear;
+}
+
+/* Animated progress for autoplay */
+.slider-progress-fill.is-playing {
+  animation: sliderProgress 5s linear forwards;
+}
+
+@keyframes sliderProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+/* Progress outside variant */
+.slider-progress-outside {
+  position: relative;
+  border-radius: var(--bs-border-radius-pill);
+  margin: var(--bs-space-3);
+  background: var(--bs-gray-200);
+}
+
+
+/* -------------------------------------------
+   SLIDER THUMBNAILS
+   ------------------------------------------- */
+.slider-thumbnails {
+  display: flex;
+  gap: var(--bs-space-2);
+  padding: var(--bs-space-3);
+  background: var(--bs-gray-100);
+  overflow-x: auto;
+}
+
+.slider-thumb {
+  flex-shrink: 0;
+  width: 80px;
+  height: 60px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--bs-border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all var(--bs-transition-base);
+}
+
+.slider-thumb:hover {
+  opacity: 0.9;
+}
+
+.slider-thumb.is-active {
+  opacity: 1;
+  border-color: var(--bs-primary);
+}
+
+.slider-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* -------------------------------------------
+   AUTOPLAY CONTROLS
+   ------------------------------------------- */
+.slider-autoplay-controls {
+  position: absolute;
+  top: var(--bs-space-3);
+  right: var(--bs-space-3);
+  display: flex;
+  gap: var(--bs-space-2);
+  z-index: 5;
+}
+
+.autoplay-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-white);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--bs-transition-base);
+}
+
+.autoplay-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.autoplay-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Play/pause states */
+.autoplay-btn .bi-pause-fill {
+  display: none;
+}
+
+.autoplay-btn.is-playing .bi-play-fill {
+  display: none;
+}
+
+.autoplay-btn.is-playing .bi-pause-fill {
+  display: block;
+}
+
+
+/* -------------------------------------------
+   SLIDER COUNTER
+   ------------------------------------------- */
+.slider-counter {
+  position: absolute;
+  top: var(--bs-space-3);
+  left: var(--bs-space-3);
+  padding: var(--bs-space-2) var(--bs-space-3);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-white);
+  font-size: var(--bs-font-size-sm);
+  font-weight: 600;
+  z-index: 5;
+}
+
+.slider-counter-current {
+  color: var(--bs-white);
+}
+
+.slider-counter-separator {
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0.25em;
+}
+
+.slider-counter-total {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* -------------------------------------------
+   SLIDER VARIANTS
+   ------------------------------------------- */
+
+/* Slider with fade transition */
+.slider-fade .slider-track {
+  transition: none;
+}
+
+.slider-fade .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider-fade .slide.is-active {
+  position: relative;
+  opacity: 1;
+}
+
+/* Slider dark */
+.slider-dark {
+  background: var(--bs-gray-900);
+}
+
+.slider-dark .slider-thumbnails {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.slider-dark .slider-thumb {
+  border-color: transparent;
+}
+
+.slider-dark .slider-thumb.is-active {
+  border-color: var(--bs-blue-light);
+}
+
+.slider-dark .slider-dots-outside .slider-dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.slider-dark .slider-dots-outside .slider-dot.is-active {
+  background: var(--bs-blue-light);
+}
+
+.slider-dark .slider-progress-outside {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Slider full width */
+.slider-fullwidth {
+  border-radius: 0;
+}
+
+/* Slider with border */
+.slider-bordered {
+  border: 1px solid var(--bs-border-color);
+}
+
+
+/* -------------------------------------------
+   HERO SLIDER
+   ------------------------------------------- */
+.hero-slider {
+  position: relative;
+  min-height: 500px;
+}
+
+.hero-slider .slide {
+  position: relative;
+}
+
+.hero-slider .slide-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-slider .slide-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  padding: var(--bs-space-6);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+  max-width: 600px;
+}
+
+.hero-slider .slide-title {
+  font-size: var(--bs-font-size-h1);
+}
+
+
+/* -------------------------------------------
+   PRODUCT SLIDER
+   ------------------------------------------- */
+.product-slider {
+  padding: var(--bs-space-4);
+}
+
+.product-slider .slide {
+  padding: 0 var(--bs-space-2);
+}
+
+.product-slider .slider-control {
+  background: var(--bs-gray-100);
+}
+
+.product-slider .slider-control:hover {
+  background: var(--bs-gray-200);
+}
+
+
+/* -------------------------------------------
+   TESTIMONIAL SLIDER
+   ------------------------------------------- */
+.testimonial-slider {
+  text-align: center;
+  padding: var(--bs-space-5);
+}
+
+.testimonial-slider .slide-content {
+  position: relative;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+.testimonial-slider .slide-quote {
+  font-size: var(--bs-font-size-h4);
+  font-style: italic;
+  color: var(--bs-heading-color);
+  margin-bottom: var(--bs-space-4);
+  line-height: 1.6;
+}
+
+.testimonial-slider .slide-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bs-space-2);
+}
+
+.testimonial-slider .author-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonial-slider .author-name {
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  margin: 0;
+}
+
+.testimonial-slider .author-title {
+  color: var(--bs-gray-500);
+  font-size: var(--bs-font-size-sm);
+  margin: 0;
+}
+
+
+/* -------------------------------------------
+   SLIDER LOADING STATE
+   ------------------------------------------- */
+.slider-loading {
+  position: relative;
+  min-height: 300px;
+}
+
+.slider-loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bs-gray-100);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.slider-loading .slider-track,
+.slider-loading .slider-control,
+.slider-loading .slider-dots {
+  opacity: 0;
+}
+
+
+/* -------------------------------------------
+   TOUCH GESTURES (Visual Hints)
+   ------------------------------------------- */
+.slider-touch-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-2);
+  padding: var(--bs-space-3) var(--bs-space-4);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: var(--bs-border-radius-pill);
+  color: var(--bs-white);
+  font-size: var(--bs-font-size-sm);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.slider-container:focus .slider-touch-hint,
+.slider-touch-hint.is-visible {
+  opacity: 1;
+}

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Video - StoneWick Components</title>
+    <meta name="description" content="Video players, channel headers, galleries, and media lists.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="kitchen-sink.html">
+                    <span class="brand-text">Components</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes-layout.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-navigation.html">Navigation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-commerce.html">Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="hero hero-compact pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
+                    <h1>Media & Video</h1>
+                    <p class="lead">Video players, YouTube channel headers, galleries, and media lists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         VIDEO THEATER
+         ========================================================== -->
+    <section id="video-theater" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">VIDEO COMPONENTS</div>
+            <h2 class="section-heading text-dark">Video Theater</h2>
+            <p class="section-intro text-muted">YouTube-style theater mode video player. Supports direct video and iframe embeds.</p>
+        </div>
+    </section>
+
+    <!-- Full Width Theater with YouTube -->
+    <div class="video-theater video-theater-full">
+        <div class="video-theater-container">
+            <div class="video-theater-player">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-theater-info">
+                <h3 class="video-theater-title">Building Modern Web Applications with Bootstrap 5</h3>
+                
+                <div class="video-theater-meta">
+                    <div class="video-theater-meta-item">
+                        <i class="bi bi-eye"></i>
+                        <span>1.2M views</span>
+                    </div>
+                    <div class="video-theater-meta-item">
+                        <i class="bi bi-calendar3"></i>
+                        <span>3 days ago</span>
+                    </div>
+                    <div class="video-theater-meta-item">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>45K likes</span>
+                    </div>
+                </div>
+                
+                <p class="video-theater-description">Learn how to build responsive, modern web applications using Bootstrap 5. This comprehensive tutorial covers everything from basic setup to advanced component customization. We'll explore the grid system, utility classes, and how to create custom themes.</p>
+                
+                <div class="video-theater-tags">
+                    <a href="#" class="video-theater-tag">Bootstrap</a>
+                    <a href="#" class="video-theater-tag">Web Development</a>
+                    <a href="#" class="video-theater-tag">CSS</a>
+                    <a href="#" class="video-theater-tag">Tutorial</a>
+                </div>
+                
+                <div class="video-theater-actions">
+                    <button class="video-theater-action-btn">
+                        <i class="bi bi-hand-thumbs-up"></i>
+                        <span>Like</span>
+                    </button>
+                    <button class="video-theater-action-btn">
+                        <i class="bi bi-share"></i>
+                        <span>Share</span>
+                    </button>
+                    <button class="video-theater-action-btn">
+                        <i class="bi bi-download"></i>
+                        <span>Download</span>
+                    </button>
+                    <button class="video-theater-action-btn">
+                        <i class="bi bi-three-dots"></i>
+                        <span>More</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compact Theater -->
+    <section class="py-section">
+        <div class="container">
+            <h3 class="mb-4">Compact Variant</h3>
+            <div class="video-theater video-theater-compact">
+                <div class="video-theater-container">
+                    <div class="video-theater-player">
+                        <iframe 
+                            src="https://www.youtube.com/embed/jNQXAC9IVRw" 
+                            title="YouTube video" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-theater-info">
+                        <h3 class="video-theater-title">Compact Theater Mode</h3>
+                        <div class="video-theater-meta">
+                            <span class="video-theater-views">850K views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         CHANNEL HEADERS
+         ========================================================== -->
+    <section id="channel-headers" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">CHANNEL COMPONENTS</div>
+            <h2 class="section-heading text-dark">Channel Header Compact (Light)</h2>
+            <p class="section-intro text-muted">Compact YouTube-style channel card for light backgrounds.</p>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="channel-header-compact">
+                        <div class="channel-avatar">
+                            <img src="https://i.pravatar.cc/128?img=11" alt="Channel Avatar">
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name-row">
+                                <h4 class="channel-name">TechTutor Pro</h4>
+                                <span class="channel-badge">YOUTUBE</span>
+                            </div>
+                            <div class="channel-stats">
+                                <div class="channel-stat-item">
+                                    <span class="channel-stat-value">1.2K</span>
+                                    <span class="channel-stat-label">subscribers</span>
+                                </div>
+                                <span class="stat-separator"></span>
+                                <div class="channel-stat-item">
+                                    <span class="channel-stat-value">610</span>
+                                    <span class="channel-stat-label">videos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-actions">
+                            <a href="#" class="channel-btn-visit">
+                                <i class="bi bi-youtube"></i>
+                                <span>VISIT CHANNEL</span>
+                            </a>
+                            <a href="#" class="channel-btn-subscribe">
+                                <i class="bi bi-youtube"></i>
+                                <span>SUBSCRIBE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Channel Header Full (with Banner)</h2>
+            <p class="section-intro text-muted">Full channel header with banner image.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="channel-header-full has-banner">
+                        <div class="channel-banner">
+                            <img src="https://placehold.co/1200x300/1a365d/fff?text=Channel+Banner" alt="Channel Banner">
+                        </div>
+                        <div class="channel-content">
+                            <div class="channel-avatar">
+                                <img src="https://i.pravatar.cc/128?img=12" alt="Channel Avatar">
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name-row">
+                                    <h3 class="channel-name">Digital Creator Studio</h3>
+                                    <span class="channel-badge">YOUTUBE</span>
+                                </div>
+                                <div class="channel-stats">
+                                    <div class="channel-stat-item">
+                                        <span class="channel-stat-value">2.5M</span>
+                                        <span class="channel-stat-label">subscribers</span>
+                                    </div>
+                                    <div class="channel-stat-item">
+                                        <span class="channel-stat-value">850</span>
+                                        <span class="channel-stat-label">videos</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="channel-actions">
+                                <a href="#" class="channel-btn-visit">
+                                    <i class="bi bi-youtube"></i>
+                                    <span>VISIT CHANNEL</span>
+                                </a>
+                                <a href="#" class="channel-btn-subscribe">
+                                    <i class="bi bi-youtube"></i>
+                                    <span>SUBSCRIBE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Channel Headers -->
+    <section class="py-section bg-dark">
+        <div class="container">
+            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">DARK BACKGROUND</div>
+            <h2 class="section-heading text-white">Channel Header Compact Dark</h2>
+            <p class="section-intro text-white-70">Compact channel card for dark backgrounds.</p>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="channel-header-compact-dark">
+                        <div class="channel-avatar">
+                            <img src="https://i.pravatar.cc/128?img=13" alt="Channel Avatar">
+                        </div>
+                        <div class="channel-info">
+                            <div class="channel-name-row">
+                                <h4 class="channel-name">Night Owl Gaming</h4>
+                                <span class="channel-badge">YOUTUBE</span>
+                            </div>
+                            <div class="channel-stats">
+                                <div class="channel-stat-item">
+                                    <span class="channel-stat-value">890K</span>
+                                    <span class="channel-stat-label">subscribers</span>
+                                </div>
+                                <span class="stat-separator"></span>
+                                <div class="channel-stat-item">
+                                    <span class="channel-stat-value">1.2K</span>
+                                    <span class="channel-stat-label">videos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="channel-actions">
+                            <a href="#" class="channel-btn-visit">
+                                <i class="bi bi-youtube"></i>
+                                <span>VISIT CHANNEL</span>
+                            </a>
+                            <a href="#" class="channel-btn-subscribe">
+                                <i class="bi bi-youtube"></i>
+                                <span>SUBSCRIBE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-white mt-5">Channel Header Full Dark (with Banner)</h2>
+            <p class="section-intro text-white-70">Full dark channel header with banner.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="channel-header-full-dark has-banner">
+                        <div class="channel-banner">
+                            <img src="https://placehold.co/1200x300/7c3aed/fff?text=Gaming+Channel" alt="Channel Banner">
+                        </div>
+                        <div class="channel-content">
+                            <div class="channel-avatar">
+                                <img src="https://i.pravatar.cc/128?img=14" alt="Channel Avatar">
+                            </div>
+                            <div class="channel-info">
+                                <div class="channel-name-row">
+                                    <h3 class="channel-name">Cosmic Adventures</h3>
+                                    <span class="channel-badge">YOUTUBE</span>
+                                </div>
+                                <div class="channel-stats">
+                                    <div class="channel-stat-item">
+                                        <span class="channel-stat-value">5.1M</span>
+                                        <span class="channel-stat-label">subscribers</span>
+                                    </div>
+                                    <div class="channel-stat-item">
+                                        <span class="channel-stat-value">2K</span>
+                                        <span class="channel-stat-label">videos</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="channel-actions">
+                                <a href="#" class="channel-btn-visit">
+                                    <i class="bi bi-youtube"></i>
+                                    <span>VISIT CHANNEL</span>
+                                </a>
+                                <a href="#" class="channel-btn-subscribe">
+                                    <i class="bi bi-youtube"></i>
+                                    <span>SUBSCRIBE</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         MEDIA LIST
+         ========================================================== -->
+    <section id="media-list" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">MEDIA LISTS</div>
+            <h2 class="section-heading text-dark">Media List (Horizontal)</h2>
+            <p class="section-intro text-muted">List layout for podcasts, videos, and media content.</p>
+            
+            <div class="media-list mb-5">
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=300&h=200&fit=crop" alt="Podcast">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">45:23</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Building a Successful Web Business</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Jan 28, 2026</span>
+                            <span><i class="bi bi-clock"></i> 45 min</span>
+                            <span><i class="bi bi-headphones"></i> Podcast</span>
+                        </div>
+                        <p class="media-desc">In this episode, we discuss strategies for building and scaling a successful web development business.</p>
+                        <div class="media-actions">
+                            <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-play-fill me-1"></i> Listen</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-download me-1"></i> Download</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="media-item featured">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=200&fit=crop" alt="Tutorial">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">1:23:45</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Complete CSS Grid Masterclass</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Jan 25, 2026</span>
+                            <span><i class="bi bi-clock"></i> 1h 23min</span>
+                            <span><i class="bi bi-camera-video"></i> Video</span>
+                        </div>
+                        <p class="media-desc">A comprehensive deep-dive into CSS Grid layout, covering everything from basics to advanced patterns.</p>
+                        <div class="media-actions">
+                            <a href="#" class="btn btn-primary btn-sm"><i class="bi bi-play-fill me-1"></i> Watch</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="bi bi-bookmark me-1"></i> Save</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Media List Grid</h2>
+            <p class="section-intro text-muted">Grid layout for video/article lists. Supports images and iframe embeds.</p>
+            
+            <div class="media-list media-list-grid">
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=340&fit=crop" alt="Design">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">32:10</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Getting Started with Web Development</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-clock"></i> 32 min</span>
+                            <span><i class="bi bi-eye"></i> 125K views</span>
+                        </div>
+                        <p class="media-desc">Essential web development principles every developer should know.</p>
+                    </div>
+                </article>
+
+                <!-- YouTube Embed Item -->
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Embedded YouTube Video</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-clock"></i> 3:32</span>
+                            <span><i class="bi bi-eye"></i> 1M views</span>
+                        </div>
+                        <p class="media-desc">Media items support iframe embeds for YouTube and other video platforms.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=340&fit=crop" alt="Server">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">8:45</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">CSS Grid Layout Tutorial</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-clock"></i> 8 min</span>
+                            <span><i class="bi bi-eye"></i> 89K views</span>
+                        </div>
+                        <p class="media-desc">Practical tips for optimizing CSS Grid layouts for responsive design.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=340&fit=crop" alt="Analytics">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">15:20</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Responsive Design Best Practices</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-clock"></i> 15 min</span>
+                            <span><i class="bi bi-eye"></i> 67K views</span>
+                        </div>
+                        <p class="media-desc">Understanding responsive design to create flexible, adaptive layouts.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         GALLERY
+         ========================================================== -->
+    <section id="gallery" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">IMAGE GALLERY</div>
+            <h2 class="section-heading text-dark">Gallery Grid (Light)</h2>
+            <p class="section-intro text-muted">Responsive image grid with hover captions.</p>
+            
+            <div class="gallery-grid mb-5">
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Gallery 1" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Alpha</span>
+                            <span class="caption-credit">Web Application</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=400&fit=crop" alt="Gallery 2" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Beta</span>
+                            <span class="caption-credit">Mobile App</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=400&fit=crop" alt="Gallery 3" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Gamma</span>
+                            <span class="caption-credit">E-Commerce</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop" alt="Gallery 4" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Delta</span>
+                            <span class="caption-credit">Brand Identity</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=400&fit=crop" alt="Gallery 5" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Epsilon</span>
+                            <span class="caption-credit">Marketing Campaign</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=400&fit=crop" alt="Gallery 6" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Project Zeta</span>
+                            <span class="caption-credit">Code Review</span>
+                        </figcaption>
+                    </figure>
+                </button>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Gallery List (Horizontal Scroll)</h2>
+            <p class="section-intro text-muted">Scrollable gallery strip for featured images.</p>
+            
+            <div class="gallery-list">
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop" alt="Scroll 1" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Team Planning</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Scroll 2" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Development</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&h=300&fit=crop" alt="Scroll 3" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Analytics</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&h=300&fit=crop" alt="Scroll 4" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Presentation</span>
+                        </figcaption>
+                    </figure>
+                </button>
+                <button class="gallery-item">
+                    <figure class="gallery-figure">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop" alt="Scroll 5" class="gallery-image">
+                        <figcaption class="gallery-caption">
+                            <span class="caption-text">Workshop</span>
+                        </figcaption>
+                    </figure>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         CAROUSELS
+         ========================================================== -->
+    <section id="carousels" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">CAROUSEL</div>
+            <h2 class="section-heading text-dark">Image Carousel</h2>
+            <p class="section-intro text-muted">Bootstrap carousel with thumbnails.</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div id="carouselDemo" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-3 overflow-hidden">
+                            <div class="carousel-item active">
+                                <img src="https://placehold.co/800x450/2563eb/fff?text=Slide+1" class="d-block w-100" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/800x450/059669/fff?text=Slide+2" class="d-block w-100" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://placehold.co/800x450/d97706/fff?text=Slide+3" class="d-block w-100" alt="Slide 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-2">&copy; 2026 StoneWick Theme</p>
+                    <p class="small text-muted mb-0">
+                        <a href="kitchen-sink.html">Index</a> · 
+                        <a href="ks-heroes-layout.html">Heroes</a> · 
+                        <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-media.html">Media</a> · 
+                        <a href="ks-data.html">Data</a> · 
+                        <a href="ks-interactive.html">Interactive</a> · 
+                        <a href="ks-navigation.html">Navigation</a> · 
+                        <a href="ks-commerce.html">Commerce</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

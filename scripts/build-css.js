@@ -1,0 +1,242 @@
+/**
+ * StoneWick CSS Build Script
+ * Bundles CSS modules with PostCSS processing
+ */
+
+const fs = require('fs');
+const path = require('path');
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const postcssImport = require('postcss-import');
+
+// Build configuration
+const config = {
+  srcDir: path.resolve(__dirname, '../src/css'),
+  distDir: path.resolve(__dirname, '../dist'),
+  
+  // Module definitions
+  modules: {
+    // Core bundle (always required)
+    core: {
+      output: 'core.css',
+      files: [
+        'core/_variables.css',
+        'core/_base.css',
+        'core/_typography.css',
+        'core/_utilities.css'
+      ]
+    },
+    
+    // Bootstrap overrides
+    bootstrap: {
+      output: 'bootstrap.css',
+      files: [
+        'bootstrap/_bs5-overrides.css'
+      ]
+    },
+    
+    // Layout module
+    layout: {
+      output: 'layout.css',
+      files: [
+        'layout/_layout.css',
+        'layout/_responsive.css'
+      ]
+    },
+    
+    // Feature modules
+    cards: {
+      output: 'modules/cards.css',
+      files: [
+        'modules/cards/_cards.css',
+        'modules/cards/_badges.css',
+        'modules/cards/_testimonials.css'
+      ]
+    },
+    
+    navigation: {
+      output: 'modules/navigation.css',
+      files: [
+        'modules/navigation/_navbar.css',
+        'modules/navigation/_tabs.css',
+        'modules/navigation/_pagination.css',
+        'modules/navigation/_breadcrumbs.css'
+      ]
+    },
+    
+    media: {
+      output: 'modules/media.css',
+      files: [
+        'modules/media/_hero.css',
+        'modules/media/_gallery.css',
+        'modules/media/_media-list.css',
+        'modules/media/_video-theater.css',
+        'modules/media/_channel-header.css'
+      ]
+    },
+    
+    commerce: {
+      output: 'modules/commerce.css',
+      files: [
+        'modules/commerce/_products.css',
+        'modules/commerce/_tables.css'
+      ]
+    },
+    
+    interactive: {
+      output: 'modules/interactive.css',
+      files: [
+        'modules/interactive/_modals.css',
+        'modules/interactive/_slider.css',
+        'modules/interactive/_metrics.css',
+        'modules/interactive/_timeline.css',
+        'modules/interactive/_section-transitions.css'
+      ]
+    }
+  },
+  
+  // Full bundle includes all modules
+  fullBundle: {
+    output: 'stonewick.css',
+    modules: ['core', 'bootstrap', 'layout', 'cards', 'navigation', 'media', 'commerce', 'interactive']
+  }
+};
+
+// PostCSS plugins
+const postcssPlugins = [
+  postcssImport(),
+  autoprefixer()
+];
+
+const postcssMinifyPlugins = [
+  ...postcssPlugins,
+  cssnano({
+    preset: ['default', {
+      discardComments: { removeAll: true },
+      normalizeWhitespace: true
+    }]
+  })
+];
+
+// Utility functions
+function ensureDir(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+function readFile(filePath) {
+  try {
+    return fs.readFileSync(filePath, 'utf8');
+  } catch (err) {
+    console.warn(`Warning: Could not read ${filePath}`);
+    return '';
+  }
+}
+
+async function processCSS(css, minify = false) {
+  const plugins = minify ? postcssMinifyPlugins : postcssPlugins;
+  const result = await postcss(plugins).process(css, { from: undefined });
+  return result.css;
+}
+
+// Build a single module
+async function buildModule(name, moduleConfig) {
+  console.log(`Building module: ${name}`);
+  
+  let css = `/* StoneWick Theme - ${name} module */\n`;
+  css += `/* Generated: ${new Date().toISOString()} */\n\n`;
+  
+  for (const file of moduleConfig.files) {
+    const filePath = path.join(config.srcDir, file);
+    const content = readFile(filePath);
+    if (content) {
+      css += `/* === ${file} === */\n`;
+      css += content + '\n\n';
+    }
+  }
+  
+  const outputPath = path.join(config.distDir, moduleConfig.output);
+  const outputDir = path.dirname(outputPath);
+  ensureDir(outputDir);
+  
+  // Write unminified
+  const processed = await processCSS(css, false);
+  fs.writeFileSync(outputPath, processed);
+  
+  // Write minified
+  const minified = await processCSS(css, true);
+  const minPath = outputPath.replace('.css', '.min.css');
+  fs.writeFileSync(minPath, minified);
+  
+  const size = Buffer.byteLength(minified, 'utf8');
+  console.log(`  → ${moduleConfig.output} (${(size / 1024).toFixed(2)} KB minified)`);
+}
+
+// Build full bundle
+async function buildFullBundle() {
+  console.log('Building full bundle...');
+  
+  let css = `/* StoneWick Theme - Full Bundle */\n`;
+  css += `/* Version: ${require('../package.json').version} */\n`;
+  css += `/* Generated: ${new Date().toISOString()} */\n\n`;
+  
+  for (const moduleName of config.fullBundle.modules) {
+    const moduleConfig = config.modules[moduleName];
+    css += `/* ========================================\n`;
+    css += `   ${moduleName.toUpperCase()} MODULE\n`;
+    css += `   ======================================== */\n\n`;
+    
+    for (const file of moduleConfig.files) {
+      const filePath = path.join(config.srcDir, file);
+      const content = readFile(filePath);
+      if (content) {
+        css += content + '\n\n';
+      }
+    }
+  }
+  
+  const outputPath = path.join(config.distDir, config.fullBundle.output);
+  ensureDir(config.distDir);
+  
+  // Write unminified
+  const processed = await processCSS(css, false);
+  fs.writeFileSync(outputPath, processed);
+  
+  // Write minified
+  const minified = await processCSS(css, true);
+  const minPath = outputPath.replace('.css', '.min.css');
+  fs.writeFileSync(minPath, minified);
+  
+  const size = Buffer.byteLength(minified, 'utf8');
+  console.log(`  → ${config.fullBundle.output} (${(size / 1024).toFixed(2)} KB minified)`);
+}
+
+// Main build function
+async function build() {
+  console.log('🎨 StoneWick CSS Build\n');
+  
+  const startTime = Date.now();
+  
+  // Clean dist
+  ensureDir(config.distDir);
+  ensureDir(path.join(config.distDir, 'modules'));
+  
+  // Build individual modules
+  for (const [name, moduleConfig] of Object.entries(config.modules)) {
+    await buildModule(name, moduleConfig);
+  }
+  
+  // Build full bundle
+  await buildFullBundle();
+  
+  const elapsed = Date.now() - startTime;
+  console.log(`\n✅ Build complete in ${elapsed}ms`);
+}
+
+// Run build
+build().catch(err => {
+  console.error('Build failed:', err);
+  process.exit(1);
+});

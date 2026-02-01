@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoneWick Theme Kitchen Sink - Part 2: Navigation</title>
+    <meta name="description" content="Navigation components: tabs, pagination, breadcrumbs for StoneWick theme.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="brand-text">Kitchen Sink 2</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#navbar-variants">Navbar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tabs">Tabs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#breadcrumbs">Breadcrumbs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#load-more">Load More</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">← Part 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink-3.html">Part 3 →</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================
+         INTRO HERO
+         ========================================================== -->
+    <section class="hero hero-compact pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">KITCHEN SINK PART 2</p>
+                    <h1>Navigation Components</h1>
+                    <p class="lead">Navbar, tabs, pagination, breadcrumbs, and navigation patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         NAVBAR VARIANTS
+         ========================================================== -->
+    
+    <section id="navbar-variants" class="py-5">
+        <div class="container">
+            <h2 class="h3 mb-2">Navbar Variants</h2>
+            <p class="text-muted mb-5">Theme variants, scroll effects, and advanced patterns</p>
+
+            <!-- Navbar Solid Dark -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Solid Dark (Default)</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 1;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo1">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo1">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Navbar Solid Light -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Solid Light</h3>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-solid-light rounded position-relative" style="z-index: 1; border: 1px solid var(--bs-gray-200);">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo2">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo2">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Navbar Primary -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Primary Color</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-primary rounded position-relative" style="z-index: 1;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo3">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo3">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <a href="#" class="btn btn-light">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Navbar Glass -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Glass Effect (Dark)</h3>
+                <div class="p-4 rounded" style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);">
+                    <nav class="navbar navbar-expand-lg navbar-glass rounded position-relative" style="z-index: 1;">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Brand</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo4">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarDemo4">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                                </ul>
+                                <div class="nav-cta">
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Navbar Glass Light -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Glass Effect (Light)</h3>
+                <div class="p-4 rounded" style="background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);">
+                    <nav class="navbar navbar-expand-lg navbar-glass-light rounded position-relative" style="z-index: 1;">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">Brand</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo4b">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarDemo4b">
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                                </ul>
+                                <div class="nav-cta">
+                                    <a href="#" class="btn btn-primary">Get Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Navbar with Search -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">With Search</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 1;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo5">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo5">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                            </ul>
+                            <div class="nav-search me-3">
+                                <i class="bi bi-search nav-search-icon"></i>
+                                <input type="search" class="nav-search-input" placeholder="Search...">
+                            </div>
+                            <div class="nav-cta">
+                                <a href="#" class="btn btn-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Navbar with User Menu -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">With User Menu</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 1;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo6">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo6">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                            </ul>
+                            <div class="navbar-divider d-none d-lg-block"></div>
+                            <li class="nav-item dropdown list-unstyled">
+                                <a class="nav-link dropdown-toggle nav-user" href="#" role="button" data-bs-toggle="dropdown">
+                                    <img src="https://i.pravatar.cc/36?img=8" alt="User" class="nav-user-avatar">
+                                    <span class="nav-user-name">John Doe</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                                    <li>
+                                        <div class="nav-user-header">
+                                            <div class="nav-user-header-name">John Doe</div>
+                                            <div class="nav-user-header-email">john@example.com</div>
+                                        </div>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Nested Dropdown Demo -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Nested Dropdowns</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 3;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo8">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo8">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                        Services
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Overview</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="#">Web Development</a>
+                                            <ul class="dropdown-menu dropdown-menu-dark">
+                                                <li><a class="dropdown-item" href="#">Frontend</a></li>
+                                                <li><a class="dropdown-item" href="#">Backend</a></li>
+                                                <li><a class="dropdown-item" href="#">Full Stack</a></li>
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item" href="#">Frameworks</a>
+                                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                                        <li><a class="dropdown-item" href="#">React</a></li>
+                                                        <li><a class="dropdown-item" href="#">Vue</a></li>
+                                                        <li><a class="dropdown-item" href="#">Angular</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="#">Mobile Apps</a>
+                                            <ul class="dropdown-menu dropdown-menu-dark">
+                                                <li><a class="dropdown-item" href="#">iOS</a></li>
+                                                <li><a class="dropdown-item" href="#">Android</a></li>
+                                                <li><a class="dropdown-item" href="#">Cross-Platform</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Cloud Solutions</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                            </ul>
+                            <div class="nav-cta">
+                                <a href="#" class="btn btn-primary">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <p class="small text-muted mt-2"><i class="bi bi-info-circle me-1"></i>Hover over "Services" then "Web Development" to see nested submenus.</p>
+            </div>
+
+            <!-- Right-Aligned Nested Dropdowns (Edge Prevention) -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Right-Aligned Nested Dropdowns</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 4;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo8b">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo8b">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                        Account
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#">Security</a></li>
+                                                <li class="dropdown-submenu">
+                                                    <a class="dropdown-item" href="#">Notifications</a>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Email</a></li>
+                                                        <li><a class="dropdown-item" href="#">Push</a></li>
+                                                        <li><a class="dropdown-item" href="#">SMS</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <p class="small text-muted mt-2"><i class="bi bi-info-circle me-1"></i>Using <code>.dropdown-menu-end</code> - nested menus automatically open to the left to prevent viewport overflow.</p>
+            </div>
+
+            <!-- Light Navbar with Mega Menu -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Light Navbar with Mega Menu</h3>
+                <nav class="navbar navbar-expand-lg navbar-light navbar-solid-light rounded position-relative" style="z-index: 2; border: 1px solid var(--bs-gray-200);">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo9">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo9">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item position-static">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                        Products
+                                    </a>
+                                    <div class="mega-menu">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6>Services</h6>
+                                                    <a href="#">Web Development</a>
+                                                    <a href="#">Mobile Apps</a>
+                                                    <a href="#">Cloud Solutions</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6>Resources</h6>
+                                                    <a href="#">Documentation</a>
+                                                    <a href="#">API Reference</a>
+                                                    <a href="#">Blog</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6>Company</h6>
+                                                    <a href="#">About Us</a>
+                                                    <a href="#">Careers</a>
+                                                    <a href="#">Contact</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mega-menu-featured">
+                                                        <h6>Featured</h6>
+                                                        <p class="small text-muted">Our newest offering for enterprise clients.</p>
+                                                        <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">More</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                        <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <p class="small text-muted mt-2"><i class="bi bi-info-circle me-1"></i>Light navbar automatically inherits light mega menu and dropdown styling.</p>
+            </div>
+
+            <!-- User Menu Variants -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">User Menu Variants</h3>
+                <div class="row g-4">
+                    <!-- Dark navbar user menu -->
+                    <div class="col-lg-6">
+                        <p class="small fw-semibold mb-2">Dark Navbar (Auto Dark Dropdown)</p>
+                        <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">App</a>
+                                <div class="navbar-divider d-none d-lg-block"></div>
+                                <li class="nav-item dropdown list-unstyled">
+                                    <a class="nav-link dropdown-toggle nav-user" href="#" role="button" data-bs-toggle="dropdown">
+                                        <img src="https://i.pravatar.cc/36?img=3" alt="User" class="nav-user-avatar">
+                                        <span class="nav-user-name">Jane Smith</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <div class="nav-user-header">
+                                                <div class="nav-user-header-name">Jane Smith</div>
+                                                <div class="nav-user-header-email">jane@company.com</div>
+                                            </div>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </nav>
+                    </div>
+                    <!-- Light navbar user menu -->
+                    <div class="col-lg-6">
+                        <p class="small fw-semibold mb-2">Light Navbar (Auto Light Dropdown)</p>
+                        <nav class="navbar navbar-expand-lg navbar-light navbar-solid-light rounded" style="border: 1px solid var(--bs-gray-200);">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">App</a>
+                                <div class="navbar-divider d-none d-lg-block"></div>
+                                <li class="nav-item dropdown list-unstyled">
+                                    <a class="nav-link dropdown-toggle nav-user" href="#" role="button" data-bs-toggle="dropdown">
+                                        <img src="https://i.pravatar.cc/36?img=5" alt="User" class="nav-user-avatar">
+                                        <span class="nav-user-name">Mike Jones</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li>
+                                            <div class="nav-user-header">
+                                                <div class="nav-user-header-name">Mike Jones</div>
+                                                <div class="nav-user-header-email">mike@company.com</div>
+                                            </div>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Profile</a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-gear me-2"></i>Settings</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <p class="small text-muted mt-3"><i class="bi bi-info-circle me-1"></i>User header text automatically adapts contrast based on parent navbar variant.</p>
+            </div>
+
+            <!-- Offcanvas Navbar -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Offcanvas Navbar (Drill Panel Navigation)</h3>
+                
+                <!-- Demo Trigger Navbars -->
+                <div class="row g-3 mb-3">
+                    <div class="col-lg-6">
+                        <p class="small fw-semibold mb-2">Dark Offcanvas</p>
+                        <nav class="navbar navbar-dark navbar-solid rounded">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="small fw-semibold mb-2">Light Offcanvas</p>
+                        <nav class="navbar navbar-light navbar-solid-light rounded" style="border: 1px solid var(--bs-gray-200);">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Brand</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLight">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <p class="small text-muted"><i class="bi bi-info-circle me-1"></i>Click the hamburger menu to open. Features drill-panel navigation, branding, social links, contact info, and CTA.</p>
+            </div>
+
+            <!-- Mega Menu Demo -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Mega Menu</h3>
+                <nav class="navbar navbar-expand-lg navbar-dark navbar-solid rounded position-relative" style="z-index: 2;">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDemo7">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarDemo7">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                                <li class="nav-item position-static">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                        Products
+                                    </a>
+                                    <div class="mega-menu mega-menu-dark">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <h6>Services</h6>
+                                                    <a href="#">Web Development</a>
+                                                    <a href="#">Mobile Apps</a>
+                                                    <a href="#">Cloud Solutions</a>
+                                                    <a href="#">Consulting</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6>Resources</h6>
+                                                    <a href="#">Documentation</a>
+                                                    <a href="#">API Reference</a>
+                                                    <a href="#">Blog</a>
+                                                    <a href="#">Community</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <h6>Company</h6>
+                                                    <a href="#">About Us</a>
+                                                    <a href="#">Careers</a>
+                                                    <a href="#">Contact</a>
+                                                    <a href="#">Partners</a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="mega-menu-featured">
+                                                        <h6>Featured</h6>
+                                                        <p class="small text-white-50">Check out our latest product release with amazing new features.</p>
+                                                        <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Scroll Effects Note -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Scroll Effects</h3>
+                <div class="alert alert-info">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <strong>Available Classes:</strong> Add <code>.navbar-shrink</code> for height reduction on scroll, 
+                    <code>.navbar-transparent</code> for hero overlays that become solid on scroll, or 
+                    <code>.navbar-autohide</code> for hide-on-scroll-down behavior. 
+                    Apply <code>.scrolled</code> class via JavaScript when page scrolls.
+                </div>
+                <pre class="bg-dark text-white p-3 rounded"><code>// Example scroll handler
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         TAB NAVIGATION
+         ========================================================== -->
+    
+    <!-- Basic Tabs (Light) -->
+    <section id="tabs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="h3 mb-2">Tab Navigation</h2>
+            <p class="text-muted mb-5">Themed tab styles with state demonstrations</p>
+
+            <!-- Standard Tabs -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Standard Tabs</h3>
+                <ul class="nav nav-tabs mb-3" id="basicTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link disabled" id="disabled-tab" data-bs-toggle="tab" type="button" role="tab" aria-disabled="true">Disabled</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="basicTabsContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="p-4 bg-light rounded">
+                            <h4>Home Content</h4>
+                            <p class="mb-0">This is the home tab content. Standard tabs use an underline indicator to show the active state.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="p-4 bg-light rounded">
+                            <h4>Profile Content</h4>
+                            <p class="mb-0">Profile tab content area with additional information about the user.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="p-4 bg-light rounded">
+                            <h4>Contact Content</h4>
+                            <p class="mb-0">Contact form or information would appear in this tab panel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pill Tabs -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Pill Navigation</h3>
+                <ul class="nav nav-pills mb-3" id="pillTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pill-home-tab" data-bs-toggle="tab" data-bs-target="#pill-home" type="button" role="tab">Overview</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pill-features-tab" data-bs-toggle="tab" data-bs-target="#pill-features" type="button" role="tab">Features</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pill-pricing-tab" data-bs-toggle="tab" data-bs-target="#pill-pricing" type="button" role="tab">Pricing</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link disabled" type="button" role="tab" aria-disabled="true">Coming Soon</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pillTabsContent">
+                    <div class="tab-pane fade show active" id="pill-home" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Pills provide a more prominent, button-like navigation style.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pill-features" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Features content with pill navigation styling.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pill-pricing" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Pricing content area for pill tabs demonstration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Underline Tabs -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Underline Navigation</h3>
+                <ul class="nav nav-underline mb-3" id="underlineTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="ul-all-tab" data-bs-toggle="tab" data-bs-target="#ul-all" type="button" role="tab">All Items</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ul-active-tab" data-bs-toggle="tab" data-bs-target="#ul-active" type="button" role="tab">Active</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="ul-archived-tab" data-bs-toggle="tab" data-bs-target="#ul-archived" type="button" role="tab">Archived</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="underlineTabsContent">
+                    <div class="tab-pane fade show active" id="ul-all" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Underline tabs provide a minimal, modern navigation style.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ul-active" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Active items filtered view.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="ul-archived" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Archived items filtered view.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs with Icons -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Tabs with Icons</h3>
+                <ul class="nav nav-tabs mb-3" id="iconTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="icon-dashboard-tab" data-bs-toggle="tab" data-bs-target="#icon-dashboard" type="button" role="tab">
+                            <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="icon-orders-tab" data-bs-toggle="tab" data-bs-target="#icon-orders" type="button" role="tab">
+                            <i class="bi bi-cart me-2"></i>Orders
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="icon-settings-tab" data-bs-toggle="tab" data-bs-target="#icon-settings" type="button" role="tab">
+                            <i class="bi bi-gear me-2"></i>Settings
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="iconTabsContent">
+                    <div class="tab-pane fade show active" id="icon-dashboard" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Dashboard content with icons in tab navigation for visual clarity.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="icon-orders" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Orders management content area.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="icon-settings" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Settings panel content area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pills with Badges -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Pills with Badges</h3>
+                <ul class="nav nav-pills mb-3" id="badgeTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="badge-inbox-tab" data-bs-toggle="tab" data-bs-target="#badge-inbox" type="button" role="tab">
+                            Inbox <span class="badge bg-light text-primary ms-2">12</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="badge-sent-tab" data-bs-toggle="tab" data-bs-target="#badge-sent" type="button" role="tab">
+                            Sent <span class="badge bg-primary ms-2">5</span>
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="badge-drafts-tab" data-bs-toggle="tab" data-bs-target="#badge-drafts" type="button" role="tab">
+                            Drafts <span class="badge bg-primary ms-2">3</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="badgeTabsContent">
+                    <div class="tab-pane fade show active" id="badge-inbox" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Inbox messages list would appear here. Badge shows unread count.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="badge-sent" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Sent messages list.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="badge-drafts" role="tabpanel">
+                        <div class="p-4 bg-light rounded">
+                            <p class="mb-0">Draft messages awaiting completion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Tabs -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Vertical Tabs</h3>
+                <div class="d-flex align-items-start">
+                    <div class="nav flex-column nav-pills me-4" id="verticalTabs" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-general-tab" data-bs-toggle="pill" data-bs-target="#v-general" type="button" role="tab">General</button>
+                        <button class="nav-link" id="v-security-tab" data-bs-toggle="pill" data-bs-target="#v-security" type="button" role="tab">Security</button>
+                        <button class="nav-link" id="v-notifications-tab" data-bs-toggle="pill" data-bs-target="#v-notifications" type="button" role="tab">Notifications</button>
+                        <button class="nav-link disabled" type="button" role="tab" aria-disabled="true">Billing</button>
+                    </div>
+                    <div class="tab-content flex-grow-1" id="verticalTabsContent">
+                        <div class="tab-pane fade show active" id="v-general" role="tabpanel">
+                            <div class="p-4 bg-light rounded">
+                                <h5>General Settings</h5>
+                                <p class="mb-0">Configure general account settings and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-security" role="tabpanel">
+                            <div class="p-4 bg-light rounded">
+                                <h5>Security Settings</h5>
+                                <p class="mb-0">Manage passwords, 2FA, and security preferences.</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-notifications" role="tabpanel">
+                            <div class="p-4 bg-light rounded">
+                                <h5>Notification Settings</h5>
+                                <p class="mb-0">Configure email and push notification preferences.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab States Demo -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Tab States (Static Demo)</h3>
+                <p class="text-muted small mb-3">Visual reference for all tab states</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h6 class="small text-uppercase text-muted mb-3">Standard Tabs</h6>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item"><span class="nav-link active">Active</span></li>
+                            <li class="nav-item"><span class="nav-link">Default</span></li>
+                            <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="small text-uppercase text-muted mb-3">Pill Tabs</h6>
+                        <ul class="nav nav-pills">
+                            <li class="nav-item"><span class="nav-link active">Active</span></li>
+                            <li class="nav-item"><span class="nav-link">Default</span></li>
+                            <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabs on Dark Background -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="h3 mb-2 text-white">Tabs on Dark Background</h2>
+            <p class="text-white-50 mb-5">Dark variant tabs for dark sections</p>
+
+            <!-- Dark Tabs -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3 text-white">Standard Tabs (Dark)</h3>
+                <ul class="nav nav-tabs nav-tabs-dark mb-3" id="darkTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="dark-home-tab" data-bs-toggle="tab" data-bs-target="#dark-home" type="button" role="tab">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="dark-about-tab" data-bs-toggle="tab" data-bs-target="#dark-about" type="button" role="tab">About</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="dark-services-tab" data-bs-toggle="tab" data-bs-target="#dark-services" type="button" role="tab">Services</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link disabled" type="button" role="tab" aria-disabled="true">Disabled</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="darkTabsContent">
+                    <div class="tab-pane fade show active" id="dark-home" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">Dark tabs work well on dark backgrounds with adjusted colors.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dark-about" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">About section content on dark background.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dark-services" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">Services section content on dark background.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Pills -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3 text-white">Pill Navigation (Dark)</h3>
+                <ul class="nav nav-pills nav-pills-dark mb-3" id="darkPills" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="dpill-one-tab" data-bs-toggle="tab" data-bs-target="#dpill-one" type="button" role="tab">Option One</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="dpill-two-tab" data-bs-toggle="tab" data-bs-target="#dpill-two" type="button" role="tab">Option Two</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="dpill-three-tab" data-bs-toggle="tab" data-bs-target="#dpill-three" type="button" role="tab">Option Three</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="darkPillsContent">
+                    <div class="tab-pane fade show active" id="dpill-one" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">Dark pill navigation content panel.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dpill-two" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">Second option content panel.</p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="dpill-three" role="tabpanel">
+                        <div class="p-4 rounded" style="background: rgba(255,255,255,0.05);">
+                            <p class="mb-0 text-white-50">Third option content panel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark State Demo -->
+            <div class="mb-0">
+                <h3 class="h5 mb-3 text-white">Dark Tab States (Static Demo)</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h6 class="small text-uppercase text-white-50 mb-3">Standard Tabs</h6>
+                        <ul class="nav nav-tabs nav-tabs-dark">
+                            <li class="nav-item"><span class="nav-link active">Active</span></li>
+                            <li class="nav-item"><span class="nav-link">Default</span></li>
+                            <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="small text-uppercase text-white-50 mb-3">Pill Tabs</h6>
+                        <ul class="nav nav-pills nav-pills-dark">
+                            <li class="nav-item"><span class="nav-link active">Active</span></li>
+                            <li class="nav-item"><span class="nav-link">Default</span></li>
+                            <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         PAGINATION
+         ========================================================== -->
+    
+    <section id="pagination" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="h3 mb-2">Pagination</h2>
+            <p class="text-muted mb-5">Page navigation with sizes and states</p>
+
+            <!-- Basic Pagination -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Basic Pagination</h3>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Pagination with First/Last -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">With First & Last</h3>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-double-left"></i></a></li>
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-double-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Pagination Sizes -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Sizes</h3>
+                
+                <p class="small text-muted mb-2">Large</p>
+                <nav aria-label="Large pagination">
+                    <ul class="pagination pagination-lg mb-4">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+                
+                <p class="small text-muted mb-2">Default</p>
+                <nav aria-label="Default pagination">
+                    <ul class="pagination mb-4">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+                
+                <p class="small text-muted mb-2">Small</p>
+                <nav aria-label="Small pagination">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Centered Pagination -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Centered</h3>
+                <nav aria-label="Centered pagination">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Simple Prev/Next -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Simple Previous / Next</h3>
+                <nav aria-label="Simple pagination">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#"><i class="bi bi-arrow-left me-2"></i>Previous</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next<i class="bi bi-arrow-right ms-2"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Pagination States -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">States (Static Demo)</h3>
+                <div class="d-flex flex-wrap gap-3 align-items-center">
+                    <div>
+                        <p class="small text-muted mb-2">Active</p>
+                        <ul class="pagination mb-0">
+                            <li class="page-item active"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="small text-muted mb-2">Disabled</p>
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="small text-muted mb-2">Default</p>
+                        <ul class="pagination mb-0">
+                            <li class="page-item"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination on Dark -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="h3 mb-2 text-white">Pagination on Dark</h2>
+            <p class="text-white-50 mb-5">Dark variant pagination</p>
+
+            <div class="mb-5">
+                <h3 class="h5 mb-3 text-white">Dark Pagination</h3>
+                <nav aria-label="Dark pagination">
+                    <ul class="pagination pagination-dark">
+                        <li class="page-item disabled"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                        <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="mb-0">
+                <h3 class="h5 mb-3 text-white">Dark States (Static Demo)</h3>
+                <div class="d-flex flex-wrap gap-3 align-items-center">
+                    <div>
+                        <p class="small text-white-50 mb-2">Active</p>
+                        <ul class="pagination pagination-dark mb-0">
+                            <li class="page-item active"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="small text-white-50 mb-2">Disabled</p>
+                        <ul class="pagination pagination-dark mb-0">
+                            <li class="page-item disabled"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="small text-white-50 mb-2">Default</p>
+                        <ul class="pagination pagination-dark mb-0">
+                            <li class="page-item"><span class="page-link">2</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         LOAD MORE PATTERNS
+         ========================================================== -->
+    
+    <section id="load-more" class="py-5">
+        <div class="container">
+            <h2 class="h3 mb-2">Load More Patterns</h2>
+            <p class="text-muted mb-5">Alternative pagination approaches</p>
+
+            <!-- Load More Button -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Load More Button</h3>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                            <i class="bi bi-file-earmark-text fs-1 mb-3 text-primary opacity-75"></i>
+                            <h5 class="h6 fw-bold text-dark mb-2">Item 1</h5>
+                            <p class="small mb-0">Sample content item</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                            <i class="bi bi-file-earmark-text fs-1 mb-3 text-primary opacity-75"></i>
+                            <h5 class="h6 fw-bold text-dark mb-2">Item 2</h5>
+                            <p class="small mb-0">Sample content item</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                            <i class="bi bi-file-earmark-text fs-1 mb-3 text-primary opacity-75"></i>
+                            <h5 class="h6 fw-bold text-dark mb-2">Item 3</h5>
+                            <p class="small mb-0">Sample content item</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="btn btn-outline-primary load-more-btn">
+                        <span class="load-more-text">Load More</span>
+                        <span class="load-more-spinner d-none">
+                            <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            Loading...
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Load More States -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Load More States</h3>
+                <div class="d-flex flex-wrap gap-3">
+                    <button type="button" class="btn btn-outline-primary load-more-btn">
+                        Load More
+                    </button>
+                    <button type="button" class="btn btn-outline-primary load-more-btn" disabled>
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Loading...
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" disabled>
+                        No More Items
+                    </button>
+                </div>
+            </div>
+
+            <!-- Infinite Scroll Trigger -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Infinite Scroll Indicators</h3>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded text-center">
+                            <h6 class="small text-uppercase text-muted mb-3">Loading State</h6>
+                            <div class="infinite-scroll-trigger">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="small text-muted mt-2 mb-0">Loading more content...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="p-4 bg-light rounded text-center">
+                            <h6 class="small text-uppercase text-muted mb-3">End of Content</h6>
+                            <div class="no-more-content">
+                                <i class="bi bi-check-circle text-success fs-3"></i>
+                                <p class="small text-muted mt-2 mb-0">You've reached the end</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Progress Indicator</h3>
+                <div class="p-4 bg-light rounded">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="small text-muted">Showing 12 of 48 items</span>
+                        <span class="small text-muted">25%</span>
+                    </div>
+                    <div class="progress" style="height: 4px;">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         BREADCRUMBS
+         ========================================================== -->
+    
+    <section id="breadcrumbs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="h3 mb-2">Breadcrumbs</h2>
+            <p class="text-muted mb-5">Path navigation with variants</p>
+
+            <!-- Basic Breadcrumb -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Basic Breadcrumb</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Breadcrumb with Icons -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">With Icons</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door me-1"></i>Home</a></li>
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-folder me-1"></i>Products</a></li>
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-tag me-1"></i>Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-file-earmark me-1"></i>Item</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Icon Only Home -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Icon Home</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" aria-label="Home"><i class="bi bi-house-door"></i></a></li>
+                        <li class="breadcrumb-item"><a href="#">Services</a></li>
+                        <li class="breadcrumb-item"><a href="#">Web Development</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Custom Solutions</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- Custom Separators -->
+            <div class="mb-5">
+                <h3 class="h5 mb-3">Custom Separators</h3>
+                
+                <p class="small text-muted mb-2">Chevron (default)</p>
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+                
+                <p class="small text-muted mb-2">Arrow</p>
+                <nav aria-label="breadcrumb" class="mb-3" style="--bs-breadcrumb-divider: '→';">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+                
+                <p class="small text-muted mb-2">Slash</p>
+                <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '/';">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Library</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumbs on Dark -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="h3 mb-2 text-white">Breadcrumbs on Dark</h2>
+            <p class="text-white-50 mb-5">Dark variant breadcrumbs</p>
+
+            <div class="mb-5">
+                <h3 class="h5 mb-3 text-white">Dark Breadcrumb</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Products</a></li>
+                        <li class="breadcrumb-item"><a href="#">Category</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Current Item</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="mb-0">
+                <h3 class="h5 mb-3 text-white">Dark with Icons</h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-dark">
+                        <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door"></i></a></li>
+                        <li class="breadcrumb-item"><a href="#">Documentation</a></li>
+                        <li class="breadcrumb-item"><a href="#">Components</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Breadcrumbs</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         FOOTER
+         ========================================================== -->
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 StoneWick Theme. Navigation Components Kitchen Sink.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="kitchen-sink.html" class="text-white-50">← Back to Part 1</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Offcanvas Dark Variant -->
+    <div class="offcanvas offcanvas-start offcanvas-navbar" tabindex="-1" id="offcanvasDark">
+        <div class="offcanvas-header">
+            <a href="#" class="offcanvas-brand">
+                <span class="brand-text">StoneWick</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-drill-container">
+                <!-- Main Panel -->
+                <div class="offcanvas-drill-panel active" id="mainPanel">
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link active">
+                                <span><i class="bi bi-house-door"></i>Home</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="servicesPanel">
+                                <span><i class="bi bi-grid"></i>Services</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="productsPanel">
+                                <span><i class="bi bi-box"></i>Products</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-info-circle"></i>About</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-envelope"></i>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Panel -->
+                <div class="offcanvas-drill-panel" id="servicesPanel">
+                    <button class="offcanvas-back-btn" data-back="mainPanel">
+                        <i class="bi bi-chevron-left"></i>Back
+                    </button>
+                    <div class="offcanvas-panel-title">Services</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="webDevPanel">
+                                <span><i class="bi bi-code-slash"></i>Web Development</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-phone"></i>Mobile Apps</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-cloud"></i>Cloud Solutions</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-lightbulb"></i>Consulting</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Web Development Sub-Panel -->
+                <div class="offcanvas-drill-panel" id="webDevPanel">
+                    <button class="offcanvas-back-btn" data-back="servicesPanel">
+                        <i class="bi bi-chevron-left"></i>Back to Services
+                    </button>
+                    <div class="offcanvas-panel-title">Web Development</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-laptop"></i>Frontend</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-server"></i>Backend</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-layers"></i>Full Stack</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products Panel -->
+                <div class="offcanvas-drill-panel" id="productsPanel">
+                    <button class="offcanvas-back-btn" data-back="mainPanel">
+                        <i class="bi bi-chevron-left"></i>Back
+                    </button>
+                    <div class="offcanvas-panel-title">Products</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-palette"></i>Themes</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-plugin"></i>Plugins</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-book"></i>Templates</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="offcanvas-footer">
+                <!-- Contact Info -->
+                <div class="offcanvas-contact">
+                    <a href="tel:+15551234567" class="offcanvas-contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <div>
+                            <div class="offcanvas-contact-label">Call Us</div>
+                            <div class="offcanvas-contact-value">+1 (555) 123-4567</div>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@example.com" class="offcanvas-contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <div>
+                            <div class="offcanvas-contact-label">Email</div>
+                            <div class="offcanvas-contact-value">hello@example.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="offcanvas-social">
+                    <a href="#" class="offcanvas-social-link" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="offcanvas-cta">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Offcanvas Light Variant -->
+    <div class="offcanvas offcanvas-start offcanvas-navbar offcanvas-navbar-light" tabindex="-1" id="offcanvasLight">
+        <div class="offcanvas-header">
+            <a href="#" class="offcanvas-brand">
+                <span class="brand-text">StoneWick</span>
+            </a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-drill-container">
+                <!-- Main Panel -->
+                <div class="offcanvas-drill-panel active" id="mainPanelLight">
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link active">
+                                <span><i class="bi bi-house-door"></i>Home</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="servicesPanelLight">
+                                <span><i class="bi bi-grid"></i>Services</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="productsPanelLight">
+                                <span><i class="bi bi-box"></i>Products</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-info-circle"></i>About</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-envelope"></i>Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Panel -->
+                <div class="offcanvas-drill-panel" id="servicesPanelLight">
+                    <button class="offcanvas-back-btn" data-back="mainPanelLight">
+                        <i class="bi bi-chevron-left"></i>Back
+                    </button>
+                    <div class="offcanvas-panel-title">Services</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link" data-panel="webDevPanelLight">
+                                <span><i class="bi bi-code-slash"></i>Web Development</span>
+                                <i class="bi bi-chevron-right"></i>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-phone"></i>Mobile Apps</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-cloud"></i>Cloud Solutions</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Web Development Sub-Panel -->
+                <div class="offcanvas-drill-panel" id="webDevPanelLight">
+                    <button class="offcanvas-back-btn" data-back="servicesPanelLight">
+                        <i class="bi bi-chevron-left"></i>Back to Services
+                    </button>
+                    <div class="offcanvas-panel-title">Web Development</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-laptop"></i>Frontend</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-server"></i>Backend</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-layers"></i>Full Stack</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products Panel -->
+                <div class="offcanvas-drill-panel" id="productsPanelLight">
+                    <button class="offcanvas-back-btn" data-back="mainPanelLight">
+                        <i class="bi bi-chevron-left"></i>Back
+                    </button>
+                    <div class="offcanvas-panel-title">Products</div>
+                    <ul class="offcanvas-menu">
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-palette"></i>Themes</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-plugin"></i>Plugins</span>
+                            </a>
+                        </li>
+                        <li class="offcanvas-menu-item">
+                            <a href="#" class="offcanvas-menu-link">
+                                <span><i class="bi bi-book"></i>Templates</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Section -->
+            <div class="offcanvas-footer">
+                <!-- Contact Info -->
+                <div class="offcanvas-contact">
+                    <a href="tel:+15551234567" class="offcanvas-contact-item">
+                        <i class="bi bi-telephone"></i>
+                        <div>
+                            <div class="offcanvas-contact-label">Call Us</div>
+                            <div class="offcanvas-contact-value">+1 (555) 123-4567</div>
+                        </div>
+                    </a>
+                    <a href="mailto:hello@example.com" class="offcanvas-contact-item">
+                        <i class="bi bi-envelope"></i>
+                        <div>
+                            <div class="offcanvas-contact-label">Email</div>
+                            <div class="offcanvas-contact-value">hello@example.com</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="offcanvas-social">
+                    <a href="#" class="offcanvas-social-link" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="Twitter">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#" class="offcanvas-social-link" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="offcanvas-cta">
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Viewport-Aware Nested Dropdowns -->
+    <script>
+        // Auto-detect viewport edges for nested submenus
+        document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+            submenu.addEventListener('mouseenter', function() {
+                const nestedMenu = this.querySelector(':scope > .dropdown-menu');
+                if (!nestedMenu) return;
+                
+                // Temporarily show to measure
+                const originalDisplay = nestedMenu.style.display;
+                nestedMenu.style.display = 'block';
+                nestedMenu.style.visibility = 'hidden';
+                
+                const rect = nestedMenu.getBoundingClientRect();
+                const viewportWidth = window.innerWidth;
+                const viewportHeight = window.innerHeight;
+                
+                // Check right edge overflow - open to left instead
+                if (rect.right > viewportWidth - 10) {
+                    this.classList.add('submenu-left');
+                    this.classList.remove('submenu-right');
+                } else if (rect.left < 10) {
+                    this.classList.add('submenu-right');
+                    this.classList.remove('submenu-left');
+                }
+                
+                // Restore
+                nestedMenu.style.display = originalDisplay;
+                nestedMenu.style.visibility = '';
+            });
+            
+            submenu.addEventListener('mouseleave', function() {
+                // Optional: keep class for consistency or remove
+                // this.classList.remove('submenu-left', 'submenu-right');
+            });
+        });
+    </script>
+
+    <!-- Offcanvas Drill Panel Navigation -->
+    <script>
+        // Handle drill panel navigation for both dark and light offcanvas
+        document.querySelectorAll('.offcanvas-navbar').forEach(offcanvas => {
+            const container = offcanvas.querySelector('.offcanvas-drill-container');
+            
+            // Forward navigation - drill into panel
+            offcanvas.querySelectorAll('[data-panel]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPanelId = this.getAttribute('data-panel');
+                    const targetPanel = container.querySelector(`#${targetPanelId}`);
+                    const currentPanel = container.querySelector('.offcanvas-drill-panel.active');
+                    
+                    if (targetPanel && currentPanel) {
+                        currentPanel.classList.remove('active');
+                        currentPanel.classList.add('parent');
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+            
+            // Back navigation
+            offcanvas.querySelectorAll('[data-back]').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetPanelId = this.getAttribute('data-back');
+                    const targetPanel = container.querySelector(`#${targetPanelId}`);
+                    const currentPanel = container.querySelector('.offcanvas-drill-panel.active');
+                    
+                    if (targetPanel && currentPanel) {
+                        currentPanel.classList.remove('active');
+                        targetPanel.classList.remove('parent');
+                        targetPanel.classList.add('active');
+                    }
+                });
+            });
+            
+            // Reset to main panel when offcanvas is closed
+            offcanvas.addEventListener('hidden.bs.offcanvas', function() {
+                const panels = container.querySelectorAll('.offcanvas-drill-panel');
+                panels.forEach(panel => {
+                    panel.classList.remove('active', 'parent');
+                });
+                // Reactivate the first panel (main menu)
+                const mainPanel = panels[0];
+                if (mainPanel) {
+                    mainPanel.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Load More Demo Script -->
+    <script>
+        // Simple load more demo
+        document.querySelectorAll('.load-more-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const text = this.querySelector('.load-more-text');
+                const spinner = this.querySelector('.load-more-spinner');
+                if (text && spinner) {
+                    text.classList.add('d-none');
+                    spinner.classList.remove('d-none');
+                    setTimeout(() => {
+                        text.classList.remove('d-none');
+                        spinner.classList.add('d-none');
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

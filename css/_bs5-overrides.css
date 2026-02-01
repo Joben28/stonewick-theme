@@ -1,0 +1,728 @@
+/* ===========================================
+   BOOTSTRAP 5 COMPONENT OVERRIDES
+   Override default BS5 component styles
+   
+   ⚠️  Only BS5 component class overrides here
+   ⚠️  Use BS5's component variable system
+   =========================================== */
+
+/* -------------------------------------------
+   BUTTONS
+   ------------------------------------------- */
+.btn {
+  font-weight: var(--bs-btn-font-weight);
+  border-radius: var(--bs-btn-border-radius);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary Button */
+.btn-primary {
+  --bs-btn-bg: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: #1d4ed8;
+  --bs-btn-hover-border-color: #1d4ed8;
+  --bs-btn-active-bg: #1e40af;
+  --bs-btn-active-border-color: #1e40af;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  --bs-btn-bg: var(--bs-secondary);
+  --bs-btn-border-color: var(--bs-secondary);
+  --bs-btn-hover-bg: #475569;
+  --bs-btn-hover-border-color: #475569;
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-border-color: var(--bs-primary);
+  --bs-btn-hover-bg: var(--bs-primary);
+  --bs-btn-hover-border-color: var(--bs-primary);
+  --bs-btn-active-bg: var(--bs-primary);
+}
+
+.btn-outline-light {
+  --bs-btn-color: #ffffff;
+  --bs-btn-border-color: rgba(255, 255, 255, 0.25);
+  --bs-btn-hover-bg: rgba(255, 255, 255, 0.1);
+  --bs-btn-hover-border-color: rgba(255, 255, 255, 0.6);
+  --bs-btn-hover-color: #ffffff;
+}
+
+.btn-outline-light:hover {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Light Button (for dark backgrounds) */
+.btn-light {
+  --bs-btn-bg: rgba(255, 255, 255, 0.95);
+  --bs-btn-border-color: transparent;
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-color: var(--bs-primary);
+}
+
+.btn-light:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Large Buttons */
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--bs-font-size-md);
+}
+
+/* -------------------------------------------
+   CARDS
+   ------------------------------------------- */
+.card {
+  --bs-card-border-color: var(--bs-border-color);
+  --bs-card-border-radius: var(--bs-border-radius-lg);
+  --bs-card-box-shadow: var(--bs-shadow-sm);
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+  box-shadow: var(--bs-card-box-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  box-shadow: var(--bs-shadow-md);
+}
+
+.card-body {
+  padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+}
+
+.card-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--bs-gray-600);
+}
+
+/* -------------------------------------------
+   NAVBAR
+   ------------------------------------------- */
+.navbar {
+  --bs-navbar-padding-y: 1rem;
+}
+
+.navbar-brand {
+  font-size: var(--bs-navbar-brand-font-size);
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Mobile Nav Toggle */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* -------------------------------------------
+   BADGES (BS5 Override)
+   ------------------------------------------- */
+.badge {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* -------------------------------------------
+   ALERTS (BS5 Override)
+   ------------------------------------------- */
+.alert {
+  border-radius: var(--bs-border-radius-lg);
+}
+
+/* -------------------------------------------
+   FORMS (BS5 Override)
+   ------------------------------------------- */
+.form-control {
+  border-radius: var(--bs-border-radius);
+  border-color: var(--bs-border-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* -------------------------------------------
+   TABLES (BS5 Override)
+   ------------------------------------------- */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--bs-body-color);
+  --bs-table-border-color: var(--bs-border-color);
+  --bs-table-striped-bg: rgba(var(--bs-body-color-rgb), 0.05);
+  --bs-table-striped-color: var(--bs-body-color);
+  --bs-table-active-bg: rgba(var(--bs-body-color-rgb), 0.1);
+  --bs-table-active-color: var(--bs-body-color);
+  --bs-table-hover-bg: rgba(var(--bs-body-color-rgb), 0.075);
+  --bs-table-hover-color: var(--bs-body-color);
+}
+
+/* Primary Table */
+.table-primary {
+  --bs-table-bg: rgba(var(--bs-primary-rgb), 0.1);
+  --bs-table-color: var(--bs-primary);
+  --bs-table-border-color: rgba(var(--bs-primary-rgb), 0.2);
+  --bs-table-striped-bg: rgba(var(--bs-primary-rgb), 0.15);
+  --bs-table-striped-color: var(--bs-primary);
+  --bs-table-active-bg: rgba(var(--bs-primary-rgb), 0.2);
+  --bs-table-active-color: var(--bs-primary);
+  --bs-table-hover-bg: rgba(var(--bs-primary-rgb), 0.175);
+  --bs-table-hover-color: var(--bs-primary);
+}
+
+/* Light Table */
+.table-light {
+  --bs-table-bg: var(--bs-light);
+  --bs-table-color: var(--bs-dark);
+  --bs-table-border-color: rgba(var(--bs-dark-rgb), 0.1);
+  --bs-table-striped-bg: rgba(var(--bs-dark-rgb), 0.025);
+  --bs-table-striped-color: var(--bs-dark);
+  --bs-table-active-bg: rgba(var(--bs-dark-rgb), 0.05);
+  --bs-table-active-color: var(--bs-dark);
+  --bs-table-hover-bg: rgba(var(--bs-dark-rgb), 0.0375);
+  --bs-table-hover-color: var(--bs-dark);
+}
+
+/* Dark Table */
+.table-dark {
+  --bs-table-bg: var(--bs-dark);
+  --bs-table-color: var(--bs-light);
+  --bs-table-border-color: rgba(var(--bs-light-rgb), 0.1);
+  --bs-table-striped-bg: rgba(var(--bs-light-rgb), 0.05);
+  --bs-table-striped-color: var(--bs-light);
+  --bs-table-active-bg: rgba(var(--bs-light-rgb), 0.1);
+  --bs-table-active-color: var(--bs-light);
+  --bs-table-hover-bg: rgba(var(--bs-light-rgb), 0.075);
+  --bs-table-hover-color: var(--bs-light);
+}
+
+/* -------------------------------------------
+   MODALS (BS5 Override)
+   ------------------------------------------- */
+.modal-content {
+  border-radius: var(--bs-border-radius-lg);
+  border: none;
+  box-shadow: var(--bs-shadow-xl);
+}
+
+.modal-header {
+  border-bottom-color: var(--bs-border-color);
+}
+
+.modal-footer {
+  border-top-color: var(--bs-border-color);
+}
+
+/* -------------------------------------------
+   ACCORDION (BS5 Override)
+   ------------------------------------------- */
+.accordion {
+  --bs-accordion-border-color: var(--bs-border-color);
+  --bs-accordion-border-radius: var(--bs-border-radius-lg);
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--bs-accordion-border-color);
+  border-top: 0;
+  overflow: hidden;
+}
+
+.accordion-item:first-of-type {
+  border-top: 1px solid var(--bs-accordion-border-color);
+  border-top-left-radius: var(--bs-accordion-border-radius) !important;
+  border-top-right-radius: var(--bs-accordion-border-radius) !important;
+}
+
+.accordion-item:last-of-type {
+  border-bottom-left-radius: var(--bs-accordion-border-radius) !important;
+  border-bottom-right-radius: var(--bs-accordion-border-radius) !important;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: var(--bs-font-size-h6);
+  color: var(--bs-heading-color);
+  background: #ffffff;
+  border-radius: var(--bs-accordion-border-radius) !important;
+  transition: all 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), 0.05);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
+  border-color: var(--bs-primary);
+}
+
+.accordion-button::after {
+  background-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.accordion-body {
+  padding: var(--bs-accordion-btn-padding-x);
+  padding-top: 0;
+  color: var(--bs-gray-600);
+  line-height: var(--bs-body-line-height);
+}
+
+/* Flush variant (no outer borders) */
+.accordion-flush .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--bs-border-color);
+  border-radius: 0 !important;
+  margin-bottom: 0;
+}
+
+.accordion-flush .accordion-button {
+  border-radius: 0 !important;
+  background: transparent;
+}
+
+/* Bordered variant */
+.accordion-bordered .accordion-item {
+  border: 2px solid var(--bs-border-color);
+}
+
+.accordion-bordered .accordion-button:not(.collapsed) {
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* Dark accordion */
+.accordion-dark .accordion-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-dark .accordion-button {
+  background: transparent;
+  color: #ffffff;
+}
+
+.accordion-dark .accordion-button:not(.collapsed) {
+  color: var(--bs-blue-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.accordion-dark .accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-dark .accordion-body {
+  color: var(--bs-gray-300);
+}
+
+/* -------------------------------------------
+   ACCORDION ENHANCEMENTS
+   ------------------------------------------- */
+
+/* Accordion Controls (Expand/Collapse All) */
+.accordion-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--bs-space-2);
+  margin-bottom: var(--bs-space-3);
+}
+
+.accordion-control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bs-space-2);
+  padding: var(--bs-space-2) var(--bs-space-3);
+  background: transparent;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-gray-600);
+  font-size: var(--bs-font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--bs-transition-base);
+}
+
+.accordion-control-btn:hover {
+  background: var(--bs-gray-100);
+  border-color: var(--bs-gray-400);
+  color: var(--bs-gray-800);
+}
+
+.accordion-control-btn i {
+  font-size: 0.875rem;
+}
+
+/* Dark variant controls */
+.accordion-controls-dark .accordion-control-btn {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--bs-gray-300);
+}
+
+.accordion-controls-dark .accordion-control-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--bs-white);
+}
+
+/* Accordion Search */
+.accordion-search {
+  position: relative;
+  margin-bottom: var(--bs-space-3);
+}
+
+.accordion-search-input {
+  width: 100%;
+  padding: var(--bs-space-3) var(--bs-space-4);
+  padding-left: 2.75rem;
+  background: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  font-size: var(--bs-font-size-base);
+  color: var(--bs-body-color);
+  transition: all var(--bs-transition-base);
+}
+
+.accordion-search-input:focus {
+  outline: none;
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.accordion-search-input::placeholder {
+  color: var(--bs-gray-400);
+}
+
+.accordion-search-icon {
+  position: absolute;
+  left: var(--bs-space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--bs-gray-400);
+  pointer-events: none;
+}
+
+/* Dark search variant */
+.accordion-search-dark .accordion-search-input {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: var(--bs-white);
+}
+
+.accordion-search-dark .accordion-search-input:focus {
+  border-color: var(--bs-blue-light);
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+.accordion-search-dark .accordion-search-input::placeholder {
+  color: var(--bs-gray-500);
+}
+
+.accordion-search-dark .accordion-search-icon {
+  color: var(--bs-gray-500);
+}
+
+/* Accordion item with hash link highlight */
+.accordion-item.is-target {
+  animation: highlightItem 1.5s ease;
+}
+
+@keyframes highlightItem {
+  0%, 100% { background: transparent; }
+  30% { background: rgba(var(--bs-primary-rgb), 0.1); }
+}
+
+/* Accordion item hidden by search filter */
+.accordion-item.is-hidden {
+  display: none;
+}
+
+/* Accordion item search highlight */
+.accordion-item .search-highlight {
+  background: rgba(var(--bs-warning-rgb), 0.3);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Accordion progress indicator */
+.accordion-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-3);
+  margin-bottom: var(--bs-space-3);
+  padding: var(--bs-space-3);
+  background: var(--bs-gray-100);
+  border-radius: var(--bs-border-radius);
+}
+
+.accordion-progress-bar {
+  flex: 1;
+  height: 0.5rem;
+  background: var(--bs-gray-200);
+  border-radius: var(--bs-border-radius-pill);
+  overflow: hidden;
+}
+
+.accordion-progress-fill {
+  height: 100%;
+  background: var(--bs-primary);
+  border-radius: var(--bs-border-radius-pill);
+  transition: width 0.3s ease;
+}
+
+.accordion-progress-text {
+  font-size: var(--bs-font-size-sm);
+  font-weight: 600;
+  color: var(--bs-gray-600);
+  white-space: nowrap;
+}
+
+/* Dark progress variant */
+.accordion-progress-dark {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.accordion-progress-dark .accordion-progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.accordion-progress-dark .accordion-progress-fill {
+  background: var(--bs-blue-light);
+}
+
+.accordion-progress-dark .accordion-progress-text {
+  color: var(--bs-gray-300);
+}
+
+/* Accordion with icons */
+.accordion-icon .accordion-button {
+  padding-left: 3.5rem;
+}
+
+.accordion-icon .accordion-button::before {
+  content: "";
+  position: absolute;
+  left: var(--bs-accordion-btn-padding-x);
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--bs-gray-500);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.accordion-icon .accordion-button:not(.collapsed)::before {
+  background-color: var(--bs-primary);
+}
+
+/* Accordion printable */
+@media print {
+  .accordion-controls,
+  .accordion-search {
+    display: none;
+  }
+  
+  .accordion-item {
+    break-inside: avoid;
+  }
+  
+  .accordion-collapse {
+    display: block !important;
+    height: auto !important;
+  }
+  
+  .accordion-button::after {
+    display: none;
+  }
+}
+
+/* -------------------------------------------
+   CAROUSEL (BS5 Override)
+   ------------------------------------------- */
+.carousel {
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+}
+
+.carousel-inner {
+  border-radius: var(--bs-border-radius-lg);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3rem;
+  height: 3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+.carousel-control-prev {
+  left: 1rem;
+}
+
+.carousel-control-next {
+  right: 1rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Indicators */
+.carousel-indicators {
+  margin-bottom: 1rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  opacity: 1;
+  transition: all 0.2s ease;
+}
+
+.carousel-indicators .active {
+  background: #ffffff;
+  width: 24px;
+  border-radius: var(--bs-border-radius-pill);
+}
+
+/* Caption */
+.carousel-caption {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 1.5rem 1.5rem;
+  text-align: left;
+}
+
+.carousel-caption h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+  font-size: var(--bs-font-size-sm);
+  margin-bottom: 0;
+  opacity: 0.9;
+}
+
+/* Carousel with thumbnails */
+.carousel-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.carousel-thumb {
+  width: 60px;
+  height: 45px;
+  border-radius: var(--bs-border-radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  background: none;
+}
+
+.carousel-thumb:hover {
+  opacity: 0.8;
+}
+
+.carousel-thumb.active {
+  border-color: var(--bs-primary);
+  opacity: 1;
+}
+
+.carousel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark variant */
+.carousel-dark .carousel-control-prev,
+.carousel-dark .carousel-control-next {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-dark .carousel-control-prev:hover,
+.carousel-dark .carousel-control-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-dark .carousel-indicators .active {
+  background: var(--bs-dark);
+}

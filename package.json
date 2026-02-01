@@ -1,0 +1,97 @@
+{
+  "name": "@stonewick/theme",
+  "version": "1.0.0",
+  "description": "Modular Bootstrap 5 theme with CSS custom properties and interactive components",
+  "author": "StoneWick",
+  "license": "MIT",
+  "main": "dist/stonewick.js",
+  "module": "dist/stonewick.esm.js",
+  "style": "dist/stonewick.css",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/stonewick.esm.js",
+      "require": "./dist/stonewick.js",
+      "style": "./dist/stonewick.css"
+    },
+    "./core": "./dist/core.css",
+    "./core.css": "./dist/core.css",
+    "./bootstrap": "./dist/bootstrap.css",
+    "./bootstrap.css": "./dist/bootstrap.css",
+    "./layout": "./dist/layout.css",
+    "./layout.css": "./dist/layout.css",
+    "./modules/cards": "./dist/modules/cards.css",
+    "./modules/cards.css": "./dist/modules/cards.css",
+    "./modules/navigation": "./dist/modules/navigation.css",
+    "./modules/navigation.css": "./dist/modules/navigation.css",
+    "./modules/media": "./dist/modules/media.css",
+    "./modules/media.css": "./dist/modules/media.css",
+    "./modules/commerce": "./dist/modules/commerce.css",
+    "./modules/commerce.css": "./dist/modules/commerce.css",
+    "./modules/interactive": "./dist/modules/interactive.css",
+    "./modules/interactive.css": "./dist/modules/interactive.css",
+    "./js": {
+      "import": "./dist/stonewick.esm.js",
+      "require": "./dist/stonewick.js"
+    },
+    "./js/comparison-slider": "./dist/js/comparison-slider.js",
+    "./js/video-theater": "./dist/js/video-theater.js",
+    "./js/modals": "./dist/js/modals.js",
+    "./js/slider": "./dist/js/slider.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "node scripts/build-css.js",
+    "build:js": "vite build",
+    "build:watch": "npm run build:css -- --watch",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "release": "npm run build && npm version",
+    "release:patch": "npm run release patch",
+    "release:minor": "npm run release minor",
+    "release:major": "npm run release major"
+  },
+  "peerDependencies": {
+    "bootstrap": "^5.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "cssnano": "^6.0.3",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.1",
+    "rimraf": "^5.0.5",
+    "terser": "^5.27.0",
+    "vite": "^5.1.0"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap5",
+    "theme",
+    "css",
+    "design-system",
+    "components",
+    "ui-kit",
+    "css-variables",
+    "custom-properties"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/stonewick.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourname/stonewick/issues"
+  },
+  "homepage": "https://github.com/yourname/stonewick#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
