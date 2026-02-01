@@ -92,7 +92,7 @@
 }
 
 .section-wave.wave-white svg path {
-  fill: #ffffff;
+  fill: var(--bs-white);
 }
 
 .section-wave.wave-dark svg path {
@@ -157,7 +157,7 @@
 }
 
 .section-angle.angle-white::before {
-  background: #ffffff;
+  background: var(--bs-white);
 }
 
 .section-angle.angle-dark::before {
@@ -209,7 +209,7 @@
   position: relative;
   background: linear-gradient(135deg, 
     var(--bs-light) 0%, 
-    var(--bs-white, #ffffff) 100%);
+    var(--bs-white) 100%);
 }
 
 /* Primary gradient - subtle tint that works on white base */
@@ -219,7 +219,7 @@
       rgba(var(--bs-primary-rgb), 0.12) 0%, 
       rgba(var(--bs-primary-rgb), 0.04) 60%,
       transparent 100%),
-    #ffffff;
+    var(--bs-white);
 }
 
 .section-gradient.gradient-subtle {

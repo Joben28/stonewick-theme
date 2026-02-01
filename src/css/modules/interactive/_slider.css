@@ -37,7 +37,7 @@
   right: 0;
   padding: var(--bs-space-5);
   padding-bottom: 6rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, rgba(var(--bs-black-rgb), 0.8));
   color: var(--bs-white);
 }
 
@@ -66,7 +66,7 @@
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(var(--bs-white-rgb), 0.9);
   border: none;
   border-radius: 50%;
   color: var(--bs-gray-700);
@@ -123,7 +123,7 @@
   width: 0.75rem;
   height: 0.75rem;
   padding: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(var(--bs-white-rgb), 0.5);
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -131,7 +131,7 @@
 }
 
 .slider-dot:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(var(--bs-white-rgb), 0.8);
 }
 
 .slider-dot.is-active {
@@ -171,7 +171,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(var(--bs-white-rgb), 0.3);
   z-index: 5;
 }
 

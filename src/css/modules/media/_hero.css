@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, var(--bs-dark) 0%, var(--bs-gray-800) 100%);
-  color: #ffffff;
+  color: var(--bs-white);
   position: relative;
   overflow: hidden;
 }
@@ -34,7 +34,7 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .hero .lead {
@@ -71,7 +71,7 @@
 
 /* Light Hero */
 .hero-light {
-  background: linear-gradient(180deg, #ffffff 0%, var(--bs-gray-50) 100%);
+  background: linear-gradient(180deg, var(--bs-white) 0%, var(--bs-gray-50) 100%);
   color: var(--bs-dark);
 }
 

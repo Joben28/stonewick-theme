@@ -7,17 +7,17 @@
    PRICING-TABLE (Dark Background)
    ------------------------------------------- */
 .pricing-table-container {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(var(--bs-white-rgb), 0.05);
   padding: 2.5rem;
   border-radius: var(--bs-border-radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(var(--bs-white-rgb), 0.1);
   backdrop-filter: blur(var(--bs-glass-blur));
 }
 
 .pricing-table-container h3 {
   font-size: var(--bs-font-size-h3);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--bs-white);
   margin-bottom: 1rem;
 }
 
@@ -29,25 +29,25 @@
 .pricing-table {
   width: 100%;
   border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(var(--bs-white-rgb), 0.03);
   border-radius: var(--bs-border-radius);
   overflow: hidden;
 }
 
 .pricing-table thead tr {
-  background: rgba(255, 255, 255, 0.08);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(var(--bs-white-rgb), 0.08);
+  border-bottom: 2px solid rgba(var(--bs-white-rgb), 0.1);
 }
 
 .pricing-table th {
   padding: 1rem 1.25rem;
   text-align: left;
-  color: #ffffff;
+  color: var(--bs-white);
   font-weight: 700;
 }
 
 .pricing-table tbody tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(var(--bs-white-rgb), 0.08);
 }
 
 .pricing-table tbody tr:last-child {
@@ -59,7 +59,7 @@
 }
 
 .pricing-table td:first-child {
-  color: #ffffff;
+  color: var(--bs-white);
   font-weight: 600;
 }
 
@@ -78,11 +78,11 @@
    ------------------------------------------- */
 .audit-comparison-table td {
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .audit-comparison-table th {
-  color: #ffffff !important;
+  color: var(--bs-white) !important;
 }
 
 .audit-comparison-table td:first-child {
@@ -132,7 +132,7 @@
    Enhanced table with rich cell content
    ------------------------------------------- */
 .data-table-container {
-  background: #ffffff;
+  background: var(--bs-white);
   border-radius: var(--bs-border-radius-lg);
   border: 1px solid var(--bs-border-color);
   overflow: hidden;
@@ -286,7 +286,7 @@
   text-align: left;
   font-weight: 700;
   font-size: var(--bs-font-size-sm);
-  color: #ffffff;
+  color: var(--bs-white);
   white-space: nowrap;
 }
 
@@ -310,7 +310,7 @@
 }
 
 .data-table-dark .data-cell-rich .cell-title {
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .data-table-dark .data-cell-rich .cell-badge {
@@ -332,7 +332,7 @@
    Light variant of pricing table
    ------------------------------------------- */
 .pricing-table-light-container {
-  background: #ffffff;
+  background: var(--bs-white);
   padding: 2.5rem;
   border-radius: var(--bs-border-radius-lg);
   border: 1px solid var(--bs-border-color);
@@ -361,13 +361,13 @@
 
 .pricing-table-light thead tr {
   background: var(--bs-primary);
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .pricing-table-light th {
   padding: 1rem 1.25rem;
   text-align: left;
-  color: #ffffff;
+  color: var(--bs-white);
   font-weight: 700;
 }
 
@@ -380,7 +380,7 @@
 }
 
 .pricing-table-light tbody tr:hover {
-  background: #ffffff;
+  background: var(--bs-white);
 }
 
 .pricing-table-light td {

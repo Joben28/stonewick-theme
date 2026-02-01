@@ -98,7 +98,7 @@
 /* Always visible caption variant */
 .gallery-caption-visible .gallery-caption {
   transform: translateY(0);
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(var(--bs-black-rgb), 0.8), transparent);
 }
 
 /* Aspect ratio variants */
@@ -128,13 +128,13 @@
    Dark variant of gallery grid
    ------------------------------------------- */
 .gallery-grid-dark .gallery-item {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(var(--bs-white-rgb), 0.05);
+  border: 1px solid rgba(var(--bs-white-rgb), 0.1);
 }
 
 .gallery-grid-dark .gallery-item:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-color: rgba(var(--bs-white-rgb), 0.2);
+  box-shadow: 0 8px 24px rgba(var(--bs-black-rgb), 0.3);
 }
 
 .gallery-grid-dark .gallery-item:focus {
@@ -184,13 +184,13 @@
 
 /* Dark variant */
 .gallery-list-dark::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--bs-white-rgb), 0.1);
 }
 
 .gallery-list-dark::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(var(--bs-white-rgb), 0.3);
 }
 
 .gallery-list-dark::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(var(--bs-white-rgb), 0.5);
 }

@@ -7,18 +7,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-02-01
+
+### Changed
+- **BREAKING CHANGE**: Replaced all hardcoded color values with CSS custom properties throughout the theme
+- Button state colors now use `color-mix()` with base variables for dynamic theming
+- All `rgba(255, 255, 255, X)` values replaced with `rgba(var(--bs-white-rgb), X)`
+- All `rgba(0, 0, 0, X)` values replaced with `rgba(var(--bs-black-rgb), X)`
+- All standalone `#ffffff` values replaced with `var(--bs-white)`
+- Background gradients now use CSS variables for colors
+
 ### Added
-- Initial library structure with modular architecture
-- Core module: variables, base, typography, utilities
-- Bootstrap overrides module
-- Cards module: card-service, card-feature, card-benefit, card-glass, commerce-card
-- Navigation module: navbar, tabs, pagination, breadcrumbs
-- Media module: hero, gallery, media-list, video-theater, channel-header
-- Commerce module: products, pricing tables
-- Interactive module: modals, slider, metrics, timeline, section-transitions
-- JavaScript components: ComparisonSlider, VideoTheater, Modal, Slider, Accordion
-- Build system with Vite and PostCSS
-- NPM package configuration with module exports
+- `--bs-black` and `--bs-black-rgb` variables to color palette
+- Social media brand colors documented in modals component (Google, Yelp, Facebook, LinkedIn)
+
+### Fixed
+- CSS syntax error in modals component (line 1576) causing build failures
+- All hardcoded colors now properly reference theme variables for consistent theming
+
+### Technical Details
+- **~200+ color replacements** across 25+ CSS files
+- Button hover/active states: `color-mix(in srgb, var(--bs-primary) 85%, black)`
+- Navigation components: All white rgba values converted to `var(--bs-white-rgb)`
+- Media components: Video theater, gallery, and channel headers updated
+- Interactive components: Modals, sliders, timelines, section transitions
+- Cards & commerce: All component variants updated
+
+This release ensures all theme colors can be customized by overriding root CSS variables, enabling true theme customization without modifying component styles.
 
 ## [1.0.0] - 2026-02-01
 
@@ -45,5 +60,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Slider - Carousel with thumbnail navigation
 - Accordion - Enhanced accordion with expand all
 
-[Unreleased]: https://github.com/yourname/stonewick/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/yourname/stonewick/releases/tag/v1.0.0
+[Unreleased]: https://github.com/Joben28/stonewick-theme/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Joben28/stonewick-theme/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/Joben28/stonewick-theme/releases/tag/v1.0.0

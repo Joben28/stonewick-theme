@@ -188,7 +188,7 @@
 }
 
 .nav-pills .nav-link.active .badge.bg-light {
-    background-color: rgba(255, 255, 255, 0.2) !important;
+    background-color: rgba(var(--bs-white-rgb), 0.2) !important;
     color: var(--bs-white);
 }
 
@@ -197,20 +197,20 @@
    ----------------------------------------------------------------------------- */
 
 .nav-tabs-dark {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(var(--bs-white-rgb), 0.1);
 }
 
 .nav-tabs-dark .nav-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(var(--bs-white-rgb), 0.6);
 }
 
 .nav-tabs-dark .nav-link:hover:not(.active):not(.disabled) {
-    color: rgba(255, 255, 255, 0.9);
-    border-bottom-color: rgba(255, 255, 255, 0.3);
+    color: rgba(var(--bs-white-rgb), 0.9);
+    border-bottom-color: rgba(var(--bs-white-rgb), 0.3);
 }
 
 .nav-tabs-dark .nav-link:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(var(--bs-white-rgb), 0.15);
 }
 
 .nav-tabs-dark .nav-link.active {
@@ -220,7 +220,7 @@
 }
 
 .nav-tabs-dark .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(var(--bs-white-rgb), 0.3);
 }
 
 /* -----------------------------------------------------------------------------
@@ -228,16 +228,16 @@
    ----------------------------------------------------------------------------- */
 
 .nav-pills-dark .nav-link {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(var(--bs-white-rgb), 0.7);
 }
 
 .nav-pills-dark .nav-link:hover:not(.active):not(.disabled) {
     color: var(--bs-white);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(var(--bs-white-rgb), 0.1);
 }
 
 .nav-pills-dark .nav-link:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px rgba(var(--bs-white-rgb), 0.15);
 }
 
 .nav-pills-dark .nav-link.active {
@@ -246,7 +246,7 @@
 }
 
 .nav-pills-dark .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(var(--bs-white-rgb), 0.3);
     background-color: transparent;
 }
 
@@ -255,16 +255,16 @@
    ----------------------------------------------------------------------------- */
 
 .nav-underline-dark {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(var(--bs-white-rgb), 0.1);
 }
 
 .nav-underline-dark .nav-link {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(var(--bs-white-rgb), 0.6);
 }
 
 .nav-underline-dark .nav-link:hover:not(.active):not(.disabled) {
-    color: rgba(255, 255, 255, 0.9);
-    border-bottom-color: rgba(255, 255, 255, 0.3);
+    color: rgba(var(--bs-white-rgb), 0.9);
+    border-bottom-color: rgba(var(--bs-white-rgb), 0.3);
 }
 
 .nav-underline-dark .nav-link.active {
@@ -273,5 +273,5 @@
 }
 
 .nav-underline-dark .nav-link.disabled {
-    color: rgba(255, 255, 255, 0.3);
+    color: rgba(var(--bs-white-rgb), 0.3);
 }

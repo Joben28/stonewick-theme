@@ -52,7 +52,7 @@
   top: 0;
   width: 2.5rem;
   height: 2.5rem;
-  background: var(--bs-body-bg, #ffffff);
+  background: var(--bs-body-bg, var(--bs-white));
   color: var(--bs-primary);
   font-weight: 600;
   font-size: 1rem;
@@ -87,7 +87,7 @@
    ------------------------------------------- */
 .process-timeline-item:not(.completed):hover .process-marker {
   background: var(--bs-primary);
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.25);
 }
@@ -103,7 +103,7 @@
 /* --- Filled Variant --- */
 .process-timeline.timeline-filled .process-marker {
   background: var(--bs-primary);
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
   border-color: var(--bs-primary);
 }
 
@@ -120,7 +120,7 @@
 /* --- Gradient Variant --- */
 .process-timeline.timeline-gradient .process-marker {
   background: linear-gradient(135deg, var(--bs-primary), var(--bs-info));
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
   border: none;
 }
 
@@ -200,9 +200,9 @@
 }
 
 .process-timeline.timeline-cards .process-timeline-item:hover .process-content {
-  background: var(--bs-white, #ffffff);
+  background: var(--bs-white, var(--bs-white));
   border-color: var(--bs-primary);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(var(--bs-black-rgb), 0.08);
   transform: translateX(0.25rem);
 }
 
@@ -245,7 +245,7 @@
 
 .process-timeline.timeline-success.timeline-filled .process-marker {
   background: var(--bs-success);
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
 }
 
 .process-timeline.timeline-info .process-marker {
@@ -259,7 +259,7 @@
 
 .process-timeline.timeline-info.timeline-filled .process-marker {
   background: var(--bs-info);
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
 }
 
 .process-timeline.timeline-warning .process-marker {
@@ -287,7 +287,7 @@
 
 .process-timeline.timeline-secondary.timeline-filled .process-marker {
   background: var(--bs-secondary);
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
 }
 
 /* -------------------------------------------
@@ -306,23 +306,23 @@
 
 .bg-dark .process-title,
 [data-bs-theme="dark"] .process-title {
-  color: var(--bs-white, #ffffff);
+  color: var(--bs-white, var(--bs-white));
 }
 
 .bg-dark .process-text,
 [data-bs-theme="dark"] .process-text {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(var(--bs-white-rgb), 0.75);
 }
 
 .bg-dark .timeline-cards .process-content,
 [data-bs-theme="dark"] .timeline-cards .process-content {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--bs-white-rgb), 0.05);
+  border-color: rgba(var(--bs-white-rgb), 0.1);
 }
 
 .bg-dark .timeline-cards .process-timeline-item:hover .process-content,
 [data-bs-theme="dark"] .timeline-cards .process-timeline-item:hover .process-content {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(var(--bs-white-rgb), 0.1);
   border-color: var(--bs-primary);
 }
 

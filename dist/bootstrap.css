@@ -1,5 +1,5 @@
 /* StoneWick Theme - bootstrap module */
-/* Generated: 2026-02-01T08:07:10.308Z */
+/* Generated: 2026-02-01T18:13:49.452Z */
 /* === bootstrap/_bs5-overrides.css === */
 /* ===========================================
    BOOTSTRAP 5 COMPONENT OVERRIDES
@@ -26,10 +26,10 @@
 .btn-primary {
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
-  --bs-btn-hover-bg: #1d4ed8;
-  --bs-btn-hover-border-color: #1d4ed8;
-  --bs-btn-active-bg: #1e40af;
-  --bs-btn-active-border-color: #1e40af;
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-primary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-primary) 85%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--bs-primary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--bs-primary) 80%, black);
 }
 .btn-primary:hover {
   box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.25);
@@ -38,8 +38,8 @@
 .btn-secondary {
   --bs-btn-bg: var(--bs-secondary);
   --bs-btn-border-color: var(--bs-secondary);
-  --bs-btn-hover-bg: #475569;
-  --bs-btn-hover-border-color: #475569;
+  --bs-btn-hover-bg: color-mix(in srgb, var(--bs-secondary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--bs-secondary) 85%, black);
 }
 /* Outline Buttons */
 .btn-outline-primary {
@@ -50,21 +50,21 @@
   --bs-btn-active-bg: var(--bs-primary);
 }
 .btn-outline-light {
-  --bs-btn-color: #ffffff;
-  --bs-btn-border-color: rgba(255, 255, 255, 0.25);
-  --bs-btn-hover-bg: rgba(255, 255, 255, 0.1);
-  --bs-btn-hover-border-color: rgba(255, 255, 255, 0.6);
-  --bs-btn-hover-color: #ffffff;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-border-color: rgba(var(--bs-white-rgb), 0.25);
+  --bs-btn-hover-bg: rgba(var(--bs-white-rgb), 0.1);
+  --bs-btn-hover-border-color: rgba(var(--bs-white-rgb), 0.6);
+  --bs-btn-hover-color: var(--bs-white);
 }
 .btn-outline-light:hover {
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(var(--bs-white-rgb), 0.1);
 }
 /* Light Button (for dark backgrounds) */
 .btn-light {
-  --bs-btn-bg: rgba(255, 255, 255, 0.95);
+  --bs-btn-bg: rgba(var(--bs-white-rgb), 0.95);
   --bs-btn-border-color: transparent;
   --bs-btn-color: var(--bs-primary);
-  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-bg: var(--bs-white);
   --bs-btn-hover-color: var(--bs-primary);
 }
 .btn-light:hover {
@@ -241,7 +241,7 @@
   font-weight: 600;
   font-size: var(--bs-font-size-h6);
   color: var(--bs-heading-color);
-  background: #ffffff;
+  background: var(--bs-white);
   border-radius: var(--bs-accordion-border-radius) !important;
   transition: all 0.2s ease;
 }
@@ -289,7 +289,7 @@
 }
 .accordion-dark .accordion-button {
   background: transparent;
-  color: #ffffff;
+  color: var(--bs-white);
 }
 .accordion-dark .accordion-button:not(.collapsed) {
   color: var(--bs-blue-light);
@@ -562,7 +562,7 @@
   transition: all 0.2s ease;
 }
 .carousel-indicators .active {
-  background: #ffffff;
+  background: var(--bs-white);
   width: 24px;
   border-radius: var(--bs-border-radius-pill);
 }

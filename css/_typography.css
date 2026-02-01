@@ -155,15 +155,15 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
 
 /* Dark theme text colors */
 .text-white-90 {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(var(--bs-white-rgb), 0.9) !important;
 }
 
 .text-white-80 {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(var(--bs-white-rgb), 0.8) !important;
 }
 
 .text-white-70 {
-  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(var(--bs-white-rgb), 0.7) !important;
 }
 
 /* -------------------------------------------
@@ -172,21 +172,21 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
    ------------------------------------------- */
 .bg-dark-gradient {
   background: linear-gradient(135deg, var(--bs-dark) 0%, var(--bs-gray-800) 100%);
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .bg-light-gradient {
-  background: linear-gradient(180deg, #ffffff 0%, var(--bs-gray-50) 100%);
+  background: linear-gradient(180deg, var(--bs-white) 0%, var(--bs-gray-50) 100%);
 }
 
 .bg-primary-gradient {
   background: linear-gradient(135deg, var(--bs-primary) 0%, var(--bs-teal) 100%);
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 .bg-trust {
   background: linear-gradient(135deg, var(--bs-dark) 0%, rgba(15, 23, 42, 0.98) 100%);
-  color: #ffffff;
+  color: var(--bs-white);
 }
 
 /* -------------------------------------------
@@ -308,6 +308,6 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
 
 /* White variant for dark backgrounds */
 .bg-soft-white {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  background: rgba(var(--bs-white-rgb), 0.15);
+  color: var(--bs-white);
 }
