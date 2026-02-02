@@ -1095,6 +1095,98 @@ if (typeof window !== "undefined") {
     Navbar.initAll();
   }
 }
+class Offcanvas {
+  constructor(element) {
+    this.element = element;
+    this.container = element.querySelector(".offcanvas-drill-container");
+    if (this.container) {
+      this.init();
+    }
+  }
+  init() {
+    this.initForwardNavigation();
+    this.initBackNavigation();
+    this.initReset();
+  }
+  /**
+   * Handle forward navigation - drill into panels
+   */
+  initForwardNavigation() {
+    this.element.querySelectorAll("[data-panel]").forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetPanelId = link.getAttribute("data-panel");
+        const targetPanel = this.container.querySelector(`#${targetPanelId}`);
+        const currentPanel = this.container.querySelector(".offcanvas-drill-panel.active");
+        if (targetPanel && currentPanel) {
+          currentPanel.classList.remove("active");
+          currentPanel.classList.add("parent");
+          targetPanel.classList.add("active");
+        }
+      });
+    });
+  }
+  /**
+   * Handle back navigation - return to parent panels
+   */
+  initBackNavigation() {
+    this.element.querySelectorAll("[data-back]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetPanelId = btn.getAttribute("data-back");
+        const targetPanel = this.container.querySelector(`#${targetPanelId}`);
+        const currentPanel = this.container.querySelector(".offcanvas-drill-panel.active");
+        if (targetPanel && currentPanel) {
+          currentPanel.classList.remove("active");
+          targetPanel.classList.remove("parent");
+          targetPanel.classList.add("active");
+        }
+      });
+    });
+  }
+  /**
+   * Reset to main panel when offcanvas is closed
+   */
+  initReset() {
+    this.element.addEventListener("hidden.bs.offcanvas", () => {
+      const panels = this.container.querySelectorAll(".offcanvas-drill-panel");
+      panels.forEach((panel) => {
+        panel.classList.remove("active", "parent");
+      });
+      const mainPanel = panels[0];
+      if (mainPanel) {
+        mainPanel.classList.add("active");
+      }
+    });
+  }
+  /**
+   * Cleanup
+   */
+  destroy() {
+  }
+  /**
+   * Initialize all offcanvas drill navigations in the document
+   */
+  static initAll(selector = ".offcanvas-navbar", scope = document) {
+    const elements = scope.querySelectorAll(selector);
+    const instances = [];
+    elements.forEach((element) => {
+      const instance = new Offcanvas(element);
+      instances.push(instance);
+    });
+    console.log(`[StoneWick] Initialized ${instances.length} offcanvas drill navigation(s)`);
+    return instances;
+  }
+}
+if (typeof window !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      Offcanvas.initAll();
+    });
+  } else {
+    Offcanvas.initAll();
+  }
+}
 const VERSION = "1.0.0";
 function initAll(options = {}) {
   const scope = options.scope ? document.querySelector(options.scope) : document;
@@ -1105,19 +1197,22 @@ function initAll(options = {}) {
   const { Slider: Slider2 } = require("./modules/slider.js");
   const { Accordion: Accordion2 } = require("./modules/accordion.js");
   const { Navbar: Navbar2 } = require("./modules/navbar.js");
+  const { Offcanvas: Offcanvas2 } = require("./modules/offcanvas.js");
   instances.comparisonSliders = ComparisonSlider2.initAll(".comparison-slider", scope);
   instances.videoTheaters = VideoTheater2.initAll(".video-theater", scope);
   instances.modals = Modal2.initAll(".modal-custom", scope);
   instances.sliders = Slider2.initAll(".carousel-thumbnails", scope);
   instances.accordions = Accordion2.initAll(".accordion", scope);
   instances.navbars = Navbar2.initAll(".navbar", scope);
+  instances.offcanvas = Offcanvas2.initAll(".offcanvas-navbar", scope);
   console.log("[StoneWick] Initialized components:", {
     comparisonSliders: instances.comparisonSliders.length,
     videoTheaters: instances.videoTheaters.length,
     modals: instances.modals.length,
     sliders: instances.sliders.length,
     accordions: instances.accordions.length,
-    navbars: instances.navbars.length
+    navbars: instances.navbars.length,
+    offcanvas: instances.offcanvas.length
   });
   return instances;
 }
@@ -1144,6 +1239,7 @@ export {
   ComparisonSlider,
   Modal,
   Navbar,
+  Offcanvas,
   Slider,
   VERSION,
   VideoTheater,

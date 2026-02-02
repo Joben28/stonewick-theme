@@ -1767,59 +1767,6 @@ window.addEventListener('scroll', () => {
         });
     </script>
 
-    <!-- Offcanvas Drill Panel Navigation -->
-    <script>
-        // Handle drill panel navigation for both dark and light offcanvas
-        document.querySelectorAll('.offcanvas-navbar').forEach(offcanvas => {
-            const container = offcanvas.querySelector('.offcanvas-drill-container');
-            
-            // Forward navigation - drill into panel
-            offcanvas.querySelectorAll('[data-panel]').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetPanelId = this.getAttribute('data-panel');
-                    const targetPanel = container.querySelector(`#${targetPanelId}`);
-                    const currentPanel = container.querySelector('.offcanvas-drill-panel.active');
-                    
-                    if (targetPanel && currentPanel) {
-                        currentPanel.classList.remove('active');
-                        currentPanel.classList.add('parent');
-                        targetPanel.classList.add('active');
-                    }
-                });
-            });
-            
-            // Back navigation
-            offcanvas.querySelectorAll('[data-back]').forEach(btn => {
-                btn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetPanelId = this.getAttribute('data-back');
-                    const targetPanel = container.querySelector(`#${targetPanelId}`);
-                    const currentPanel = container.querySelector('.offcanvas-drill-panel.active');
-                    
-                    if (targetPanel && currentPanel) {
-                        currentPanel.classList.remove('active');
-                        targetPanel.classList.remove('parent');
-                        targetPanel.classList.add('active');
-                    }
-                });
-            });
-            
-            // Reset to main panel when offcanvas is closed
-            offcanvas.addEventListener('hidden.bs.offcanvas', function() {
-                const panels = container.querySelectorAll('.offcanvas-drill-panel');
-                panels.forEach(panel => {
-                    panel.classList.remove('active', 'parent');
-                });
-                // Reactivate the first panel (main menu)
-                const mainPanel = panels[0];
-                if (mainPanel) {
-                    mainPanel.classList.add('active');
-                }
-            });
-        });
-    </script>
-
     <!-- Load More Demo Script -->
     <script>
         // Simple load more demo

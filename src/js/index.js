@@ -23,6 +23,7 @@ export { Modal } from './modules/modals.js';
 export { Slider } from './modules/slider.js';
 export { Accordion } from './modules/accordion.js';
 export { Navbar } from './modules/navbar.js';
+export { Offcanvas } from './modules/offcanvas.js';
 
 // Version
 export const VERSION = '1.0.0';
@@ -44,6 +45,7 @@ export function initAll(options = {}) {
   const { Slider } = require('./modules/slider.js');
   const { Accordion } = require('./modules/accordion.js');
   const { Navbar } = require('./modules/navbar.js');
+  const { Offcanvas } = require('./modules/offcanvas.js');
   
   // Initialize each component type
   instances.comparisonSliders = ComparisonSlider.initAll('.comparison-slider', scope);
@@ -52,6 +54,7 @@ export function initAll(options = {}) {
   instances.sliders = Slider.initAll('.carousel-thumbnails', scope);
   instances.accordions = Accordion.initAll('.accordion', scope);
   instances.navbars = Navbar.initAll('.navbar', scope);
+  instances.offcanvas = Offcanvas.initAll('.offcanvas-navbar', scope);
   
   console.log('[StoneWick] Initialized components:', {
     comparisonSliders: instances.comparisonSliders.length,
@@ -59,7 +62,8 @@ export function initAll(options = {}) {
     modals: instances.modals.length,
     sliders: instances.sliders.length,
     accordions: instances.accordions.length,
-    navbars: instances.navbars.length
+    navbars: instances.navbars.length,
+    offcanvas: instances.offcanvas.length
   });
   
   return instances;
