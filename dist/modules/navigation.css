@@ -1,5 +1,5 @@
 /* StoneWick Theme - navigation module */
-/* Generated: 2026-02-01T18:13:49.830Z */
+/* Generated: 2026-02-02T02:47:26.175Z */
 /* === modules/navigation/_navbar.css === */
 /* ==========================================================================
    NAVBAR COMPONENT
@@ -170,6 +170,7 @@
     width: 100%;
     background: var(--bs-white);
     border: none;
+    border-top: 1px solid var(--bs-gray-200);
     border-radius: 0;
     box-shadow: var(--bs-shadow-lg);
     padding: var(--bs-space-5);
@@ -179,13 +180,25 @@
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
 .nav-item:hover > .mega-menu,
-.nav-item:focus-within > .mega-menu {
+.nav-item:focus-within > .mega-menu,
+.mega-menu:hover {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
+/* Create hover bridge by extending mega menu's interactive area upward */
+.mega-menu::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    height: 1rem;
+    background: transparent;
+}
 .mega-menu-dark {
     background: var(--bs-gray-900);
+    border-top-color: rgba(var(--bs-white-rgb), 0.1);
     color: var(--bs-white);
 }
 .mega-menu-dark h6 {
