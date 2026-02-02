@@ -1,0 +1,259 @@
+/* ===========================================
+   THEME VARIABLES
+   All CSS Custom Properties for the theme
+   
+   ⚠️  This file contains ONLY :root variables
+   ⚠️  Do NOT add selectors other than :root
+   =========================================== */
+
+:root {
+  /* -------------------------------------------
+     COLOR PALETTE - Primary Theme Colors
+     ------------------------------------------- */
+  --bs-primary: #2563eb;
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-secondary: #64748b;
+  --bs-secondary-rgb: 100, 116, 139;
+  --bs-success: #10b981;
+  --bs-success-rgb: 16, 185, 129;
+  --bs-info: #06b6d4;
+  --bs-info-rgb: 6, 182, 212;
+  --bs-warning: #f59e0b;
+  --bs-warning-rgb: 245, 158, 11;
+  --bs-danger: #ef4444;
+  --bs-danger-rgb: 239, 68, 68;
+  --bs-light: #f8fafc;
+  --bs-light-rgb: 248, 250, 252;
+  --bs-dark: #0f172a;
+  --bs-dark-rgb: 15, 23, 42;
+  --bs-white: #ffffff;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black: #000000;
+  --bs-black-rgb: 0, 0, 0;
+
+  /* Extended Color Palette */
+  --bs-teal: #14b8a6;
+  --bs-teal-rgb: 20, 184, 166;
+  --bs-purple: #8b5cf6;
+  --bs-purple-rgb: 139, 92, 246;
+  --bs-green: #10b981;
+  --bs-green-rgb: 16, 185, 129;
+  --bs-amber: #f59e0b;
+  --bs-amber-rgb: 245, 158, 11;
+
+  /* Light Accent Colors (for dark backgrounds) */
+  --bs-blue-light: #93c5fd;
+  --bs-teal-light: #5eead4;
+  --bs-purple-light: #c4b5fd;
+  --bs-yellow-light: #fcd34d;
+  --bs-green-light: #6ee7b7;
+
+  /* -------------------------------------------
+     GRAY SCALE
+     ------------------------------------------- */
+  --bs-gray-50: #f8fafc;
+  --bs-gray-100: #f1f5f9;
+  --bs-gray-200: #e2e8f0;
+  --bs-gray-300: #cbd5e1;
+  --bs-gray-400: #94a3b8;
+  --bs-gray-500: #64748b;
+  --bs-gray-600: #475569;
+  --bs-gray-700: #334155;
+  --bs-gray-800: #1e293b;
+  --bs-gray-900: #0f172a;
+
+  /* -------------------------------------------
+     TYPOGRAPHY
+     ------------------------------------------- */
+  --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --bs-body-font-size: 1.125rem;
+  --bs-body-font-weight: 400;
+  --bs-body-line-height: 1.6;
+  --bs-body-color: var(--bs-gray-700);
+  --bs-body-color-rgb: 51, 65, 85;
+  --bs-body-bg: #ffffff;
+
+  /* Heading Typography */
+  --bs-heading-color: var(--bs-dark);
+  --bs-heading-font-weight: 700;
+  --bs-heading-line-height: 1.2;
+
+  /* Type Scale */
+  --bs-font-size-hero: 4.25rem;
+  --bs-font-size-h1: 2.75rem;
+  --bs-font-size-h2: 2.75rem;
+  --bs-font-size-h2-alt: 1.875rem;
+  --bs-font-size-h3: 1.65rem;
+  --bs-font-size-h4: 1.375rem;
+  --bs-font-size-h5: 1.125rem;
+  --bs-font-size-h6: 1rem;
+  --bs-font-size-lg: 1.5rem;
+  --bs-font-size-md: 1.3125rem;
+  --bs-font-size-sm: 0.875rem;
+  --bs-font-size-xs: 0.75rem;
+
+  /* -------------------------------------------
+     LINKS
+     ------------------------------------------- */
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: #1d4ed8;
+  --bs-link-decoration: none;
+  --bs-link-hover-decoration: underline;
+
+  /* -------------------------------------------
+     BORDERS
+     ------------------------------------------- */
+  --bs-border-width: 1px;
+  --bs-border-style: solid;
+  --bs-border-color: #e2e8f0;
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 0.75rem;
+  --bs-border-radius-xxl: 1rem;
+  --bs-border-radius-pill: 50rem;
+
+  /* -------------------------------------------
+     SHADOWS
+     ------------------------------------------- */
+  --bs-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --bs-box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  --bs-box-shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+
+  /* Extended Shadows */
+  --bs-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --bs-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --bs-shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.2);
+  --bs-shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.25);
+
+  /* -------------------------------------------
+     SPACING
+     ------------------------------------------- */
+  --bs-spacer: 1rem;
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+
+  /* Custom Spacing Scale */
+  --bs-space-1: 0.25rem;
+  --bs-space-2: 0.5rem;
+  --bs-space-3: 1rem;
+  --bs-space-4: 1.5rem;
+  --bs-space-5: 2rem;
+  --bs-space-6: 3rem;
+  --bs-space-7: 4rem;
+  --bs-space-8: 5rem;
+  --bs-space-section: 7.5rem;
+  --bs-space-section-sm: 5rem;
+  --bs-space-section-lg: 10rem;
+
+  /* -------------------------------------------
+     LAYOUT
+     ------------------------------------------- */
+  --bs-header-height: 80px;
+  --bs-container-max-width: 1320px;
+
+  /* -------------------------------------------
+     TRANSITIONS
+     ------------------------------------------- */
+  --bs-transition-base: all 0.2s ease-in-out;
+  --bs-transition-fade: opacity 0.15s linear;
+  --bs-transition-collapse: height 0.35s ease;
+
+  /* -------------------------------------------
+     Z-INDEX
+     ------------------------------------------- */
+  --bs-zindex-dropdown: 1000;
+  --bs-zindex-sticky: 1020;
+  --bs-zindex-fixed: 1030;
+  --bs-zindex-modal-backdrop: 1040;
+  --bs-zindex-modal: 1050;
+  --bs-zindex-popover: 1060;
+  --bs-zindex-tooltip: 1070;
+
+  /* -------------------------------------------
+     GLASS EFFECT TOKENS
+     ------------------------------------------- */
+  --bs-glass-bg: rgba(255, 255, 255, 0.95);
+  --bs-glass-bg-dark: rgba(15, 23, 42, 0.95);
+  --bs-glass-border: rgba(255, 255, 255, 0.1);
+  --bs-glass-blur: 10px;
+  --bs-glass-blur-strong: 16px;
+
+  /* -------------------------------------------
+     COMPONENT-SPECIFIC VARIABLES
+     ------------------------------------------- */
+  /* Buttons */
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-border-radius: var(--bs-border-radius);
+
+  /* Cards */
+  --bs-card-spacer-y: 1rem;
+  --bs-card-spacer-x: 1rem;
+  --bs-card-border-width: 1px;
+  --bs-card-border-color: var(--bs-border-color);
+  --bs-card-border-radius: var(--bs-border-radius-lg);
+  --bs-card-bg: #ffffff;
+
+  /* Navbar */
+  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-x: 0;
+  --bs-navbar-brand-font-size: 1.5rem;
+  --bs-navbar-toggler-padding-y: 0.25rem;
+  --bs-navbar-toggler-padding-x: 0.75rem;
+
+  /* -------------------------------------------
+     AVATARS
+     ------------------------------------------- */
+  --bs-avatar-sm: 2rem;
+  --bs-avatar-md: 3rem;
+  --bs-avatar-lg: 4rem;
+  --bs-avatar-xl: 5rem;
+
+  /* -------------------------------------------
+     RATINGS
+     ------------------------------------------- */
+  --bs-rating-color: var(--bs-warning);
+  --bs-rating-empty-color: var(--bs-gray-300);
+
+  /* -------------------------------------------
+     GALLERY
+     ------------------------------------------- */
+  --bs-gallery-gap: var(--bs-space-3);
+  --bs-gallery-min-col: 200px;
+  --bs-gallery-caption-bg: rgba(0, 0, 0, 0.7);
+
+  /* -------------------------------------------
+     MEDIA LIST
+     ------------------------------------------- */
+  --bs-media-thumb-width: 180px;
+  --bs-media-thumb-height: 120px;
+
+  /* -------------------------------------------
+     NAVIGATION (Tabs, Pills, Breadcrumbs)
+     ------------------------------------------- */
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.75rem;
+  --bs-nav-tabs-border-width: 2px;
+  --bs-nav-pills-border-radius: var(--bs-border-radius);
+  
+  /* Pagination */
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.5rem;
+  --bs-pagination-border-radius: var(--bs-border-radius);
+  
+  /* Breadcrumbs */
+  --bs-breadcrumb-divider: "›";
+  --bs-breadcrumb-divider-color: var(--bs-gray-400);
+
+  /* -------------------------------------------
+     NAVBAR
+     ------------------------------------------- */
+  --bs-navbar-height: 80px;
+  --bs-navbar-height-scrolled: 60px;
+  --bs-navbar-transition: all 0.3s ease;
+}

@@ -1,0 +1,527 @@
+/* ===========================================
+   METRICS
+   Stats, metrics, and data display components
+   =========================================== */
+
+/* -------------------------------------------
+   METRIC-ITEM
+   Single stat display with icon, value, label
+   ------------------------------------------- */
+.metric-item {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metric-item i {
+  font-size: 2.5rem;
+  color: var(--bs-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-size: var(--bs-font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--bs-gray-600);
+}
+
+.metric-explanation {
+  font-size: 0.75rem;
+  color: var(--bs-gray-500);
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Dark Variants (auto-applied on dark backgrounds) */
+.bg-dark-gradient .metric-item i,
+.bg-trust .metric-item i,
+.hero .metric-item i {
+  color: var(--bs-warning);
+}
+
+.bg-dark-gradient .metric-value,
+.bg-trust .metric-value,
+.hero .metric-value {
+  color: var(--bs-white);
+}
+
+.bg-dark-gradient .metric-label,
+.bg-trust .metric-label,
+.hero .metric-label {
+  color: var(--bs-gray-400);
+}
+
+/* -------------------------------------------
+   IMAGE COMPARISON SLIDER
+   Draggable before/after reveal slider with mouse and touch support
+   ------------------------------------------- */
+.comparison-slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: var(--bs-border-radius-lg);
+  box-shadow: var(--bs-shadow-lg);
+  user-select: none;
+  cursor: grab;
+  display: block;
+}
+
+.comparison-slider:active {
+  cursor: grabbing;
+}
+
+.comparison-before,
+.comparison-after {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.comparison-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  clip-path: inset(0 50% 0 0);
+}
+
+.comparison-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  vertical-align: middle;
+}
+
+.comparison-label {
+  position: absolute;
+  top: var(--bs-space-3);
+  padding: var(--bs-space-2) var(--bs-space-3);
+  background: rgba(var(--bs-black-rgb), 0.7);
+  color: var(--bs-white);
+  font-weight: 600;
+  font-size: var(--bs-font-size-sm);
+  border-radius: var(--bs-border-radius);
+  backdrop-filter: blur(4px);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 2;
+}
+
+.comparison-label-before {
+  left: var(--bs-space-3);
+}
+
+.comparison-label-after {
+  right: var(--bs-space-3);
+}
+
+.comparison-handle {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: var(--bs-white);
+  transform: translateX(-50%);
+  cursor: ew-resize;
+  z-index: 3;
+  transition: background 0.2s ease;
+}
+
+.comparison-handle:hover {
+  background: var(--bs-primary);
+}
+
+.comparison-handle-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3px;
+  height: 100%;
+  background: inherit;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-handle-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: var(--bs-white);
+  border: 3px solid var(--bs-primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.125rem;
+  box-shadow: var(--bs-shadow-md);
+  transition: all 0.2s ease;
+}
+
+.comparison-handle:hover .comparison-handle-circle {
+  background: var(--bs-primary);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.comparison-handle-circle i {
+  font-size: 0.875rem;
+  color: var(--bs-primary);
+  transition: color 0.2s ease;
+}
+
+.comparison-handle:hover .comparison-handle-circle i {
+  color: var(--bs-white);
+}
+
+.comparison-handle-circle i:first-child {
+  margin-right: -0.25rem;
+}
+
+.comparison-handle-circle i:last-child {
+  margin-left: -0.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .comparison-handle-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .comparison-label {
+    font-size: var(--bs-font-size-xs);
+    padding: var(--bs-space-1) var(--bs-space-2);
+  }
+}
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  color: var(--bs-light);
+}
+
+/* ------------------------------------------- 
+   PERFORMANCE-AUDIT
+   Site auditing tool interface with toggle
+   ------------------------------------------- */
+.performance-audit {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--bs-shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 3rem 0;
+}
+
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.audit-title-section {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.audit-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--bs-heading-color);
+  margin: 0;
+}
+
+.audit-subtitle {
+  font-size: 0.875rem;
+  color: var(--bs-gray-600);
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.audit-comparison-table {
+  margin-top: 1rem;
+}
+
+.audit-comparison-table th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--bs-gray-700);
+  border-bottom: 2px solid var(--bs-gray-300);
+  padding: 0.5rem 0.5rem;
+}
+
+.audit-comparison-table td {
+  padding: 0.5rem 0.5rem;
+  vertical-align: middle;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.audit-comparison-table tbody tr {
+  border-bottom: 1px solid var(--bs-gray-200);
+}
+
+.audit-comparison-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.stonewick-column {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(34, 197, 94, 0.02) 100%);
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.1);
+  border-left: 3px solid var(--bs-success);
+}
+
+.bg-light-danger {
+  background-color: rgba(220, 53, 69, 0.05) !important;
+}
+
+.bg-light-warning {
+  background-color: rgba(255, 193, 7, 0.05) !important;
+}
+
+.audit-impact-footer {
+  border: 1px solid var(--bs-gray-300);
+  background: var(--bs-gray-100);
+  color: var(--bs-gray-600);
+}
+
+.audit-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggle-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--bs-gray-600);
+  transition: color 0.3s ease;
+}
+
+.toggle-label.active {
+  color: var(--bs-primary);
+  font-weight: 600;
+}
+
+/* Custom Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bs-gray-300);
+  transition: 0.3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+  background-color: var(--bs-primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.audit-metrics {
+  position: relative;
+}
+
+.metric-group {
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.metric-group.active {
+  display: grid;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.metric-item {
+  background: var(--bs-gray-50);
+  border-radius: var(--bs-border-radius-md);
+  padding: 1.25rem;
+  border: 1px solid var(--bs-gray-200);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.metric-item:hover {
+  box-shadow: var(--bs-shadow-sm);
+  transform: translateY(-1px);
+}
+
+.metric-name {
+  font-weight: 600;
+  color: var(--bs-heading-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.metric-value {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.metric-value.poor {
+  color: var(--bs-danger);
+}
+
+.metric-value.needs-improvement {
+  color: var(--bs-warning);
+}
+
+.metric-value.good {
+  color: var(--bs-success);
+}
+
+.metric-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+.metric-status i {
+  font-size: 1rem;
+}
+
+.metric-status .bi-x-circle {
+  color: var(--bs-danger);
+}
+
+.metric-status .bi-dash-circle {
+  color: var(--bs-warning);
+}
+
+.metric-status .bi-check-circle {
+  color: var(--bs-success);
+}
+
+.metric-explanation {
+  font-size: 0.75rem;
+  color: var(--bs-gray-600);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+/* Dark background variants */
+.bg-dark .performance-audit,
+.bg-dark-gradient .performance-audit,
+.bg-trust .performance-audit,
+.bg-packages .performance-audit {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--bs-light);
+}
+
+.bg-dark .audit-title,
+.bg-dark-gradient .audit-title,
+.bg-trust .audit-title,
+.bg-packages .audit-title {
+  color: var(--bs-light);
+}
+
+.bg-dark .metric-name,
+.bg-dark-gradient .metric-name,
+.bg-trust .metric-name,
+.bg-packages .metric-name {
+  color: var(--bs-light);
+}
+
+.bg-dark .audit-header,
+.bg-dark-gradient .audit-header,
+.bg-trust .audit-header,
+.bg-packages .audit-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-dark .metric-item,
+.bg-dark-gradient .metric-item,
+.bg-trust .metric-item,
+.bg-packages .metric-item {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .metric-group {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .metric-item {
+    padding: 1rem;
+  }
+  
+  .audit-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .audit-toggle {
+    align-self: center;
+  }
+}

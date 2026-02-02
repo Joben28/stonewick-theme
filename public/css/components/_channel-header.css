@@ -1,0 +1,386 @@
+/* ==========================================================================
+   CHANNEL HEADER COMPONENT
+   YouTube-style channel header cards
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------------
+   Channel Header - Compact Variant (Light Background)
+   ----------------------------------------------------------------------------- */
+
+.channel-header-compact {
+  background: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  padding: var(--bs-space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.channel-header-compact:hover {
+  box-shadow: var(--bs-shadow-md);
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* Channel Avatar */
+.channel-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--bs-gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--bs-gray-500);
+  font-weight: 600;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--bs-gray-100);
+}
+
+.channel-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Channel Info */
+.channel-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.channel-name-row {
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-2);
+  margin-bottom: var(--bs-space-2);
+}
+
+.channel-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.channel-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  background: #ff0000;
+  color: var(--bs-white);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.channel-stats {
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-3);
+  font-size: 0.875rem;
+  color: var(--bs-gray-600);
+}
+
+.channel-stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.channel-stat-value {
+  font-weight: 600;
+  color: var(--bs-heading-color);
+}
+
+.channel-stat-label {
+  color: var(--bs-gray-500);
+}
+
+.channel-stats .stat-separator {
+  width: 4px;
+  height: 4px;
+  background: var(--bs-gray-400);
+  border-radius: 50%;
+}
+
+/* Channel Actions */
+.channel-actions {
+  display: flex;
+  gap: var(--bs-space-2);
+  flex-shrink: 0;
+}
+
+.channel-btn-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bs-space-2);
+  padding: 0.625rem 1.25rem;
+  background: #ff0000;
+  color: var(--bs-white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.channel-btn-visit:hover {
+  background: #cc0000;
+  color: var(--bs-white);
+  transform: translateY(-1px);
+}
+
+.channel-btn-visit i {
+  font-size: 1rem;
+}
+
+.channel-btn-subscribe {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bs-space-2);
+  padding: 0.625rem 1.25rem;
+  background: transparent;
+  color: #ff0000;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border: 2px solid #ff0000;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.channel-btn-subscribe:hover {
+  background: #ff0000;
+  color: var(--bs-white);
+}
+
+.channel-btn-subscribe i {
+  font-size: 1rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Channel Header - Full Variant with Banner
+   ----------------------------------------------------------------------------- */
+
+.channel-header-full {
+  background: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.channel-header-full:hover {
+  box-shadow: var(--bs-shadow-md);
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+
+/* Optional Banner */
+.channel-banner {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-blue-light));
+  position: relative;
+  overflow: hidden;
+}
+
+.channel-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Channel Content Area */
+.channel-content {
+  padding: var(--bs-space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.channel-header-full .channel-avatar {
+  width: 120px;
+  height: 120px;
+  margin-top: -60px; /* Pull up over banner */
+  border: 5px solid var(--bs-white);
+  box-shadow: 0 4px 12px rgba(var(--bs-black-rgb), 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+/* No banner variant - normal avatar positioning */
+.channel-header-full:not(.has-banner) .channel-avatar {
+  margin-top: 0;
+}
+
+.channel-header-full .channel-info {
+  flex: 1;
+}
+
+.channel-header-full .channel-name {
+  font-size: 1.75rem;
+  margin-bottom: var(--bs-space-2);
+}
+
+.channel-header-full .channel-stats {
+  display: flex;
+  gap: var(--bs-space-4);
+  margin-bottom: 0.25rem;
+}
+
+.channel-header-full .channel-stat-item {
+  flex-direction: column;
+  gap: 0;
+}
+
+.channel-header-full .channel-stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--bs-heading-color);
+  line-height: 1;
+}
+
+.channel-header-full .channel-stat-label {
+  font-size: 0.75rem;
+  color: var(--bs-gray-500);
+  text-transform: lowercase;
+}
+
+.channel-header-full .channel-actions {
+  margin-top: var(--bs-space-3);
+}
+
+/* Actions aligned to right for full variant */
+@media (min-width: 992px) {
+  .channel-header-full .channel-content {
+    align-items: flex-start;
+  }
+  
+  .channel-header-full .channel-actions {
+    margin-top: 0;
+    align-self: flex-start;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Dark Background Variants
+   ----------------------------------------------------------------------------- */
+
+.channel-header-compact-dark {
+  background: rgba(var(--bs-white-rgb), 0.05);
+  border: 1px solid rgba(var(--bs-white-rgb), 0.1);
+  border-radius: var(--bs-border-radius-lg);
+  padding: var(--bs-space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--bs-space-4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.channel-header-compact-dark:hover {
+  box-shadow: 0 8px 24px rgba(var(--bs-black-rgb), 0.3);
+  background: rgba(var(--bs-white-rgb), 0.08);
+  border-color: rgba(var(--bs-white-rgb), 0.15);
+}
+
+.channel-header-compact-dark .channel-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--bs-gray-400);
+  font-weight: 600;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+}
+
+.channel-header-compact-dark .channel-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.channel-header-compact-dark .channel-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.channel-header-compact-dark .channel-name {
+  color: var(--bs-white);
+}
+
+.channel-header-compact-dark .channel-stat-value {
+  color: var(--bs-white);
+}
+
+.channel-header-compact-dark .channel-stat-label {
+  color: var(--bs-gray-400);
+}
+
+.channel-header-compact-dark .channel-stats {
+  color: var(--bs-gray-400);
+}
+
+.channel-header-compact-dark .stat-separator {
+  background: var(--bs-gray-500);
+}
+
+.channel-header-compact-dark .channel-actions {
+  display: flex;
+  gap: var(--bs-space-2);
+  flex-shrink: 0;
+}
+
+/* Full Dark */
+.channel-header-full-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.channel-header-full-dark:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.channel-header-full-dark .channel-banner {
+  opacity: 0.9;
+}
+
+.channel-header-full-dark .channel-avatar {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--bs-gray-400);
+}
+
+.channel-header-full-dark .channel-name {
+  color: var(--bs-white);
+}
+
+.channel-header-full-dark .channel-stat-value {
+  color: var(--bs-white);
+}
+
+.channel-header-full-dark .channel-stat-label {
+  color: var(--bs-gray-400);
+}
