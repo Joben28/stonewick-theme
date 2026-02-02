@@ -356,11 +356,11 @@
                         <div class="collapse navbar-collapse" id="navbarDemo9">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                                <li class="nav-item position-static">
+                                <li class="nav-item dropdown position-static">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                         Products
                                     </a>
-                                    <div class="mega-menu">
+                                    <div class="mega-menu dropdown-menu">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-3">
@@ -516,11 +516,11 @@
                         <div class="collapse navbar-collapse" id="navbarDemo7">
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                                <li class="nav-item position-static">
+                                <li class="nav-item dropdown position-static">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                                         Products
                                     </a>
-                                    <div class="mega-menu mega-menu-dark">
+                                    <div class="mega-menu mega-menu-dark dropdown-menu">
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-md-3">
@@ -1738,6 +1738,32 @@ window.addEventListener('scroll', () => {
                 // Optional: keep class for consistency or remove
                 // this.classList.remove('submenu-left', 'submenu-right');
             });
+
+            // Mobile click handling - toggle nested dropdowns
+            const link = submenu.querySelector(':scope > .dropdown-item');
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    // Only handle on mobile/collapsed navbar
+                    if (window.innerWidth < 992) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        const nestedMenu = submenu.querySelector(':scope > .dropdown-menu');
+                        if (nestedMenu) {
+                            // Toggle this submenu
+                            submenu.classList.toggle('show');
+                            
+                            // Close other submenus at same level
+                            const parent = submenu.parentElement;
+                            parent.querySelectorAll(':scope > .dropdown-submenu.show').forEach(other => {
+                                if (other !== submenu) {
+                                    other.classList.remove('show');
+                                }
+                            });
+                        }
+                    }
+                });
+            }
         });
     </script>
 

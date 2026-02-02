@@ -998,6 +998,103 @@ const accordion = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePro
   __proto__: null,
   Accordion
 }, Symbol.toStringTag, { value: "Module" }));
+class Navbar {
+  /**
+   * Initialize navbar functionality
+   * @param {HTMLElement} element - Navbar element
+   */
+  constructor(element) {
+    this.element = element;
+    this.isInitialized = false;
+    this.init();
+  }
+  /**
+   * Initialize navbar features
+   */
+  init() {
+    if (this.isInitialized) return;
+    this.initNestedDropdowns();
+    this.initViewportDetection();
+    this.isInitialized = true;
+  }
+  /**
+   * Initialize nested dropdown functionality
+   */
+  initNestedDropdowns() {
+    const submenus = this.element.querySelectorAll(".dropdown-submenu");
+    submenus.forEach((submenu) => {
+      const link = submenu.querySelector(":scope > .dropdown-item");
+      if (!link) return;
+      link.addEventListener("click", (e) => {
+        if (window.innerWidth < 992) {
+          e.preventDefault();
+          e.stopPropagation();
+          const nestedMenu = submenu.querySelector(":scope > .dropdown-menu");
+          if (nestedMenu) {
+            submenu.classList.toggle("show");
+            const parent = submenu.parentElement;
+            parent.querySelectorAll(":scope > .dropdown-submenu.show").forEach((other) => {
+              if (other !== submenu) {
+                other.classList.remove("show");
+              }
+            });
+          }
+        }
+      });
+    });
+  }
+  /**
+   * Auto-detect viewport edges for nested submenus
+   */
+  initViewportDetection() {
+    const submenus = this.element.querySelectorAll(".dropdown-submenu");
+    submenus.forEach((submenu) => {
+      submenu.addEventListener("mouseenter", function() {
+        const nestedMenu = this.querySelector(":scope > .dropdown-menu");
+        if (!nestedMenu) return;
+        const originalDisplay = nestedMenu.style.display;
+        nestedMenu.style.display = "block";
+        nestedMenu.style.visibility = "hidden";
+        const rect = nestedMenu.getBoundingClientRect();
+        const viewportWidth = window.innerWidth;
+        if (rect.right > viewportWidth - 10) {
+          this.classList.add("submenu-left");
+          this.classList.remove("submenu-right");
+        } else if (rect.left < 10) {
+          this.classList.add("submenu-right");
+          this.classList.remove("submenu-left");
+        }
+        nestedMenu.style.display = originalDisplay;
+        nestedMenu.style.visibility = "";
+      });
+    });
+  }
+  /**
+   * Destroy the navbar instance
+   */
+  destroy() {
+    this.isInitialized = false;
+  }
+  /**
+   * Initialize all navbars in the document
+   * @param {string} selector - CSS selector for navbar elements
+   * @param {HTMLElement} scope - Scope to search within (default: document)
+   * @returns {Array<Navbar>} Array of initialized navbar instances
+   */
+  static initAll(selector = ".navbar", scope = document) {
+    const navbars = scope.querySelectorAll(selector);
+    return Array.from(navbars).map((navbar) => new Navbar(navbar));
+  }
+}
+if (typeof window !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      Navbar.initAll();
+    });
+  } else {
+    Navbar.initAll();
+  }
+}
 const VERSION = "1.0.0";
 function initAll(options = {}) {
   const scope = options.scope ? document.querySelector(options.scope) : document;
@@ -1007,17 +1104,20 @@ function initAll(options = {}) {
   const { Modal: Modal2 } = require("./modules/modals.js");
   const { Slider: Slider2 } = require("./modules/slider.js");
   const { Accordion: Accordion2 } = require("./modules/accordion.js");
+  const { Navbar: Navbar2 } = require("./modules/navbar.js");
   instances.comparisonSliders = ComparisonSlider2.initAll(".comparison-slider", scope);
   instances.videoTheaters = VideoTheater2.initAll(".video-theater", scope);
   instances.modals = Modal2.initAll(".modal-custom", scope);
   instances.sliders = Slider2.initAll(".carousel-thumbnails", scope);
   instances.accordions = Accordion2.initAll(".accordion", scope);
+  instances.navbars = Navbar2.initAll(".navbar", scope);
   console.log("[StoneWick] Initialized components:", {
     comparisonSliders: instances.comparisonSliders.length,
     videoTheaters: instances.videoTheaters.length,
     modals: instances.modals.length,
     sliders: instances.sliders.length,
-    accordions: instances.accordions.length
+    accordions: instances.accordions.length,
+    navbars: instances.navbars.length
   });
   return instances;
 }
@@ -1043,6 +1143,7 @@ export {
   Accordion,
   ComparisonSlider,
   Modal,
+  Navbar,
   Slider,
   VERSION,
   VideoTheater,

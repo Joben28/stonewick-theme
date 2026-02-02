@@ -65,10 +65,24 @@
   }
 
   .mega-menu {
-    position: static;
+    position: static !important;
     box-shadow: none;
     padding: var(--bs-space-3);
     border-top: 1px solid var(--bs-gray-200);
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  /* Show when Bootstrap adds .show class */
+  .mega-menu.show {
+    display: block !important;
+  }
+
+  /* Remove hover bridge on mobile */
+  .mega-menu::before {
+    display: none;
   }
 
   .mega-menu .row {
@@ -90,10 +104,12 @@
     box-shadow: none;
     border: none;
     background: transparent;
+    display: none;
   }
 
   .dropdown-submenu > .dropdown-item::after {
-    transform: rotate(45deg);
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
   }
 
   .dropdown-submenu:hover > .dropdown-menu {
@@ -102,6 +118,10 @@
 
   .dropdown-submenu.show > .dropdown-menu {
     display: block;
+  }
+
+  .dropdown-submenu.show > .dropdown-item::after {
+    transform: rotate(-90deg);
   }
 
   /* Hero */

@@ -22,6 +22,7 @@ export { VideoTheater } from './modules/video-theater.js';
 export { Modal } from './modules/modals.js';
 export { Slider } from './modules/slider.js';
 export { Accordion } from './modules/accordion.js';
+export { Navbar } from './modules/navbar.js';
 
 // Version
 export const VERSION = '1.0.0';
@@ -42,6 +43,7 @@ export function initAll(options = {}) {
   const { Modal } = require('./modules/modals.js');
   const { Slider } = require('./modules/slider.js');
   const { Accordion } = require('./modules/accordion.js');
+  const { Navbar } = require('./modules/navbar.js');
   
   // Initialize each component type
   instances.comparisonSliders = ComparisonSlider.initAll('.comparison-slider', scope);
@@ -49,13 +51,15 @@ export function initAll(options = {}) {
   instances.modals = Modal.initAll('.modal-custom', scope);
   instances.sliders = Slider.initAll('.carousel-thumbnails', scope);
   instances.accordions = Accordion.initAll('.accordion', scope);
+  instances.navbars = Navbar.initAll('.navbar', scope);
   
   console.log('[StoneWick] Initialized components:', {
     comparisonSliders: instances.comparisonSliders.length,
     videoTheaters: instances.videoTheaters.length,
     modals: instances.modals.length,
     sliders: instances.sliders.length,
-    accordions: instances.accordions.length
+    accordions: instances.accordions.length,
+    navbars: instances.navbars.length
   });
   
   return instances;
