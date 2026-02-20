@@ -19,9 +19,12 @@
   content: '';
   position: absolute;
   inset: 0;
-  background:
+  /* var(--overlay-bg) is set by .overlay-* utility classes on this element.
+     Falls back to the default primary+teal radial gradient. */
+  background: var(--overlay-bg,
     radial-gradient(circle at 15% 25%, rgba(var(--bs-primary-rgb), 0.12) 0%, transparent 50%),
-    radial-gradient(circle at 85% 75%, rgba(var(--bs-teal-rgb), 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 85% 75%, rgba(var(--bs-teal-rgb), 0.08) 0%, transparent 50%)
+  );
   pointer-events: none;
 }
 
