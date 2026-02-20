@@ -1,5 +1,5 @@
 /* StoneWick Theme - cards module */
-/* Generated: 2026-02-02T05:35:32.410Z */
+/* Generated: 2026-02-20T17:39:57.474Z */
 /* === modules/cards/_cards.css === */
 /* ===========================================
    CARDS
@@ -1063,6 +1063,448 @@
 .card-testimonial-compact .testimonial-footer {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
+}
+/* === modules/cards/_events.css === */
+/* ==========================================================================
+   EVENT CARDS
+   Cards for displaying events, webinars, conferences, and meetups
+   ========================================================================== */
+/* -----------------------------------------------------------------------------
+   Event Grid Layout
+   ----------------------------------------------------------------------------- */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--bs-space-4);
+}
+.event-grid-2 {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.event-grid-3 {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--bs-space-3);
+}
+/* -----------------------------------------------------------------------------
+   Base Event Card
+   ----------------------------------------------------------------------------- */
+.card-event {
+  background: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-event:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-lg);
+  border-color: rgba(var(--bs-primary-rgb), 0.2);
+}
+/* Featured variant */
+.card-event.featured {
+  border-color: var(--bs-primary);
+  border-width: 2px;
+}
+.card-event.featured::before {
+  content: 'Featured';
+  position: absolute;
+  top: var(--bs-space-3);
+  right: var(--bs-space-3);
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--bs-border-radius);
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+/* -----------------------------------------------------------------------------
+   Event Image
+   ----------------------------------------------------------------------------- */
+.event-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.event-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card-event:hover .event-image img {
+  transform: scale(1.05);
+}
+/* Event Date Badge */
+.event-date-badge {
+  position: absolute;
+  top: var(--bs-space-3);
+  left: var(--bs-space-3);
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius);
+  box-shadow: var(--bs-shadow-sm);
+  padding: 0.5rem;
+  text-align: center;
+  min-width: 3.5rem;
+  z-index: 5;
+}
+.event-date-day {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--bs-heading-color);
+}
+.event-date-month {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--bs-gray-600);
+  margin-top: 0.125rem;
+  letter-spacing: 0.5px;
+}
+/* Event Category Badge */
+.event-category {
+  position: absolute;
+  bottom: var(--bs-space-3);
+  left: var(--bs-space-3);
+  background: rgba(0, 0, 0, 0.75);
+  color: var(--bs-white);
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--bs-border-radius);
+  font-size: var(--bs-font-size-sm);
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+/* -----------------------------------------------------------------------------
+   Event Body
+   ----------------------------------------------------------------------------- */
+.event-body {
+  padding: var(--bs-space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.event-title {
+  font-size: var(--bs-font-size-h5);
+  font-weight: 700;
+  margin-bottom: var(--bs-space-2);
+  line-height: 1.3;
+}
+.event-title a {
+  color: var(--bs-heading-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.event-title a:hover {
+  color: var(--bs-primary);
+}
+.event-description {
+  color: var(--bs-gray-600);
+  margin-bottom: var(--bs-space-3);
+  line-height: var(--bs-body-line-height);
+  flex: 1;
+}
+/* Event Meta Info */
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bs-space-3);
+  margin-bottom: var(--bs-space-3);
+  padding-top: var(--bs-space-2);
+  border-top: 1px solid var(--bs-border-color);
+}
+.event-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bs-gray-600);
+  font-size: var(--bs-font-size-sm);
+}
+.event-meta-item i {
+  color: var(--bs-gray-500);
+  font-size: 1rem;
+}
+/* Event Actions */
+.event-actions {
+  display: flex;
+  gap: var(--bs-space-2);
+  margin-top: auto;
+}
+.add-to-calendar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-gray-700);
+  font-size: var(--bs-font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.add-to-calendar:hover {
+  background: var(--bs-gray-100);
+  border-color: var(--bs-gray-400);
+  color: var(--bs-heading-color);
+}
+.add-to-calendar i {
+  font-size: 1rem;
+}
+/* -----------------------------------------------------------------------------
+   Event Card - Horizontal Variant
+   ----------------------------------------------------------------------------- */
+.card-event-horizontal {
+  flex-direction: row;
+}
+.card-event-horizontal .event-image {
+  width: 300px;
+  height: auto;
+}
+.card-event-horizontal .event-body {
+  flex: 1;
+}
+/* -----------------------------------------------------------------------------
+   Event Card - Compact Variant
+   ----------------------------------------------------------------------------- */
+.card-event-compact {
+  flex-direction: row;
+  align-items: center;
+  padding: var(--bs-space-3);
+  height: auto;
+}
+.card-event-compact .event-date-badge {
+  position: static;
+  margin-right: var(--bs-space-3);
+  flex-shrink: 0;
+}
+.card-event-compact .event-image {
+  display: none;
+}
+.card-event-compact .event-body {
+  padding: 0;
+  flex: 1;
+}
+.card-event-compact .event-title {
+  font-size: var(--bs-font-size-base);
+  margin-bottom: var(--bs-space-1);
+}
+.card-event-compact .event-description {
+  display: none;
+}
+.card-event-compact .event-meta {
+  margin-bottom: 0;
+  padding-top: 0;
+  border-top: none;
+  gap: var(--bs-space-2);
+}
+.card-event-compact .event-meta-item {
+  font-size: 0.8125rem;
+}
+.card-event-compact .event-actions {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.card-event-compact .add-to-calendar span {
+  display: none;
+}
+.card-event-compact .add-to-calendar {
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+}
+.card-event-compact .add-to-calendar:hover {
+  background: var(--bs-gray-100);
+}
+/* -----------------------------------------------------------------------------
+   Event Card - Dark Variant
+   ----------------------------------------------------------------------------- */
+.card-event-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-event-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+/* Featured variant for dark */
+.card-event-dark.featured {
+  border-color: var(--bs-primary);
+  border-width: 2px;
+}
+.card-event-dark.featured::before {
+  content: 'Featured';
+  position: absolute;
+  top: var(--bs-space-3);
+  right: var(--bs-space-3);
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--bs-border-radius);
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  z-index: 10;
+}
+/* Dark variant event body */
+.card-event-dark .event-body {
+  padding: var(--bs-space-4);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-event-dark .event-title {
+  font-size: var(--bs-font-size-h5);
+  font-weight: 700;
+  margin-bottom: var(--bs-space-2);
+  line-height: 1.3;
+}
+.card-event-dark .event-title a {
+  color: var(--bs-white);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.card-event-dark .event-title a:hover {
+  color: var(--bs-primary);
+}
+.card-event-dark .event-description {
+  color: var(--bs-gray-300);
+  margin-bottom: var(--bs-space-3);
+  line-height: var(--bs-body-line-height);
+  flex: 1;
+}
+/* Dark variant event meta */
+.card-event-dark .event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--bs-space-3);
+  margin-bottom: var(--bs-space-3);
+  padding-top: var(--bs-space-2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.card-event-dark .event-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--bs-gray-400);
+  font-size: var(--bs-font-size-sm);
+}
+.card-event-dark .event-meta-item i {
+  color: var(--bs-gray-500);
+  font-size: 1rem;
+}
+/* Dark variant event actions */
+.card-event-dark .event-actions {
+  display: flex;
+  gap: var(--bs-space-2);
+  margin-top: auto;
+}
+.card-event-dark .add-to-calendar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--bs-border-radius);
+  color: var(--bs-gray-300);
+  font-size: var(--bs-font-size-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.card-event-dark .add-to-calendar:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--bs-white);
+}
+.card-event-dark .add-to-calendar i {
+  font-size: 1rem;
+}
+/* Dark variant date badge */
+.card-event-dark .event-date-badge {
+  position: absolute;
+  top: var(--bs-space-3);
+  left: var(--bs-space-3);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--bs-border-radius);
+  box-shadow: var(--bs-shadow-sm);
+  padding: 0.5rem;
+  text-align: center;
+  min-width: 3.5rem;
+  z-index: 5;
+}
+/* Dark variant compact */
+.card-event-dark.card-event-compact {
+  flex-direction: row;
+  align-items: center;
+  padding: var(--bs-space-3);
+  height: auto;
+}
+.card-event-dark.card-event-compact .event-date-badge {
+  position: static;
+  margin-right: var(--bs-space-3);
+  flex-shrink: 0;
+}
+.card-event-dark.card-event-compact .event-image {
+  display: none;
+}
+.card-event-dark.card-event-compact .event-body {
+  padding: 0;
+  flex: 1;
+}
+.card-event-dark.card-event-compact .event-title {
+  font-size: var(--bs-font-size-base);
+  margin-bottom: var(--bs-space-1);
+}
+.card-event-dark.card-event-compact .event-description {
+  display: none;
+}
+.card-event-dark.card-event-compact .event-meta {
+  margin-bottom: 0;
+  padding-top: 0;
+  border-top: none;
+  gap: var(--bs-space-2);
+}
+.card-event-dark.card-event-compact .event-meta-item {
+  font-size: 0.8125rem;
+}
+.card-event-dark.card-event-compact .event-actions {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.card-event-dark.card-event-compact .add-to-calendar span {
+  display: none;
+}
+.card-event-dark.card-event-compact .add-to-calendar {
+  padding: 0.5rem;
+  border: none;
+  background: transparent;
+}
+.card-event-dark.card-event-compact .add-to-calendar:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 

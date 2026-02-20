@@ -1,0 +1,589 @@
+/* ===========================================
+   MINISTRY BRAND CUSTOMIZATIONS
+   GracePoint Community Church
+   
+   Brand: Welcoming, warm, spiritual,
+   hope-filled, community-focused
+   
+   APPROACH: Override variables only, let theme do the work
+   =========================================== */
+
+/* -------------------------------------------
+   BRAND TOKENS
+   Override base theme variables
+   ------------------------------------------- */
+.ministry-brand {
+  /* Primary = Deep Midnight Blue (trust, depth) */
+  --bs-primary: #1a2332;
+  --bs-primary-rgb: 26, 35, 50;
+  
+  /* Secondary = Radiant Gold (ray of light, hope) */
+  --bs-secondary: #f59e0b;
+  --bs-secondary-rgb: 245, 158, 11;
+  
+  /* Accent = Soft Sky Blue (peace, light) */
+  --bs-teal: #60a5fa;
+  --bs-teal-rgb: 96, 165, 250;
+  
+  /* Warmer light backgrounds */
+  --bs-light: #fdfcf9;
+  --bs-light-rgb: 253, 252, 249;
+  
+  /* Softer shadows for ministry feel */
+  --bs-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --bs-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --bs-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.08);
+  
+  /* Slightly rounded corners (softer, welcoming) */
+  --bs-border-radius: 0.5rem;
+  --bs-border-radius-lg: 0.75rem;
+  --bs-border-radius-xl: 1rem;
+  
+  /* Glass effect - lighter for ministry */
+  --bs-glass-bg: rgba(255, 255, 255, 0.98);
+  --bs-glass-bg-dark: rgba(255, 255, 255, 0.98);
+  --bs-glass-border: rgba(0, 0, 0, 0.05);
+}
+
+/* -------------------------------------------
+   BACKGROUND UTILITIES
+   Brand-specific section backgrounds
+   ------------------------------------------- */
+.ministry-brand .bg-warm {
+  background-color: #fdf8f0;
+}
+
+.ministry-brand .bg-cream {
+  background-color: #faf6ed;
+}
+
+/* -------------------------------------------
+   HEADER
+   Light header with subtle glass effect
+   ------------------------------------------- */
+.ministry-brand .main-header {
+  position: sticky;
+  --navbar-text-color: var(--bs-gray-700);
+  --navbar-text-hover: var(--bs-secondary);
+  background: var(--bs-glass-bg);
+  border-bottom: 1px solid var(--bs-glass-border);
+}
+
+.ministry-brand .navbar-brand {
+  color: var(--bs-primary);
+}
+
+.ministry-brand .navbar-brand i {
+  color: var(--bs-secondary);
+}
+
+.ministry-brand .nav-link.active {
+  color: var(--bs-secondary);
+}
+
+/* -------------------------------------------
+   HERO
+   Background images with overlay for text readability
+   ------------------------------------------- */
+.ministry-brand .hero {
+  background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ministry-brand .hero::before {
+  /* Dark overlay with warm gradient tint for readability */
+  background:
+    linear-gradient(135deg, 
+      rgba(26, 35, 50, 0.85) 0%, 
+      rgba(26, 35, 50, 0.75) 50%,
+      rgba(26, 35, 50, 0.85) 100%
+    ),
+    radial-gradient(ellipse at 70% 20%, rgba(var(--bs-secondary-rgb), 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 80%, rgba(var(--bs-teal-rgb), 0.08) 0%, transparent 60%);
+}
+
+.ministry-brand .hero-glow::before {
+  background:
+    linear-gradient(135deg, 
+      rgba(26, 35, 50, 0.80) 0%, 
+      rgba(26, 35, 50, 0.70) 50%,
+      rgba(26, 35, 50, 0.80) 100%
+    ),
+    radial-gradient(ellipse at 20% 30%, rgba(var(--bs-secondary-rgb), 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(var(--bs-teal-rgb), 0.12) 0%, transparent 50%);
+}
+
+.ministry-brand .hero-highlight {
+  color: var(--bs-secondary);
+}
+
+.ministry-brand .hero-highlight-secondary {
+  color: var(--bs-secondary);
+  text-shadow: 0 0 40px rgba(var(--bs-secondary-rgb), 0.6);
+}
+
+/* -------------------------------------------
+   BUTTONS
+   Gold secondary buttons (CTA focus)
+   ------------------------------------------- */
+.ministry-brand .btn-secondary {
+  background: linear-gradient(135deg, var(--bs-secondary), #fbbf24);
+  border-color: transparent;
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+
+.ministry-brand .btn-secondary:hover {
+  background: linear-gradient(135deg, #fbbf24, #fcd34d);
+  color: var(--bs-primary);
+}
+
+/* -------------------------------------------
+   CARDS
+   Subtle border accent on hover
+   ------------------------------------------- */
+.ministry-brand .card:hover,
+.ministry-brand .card-service:hover,
+.ministry-brand .card-feature:hover {
+  border-color: rgba(var(--bs-secondary-rgb), 0.2);
+}
+
+/* -------------------------------------------
+   EYEBROW
+   Gold accent color
+   ------------------------------------------- */
+.ministry-brand .eyebrow {
+  color: var(--bs-secondary);
+}
+
+/* -------------------------------------------
+   INFO STRIP
+   Utility bar with contact information
+   ------------------------------------------- */
+.ministry-brand .info-strip {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ministry-brand .info-strip a {
+  color: var(--bs-white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ministry-brand .info-strip a:hover {
+  color: var(--bs-secondary);
+}
+
+.ministry-brand .info-strip-item {
+  padding: 0 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ministry-brand .info-strip-item:last-child {
+  border-right: none;
+}
+
+/* -------------------------------------------
+   FOOTER
+   Dark with gold accent line
+   ------------------------------------------- */
+.ministry-brand .footer {
+  background: linear-gradient(135deg, #0f1419 0%, var(--bs-primary) 100%);
+}
+
+.ministry-brand .footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--bs-secondary), transparent);
+}
+
+/* -------------------------------------------
+   MINISTRY-SPECIFIC COMPONENTS
+   Only components unique to ministry sites
+   ------------------------------------------- */
+
+/* Service Times */
+.ministry-brand .service-time {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--bs-shadow-sm);
+}
+
+.ministry-brand .service-time-day {
+  color: var(--bs-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.ministry-brand .service-time-hour {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--bs-heading-color);
+}
+
+/* Scripture display */
+.ministry-brand .display-verse {
+  font-style: italic;
+  color: var(--bs-primary);
+  border-left: 4px solid var(--bs-secondary);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+}
+
+.ministry-brand .verse-reference {
+  font-size: 0.875rem;
+  color: var(--bs-secondary);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Live badge */
+.ministry-brand .badge-live {
+  background: #dc2626;
+  color: var(--bs-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  animation: pulse-live 2s infinite;
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Divider with cross icon */
+.ministry-brand .divider-cross {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.ministry-brand .divider-cross::before,
+.ministry-brand .divider-cross::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bs-border-color);
+  max-width: 100px;
+}
+
+.ministry-brand .divider-cross i {
+  margin: 0 1rem;
+  color: var(--bs-secondary);
+}
+
+/* -------------------------------------------
+   STAFF CARDS
+   Leadership/team member display
+   ------------------------------------------- */
+.ministry-brand .staff-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.ministry-brand .staff-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(var(--bs-secondary-rgb), 0.3);
+  box-shadow: 0 4px 16px rgba(var(--bs-secondary-rgb), 0.15);
+}
+
+.ministry-brand .staff-card h5 {
+  color: var(--bs-heading-color);
+  margin-bottom: 0.25rem;
+}
+
+.ministry-brand .staff-role {
+  color: var(--bs-secondary);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* -------------------------------------------
+   EVENT CARDS
+   Calendar/event display
+   ------------------------------------------- */
+.ministry-brand .event-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bs-shadow-sm);
+  transition: transform 0.2s ease;
+}
+
+.ministry-brand .event-card:hover {
+  transform: translateY(-4px);
+}
+
+.ministry-brand .event-card-date {
+  background: linear-gradient(135deg, var(--bs-primary) 0%, #0f1419 100%);
+  color: var(--bs-white);
+  padding: 1rem;
+  text-align: center;
+  min-width: 90px;
+}
+
+.ministry-brand .event-card-date .day {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.ministry-brand .event-card-date .month {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* -------------------------------------------
+   SERMON CARDS
+   Video/audio sermon display
+   ------------------------------------------- */
+.ministry-brand .sermon-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bs-shadow-sm);
+}
+
+.ministry-brand .sermon-card-image {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.ministry-brand .sermon-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ministry-brand .sermon-card-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: var(--bs-secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-primary);
+  font-size: 1.5rem;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.ministry-brand .sermon-card:hover .sermon-card-play {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.ministry-brand .sermon-card-body {
+  padding: 1.5rem;
+}
+
+.ministry-brand .sermon-card-series {
+  color: var(--bs-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* -------------------------------------------
+   MINISTRY PROGRAM CARDS
+   Ministry category display
+   ------------------------------------------- */
+.ministry-brand .ministry-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--bs-shadow-sm);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ministry-brand .ministry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-md);
+}
+
+.ministry-brand .ministry-card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(var(--bs-secondary-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  color: var(--bs-primary);
+  font-size: 1.75rem;
+  border: 2px solid rgba(var(--bs-secondary-rgb), 0.2);
+}
+
+/* -------------------------------------------
+   SMALL GROUPS
+   Connect group cards
+   ------------------------------------------- */
+.ministry-brand .group-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bs-shadow-sm);
+}
+
+.ministry-brand .group-card-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.ministry-brand .group-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ministry-brand .group-card-body {
+  padding: 1.5rem;
+}
+
+.ministry-brand .group-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  color: var(--bs-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* -------------------------------------------
+   GIVING OPTIONS
+   Donation type selection
+   ------------------------------------------- */
+.ministry-brand .giving-option {
+  background: var(--bs-white);
+  border: 2px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.ministry-brand .giving-option:hover,
+.ministry-brand .giving-option.active {
+  border-color: var(--bs-primary);
+  box-shadow: var(--bs-shadow-md);
+}
+
+.ministry-brand .giving-option-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--bs-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: var(--bs-primary);
+  font-size: 1.5rem;
+}
+
+.ministry-brand .giving-amount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  font-weight: 600;
+  color: var(--bs-heading-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ministry-brand .giving-amount:hover,
+.ministry-brand .giving-amount.selected {
+  border-color: var(--bs-primary);
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+/* -------------------------------------------
+   PRAYER REQUEST FORM
+   ------------------------------------------- */
+.ministry-brand .prayer-form {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-xl);
+  padding: 2.5rem;
+  box-shadow: var(--bs-shadow-md);
+}
+
+.ministry-brand .prayer-type {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ministry-brand .prayer-type:hover,
+.ministry-brand .prayer-type.selected {
+  border-color: var(--bs-primary);
+  background: var(--bs-light);
+}
+
+.ministry-brand .prayer-type input {
+  margin-right: 0.75rem;
+}
+
+/* -------------------------------------------
+   SERMON COMPONENTS
+   Sermon archive and series styling
+   ------------------------------------------- */
+.ministry-brand .active-sermon {
+  background-color: rgba(var(--bs-primary-rgb), 0.05);
+  border-left: 3px solid var(--bs-secondary);
+}
+
+.ministry-brand .sermon-thumb {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.ministry-brand .sermon-thumb:hover {
+  opacity: 0.8;
+}
+

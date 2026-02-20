@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Consulting | StoneWick - Expert Web & Technology Guidance</title>
+    <meta name="description"
+        content="Web and technology consulting for small businesses. Get expert guidance on tech stack decisions, SEO strategy, and digital infrastructure without agency fees.">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stonewicksites.com/tech-consulting">
+    <meta property="og:title" content="Tech Consulting | StoneWick">
+    <meta property="og:description" content="Expert technology guidance for small businesses. Make smart tech decisions without expensive agency overhead.">
+    
+    <meta name="author" content="Joseph Pederson">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="canonical" href="https://stonewicksites.com/tech-consulting">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <svg viewBox="0 0 233 43" xmlns="http://www.w3.org/2000/svg" data-logo="logo" style="height: 32px; width: auto;">
+                        <g transform="translate(0, 1) rotate(0)" id="logogram"><path fill="#2563EB" d="M20.1719 5.45685L22.8086 0.889954L30.285 5.20648L27.6483 9.77338C27.186 10.5742 27.8792 11.5476 28.7872 11.3725L33.8389 10.3984L35.4735 18.8753L30.4218 19.8494C22.2497 21.4253 16.0106 12.6645 20.1719 5.45685Z" clip-rule="evenodd" fill-rule="evenodd"></path><path fill="#F59E0B" d="M15.6034 36.3231L12.9667 40.89L5.49021 36.5735L8.12691 32.0066C8.58928 31.2057 7.89604 30.2323 6.98803 30.4074L1.93636 31.3815L0.301758 22.9046L5.35343 21.9305C13.5255 20.3547 19.7647 29.1155 15.6034 36.3231Z" clip-rule="evenodd" fill-rule="evenodd"></path><path fill="#4B5771" d="M15.8321 5.45685L13.1954 0.889954L5.71891 5.20648L8.35561 9.77338C8.81797 10.5742 8.12474 11.5476 7.21673 11.3725L2.16505 10.3984L0.530457 18.8753L5.58213 19.8494C13.7542 21.4253 19.9934 12.6645 15.8321 5.45685Z" clip-rule="evenodd" fill-rule="evenodd"></path><path fill="#14B8A6" d="M19.9514 36.3231L22.5881 40.89L30.0645 36.5735L27.4278 32.0066C26.9654 31.2057 27.6587 30.2323 28.5667 30.4074L33.6184 31.3815L35.253 22.9046L30.2013 21.9305C22.0292 20.3547 15.79 29.1155 19.9514 36.3231Z" clip-rule="evenodd" fill-rule="evenodd"></path></g>
+                        <g transform="translate(42, 8.5)" id="logotype"><path d="M18.15 26.35L18.15 26.35Q14.65 26.35 12.25 25.35Q9.85 24.36 8.55 22.54Q7.26 20.71 7.08 18.16L7.08 18.16L13.04 18.16Q13.18 19.56 13.82 20.42Q14.47 21.27 15.61 21.66Q16.75 22.04 18.29 22.04L18.29 22.04Q19.34 22.04 20.16 21.87Q20.98 21.70 21.56 21.34Q22.14 20.99 22.45 20.47Q22.77 19.95 22.77 19.21L22.77 19.21Q22.77 18.30 22.36 17.67Q21.96 17.04 21.17 16.62Q20.39 16.20 19.20 15.92L19.20 15.92L14.68 14.80Q12.41 14.27 10.81 13.36Q9.22 12.45 8.38 11.09Q7.54 9.72 7.54 7.80L7.54 7.80Q7.54 6.01 8.28 4.60Q9.01 3.18 10.38 2.18Q11.74 1.18 13.67 0.68Q15.59 0.17 17.97 0.17L17.97 0.17Q21.23 0.17 23.52 1.08Q25.81 1.99 27.11 3.69Q28.40 5.38 28.61 7.83L28.61 7.83L22.70 7.83Q22.49 6.61 21.87 5.86Q21.26 5.10 20.28 4.75Q19.30 4.40 17.90 4.40L17.90 4.40Q16.54 4.40 15.63 4.74Q14.72 5.07 14.26 5.66Q13.80 6.26 13.80 7.03L13.80 7.03Q13.80 7.83 14.21 8.41Q14.61 8.99 15.40 9.41Q16.19 9.83 17.34 10.14L17.34 10.14L21.40 11.05Q23.68 11.61 25.41 12.54Q27.14 13.47 28.10 14.96Q29.07 16.45 29.07 18.75L29.07 18.75Q29.07 20.61 28.31 22.01Q27.56 23.41 26.13 24.39Q24.69 25.37 22.68 25.86Q20.66 26.35 18.15 26.35ZM43.03 26L37.22 26Q35.51 26 34.51 25.16Q33.51 24.32 33.51 22.57L33.51 22.57L33.51 2.09L39.29 2.09L39.29 21.52L43.03 21.52L43.03 26ZM42.93 11.44L30.47 11.44L30.47 7.20L42.93 7.20L42.93 11.44ZM54.69 26.35L54.69 26.35Q52.34 26.35 50.47 25.74Q48.60 25.13 47.28 23.95Q45.97 22.78 45.27 21.13Q44.57 19.49 44.57 17.42L44.57 17.42L44.57 15.74Q44.57 13.01 45.80 11.02Q47.02 9.02 49.30 7.94Q51.57 6.85 54.69 6.85L54.69 6.85Q57.03 6.85 58.90 7.47Q60.78 8.08 62.09 9.25Q63.40 10.42 64.12 12.07Q64.84 13.71 64.84 15.74L64.84 15.74L64.84 17.42Q64.84 20.16 63.59 22.17Q62.35 24.18 60.09 25.27Q57.84 26.35 54.69 26.35ZM54.69 22.11L54.69 22.11Q55.98 22.11 56.91 21.68Q57.84 21.24 58.34 20.42Q58.85 19.59 58.85 18.58L58.85 18.58L58.85 14.62Q58.85 13.54 58.34 12.73Q57.84 11.93 56.91 11.49Q55.98 11.05 54.69 11.05L54.69 11.05Q53.43 11.05 52.48 11.49Q51.54 11.93 51.03 12.73Q50.52 13.54 50.52 14.62L50.52 14.62L50.52 18.58Q50.52 19.59 51.03 20.42Q51.54 21.24 52.48 21.68Q53.43 22.11 54.69 22.11ZM72.68 26L66.90 26L66.90 7.20L72.08 7.20L72.68 9.76L72.92 9.76Q73.97 8.36 75.56 7.63Q77.16 6.89 79.12 6.89L79.12 6.89Q81.46 6.89 83.02 7.75Q84.58 8.60 85.36 10.18Q86.15 11.75 86.15 13.99L86.15 13.99L86.15 26L80.38 26L80.38 14.80Q80.38 13.64 79.97 12.84Q79.57 12.03 78.80 11.63Q78.03 11.23 76.88 11.23L76.88 11.23Q75.48 11.23 74.41 11.86Q73.34 12.49 72.68 13.50L72.68 13.50L72.68 26ZM98.12 26.35L98.12 26.35Q95.81 26.35 93.96 25.74Q92.10 25.13 90.77 23.97Q89.44 22.81 88.74 21.15Q88.04 19.49 88.04 17.42L88.04 17.42L88.04 15.74Q88.04 13.01 89.28 11.02Q90.53 9.02 92.80 7.94Q95.08 6.85 98.12 6.85L98.12 6.85Q100.36 6.85 102.16 7.47Q103.97 8.08 105.26 9.23Q106.56 10.39 107.26 12.02Q107.96 13.64 107.96 15.64L107.96 15.64L107.96 18.02L93.05 18.02L93.05 14.73L102.53 14.73L102.08 15.25L102.08 14.10Q102.08 13.08 101.59 12.33Q101.10 11.58 100.22 11.16Q99.35 10.74 98.12 10.74L98.12 10.74Q96.83 10.74 95.90 11.18Q94.97 11.61 94.48 12.40Q93.99 13.19 93.99 14.24L93.99 14.24L93.99 18.93Q93.99 19.95 94.50 20.75Q95.01 21.55 95.95 21.99Q96.90 22.43 98.19 22.43L98.19 22.43Q99.77 22.43 100.78 21.84Q101.80 21.24 102.08 20.16L102.08 20.16L107.75 20.16Q107.47 22.08 106.14 23.46Q104.81 24.84 102.74 25.60Q100.68 26.35 98.12 26.35ZM121.12 26L114.12 26L109.01 7.20L114.75 7.20L117.41 18.96L117.79 21.10L118.00 21.10L118.39 18.96L120.84 7.20L126.96 7.20L129.34 19L129.73 21.10L129.90 21.10L130.32 19L133.02 7.20L138.69 7.20L133.58 26L126.44 26L124.30 15.71L123.92 13.40L123.67 13.40L123.29 15.71L121.12 26ZM146.21 26L140.44 26L140.44 7.20L146.21 7.20L146.21 26ZM146.21 4.82L140.44 4.82L140.44 0.20L146.21 0.20L146.21 4.82ZM158.39 26.35L158.39 26.35Q156.05 26.35 154.19 25.72Q152.34 25.09 151.02 23.93Q149.71 22.78 149.03 21.12Q148.34 19.45 148.34 17.42L148.34 17.42L148.34 15.74Q148.34 13.01 149.57 11.02Q150.80 9.02 153.07 7.94Q155.34 6.85 158.43 6.85L158.43 6.85Q161.26 6.85 163.36 7.75Q165.46 8.64 166.67 10.25Q167.88 11.86 168.02 14.03L168.02 14.03L162.24 14.03Q162.06 12.52 161.07 11.79Q160.07 11.05 158.43 11.05L158.43 11.05Q157.20 11.05 156.25 11.49Q155.31 11.93 154.82 12.73Q154.33 13.54 154.33 14.62L154.33 14.62L154.33 18.58Q154.33 19.63 154.82 20.43Q155.31 21.24 156.25 21.68Q157.20 22.11 158.46 22.11L158.46 22.11Q159.55 22.11 160.35 21.78Q161.16 21.45 161.65 20.79Q162.14 20.12 162.24 19.14L162.24 19.14L168.09 19.14Q167.91 21.31 166.65 22.94Q165.39 24.57 163.27 25.46Q161.16 26.35 158.39 26.35ZM175.75 26L169.98 26L169.98 0.48L175.75 0.48L175.75 26ZM190.49 26L183.80 26L178.09 17.04L182.44 14.13L190.49 26ZM180.34 16.48L175.37 21.31L175.40 15.46L183.42 7.20L190.34 7.20L180.79 16.55L180.34 16.48Z" fill="#ffffff"></path></g>
+                    </svg>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+                                <li><a class="dropdown-item active" href="tech-consulting.html">Tech Consulting</a></li>
+                                <li><a class="dropdown-item" href="custom-integrations.html">Custom Integrations</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="packages.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="demos.html">Demos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <div class="eyebrow text-warning">TECH CONSULTING</div>
+                    <h1>Stop Guessing. <span class="text-warning">Get Answers.</span></h1>
+                    <p class="lead">You don't need another vendor trying to upsell you. You need straight answers about your website, your tech stack, and your digital strategy—from someone who's built it all before.</p>
+                    <div class="hero-actions mt-4">
+                        <a href="#contact" class="btn btn-primary btn-lg me-3">Book a Consultation</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">See How I Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Prop -->
+    <section class="py-section bg-light-gradient">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="eyebrow">WHY CONSULTING</div>
+                    <h2 class="section-heading">Before You Build,<br><span class="text-highlight">Know What You Need</span></h2>
+                    
+                    <p>Most businesses overspend on technology because they don't know what questions to ask. Agencies sell solutions to problems you might not have. Vendors recommend tools that benefit them, not you.</p>
+                    
+                    <p>I've been on both sides—building enterprise systems and launching scrappy startups. I can tell you what you actually need, what can wait, and what's a waste of money.</p>
+                    
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-primary btn-lg">Get Honest Advice</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                                <i class="bi bi-cash-stack fs-1 mb-3 text-primary opacity-75"></i>
+                                <h5 class="h6 fw-bold text-dark mb-2">Save Money</h5>
+                                <p class="small mb-0">Avoid expensive tools you don't need.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                                <i class="bi bi-clock-history fs-1 mb-3 text-primary opacity-75"></i>
+                                <h5 class="h6 fw-bold text-dark mb-2">Save Time</h5>
+                                <p class="small mb-0">Skip research paralysis. Get direct answers.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                                <i class="bi bi-graph-up-arrow fs-1 mb-3 text-primary opacity-75"></i>
+                                <h5 class="h6 fw-bold text-dark mb-2">Scale Smart</h5>
+                                <p class="small mb-0">Build foundations that grow with you.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                                <i class="bi bi-shield-check fs-1 mb-3 text-primary opacity-75"></i>
+                                <h5 class="h6 fw-bold text-dark mb-2">Reduce Risk</h5>
+                                <p class="small mb-0">Make informed decisions, not guesses.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave to Dark -->
+    <div class="section-wave wave-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Consulting Services -->
+    <section id="services" class="section-pattern bg-dark pattern-dots-wide py-section">
+        <div class="container">
+            <div class="eyebrow text-warning">CONSULTING SERVICES</div>
+            <h2 class="section-heading text-white">What I Help With</h2>
+            <p class="section-intro text-white-70">Clear guidance on complex decisions. No jargon, no upselling—just practical advice you can act on.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <div class="card-glass h-100">
+                        <div class="icon-badge gray"><i class="bi bi-diagram-3"></i></div>
+                        <h4>Tech Stack Review</h4>
+                        <p>Are you using the right tools? I'll audit your current setup and identify what's working, what's redundant, and what's costing you money without delivering value.</p>
+                        <div class="card-footer">
+                            <span class="glass-badge gray"><i class="bi bi-check"></i> Tool Audit</span>
+                            <span class="glass-badge gray"><i class="bi bi-check"></i> Cost Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-glass h-100">
+                        <div class="icon-badge teal"><i class="bi bi-search"></i></div>
+                        <h4>SEO Strategy</h4>
+                        <p>Why aren't you ranking? I'll analyze your site structure, content strategy, and technical SEO to identify what's holding you back—and what will actually move the needle.</p>
+                        <div class="card-footer">
+                            <span class="glass-badge teal"><i class="bi bi-check"></i> Site Audit</span>
+                            <span class="glass-badge teal"><i class="bi bi-check"></i> Content Gaps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-glass h-100">
+                        <div class="icon-badge blue"><i class="bi bi-building"></i></div>
+                        <h4>Website Strategy</h4>
+                        <p>Building a new site? Rebuilding an old one? I'll help you define requirements, evaluate vendors, and create a project plan that protects your investment.</p>
+                        <div class="card-footer">
+                            <span class="glass-badge blue"><i class="bi bi-check"></i> Requirements</span>
+                            <span class="glass-badge blue"><i class="bi bi-check"></i> Vendor Vetting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge amber flex-shrink-0"><i class="bi bi-palette"></i></div>
+                        <div>
+                            <h5>Brand & Design Direction</h5>
+                            <p>Need a visual refresh? I'll help you define brand guidelines, evaluate design options, and ensure consistency across your digital presence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge purple flex-shrink-0"><i class="bi bi-link-45deg"></i></div>
+                        <div>
+                            <h5>Integration Planning</h5>
+                            <p>Considering new software? I'll map how systems connect, identify data flow issues, and recommend solutions that actually work together.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge gray flex-shrink-0"><i class="bi bi-speedometer2"></i></div>
+                        <div>
+                            <h5>Performance Optimization</h5>
+                            <p>Site running slow? I'll diagnose bottlenecks, prioritize fixes, and create an action plan—whether you implement it yourself or hire me to do it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave to Light -->
+    <div class="section-wave wave-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- How It Works -->
+    <section class="py-section">
+        <div class="container">
+            <div class="eyebrow">HOW IT WORKS</div>
+            <h2 class="section-heading text-center">Simple. Focused. <span class="text-highlight">Actionable.</span></h2>
+            <p class="section-intro text-center text-muted">Consulting doesn't have to mean endless meetings. Here's how we work together.</p>
+
+            <div class="row g-5 mt-4">
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div class="badge-gradient mb-3 mx-auto" style="width: 3.5rem; height: 3.5rem;">
+                            <span class="fw-bold">1</span>
+                        </div>
+                        <h4>Intake Call</h4>
+                        <p class="text-muted">30-minute conversation to understand your situation, challenges, and goals. Free, no commitment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div class="badge-gradient mb-3 mx-auto" style="width: 3.5rem; height: 3.5rem;">
+                            <span class="fw-bold">2</span>
+                        </div>
+                        <h4>Deep Dive</h4>
+                        <p class="text-muted">Focused analysis on your specific challenge. I research, audit, and prepare actionable recommendations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <div class="badge-gradient mb-3 mx-auto" style="width: 3.5rem; height: 3.5rem;">
+                            <span class="fw-bold">3</span>
+                        </div>
+                        <h4>Action Plan</h4>
+                        <p class="text-muted">Written deliverable with clear next steps, priority order, and cost/benefit analysis. Yours to implement or bring back to me.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave to Dark -->
+    <div class="section-wave wave-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Common Questions -->
+    <section class="py-section bg-dark">
+        <div class="container">
+            <div class="eyebrow text-warning">COMMON QUESTIONS</div>
+            <h2 class="section-heading text-white">Questions I Answer</h2>
+            <p class="section-intro text-white-70">Real questions from real business owners. If you're asking these, consulting might be right for you.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge blue flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"Should I rebuild my website or fix what I have?"</h5>
+                            <p class="mb-0">I'll assess your current site's foundation and ROI potential to give you an honest answer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge teal flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"Why isn't my site showing up on Google?"</h5>
+                            <p class="mb-0">I'll diagnose technical issues, content gaps, and competitive factors holding you back.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge amber flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"Am I paying too much for my current tools?"</h5>
+                            <p class="mb-0">I'll audit your subscriptions and identify consolidation opportunities or better alternatives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge purple flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"How do I evaluate a web development proposal?"</h5>
+                            <p class="mb-0">I'll review proposals, identify red flags, and help you ask the right questions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge gray flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"What marketing tools do I actually need?"</h5>
+                            <p class="mb-0">I'll match your actual needs to available solutions—often simpler than vendors suggest.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-feature-dark h-100">
+                        <div class="icon-badge blue flex-shrink-0"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5>"How do I get my systems talking to each other?"</h5>
+                            <p class="mb-0">I'll map your data flow and recommend integration approaches within your budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave to Light -->
+    <div class="section-wave wave-light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"></path>
+        </svg>
+    </div>
+
+    <!-- Pricing -->
+    <section class="py-section">
+        <div class="container">
+            <div class="eyebrow">CONSULTING RATES</div>
+            <h2 class="section-heading text-center">Transparent Pricing</h2>
+            <p class="section-intro text-center text-muted">No hourly surprises. Clear deliverables. Know what you're getting before we start.</p>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4">
+                    <div class="commerce-card h-100">
+                        <h4 class="mb-1">Strategy Call</h4>
+                        <p class="small text-muted">60-minute focused consultation on a specific challenge. Real-time problem solving.</p>
+                        <div class="price-tag">$150</div>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 60-minute video call</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Screen sharing for live review</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Summary notes emailed after</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="commerce-card featured h-100">
+                        <h4 class="mb-1">Site Audit</h4>
+                        <p class="small text-muted">Comprehensive analysis of your website's performance, SEO, and conversion potential.</p>
+                        <div class="price-tag">$350</div>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Technical SEO analysis</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Performance benchmarks</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Conversion review</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Prioritized action plan</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 30-min review call</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="commerce-card h-100">
+                        <h4 class="mb-1">Tech Stack Review</h4>
+                        <p class="small text-muted">Full audit of your tools, integrations, and digital infrastructure with optimization roadmap.</p>
+                        <div class="price-tag">$500</div>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Complete tool inventory</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Cost/benefit analysis</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Integration mapping</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> Optimization roadmap</li>
+                            <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i> 60-min strategy call</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted">Need ongoing advisory support? Ask about the <a href="packages.html">Partner Package</a>—includes monthly strategy calls.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content text-center">
+                <div class="eyebrow text-warning">GET ANSWERS</div>
+                <h2 class="section-heading text-white">Ready to Stop Guessing?</h2>
+                <p class="section-intro text-white">Let's have a conversation about what you're trying to accomplish. I'll tell you honestly whether I can help—and if consulting is even what you need.</p>
+                <div class="cta-buttons d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="mailto:joseph@stonewicksites.com" class="btn btn-light btn-lg">
+                        <i class="bi bi-envelope me-2"></i>joseph@stonewicksites.com
+                    </a>
+                    <a href="tel:+15852047730" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-telephone me-2"></i>(585) 204-7730
+                    </a>
+                </div>
+                <div class="mt-4">
+                    <div class="d-inline-flex align-items-center gap-2 text-white bg-success bg-opacity-25 px-4 py-2 rounded-pill">
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        <span class="fw-medium">Free 30-minute intake call</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h4 class="footer-heading">StoneWick</h4>
+                    <p class="footer-description">Custom web development for local businesses. Fast, professional, built to drive real growth.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="link-list link-list-muted link-list-sm">
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="tech-consulting.html">Tech Consulting</a></li>
+                        <li><a href="custom-integrations.html">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="link-list link-list-muted link-list-sm">
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="demos.html">Demo Sites</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4 class="footer-heading">Get In Touch</h4>
+                    <p class="small text-white-50">joseph@stonewicksites.com</p>
+                    <p class="small text-white-50">(585) 204-7730</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="text-center">&copy; 2026 StoneWick. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

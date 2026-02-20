@@ -9,6 +9,8 @@ Comprehensive guide to all media components: galleries, video players, media lis
 1. [Video Theater](#video-theater)
 2. [Channel Headers](#channel-headers)
 3. [Media Lists](#media-lists)
+   - [Episode Player Card](#episode-player-card)
+   - [Episode Grid Cards (Compact Horizontal)](#episode-grid-cards-compact-horizontal)
 4. [Gallery Components](#gallery-components)
 5. [Blog Cards](#blog-cards)
 6. [Event Cards](#event-cards)
@@ -471,6 +473,136 @@ Both list and grid layouts support iframe embeds:
 - Replace `<img>` in `.media-thumb` with `<iframe>`
 - No play icon or duration needed for iframes
 - iframe handles video playback automatically
+
+### Episode Player Card
+
+Featured episode player with thumbnail, metadata, and HTML5 audio controls. Perfect for podcast/sermon pages.
+
+```html
+<div class="card border shadow-sm">
+    <div class="card-body">
+        <div class="d-flex align-items-start gap-3 mb-3">
+            <img src="episode-thumbnail.jpg" 
+                 class="rounded" 
+                 alt="Episode 147" 
+                 style="width: 80px; height: 80px; object-fit: cover;">
+            <div class="flex-grow-1">
+                <h5 class="mb-1">Episode 147: The Art of Biblical Meditation</h5>
+                <p class="text-muted small mb-0">Pastor Marcus Chen • Feb 13, 2026 • 38 min</p>
+            </div>
+        </div>
+        <audio controls class="w-100" preload="metadata">
+            <source src="episode-audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</div>
+```
+
+**Usage:**
+- Use for featured episode playback on podcast/sermon pages
+- Thumbnail should be 80x80px minimum
+- HTML5 audio controls are browser-native and fully functional
+- Works with MP3, WAV, OGG audio formats
+
+### Episode Grid Cards (Compact Horizontal)
+
+Compact horizontal media cards in a Bootstrap grid. Each `.media-item` shows a 180×120 thumbnail beside title and metadata. Uses `.row.g-4` with `.col-lg-4.col-md-6` columns and `.media-item.h-100` cards.
+
+```html
+<div class="row g-4">
+    <div class="col-lg-4 col-md-6">
+        <a href="#" class="text-decoration-none">
+            <article class="media-item h-100">
+                <div class="media-thumb">
+                    <img src="episode-thumbnail.jpg" alt="Episode 147">
+                    <span class="media-duration">38 min</span>
+                </div>
+                <div class="media-content">
+                    <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                        <span class="badge bg-primary">#147</span>
+                        <span class="badge bg-success">New</span>
+                    </div>
+                    <h5 class="media-title">The Art of Biblical Meditation</h5>
+                    <div class="media-meta">
+                        <span><i class="bi bi-calendar3"></i> Feb 13, 2026</span>
+                    </div>
+                </div>
+            </article>
+        </a>
+    </div>
+    
+    <!-- Repeat col for more episodes -->
+</div>
+```
+
+**Usage:**
+- Bootstrap grid provides responsive 3-col (lg) / 2-col (md) / 1-col (sm) layout
+- Each card is a compact horizontal flex row: 180×120 thumbnail left, content right
+- Entire card wrapped in `<a>` — no nested links inside
+- Duration badge via `.media-duration` overlays bottom-right of thumbnail
+- Badge numbers indicate episode number
+- Optional second badge for "New", "Featured", etc.
+- Built-in hover: lift + shadow + primary border via `.media-item`
+- `.h-100` on `.media-item` ensures equal card heights in each row
+- No play button overlay (cards navigate to episode detail page)
+
+**CSS Classes (all base theme):**
+- `.media-item` - Flex card with white bg, border, rounded corners, hover lift + shadow
+- `.media-thumb` - Container for thumbnail (180×120 default) + duration badge
+- `.media-duration` - Absolute-positioned duration badge
+- `.media-content` - Content area with padding
+- `.media-title` - Title with `font-weight: 700`
+- `.media-meta` - Small muted metadata row
+
+---
+
+### Video Items (Up Next Sidebar)
+
+Compact video list items for "Up Next" sidebars on video watch pages. 16:9 thumbnail (120x68px) with title, channel info, and view stats. Includes subtle hover lift effect.
+
+```html
+<div class="d-flex flex-column gap-3">
+    <!-- Video Item -->
+    <a href="#" class="text-decoration-none">
+        <div class="video-item d-flex gap-2 p-2 rounded-3 bg-dark bg-opacity-25 hover-lift">
+            <div class="video-thumb position-relative flex-shrink-0">
+                <img src="thumbnail.jpg" 
+                     alt="Video Title"
+                     class="w-100 h-100 object-fit-cover rounded-2">
+                <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white px-1 m-1 rounded-1" 
+                     style="font-size: 0.65rem; font-weight: 600;">38:12</div>
+            </div>
+            <div class="flex-grow-1 min-w-0">
+                <h6 class="text-white mb-1 fw-semibold" style="font-size: 0.875rem; line-height: 1.3;">
+                    The Art of Biblical Meditation
+                </h6>
+                <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+                    <span class="d-block">Channel Name</span>
+                    <span>8.2K views • 3 days ago</span>
+                </p>
+            </div>
+        </div>
+    </a>
+    
+    <!-- Repeat for more videos -->
+</div>
+```
+
+**Usage:**
+- Designed for dark backgrounds (video watch pages)
+- Thumbnail is 120x68px (16:9 aspect ratio) using `.video-thumb` class
+- Video duration badge overlays bottom-right of thumbnail
+- Wrap entire item in `<a>` tag for navigation
+- Uses `.video-item` class for subtle hover effect (2px lift, background lightening)
+- Channel name and stats use small typography for compact display
+- Vertical stacking with `gap-3` spacing between items
+- Typical use case: 4-5 items in a sidebar column
+- Inline font sizing for this specific UI pattern is acceptable
+
+**CSS Classes:**
+- `.video-item` - Transition and hover effects (slight lift, background change)
+- `.video-thumb` - Fixed 120x68px sizing (16:9 aspect ratio)
 
 ---
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards & Content - StoneWick Components</title>
-    <meta name="description" content="All card variants, badges, and content containers.">
+    <meta name="description" content="BS5 card anatomy, 12 custom card variants, blog cards, product cards, and content containers.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/theme.css?v=5">
@@ -23,13 +23,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-heroes-layout.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes.html">Heroes</a></li>
                         <li class="nav-item"><a class="nav-link active" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-badges.html">Badges</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-social.html">Social</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-navigation.html">Navigation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-commerce.html">Commerce</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +46,98 @@
                 <div class="col-lg-10 hero-content">
                     <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
                     <h1>Cards & Content</h1>
-                    <p class="lead">All card variants, badges, and content containers for light and dark backgrounds.</p>
+                    <p class="lead">BS5 card anatomy, 12 custom card types, blog cards, and product cards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         BS5 CARD ANATOMY
+         ========================================================== -->
+    <section id="card-anatomy" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Card Anatomy</h2>
+            <p class="section-intro text-muted">Bootstrap card building blocks — body, titles, text, images, headers, footers, and overlays.</p>
+
+            <div class="row g-4">
+                <!-- Basic Card -->
+                <div class="col-md-4">
+                    <h5 class="mb-3">Basic Card</h5>
+                    <div class="card">
+                        <img src="https://picsum.photos/seed/card1/600/300" class="card-img-top" alt="Card image">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Header & Footer -->
+                <div class="col-md-4">
+                    <h5 class="mb-3">Header & Footer</h5>
+                    <div class="card">
+                        <div class="card-header">Featured</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Special title treatment</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                        <div class="card-footer text-body-secondary">2 days ago</div>
+                    </div>
+                </div>
+
+                <!-- Image Overlay -->
+                <div class="col-md-4">
+                    <h5 class="mb-3">Image Overlay</h5>
+                    <div class="card text-bg-dark">
+                        <img src="https://picsum.photos/seed/card2/600/400" class="card-img" alt="Card image">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text as a lead-in.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Colors -->
+            <h3 class="mt-5 mb-3">Color Variants</h3>
+            <div class="row g-3">
+                <div class="col-md-3"><div class="card text-bg-primary p-3"><div class="card-body"><h6 class="card-title">Primary</h6><p class="card-text small">text-bg-primary</p></div></div></div>
+                <div class="col-md-3"><div class="card text-bg-success p-3"><div class="card-body"><h6 class="card-title">Success</h6><p class="card-text small">text-bg-success</p></div></div></div>
+                <div class="col-md-3"><div class="card text-bg-danger p-3"><div class="card-body"><h6 class="card-title">Danger</h6><p class="card-text small">text-bg-danger</p></div></div></div>
+                <div class="col-md-3"><div class="card text-bg-warning p-3"><div class="card-body"><h6 class="card-title">Warning</h6><p class="card-text small">text-bg-warning</p></div></div></div>
+            </div>
+
+            <!-- Card Group -->
+            <h3 class="mt-5 mb-3">Card Group</h3>
+            <div class="card-group">
+                <div class="card">
+                    <img src="https://picsum.photos/seed/grp1/600/300" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text.</p>
+                    </div>
+                    <div class="card-footer"><small class="text-body-secondary">Last updated 3 mins ago</small></div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/grp2/600/300" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below.</p>
+                    </div>
+                    <div class="card-footer"><small class="text-body-secondary">Last updated 3 mins ago</small></div>
+                </div>
+                <div class="card">
+                    <img src="https://picsum.photos/seed/grp3/600/300" class="card-img-top" alt="Card image">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is the widest card with text below.</p>
+                    </div>
+                    <div class="card-footer"><small class="text-body-secondary">Last updated 3 mins ago</small></div>
                 </div>
             </div>
         </div>
@@ -54,7 +148,7 @@
          ========================================================== -->
     <section id="cards-light" class="py-section bg-light">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">LIGHT BACKGROUND</div>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
             <h2 class="section-heading text-dark">Card Service</h2>
             <p class="section-intro text-muted">Vertical card with centered icon, title, and description.</p>
             
@@ -131,28 +225,28 @@
                 <div class="col-md-3 col-6">
                     <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
                         <i class="bi bi-telephone fs-1 mb-3 text-primary opacity-75"></i>
-                        <h5 class="h6 fw-bold text-dark mb-2">24/7 Support</h5>
+                        <h5 class="fw-bold text-dark mb-2">24/7 Support</h5>
                         <p class="small mb-0">Round-the-clock assistance whenever you need it.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
                         <i class="bi bi-rocket-takeoff fs-1 mb-3 text-primary opacity-75"></i>
-                        <h5 class="h6 fw-bold text-dark mb-2">Fast Launch</h5>
+                        <h5 class="fw-bold text-dark mb-2">Fast Launch</h5>
                         <p class="small mb-0">Get your project live in record time.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
                         <i class="bi bi-award fs-1 mb-3 text-primary opacity-75"></i>
-                        <h5 class="h6 fw-bold text-dark mb-2">Quality First</h5>
+                        <h5 class="fw-bold text-dark mb-2">Quality First</h5>
                         <p class="small mb-0">Premium quality in every line of code.</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-6">
                     <div class="card-benefit d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
                         <i class="bi bi-heart fs-1 mb-3 text-primary opacity-75"></i>
-                        <h5 class="h6 fw-bold text-dark mb-2">Made with Love</h5>
+                        <h5 class="fw-bold text-dark mb-2">Made with Love</h5>
                         <p class="small mb-0">Crafted with care and attention to detail.</p>
                     </div>
                 </div>
@@ -252,74 +346,39 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ==========================================================
-         BADGES
-         ========================================================== -->
-    <section id="badges" class="py-section bg-light">
-        <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">LIGHT BACKGROUND</div>
-            <h2 class="section-heading text-dark">Badge Gradient</h2>
-            <p class="section-intro text-muted">Circular gradient badges for light backgrounds.</p>
+            <h2 class="section-heading text-white mt-5">Card Benefit Dark</h2>
+            <p class="section-intro text-white-70">Dark variant of the benefit card - REQUIRES utility classes for layout!</p>
             
-            <div class="row g-4 mb-5">
-                <div class="col-auto">
-                    <div class="badge-gradient"><i class="bi bi-check-lg"></i></div>
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="card-benefit-dark d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-telephone fs-1 mb-3 text-info opacity-75"></i>
+                        <h5 class="fw-bold text-white mb-2">24/7 Support</h5>
+                        <p class="small text-white-70 mb-0">Round-the-clock assistance whenever you need it.</p>
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <div class="badge-gradient"><i class="bi bi-star-fill"></i></div>
+                <div class="col-md-3 col-6">
+                    <div class="card-benefit-dark d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-rocket-takeoff fs-1 mb-3 text-info opacity-75"></i>
+                        <h5 class="fw-bold text-white mb-2">Fast Launch</h5>
+                        <p class="small text-white-70 mb-0">Get your project live in record time.</p>
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <div class="badge-gradient"><i class="bi bi-lightning-fill"></i></div>
+                <div class="col-md-3 col-6">
+                    <div class="card-benefit-dark d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-award fs-1 mb-3 text-info opacity-75"></i>
+                        <h5 class="fw-bold text-white mb-2">Quality First</h5>
+                        <p class="small text-white-70 mb-0">Premium quality in every line of code.</p>
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <div class="badge-gradient"><i class="bi bi-heart-fill"></i></div>
+                <div class="col-md-3 col-6">
+                    <div class="card-benefit-dark d-flex flex-column justify-content-center align-items-center text-center p-4 h-100">
+                        <i class="bi bi-heart fs-1 mb-3 text-info opacity-75"></i>
+                        <h5 class="fw-bold text-white mb-2">Made with Love</h5>
+                        <p class="small text-white-70 mb-0">Crafted with care and attention to detail.</p>
+                    </div>
                 </div>
-                <div class="col-auto">
-                    <div class="badge-gradient"><i class="bi bi-trophy-fill"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-section bg-dark">
-        <div class="container">
-            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">DARK BACKGROUND</div>
-            <h2 class="section-heading text-white">Icon Badges</h2>
-            <p class="section-intro text-white-70">Colored icon containers for dark backgrounds.</p>
-            
-            <div class="row g-4 mb-5">
-                <div class="col-auto">
-                    <div class="icon-badge blue"><i class="bi bi-code-slash"></i></div>
-                </div>
-                <div class="col-auto">
-                    <div class="icon-badge teal"><i class="bi bi-database"></i></div>
-                </div>
-                <div class="col-auto">
-                    <div class="icon-badge purple"><i class="bi bi-cloud"></i></div>
-                </div>
-                <div class="col-auto">
-                    <div class="icon-badge amber"><i class="bi bi-lightning-fill"></i></div>
-                </div>
-                <div class="col-auto">
-                    <div class="icon-badge green"><i class="bi bi-check-lg"></i></div>
-                </div>
-                <div class="col-auto">
-                    <div class="icon-badge gray"><i class="bi bi-gear"></i></div>
-                </div>
-            </div>
-
-            <h2 class="section-heading text-white mt-5">Glass Badges</h2>
-            <p class="section-intro text-white-70">Glassmorphic pill badges for dark backgrounds.</p>
-            
-            <div class="d-flex flex-wrap gap-3">
-                <span class="glass-badge blue"><i class="bi bi-braces"></i> TypeScript</span>
-                <span class="glass-badge teal"><i class="bi bi-server"></i> PostgreSQL</span>
-                <span class="glass-badge purple"><i class="bi bi-cloud-check"></i> AWS</span>
-                <span class="glass-badge amber"><i class="bi bi-lightning-fill"></i> Fast</span>
-                <span class="glass-badge green"><i class="bi bi-check-circle"></i> Verified</span>
             </div>
         </div>
     </section>
@@ -348,7 +407,7 @@
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-half"></i>
                             </div>
-                            <h5>Business Analytics Dashboard</h5>
+                            <h4>Business Analytics Dashboard</h4>
                             <p>Complete analytics solution for tracking your business performance metrics in real-time.</p>
                             <a href="#" class="btn btn-primary btn-sm">Learn More</a>
                         </div>
@@ -373,7 +432,7 @@
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star"></i>
                             </div>
-                            <h5>Team Collaboration Tools</h5>
+                            <h4>Team Collaboration Tools</h4>
                             <p>Modern workspace solutions for remote and hybrid teams to stay connected.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
                         </div>
@@ -399,7 +458,7 @@
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                             </div>
-                            <h5>Developer Workshop Series</h5>
+                            <h4>Developer Workshop Series</h4>
                             <p>Hands-on coding workshops covering modern web development best practices.</p>
                             <a href="#" class="btn btn-primary btn-sm">Register Now</a>
                         </div>
@@ -433,7 +492,7 @@
                                 <i class="bi bi-youtube text-danger fs-5"></i>
                                 <span class="small text-muted">YouTube Embed</span>
                             </div>
-                            <h5>Video Tutorial Card</h5>
+                            <h4>Video Tutorial Card</h4>
                             <p>Cards support YouTube iframe embeds - perfect for video tutorials and previews.</p>
                             <a href="#" class="btn btn-outline-primary btn-sm">View on YouTube</a>
                         </div>
@@ -511,6 +570,1183 @@
         </div>
     </section>
 
+    <!-- ==========================================================
+         TESTIMONIALS
+         ========================================================== -->
+    <section id="testimonials" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">TESTIMONIALS</div>
+            <h2 class="section-heading text-dark">Card Testimonial (Light)</h2>
+            <p class="section-intro text-muted">Review cards with avatar, rating, quote, and source badge.</p>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-testimonial">
+                        <div class="testimonial-header">
+                            <div class="avatar avatar-lg avatar-primary">
+                                <span class="avatar-initials">JD</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">John Davidson</div>
+                                <div class="testimonial-title">Owner, Davidson Plumbing</div>
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <blockquote>Best investment I've made for my business. My new website brings in 3x the leads we used to get. Highly recommend!</blockquote>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-source google"><i class="bi bi-google"></i> Google</span>
+                            <span class="testimonial-date">2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-testimonial featured">
+                        <div class="testimonial-header">
+                            <div class="avatar avatar-lg">
+                                <img src="https://i.pravatar.cc/150?img=32" alt="Sarah M." class="avatar-img">
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Sarah Mitchell</div>
+                                <div class="testimonial-title">CEO, Mitchell Consulting</div>
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <blockquote>Professional, responsive, and delivered exactly what we needed. Our conversion rate doubled within the first month.</blockquote>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-source linkedin"><i class="bi bi-linkedin"></i> LinkedIn</span>
+                            <span class="testimonial-date">1 month ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-testimonial">
+                        <div class="testimonial-header">
+                            <div class="avatar avatar-lg avatar-success">
+                                <span class="avatar-initials">MR</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Mike Rodriguez</div>
+                                <div class="testimonial-title">Owner, Elite Auto Detail</div>
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <blockquote>Finally a web developer who understands small business needs. Fast turnaround and great communication throughout.</blockquote>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-source yelp"><i class="bi bi-yelp"></i> Yelp</span>
+                            <span class="testimonial-date">3 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Dark -->
+    <section class="bg-dark-gradient py-section">
+        <div class="container">
+            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">TESTIMONIALS</div>
+            <h2 class="section-heading text-white">Card Testimonial Dark</h2>
+            <p class="section-intro text-white-70">Dark variant testimonial cards.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-testimonial-dark">
+                        <div class="testimonial-header">
+                            <div class="avatar avatar-lg">
+                                <img src="https://i.pravatar.cc/150?img=45" alt="Lisa K." class="avatar-img">
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Lisa Kowalski</div>
+                                <div class="testimonial-title">Marketing Director</div>
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <blockquote>Outstanding work! The attention to detail and focus on performance really shows in the final product.</blockquote>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-source google"><i class="bi bi-google"></i> Google</span>
+                            <span class="testimonial-date">1 week ago</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-testimonial-dark">
+                        <div class="testimonial-header">
+                            <div class="avatar avatar-lg avatar-info">
+                                <span class="avatar-initials">TC</span>
+                            </div>
+                            <div class="testimonial-info">
+                                <div class="testimonial-name">Tom Chen</div>
+                                <div class="testimonial-title">Startup Founder</div>
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-body">
+                            <blockquote>They helped us launch our MVP in record time. Couldn't have done it without their expertise.</blockquote>
+                        </div>
+                        <div class="testimonial-footer">
+                            <span class="testimonial-source linkedin"><i class="bi bi-linkedin"></i> LinkedIn</span>
+                            <span class="testimonial-date">2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Media Dark -->
+    <section class="bg-dark-gradient py-section">
+        <div class="container">
+            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">MEDIA CARDS</div>
+            <h2 class="section-heading text-white">Card Media Dark</h2>
+            <p class="section-intro text-white-70">Dark variant of media cards with images, content body, and footer metadata.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-media-dark">
+                        <div class="card-media-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Dashboard">
+                            <span class="badge bg-primary">Featured</span>
+                        </div>
+                        <div class="card-media-body">
+                            <div class="rating-stars mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <h4>Business Analytics Dashboard</h4>
+                            <p>Complete analytics solution for tracking your business performance metrics in real-time.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+                        </div>
+                        <div class="card-media-footer">
+                            <div class="meta-row">
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> Jan 15, 2026</span>
+                                <span class="meta-item"><i class="bi bi-geo-alt"></i> Portland, OR</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-media-dark">
+                        <div class="card-media-image">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop" alt="Team">
+                        </div>
+                        <div class="card-media-body">
+                            <div class="rating-stars mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <h4>Team Collaboration Tools</h4>
+                            <p>Modern workspace solutions for remote and hybrid teams to stay connected.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+                        </div>
+                        <div class="card-media-footer">
+                            <div class="meta-row">
+                                <span class="meta-item"><i class="bi bi-clock"></i> 2 days ago</span>
+                                <span class="meta-item"><i class="bi bi-people"></i> 24 attendees</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card-media-dark featured">
+                        <div class="card-media-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Code">
+                            <span class="badge bg-warning text-dark">New</span>
+                        </div>
+                        <div class="card-media-body">
+                            <div class="rating-stars mb-2">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <h4>Developer Workshop Series</h4>
+                            <p>Hands-on coding workshops covering modern web development best practices.</p>
+                            <a href="#" class="btn btn-primary btn-sm">Register Now</a>
+                        </div>
+                        <div class="card-media-footer">
+                            <div class="meta-row">
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> Feb 1, 2026</span>
+                                <span class="meta-item"><i class="bi bi-laptop"></i> Virtual</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-white mt-5">Card Resource Dark</h2>
+            <p class="section-intro text-white-70">Dark variant of horizontal cards for downloadable resources.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card-resource-dark">
+                        <div class="resource-icon pdf"><i class="bi bi-file-earmark-pdf"></i></div>
+                        <div class="resource-content">
+                            <h6 class="resource-title">2026 Web Design Trends</h6>
+                            <div class="resource-meta">
+                                <span>PDF</span>
+                                <span>2.4 MB</span>
+                            </div>
+                            <p class="resource-desc">Comprehensive guide to the latest design trends and best practices for modern websites.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm resource-action"><i class="bi bi-download me-1"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-resource-dark">
+                        <div class="resource-icon doc"><i class="bi bi-file-earmark-text"></i></div>
+                        <div class="resource-content">
+                            <h6 class="resource-title">SEO Checklist Template</h6>
+                            <div class="resource-meta">
+                                <span>DOCX</span>
+                                <span>156 KB</span>
+                            </div>
+                            <p class="resource-desc">Step-by-step checklist to ensure your website is optimized for search engines.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm resource-action"><i class="bi bi-download me-1"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-resource-dark">
+                        <div class="resource-icon zip"><i class="bi bi-file-earmark-zip"></i></div>
+                        <div class="resource-content">
+                            <h6 class="resource-title">Starter Template Kit</h6>
+                            <div class="resource-meta">
+                                <span>ZIP</span>
+                                <span>8.7 MB</span>
+                            </div>
+                            <p class="resource-desc">Complete starter kit with HTML, CSS, and JavaScript templates for new projects.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm resource-action"><i class="bi bi-download me-1"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-resource-dark">
+                        <div class="resource-icon video"><i class="bi bi-play-circle"></i></div>
+                        <div class="resource-content">
+                            <h6 class="resource-title">Website Launch Tutorial</h6>
+                            <div class="resource-meta">
+                                <span>Video</span>
+                                <span>45 min</span>
+                            </div>
+                            <p class="resource-desc">Complete walkthrough of launching your first website from development to production.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm resource-action"><i class="bi bi-play me-1"></i> Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         EVENT CARDS
+         ========================================================== -->
+    <section id="event-cards" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">EVENTS</div>
+            <h2 class="section-heading text-dark">Event Cards</h2>
+            <p class="section-intro text-muted">Cards for showcasing events, webinars, and meetings.</p>
+            
+            <div class="event-grid mb-5">
+                <article class="card-event">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Conference">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">15</span>
+                            <span class="event-date-month">Mar</span>
+                        </div>
+                        <span class="event-category">Conference</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Web Development Summit 2026</a></h4>
+                        <p class="event-description">Join industry leaders for a day of insights, networking, and innovation in web technologies.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Portland, OR</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card-event featured">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop" alt="Workshop">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">22</span>
+                            <span class="event-date-month">Mar</span>
+                        </div>
+                        <span class="event-category">Workshop</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">CSS Mastery Workshop</a></h4>
+                        <p class="event-description">Deep dive into modern CSS techniques including Grid, Custom Properties, and Container Queries.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>2:00 PM - 6:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-camera-video"></i>
+                                <span>Online Event</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card-event">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Meetup">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">05</span>
+                            <span class="event-date-month">Apr</span>
+                        </div>
+                        <span class="event-category">Networking</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Portland Tech Meetup</a></h4>
+                        <p class="event-description">Monthly gathering of local tech professionals to share knowledge and build connections.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>6:30 PM - 9:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>The Tech Hub, Downtown</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">RSVP</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Compact Event List -->
+            <h3 class="h5 mb-3">Compact Event List</h3>
+            <div class="event-list">
+                <article class="card-event card-event-compact">
+                    <div class="event-date-badge">
+                        <span class="event-date-day">10</span>
+                        <span class="event-date-month">Apr</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Code Review Best Practices</a></h4>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>1:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
+                    </div>
+                </article>
+                <article class="card-event card-event-compact">
+                    <div class="event-date-badge">
+                        <span class="event-date-day">18</span>
+                        <span class="event-date-month">Apr</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">JavaScript Performance Tuning</a></h4>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>3:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Room 301</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Cards Dark -->
+    <section class="bg-dark-gradient py-section">
+        <div class="container">
+            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">EVENTS</div>
+            <h2 class="section-heading text-white">Event Cards Dark</h2>
+            <p class="section-intro text-white-70">Dark variant cards for showcasing events, webinars, and meetings.</p>
+            
+            <div class="event-grid mb-5">
+                <article class="card-event-dark">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Conference">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">15</span>
+                            <span class="event-date-month">Mar</span>
+                        </div>
+                        <span class="event-category">Conference</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Web Development Summit 2026</a></h4>
+                        <p class="event-description">Join industry leaders for a day of insights, networking, and innovation in web technologies.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>9:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Portland, OR</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card-event-dark featured">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop" alt="Workshop">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">22</span>
+                            <span class="event-date-month">Mar</span>
+                        </div>
+                        <span class="event-category">Workshop</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">CSS Mastery Workshop</a></h4>
+                        <p class="event-description">Deep dive into modern CSS techniques including Grid, Custom Properties, and Container Queries.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>2:00 PM - 6:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-camera-video"></i>
+                                <span>Online Event</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">Register</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="card-event-dark">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Meetup">
+                        <div class="event-date-badge">
+                            <span class="event-date-day">05</span>
+                            <span class="event-date-month">Apr</span>
+                        </div>
+                        <span class="event-category">Networking</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Portland Tech Meetup</a></h4>
+                        <p class="event-description">Monthly gathering of local tech professionals to share knowledge and build connections.</p>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>6:30 PM - 9:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>The Tech Hub, Downtown</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <a href="#" class="btn btn-primary btn-sm">RSVP</a>
+                            <button class="add-to-calendar">
+                                <i class="bi bi-calendar-plus"></i>
+                                Add to Calendar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <!-- Compact Event List Dark -->
+            <h3 class="h5 text-white mb-3">Compact Event List Dark</h3>
+            <div class="event-list">
+                <article class="card-event-dark card-event-compact">
+                    <div class="event-date-badge">
+                        <span class="event-date-day">10</span>
+                        <span class="event-date-month">Apr</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">Code Review Best Practices</a></h4>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>1:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
+                    </div>
+                </article>
+                <article class="card-event-dark card-event-compact">
+                    <div class="event-date-badge">
+                        <span class="event-date-day">18</span>
+                        <span class="event-date-month">Apr</span>
+                    </div>
+                    <div class="event-body">
+                        <h4 class="event-title"><a href="#">JavaScript Performance Tuning</a></h4>
+                        <div class="event-meta">
+                            <div class="event-meta-item">
+                                <i class="bi bi-clock"></i>
+                                <span>3:00 PM</span>
+                            </div>
+                            <div class="event-meta-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <span>Room 301</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         BLOG CARDS
+         ========================================================== -->
+    <section id="blog-cards" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Blog Cards</h2>
+            <p class="section-intro text-muted">Card layouts for blog posts and articles.</p>
+
+            <!-- Standard Blog Cards -->
+            <h3 class="h5 mb-3">Standard Blog Cards</h3>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <a href="#" class="blog-card-image">
+                            <img src="https://picsum.photos/seed/blog1/800/500" alt="Blog post">
+                        </a>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-category">Technology</span>
+                                <span class="blog-card-date">Jan 28, 2026</span>
+                            </div>
+                            <h4 class="blog-card-title"><a href="#">Getting Started with Modern Web Development</a></h4>
+                            <p class="blog-card-excerpt">Learn the essential tools and frameworks needed to build modern, responsive websites in 2026.</p>
+                            <div class="blog-card-footer">
+                                <div class="blog-card-author">
+                                    <img src="https://i.pravatar.cc/32?img=12" alt="Author" class="blog-card-author-avatar">
+                                    <span class="blog-card-author-name">Sarah Chen</span>
+                                </div>
+                                <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <a href="#" class="blog-card-image">
+                            <img src="https://picsum.photos/seed/blog2/800/500" alt="Blog post">
+                        </a>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-category">Design</span>
+                                <span class="blog-card-date">Jan 25, 2026</span>
+                            </div>
+                            <h4 class="blog-card-title"><a href="#">UI Design Trends to Watch This Year</a></h4>
+                            <p class="blog-card-excerpt">Explore the latest design trends shaping user interfaces and digital experiences.</p>
+                            <div class="blog-card-footer">
+                                <div class="blog-card-author">
+                                    <img src="https://i.pravatar.cc/32?img=15" alt="Author" class="blog-card-author-avatar">
+                                    <span class="blog-card-author-name">Mike Torres</span>
+                                </div>
+                                <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 8 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card">
+                        <a href="#" class="blog-card-image">
+                            <img src="https://picsum.photos/seed/blog3/800/500" alt="Blog post">
+                        </a>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-category">Business</span>
+                                <span class="blog-card-date">Jan 20, 2026</span>
+                            </div>
+                            <h4 class="blog-card-title"><a href="#">Building a Successful SaaS Product</a></h4>
+                            <p class="blog-card-excerpt">Key strategies and lessons learned from launching and scaling a software-as-a-service business.</p>
+                            <div class="blog-card-footer">
+                                <div class="blog-card-author">
+                                    <img src="https://i.pravatar.cc/32?img=18" alt="Author" class="blog-card-author-avatar">
+                                    <span class="blog-card-author-name">Alex Rivera</span>
+                                </div>
+                                <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 12 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Featured Blog Card -->
+            <h3 class="h5 mb-3">Featured Blog Card</h3>
+            <article class="blog-card-featured mb-5">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <a href="#" class="blog-card-featured-image">
+                            <img src="https://picsum.photos/seed/featured1/1200/800" alt="Featured post">
+                            <span class="blog-card-featured-badge">Featured</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blog-card-featured-body">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-category">Featured</span>
+                                <span class="blog-card-date">Jan 30, 2026</span>
+                            </div>
+                            <h3 class="blog-card-featured-title"><a href="#">The Future of Web Development: AI and Beyond</a></h3>
+                            <p class="blog-card-featured-excerpt">Artificial intelligence is revolutionizing how we build websites and applications. Discover the tools and techniques shaping the next generation of web development.</p>
+                            <div class="blog-card-footer">
+                                <div class="blog-card-author">
+                                    <img src="https://i.pravatar.cc/40?img=22" alt="Author" class="blog-card-author-avatar">
+                                    <div>
+                                        <div class="blog-card-author-name">Dr. Emily Watson</div>
+                                        <div class="blog-card-author-role">Chief Technology Officer</div>
+                                    </div>
+                                </div>
+                                <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 15 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Minimal Blog Cards -->
+            <h3 class="h5 mb-3">Minimal Blog Cards</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card-minimal">
+                        <span class="blog-card-category-minimal">Tutorial</span>
+                        <h4 class="blog-card-title-minimal"><a href="#">Building Responsive Layouts with CSS Grid</a></h4>
+                        <p class="blog-card-excerpt-minimal">Master the art of creating flexible, responsive layouts using modern CSS Grid techniques.</p>
+                        <div class="blog-card-meta-minimal"><span>Feb 1, 2026</span><span>·</span><span>6 min read</span></div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card-minimal">
+                        <span class="blog-card-category-minimal">Guide</span>
+                        <h4 class="blog-card-title-minimal"><a href="#">Understanding JavaScript Async/Await</a></h4>
+                        <p class="blog-card-excerpt-minimal">A comprehensive guide to handling asynchronous operations in modern JavaScript.</p>
+                        <div class="blog-card-meta-minimal"><span>Jan 29, 2026</span><span>·</span><span>10 min read</span></div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="blog-card-minimal">
+                        <span class="blog-card-category-minimal">News</span>
+                        <h4 class="blog-card-title-minimal"><a href="#">New Features in Bootstrap 5.3</a></h4>
+                        <p class="blog-card-excerpt-minimal">Explore the latest updates and improvements in the newest Bootstrap release.</p>
+                        <div class="blog-card-meta-minimal"><span>Jan 26, 2026</span><span>·</span><span>4 min read</span></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         BLOG LISTS
+         ========================================================== -->
+    <section id="blog-lists" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Blog List Items</h2>
+            <p class="section-intro text-muted">Horizontal layouts for blog archives and search results.</p>
+
+            <!-- Standard Blog List -->
+            <h3 class="h5 mb-3">Standard Blog List</h3>
+            <div class="blog-list mb-5">
+                <article class="blog-list-item">
+                    <a href="#" class="blog-list-image"><img src="https://picsum.photos/seed/list1/400/300" alt="Blog post"></a>
+                    <div class="blog-list-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">Development</span>
+                            <span class="blog-card-date">Jan 31, 2026</span>
+                        </div>
+                        <h4 class="blog-list-title"><a href="#">Complete Guide to React Hooks</a></h4>
+                        <p class="blog-list-excerpt">Learn how to use React Hooks to manage state and side effects in your functional components.</p>
+                        <div class="blog-card-footer">
+                            <div class="blog-card-author">
+                                <img src="https://i.pravatar.cc/32?img=25" alt="Author" class="blog-card-author-avatar">
+                                <span class="blog-card-author-name">David Kim</span>
+                            </div>
+                            <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 14 min read</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-list-item">
+                    <a href="#" class="blog-list-image"><img src="https://picsum.photos/seed/list2/400/300" alt="Blog post"></a>
+                    <div class="blog-list-content">
+                        <div class="blog-card-meta">
+                            <span class="blog-card-category">Design</span>
+                            <span class="blog-card-date">Jan 28, 2026</span>
+                        </div>
+                        <h4 class="blog-list-title"><a href="#">Color Theory for Web Designers</a></h4>
+                        <p class="blog-list-excerpt">Understanding color psychology and how to create harmonious color schemes for your web projects.</p>
+                        <div class="blog-card-footer">
+                            <div class="blog-card-author">
+                                <img src="https://i.pravatar.cc/32?img=28" alt="Author" class="blog-card-author-avatar">
+                                <span class="blog-card-author-name">Lisa Park</span>
+                            </div>
+                            <span class="blog-card-reading-time"><i class="bi bi-clock"></i> 9 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Compact Blog List -->
+            <h3 class="h5 mb-3">Compact Blog List</h3>
+            <div class="blog-list-compact">
+                <article class="blog-list-compact-item">
+                    <span class="blog-list-compact-date">Feb 1</span>
+                    <div class="blog-list-compact-content">
+                        <h5 class="blog-list-compact-title"><a href="#">Introducing Our New Design System</a></h5>
+                        <p class="blog-list-compact-excerpt">We've been working on a comprehensive design system to streamline our development process.</p>
+                    </div>
+                </article>
+                <article class="blog-list-compact-item">
+                    <span class="blog-list-compact-date">Jan 30</span>
+                    <div class="blog-list-compact-content">
+                        <h5 class="blog-list-compact-title"><a href="#">5 Tips for Better Code Reviews</a></h5>
+                        <p class="blog-list-compact-excerpt">Make your code reviews more effective with these practical tips from our engineering team.</p>
+                    </div>
+                </article>
+                <article class="blog-list-compact-item">
+                    <span class="blog-list-compact-date">Jan 27</span>
+                    <div class="blog-list-compact-content">
+                        <h5 class="blog-list-compact-title"><a href="#">Migrating to TypeScript: Lessons Learned</a></h5>
+                        <p class="blog-list-compact-excerpt">Our experience transitioning a large JavaScript codebase to TypeScript.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         PRODUCT CARDS
+         ========================================================== -->
+    <section id="product-cards" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Product Cards</h2>
+            <p class="section-intro text-muted">E-commerce product card layouts with badges, ratings, and actions.</p>
+
+            <!-- Standard Product Cards -->
+            <h3 class="h5 mb-3">Standard Product Cards</h3>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/prod1/600/600" alt="Product">
+                            <div class="product-card-badges"><span class="product-badge product-badge-sale">Sale</span></div>
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Electronics</span>
+                            <h4 class="product-card-title"><a href="#">Wireless Bluetooth Headphones</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span class="product-rating-count">(127)</span>
+                            </div>
+                            <div class="product-card-price">
+                                <span class="product-price-current">$79.99</span>
+                                <span class="product-price-original">$119.99</span>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/prod2/600/600" alt="Product">
+                            <div class="product-card-badges"><span class="product-badge product-badge-new">New</span></div>
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Accessories</span>
+                            <h4 class="product-card-title"><a href="#">Minimalist Leather Wallet</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <span class="product-rating-count">(89)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$45.00</span></div>
+                            <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/prod3/600/600" alt="Product">
+                            <div class="product-card-badges"><span class="product-badge product-badge-trending">Trending</span></div>
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Home & Living</span>
+                            <h4 class="product-card-title"><a href="#">Ceramic Coffee Mug Set</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span class="product-rating-count">(56)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$32.99</span></div>
+                            <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/prod4/600/600" alt="Product">
+                            <div class="product-card-badges"><span class="product-badge product-badge-stock">Low Stock</span></div>
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Fashion</span>
+                            <h4 class="product-card-title"><a href="#">Classic Cotton T-Shirt</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <span class="product-rating-count">(203)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$24.99</span></div>
+                            <button class="btn btn-primary w-100 mt-3">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Hover Effect Product Cards -->
+            <h3 class="h5 mb-3">With Hover Effects</h3>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card product-card-hover">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/hover1/600/600" alt="Product" class="product-image-primary">
+                            <img src="https://picsum.photos/seed/hover1b/600/600" alt="Product alternate" class="product-image-secondary">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <button class="product-quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Tech</span>
+                            <h4 class="product-card-title"><a href="#">Smart Watch Pro</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span class="product-rating-count">(312)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$299.00</span></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card product-card-hover">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/hover2/600/600" alt="Product" class="product-image-primary">
+                            <img src="https://picsum.photos/seed/hover2b/600/600" alt="Product alternate" class="product-image-secondary">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <button class="product-quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Books</span>
+                            <h4 class="product-card-title"><a href="#">Modern Web Design Guide</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                <span class="product-rating-count">(78)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$39.99</span></div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card product-card-hover">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/hover3/600/600" alt="Product" class="product-image-primary">
+                            <img src="https://picsum.photos/seed/hover3b/600/600" alt="Product alternate" class="product-image-secondary">
+                            <div class="product-card-badges"><span class="product-badge product-badge-sale">-30%</span></div>
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <button class="product-quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Sports</span>
+                            <h4 class="product-card-title"><a href="#">Yoga Mat Premium</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                                <span class="product-rating-count">(145)</span>
+                            </div>
+                            <div class="product-card-price">
+                                <span class="product-price-current">$49.99</span>
+                                <span class="product-price-original">$69.99</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <article class="product-card product-card-hover">
+                        <div class="product-card-image">
+                            <img src="https://picsum.photos/seed/hover4/600/600" alt="Product" class="product-image-primary">
+                            <img src="https://picsum.photos/seed/hover4b/600/600" alt="Product alternate" class="product-image-secondary">
+                            <div class="product-card-actions">
+                                <button class="product-action-btn" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+                                <button class="product-action-btn" aria-label="Quick view"><i class="bi bi-eye"></i></button>
+                            </div>
+                            <button class="product-quick-add">Quick Add</button>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Office</span>
+                            <h4 class="product-card-title"><a href="#">Ergonomic Desk Lamp</a></h4>
+                            <div class="product-card-rating">
+                                <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                <span class="product-rating-count">(91)</span>
+                            </div>
+                            <div class="product-card-price"><span class="product-price-current">$89.00</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <p class="small text-muted mt-3"><i class="bi bi-info-circle me-1"></i>Hover to see secondary image and Quick Add button</p>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         PRODUCT LISTS
+         ========================================================== -->
+    <section id="product-lists" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Product List Items</h2>
+            <p class="section-intro text-muted">Horizontal layouts for product listings and search results.</p>
+
+            <!-- Standard Product List -->
+            <h3 class="h5 mb-3">Standard Product List</h3>
+            <div class="product-list mb-5">
+                <article class="product-list-item">
+                    <div class="product-list-image">
+                        <img src="https://picsum.photos/seed/plist1/300/300" alt="Product">
+                        <div class="product-card-badges"><span class="product-badge product-badge-sale">Sale</span></div>
+                    </div>
+                    <div class="product-list-content">
+                        <span class="product-card-category">Electronics</span>
+                        <h4 class="product-list-title"><a href="#">4K Ultra HD Smart TV - 55 Inch</a></h4>
+                        <div class="product-card-rating">
+                            <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                            <span class="product-rating-count">(456 reviews)</span>
+                        </div>
+                        <p class="product-list-description">Experience stunning picture quality with HDR support, smart streaming, and a sleek modern design.</p>
+                        <div class="product-list-features">
+                            <span class="product-feature-tag"><i class="bi bi-check-circle"></i> Free Shipping</span>
+                            <span class="product-feature-tag"><i class="bi bi-shield-check"></i> 2-Year Warranty</span>
+                        </div>
+                    </div>
+                    <div class="product-list-actions">
+                        <div class="product-card-price mb-3">
+                            <span class="product-price-current">$799.99</span>
+                            <span class="product-price-original">$1,199.99</span>
+                        </div>
+                        <button class="btn btn-primary w-100 mb-2">Add to Cart</button>
+                        <button class="btn btn-outline-secondary w-100"><i class="bi bi-heart"></i> Wishlist</button>
+                    </div>
+                </article>
+                <article class="product-list-item">
+                    <div class="product-list-image">
+                        <img src="https://picsum.photos/seed/plist2/300/300" alt="Product">
+                    </div>
+                    <div class="product-list-content">
+                        <span class="product-card-category">Computing</span>
+                        <h4 class="product-list-title"><a href="#">Wireless Gaming Mouse RGB</a></h4>
+                        <div class="product-card-rating">
+                            <div class="product-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <span class="product-rating-count">(287 reviews)</span>
+                        </div>
+                        <p class="product-list-description">High-precision wireless gaming mouse with customizable RGB lighting and programmable buttons.</p>
+                        <div class="product-list-features">
+                            <span class="product-feature-tag"><i class="bi bi-lightning"></i> 16,000 DPI</span>
+                            <span class="product-feature-tag"><i class="bi bi-battery-charging"></i> 70hr Battery</span>
+                        </div>
+                    </div>
+                    <div class="product-list-actions">
+                        <div class="product-card-price mb-3"><span class="product-price-current">$69.99</span></div>
+                        <button class="btn btn-primary w-100 mb-2">Add to Cart</button>
+                        <button class="btn btn-outline-secondary w-100"><i class="bi bi-heart"></i> Wishlist</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Compact Product List -->
+            <h3 class="h5 mb-3">Compact Product List</h3>
+            <div class="product-list-compact">
+                <article class="product-list-compact-item">
+                    <img src="https://picsum.photos/seed/compact1/100/100" alt="Product" class="product-list-compact-image">
+                    <div class="product-list-compact-content">
+                        <h5 class="product-list-compact-title"><a href="#">Stainless Steel Water Bottle</a></h5>
+                        <div class="product-card-rating">
+                            <div class="product-stars product-stars-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                            <span class="product-rating-count">(89)</span>
+                        </div>
+                        <div class="product-card-price"><span class="product-price-current">$29.99</span></div>
+                    </div>
+                    <div class="product-list-compact-action"><button class="btn btn-sm btn-primary">Add</button></div>
+                </article>
+                <article class="product-list-compact-item">
+                    <img src="https://picsum.photos/seed/compact2/100/100" alt="Product" class="product-list-compact-image">
+                    <div class="product-list-compact-content">
+                        <h5 class="product-list-compact-title"><a href="#">Organic Cotton Tote Bag</a></h5>
+                        <div class="product-card-rating">
+                            <div class="product-stars product-stars-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <span class="product-rating-count">(156)</span>
+                        </div>
+                        <div class="product-card-price"><span class="product-price-current">$19.99</span></div>
+                    </div>
+                    <div class="product-list-compact-action"><button class="btn btn-sm btn-primary">Add</button></div>
+                </article>
+                <article class="product-list-compact-item">
+                    <img src="https://picsum.photos/seed/compact3/100/100" alt="Product" class="product-list-compact-image">
+                    <div class="product-list-compact-content">
+                        <h5 class="product-list-compact-title"><a href="#">Bamboo Sunglasses</a></h5>
+                        <div class="product-card-rating">
+                            <div class="product-stars product-stars-sm"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                            <span class="product-rating-count">(67)</span>
+                        </div>
+                        <div class="product-card-price"><span class="product-price-current">$54.99</span></div>
+                    </div>
+                    <div class="product-list-compact-action"><button class="btn btn-sm btn-primary">Add</button></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
+        <div class="container">
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-social.html#avatar-system" class="btn btn-sm btn-outline-primary">Avatars <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-social.html#rating-stars" class="btn btn-sm btn-outline-primary">Rating Stars <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-badges.html#badge-gradient" class="btn btn-sm btn-outline-primary">Gradient Badges <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-badges.html#icon-badge" class="btn btn-sm btn-outline-primary">Icon Badges <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-buttons.html#button-variants" class="btn btn-sm btn-outline-primary">Card Buttons <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-sections.html#services-grid" class="btn btn-sm btn-outline-primary">Card Section Blueprints <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <p class="text-muted small mt-2 mb-0">Cards often compose avatars, badges, and buttons from these pages.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
@@ -519,13 +1755,16 @@
                     <p class="mb-2">&copy; 2026 StoneWick Theme</p>
                     <p class="small text-muted mb-0">
                         <a href="kitchen-sink.html">Index</a> · 
-                        <a href="ks-heroes-layout.html">Heroes</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
                         <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
                         <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
                         <a href="ks-data.html">Data</a> · 
                         <a href="ks-interactive.html">Interactive</a> · 
-                        <a href="ks-navigation.html">Navigation</a> · 
-                        <a href="ks-commerce.html">Commerce</a>
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
                     </p>
                 </div>
             </div>
@@ -542,6 +1781,30 @@
             } else {
                 header.classList.remove('scrolled');
             }
+        });
+
+        // Product wishlist toggle demo
+        document.querySelectorAll('.product-action-btn').forEach(btn => {
+            if (btn.querySelector('.bi-heart')) {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('bi-heart');
+                    icon.classList.toggle('bi-heart-fill');
+                });
+            }
+        });
+
+        // Quick add demo
+        document.querySelectorAll('.product-quick-add').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = 'Added!';
+                this.style.backgroundColor = 'var(--bs-success)';
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.style.backgroundColor = '';
+                }, 1500);
+            });
         });
     </script>
 </body>

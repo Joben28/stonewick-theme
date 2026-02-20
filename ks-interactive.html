@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Components - StoneWick Components</title>
-    <meta name="description" content="Testimonials, modals, sliders, and interactive elements.">
+    <meta name="description" content="Accordion, alerts, toasts, modals, forms, tooltips, collapse, and interactive components.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/theme.css?v=5">
@@ -23,13 +23,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-heroes-layout.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes.html">Heroes</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-badges.html">Badges</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-social.html">Social</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
                         <li class="nav-item"><a class="nav-link active" href="ks-interactive.html">Interactive</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-navigation.html">Navigation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-commerce.html">Commerce</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,166 +46,105 @@
                 <div class="col-lg-10 hero-content">
                     <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
                     <h1>Interactive Elements</h1>
-                    <p class="lead">Testimonials, modals, sliders, event cards, and interactive components.</p>
+                    <p class="lead">Accordion, alerts, toasts, modals, forms, tooltips, and interactive components.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==========================================================
-         TESTIMONIALS
+         ACCORDION
          ========================================================== -->
-    <section id="testimonials" class="py-section bg-light">
+    <section id="accordion" class="py-section">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">TESTIMONIALS</div>
-            <h2 class="section-heading text-dark">Card Testimonial (Light)</h2>
-            <p class="section-intro text-muted">Review cards with avatar, rating, quote, and source badge.</p>
-            
-            <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-testimonial">
-                        <div class="testimonial-header">
-                            <div class="avatar avatar-lg avatar-primary">
-                                <span class="avatar-initials">JD</span>
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-name">John Davidson</div>
-                                <div class="testimonial-title">Owner, Davidson Plumbing</div>
-                                <div class="rating-stars rating-stars-sm">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <blockquote>Best investment I've made for my business. My new website brings in 3x the leads we used to get. Highly recommend!</blockquote>
-                        </div>
-                        <div class="testimonial-footer">
-                            <span class="testimonial-source google"><i class="bi bi-google"></i> Google</span>
-                            <span class="testimonial-date">2 weeks ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-testimonial featured">
-                        <div class="testimonial-header">
-                            <div class="avatar avatar-lg">
-                                <img src="https://i.pravatar.cc/150?img=32" alt="Sarah M." class="avatar-img">
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-name">Sarah Mitchell</div>
-                                <div class="testimonial-title">CEO, Mitchell Consulting</div>
-                                <div class="rating-stars rating-stars-sm">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <blockquote>Professional, responsive, and delivered exactly what we needed. Our conversion rate doubled within the first month.</blockquote>
-                        </div>
-                        <div class="testimonial-footer">
-                            <span class="testimonial-source linkedin"><i class="bi bi-linkedin"></i> LinkedIn</span>
-                            <span class="testimonial-date">1 month ago</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-testimonial">
-                        <div class="testimonial-header">
-                            <div class="avatar avatar-lg avatar-success">
-                                <span class="avatar-initials">MR</span>
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-name">Mike Rodriguez</div>
-                                <div class="testimonial-title">Owner, Elite Auto Detail</div>
-                                <div class="rating-stars rating-stars-sm">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <blockquote>Finally a web developer who understands small business needs. Fast turnaround and great communication throughout.</blockquote>
-                        </div>
-                        <div class="testimonial-footer">
-                            <span class="testimonial-source yelp"><i class="bi bi-yelp"></i> Yelp</span>
-                            <span class="testimonial-date">3 weeks ago</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Accordion</h2>
+            <p class="section-intro text-muted">Collapsible content panels for FAQs, settings, and grouped information.</p>
 
-    <!-- Testimonials Dark -->
-    <section class="bg-dark-gradient py-section">
-        <div class="container">
-            <div class="text-warning fw-bold text-uppercase fs-6 mb-3 eyebrow">TESTIMONIALS</div>
-            <h2 class="section-heading text-white">Card Testimonial Dark</h2>
-            <p class="section-intro text-white-70">Dark variant testimonial cards.</p>
-            
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-testimonial-dark">
-                        <div class="testimonial-header">
-                            <div class="avatar avatar-lg">
-                                <img src="https://i.pravatar.cc/150?img=45" alt="Lisa K." class="avatar-img">
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-name">Lisa Kowalski</div>
-                                <div class="testimonial-title">Marketing Director</div>
-                                <div class="rating-stars rating-stars-sm">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
+                <!-- Default Accordion -->
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Default</h5>
+                    <div class="accordion" id="accordionDefault">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#defaultOne">Accordion Item #1</button>
+                            </h2>
+                            <div id="defaultOne" class="accordion-collapse collapse show" data-bs-parent="#accordionDefault">
+                                <div class="accordion-body"><strong>This is the first item's accordion body.</strong> It is shown by default until the collapse plugin adds the appropriate classes.</div>
                             </div>
                         </div>
-                        <div class="testimonial-body">
-                            <blockquote>Outstanding work! The attention to detail and focus on performance really shows in the final product.</blockquote>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#defaultTwo">Accordion Item #2</button>
+                            </h2>
+                            <div id="defaultTwo" class="accordion-collapse collapse" data-bs-parent="#accordionDefault">
+                                <div class="accordion-body"><strong>This is the second item's accordion body.</strong> Hidden by default, revealed when the user activates the trigger.</div>
+                            </div>
                         </div>
-                        <div class="testimonial-footer">
-                            <span class="testimonial-source google"><i class="bi bi-google"></i> Google</span>
-                            <span class="testimonial-date">1 week ago</span>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#defaultThree">Accordion Item #3</button>
+                            </h2>
+                            <div id="defaultThree" class="accordion-collapse collapse" data-bs-parent="#accordionDefault">
+                                <div class="accordion-body"><strong>This is the third item's accordion body.</strong> Hidden by default, revealed on toggle.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-testimonial-dark">
-                        <div class="testimonial-header">
-                            <div class="avatar avatar-lg avatar-info">
-                                <span class="avatar-initials">TC</span>
-                            </div>
-                            <div class="testimonial-info">
-                                <div class="testimonial-name">Tom Chen</div>
-                                <div class="testimonial-title">Startup Founder</div>
-                                <div class="rating-stars rating-stars-sm">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                </div>
+
+                <!-- Flush Accordion -->
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Flush (.accordion-flush)</h5>
+                    <div class="accordion accordion-flush" id="accordionFlush">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushOne">Flush Item #1</button>
+                            </h2>
+                            <div id="flushOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                <div class="accordion-body">Removes borders and rounded corners for edge-to-edge rendering within a parent container.</div>
                             </div>
                         </div>
-                        <div class="testimonial-body">
-                            <blockquote>They helped us launch our MVP in record time. Couldn't have done it without their expertise.</blockquote>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushTwo">Flush Item #2</button>
+                            </h2>
+                            <div id="flushTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                <div class="accordion-body">Another flush accordion item demonstrating the borderless style variant.</div>
+                            </div>
                         </div>
-                        <div class="testimonial-footer">
-                            <span class="testimonial-source linkedin"><i class="bi bi-linkedin"></i> LinkedIn</span>
-                            <span class="testimonial-date">2 weeks ago</span>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushThree">Flush Item #3</button>
+                            </h2>
+                            <div id="flushThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                <div class="accordion-body">Third flush item demonstrating edge-to-edge rendering.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Always Open -->
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Always Open (no data-bs-parent)</h5>
+                    <div class="accordion" id="accordionOpen">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#openOne">Always Open #1</button>
+                            </h2>
+                            <div id="openOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">Omitting <code>data-bs-parent</code> allows multiple items to stay open simultaneously.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#openTwo">Always Open #2</button>
+                            </h2>
+                            <div id="openTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">Open this without closing the first — both can be visible at the same time.</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -211,159 +153,110 @@
     </section>
 
     <!-- ==========================================================
-         EVENT CARDS
+         ALERTS
          ========================================================== -->
-    <section id="event-cards" class="py-section bg-light">
+    <section id="alerts" class="py-section bg-light">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">EVENTS</div>
-            <h2 class="section-heading text-dark">Event Cards</h2>
-            <p class="section-intro text-muted">Cards for showcasing events, webinars, and meetings.</p>
-            
-            <div class="event-grid mb-5">
-                <article class="card-event">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" alt="Conference">
-                        <div class="event-date-badge">
-                            <span class="event-date-day">15</span>
-                            <span class="event-date-month">Mar</span>
-                        </div>
-                        <span class="event-category">Conference</span>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Alerts</h2>
+            <p class="section-intro text-muted">Contextual feedback messages for user actions and notifications.</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="alert alert-primary" role="alert"><i class="bi bi-info-circle me-2"></i>A simple <strong>primary</strong> alert — check it out!</div>
+                    <div class="alert alert-secondary" role="alert">A simple <strong>secondary</strong> alert — check it out!</div>
+                    <div class="alert alert-success" role="alert"><i class="bi bi-check-circle me-2"></i><strong>Success!</strong> Your changes have been saved.</div>
+                    <div class="alert alert-danger" role="alert"><i class="bi bi-x-circle me-2"></i><strong>Error!</strong> Something went wrong.</div>
+                    <div class="alert alert-warning" role="alert"><i class="bi bi-exclamation-triangle me-2"></i><strong>Warning!</strong> Please review the highlighted fields.</div>
+                    <div class="alert alert-info" role="alert"><i class="bi bi-bell me-2"></i>A simple <strong>info</strong> alert with icon.</div>
+                    <div class="alert alert-light" role="alert">A simple <strong>light</strong> alert — subtle notification.</div>
+                    <div class="alert alert-dark" role="alert">A simple <strong>dark</strong> alert — high contrast.</div>
+
+                    <!-- Dismissible -->
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle me-2"></i><strong>Dismissible!</strong> Click the X to close.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                    <div class="event-body">
-                        <h3 class="event-title"><a href="#">Web Development Summit 2026</a></h3>
-                        <p class="event-description">Join industry leaders for a day of insights, networking, and innovation in web technologies.</p>
-                        <div class="event-meta">
-                            <div class="event-meta-item">
-                                <i class="bi bi-clock"></i>
-                                <span>9:00 AM - 5:00 PM</span>
-                            </div>
-                            <div class="event-meta-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <span>Portland, OR</span>
-                            </div>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-primary btn-sm">Register</a>
-                            <button class="add-to-calendar">
-                                <i class="bi bi-calendar-plus"></i>
-                                Add to Calendar
-                            </button>
-                        </div>
+
+                    <!-- Additional Content -->
+                    <div class="alert alert-primary" role="alert">
+                        <h4 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Additional Content</h4>
+                        <p>Alerts can contain headings, paragraphs, and dividers.</p>
+                        <hr>
+                        <p class="mb-0">Use <code>.alert-link</code> for <a href="#" class="alert-link">matching colored links</a>.</p>
                     </div>
-                </article>
-                
-                <article class="card-event featured">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop" alt="Workshop">
-                        <div class="event-date-badge">
-                            <span class="event-date-day">22</span>
-                            <span class="event-date-month">Mar</span>
-                        </div>
-                        <span class="event-category">Workshop</span>
-                    </div>
-                    <div class="event-body">
-                        <h3 class="event-title"><a href="#">CSS Mastery Workshop</a></h3>
-                        <p class="event-description">Deep dive into modern CSS techniques including Grid, Custom Properties, and Container Queries.</p>
-                        <div class="event-meta">
-                            <div class="event-meta-item">
-                                <i class="bi bi-clock"></i>
-                                <span>2:00 PM - 6:00 PM</span>
-                            </div>
-                            <div class="event-meta-item">
-                                <i class="bi bi-camera-video"></i>
-                                <span>Online Event</span>
-                            </div>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-primary btn-sm">Register</a>
-                            <button class="add-to-calendar">
-                                <i class="bi bi-calendar-plus"></i>
-                                Add to Calendar
-                            </button>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="card-event">
-                    <div class="event-image">
-                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop" alt="Meetup">
-                        <div class="event-date-badge">
-                            <span class="event-date-day">05</span>
-                            <span class="event-date-month">Apr</span>
-                        </div>
-                        <span class="event-category">Networking</span>
-                    </div>
-                    <div class="event-body">
-                        <h3 class="event-title"><a href="#">Portland Tech Meetup</a></h3>
-                        <p class="event-description">Monthly gathering of local tech professionals to share knowledge and build connections.</p>
-                        <div class="event-meta">
-                            <div class="event-meta-item">
-                                <i class="bi bi-clock"></i>
-                                <span>6:30 PM - 9:00 PM</span>
-                            </div>
-                            <div class="event-meta-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <span>The Tech Hub, Downtown</span>
-                            </div>
-                        </div>
-                        <div class="event-actions">
-                            <a href="#" class="btn btn-primary btn-sm">RSVP</a>
-                            <button class="add-to-calendar">
-                                <i class="bi bi-calendar-plus"></i>
-                                Add to Calendar
-                            </button>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
-            
-            <!-- Compact Event List -->
-            <h3 class="h5 mb-3">Compact Event List</h3>
-            <div class="event-list">
-                <article class="card-event card-event-compact">
-                    <div class="event-date-badge">
-                        <span class="event-date-day">10</span>
-                        <span class="event-date-month">Apr</span>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         TOASTS
+         ========================================================== -->
+    <section id="toasts" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Toasts</h2>
+            <p class="section-intro text-muted">Lightweight notifications designed for push messaging.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Basic Toast</h5>
+                    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="me-auto">Bootstrap</strong>
+                            <small>11 mins ago</small>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">Hello, world! This is a toast message.</div>
                     </div>
-                    <div class="event-body">
-                        <h4 class="event-title"><a href="#">Code Review Best Practices</a></h4>
-                        <div class="event-meta">
-                            <div class="event-meta-item">
-                                <i class="bi bi-clock"></i>
-                                <span>1:00 PM</span>
-                            </div>
-                            <div class="event-meta-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <span>Online</span>
-                            </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Color Schemes</h5>
+                    <div class="toast show align-items-center text-bg-primary border-0 mb-2" role="alert">
+                        <div class="d-flex">
+                            <div class="toast-body">Primary toast with white text.</div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
                     </div>
-                    <div class="event-actions">
-                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
-                    </div>
-                </article>
-                <article class="card-event card-event-compact">
-                    <div class="event-date-badge">
-                        <span class="event-date-day">18</span>
-                        <span class="event-date-month">Apr</span>
-                    </div>
-                    <div class="event-body">
-                        <h4 class="event-title"><a href="#">JavaScript Performance Tuning</a></h4>
-                        <div class="event-meta">
-                            <div class="event-meta-item">
-                                <i class="bi bi-clock"></i>
-                                <span>3:00 PM</span>
-                            </div>
-                            <div class="event-meta-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <span>Room 301</span>
-                            </div>
+                    <div class="toast show align-items-center text-bg-success border-0 mb-2" role="alert">
+                        <div class="d-flex">
+                            <div class="toast-body">Success — action completed!</div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                         </div>
                     </div>
-                    <div class="event-actions">
-                        <a href="#" class="btn btn-outline-primary btn-sm">Join</a>
+                    <div class="toast show align-items-center text-bg-danger border-0" role="alert">
+                        <div class="d-flex">
+                            <div class="toast-body">Danger — something went wrong.</div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
                     </div>
-                </article>
+                </div>
+            </div>
+
+            <!-- Stacking -->
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Stacking</h5>
+                    <div class="toast-container position-static">
+                        <div class="toast show" role="alert">
+                            <div class="toast-header">
+                                <strong class="me-auto">Notification</strong>
+                                <small>just now</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">First toast in the stack.</div>
+                        </div>
+                        <div class="toast show" role="alert">
+                            <div class="toast-header">
+                                <strong class="me-auto">Notification</strong>
+                                <small>2 seconds ago</small>
+                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">Second toast in the stack.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -371,10 +264,10 @@
     <!-- ==========================================================
          MODALS
          ========================================================== -->
-    <section id="modals" class="py-section">
+    <section id="modals" class="py-section bg-light">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">MODALS</div>
-            <h2 class="section-heading text-dark">Bootstrap Modal Dialogs</h2>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Modal Dialogs</h2>
             <p class="section-intro text-muted">Bootstrap modals for dialogs, forms, and content.</p>
             
             <div class="row g-4">
@@ -406,7 +299,7 @@
     <!-- Modal System -->
     <section id="modal-system" class="py-section bg-light">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">MODAL SYSTEM</div>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
             <h2 class="section-heading text-dark">Custom Modal Variants</h2>
             <p class="section-intro text-muted">Various modal types for galleries, videos, content, and downloads.</p>
             
@@ -731,11 +624,103 @@
     </div>
 
     <!-- ==========================================================
+         COLLAPSE
+         ========================================================== -->
+    <section id="collapse" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Collapse</h2>
+            <p class="section-intro text-muted">Toggle content visibility with CSS transitions.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Single Target</h5>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button">Link trigger</a>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample">Button trigger</button>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body">Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the trigger.</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Horizontal Collapse</h5>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHorizontal">Toggle width</button>
+                    </p>
+                    <div style="min-height: 120px;">
+                        <div class="collapse collapse-horizontal" id="collapseHorizontal">
+                            <div class="card card-body" style="width: 300px;">This collapses horizontally, animating the width instead of height.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multiple Targets -->
+            <div class="row mt-4">
+                <div class="col-md-8">
+                    <h5 class="mb-3">Multiple Targets</h5>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiA">Toggle first</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiB">Toggle second</button>
+                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse">Toggle both</button>
+                    </p>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="collapse multi-collapse" id="multiA">
+                                <div class="card card-body">First multi-collapse element.</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="collapse multi-collapse" id="multiB">
+                                <div class="card card-body">Second multi-collapse element.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         TOOLTIPS & POPOVERS
+         ========================================================== -->
+    <section id="tooltips-popovers" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
+            <h2 class="section-heading text-dark">Tooltips & Popovers</h2>
+            <p class="section-intro text-muted">Floating informational elements triggered on hover or click.</p>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Tooltips</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">Top</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">Right</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">Bottom</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">Left</button>
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <strong>HTML</strong>">HTML tooltip</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Popovers</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="top" data-bs-title="Top" data-bs-content="Top popover content.">Top</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-title="Bottom" data-bs-content="Bottom popover content.">Bottom</button>
+                        <a tabindex="0" class="btn btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-title="Dismissible" data-bs-content="Click anywhere else to dismiss.">Dismissible</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
          SLIDERS / RANGE INPUTS
          ========================================================== -->
-    <section id="sliders" class="py-section bg-light">
+    <section id="sliders" class="py-section">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">FORM ELEMENTS</div>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
             <h2 class="section-heading text-dark">Sliders & Range Inputs</h2>
             <p class="section-intro text-muted">Custom styled range inputs for forms.</p>
             
@@ -770,40 +755,53 @@
          ========================================================== -->
     <section id="forms" class="py-section">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">FORMS</div>
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">BS5 STANDARD</div>
             <h2 class="section-heading text-dark">Form Elements</h2>
-            <p class="section-intro text-muted">Bootstrap form controls with theme styling.</p>
+            <p class="section-intro text-muted">Bootstrap form controls with theme styling and validation.</p>
             
             <div class="row g-5">
-                <!-- Contact Form -->
+                <!-- Contact Form with Validation -->
                 <div class="col-lg-6">
-                    <h4 class="mb-4">Contact Form</h4>
-                    <form>
+                    <h4 class="mb-4">Contact Form (with Validation)</h4>
+                    <form data-validate id="contactForm">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label for="firstName" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="John">
+                                <label for="firstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="firstName" placeholder="John" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
                             </div>
                             <div class="col-md-6">
-                                <label for="lastName" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                                <label for="lastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
                             </div>
                             <div class="col-12">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="john@example.com" required>
+                                <div class="valid-feedback">Email looks good!</div>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
                             </div>
                             <div class="col-12">
-                                <label for="subject" class="form-label">Subject</label>
-                                <select class="form-select" id="subject">
-                                    <option selected>Choose a subject...</option>
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="(555) 123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                <div class="form-text">Format: 123-456-7890</div>
+                                <div class="invalid-feedback">Please enter a valid phone number.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject <span class="text-danger">*</span></label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Choose a subject...</option>
                                     <option value="1">General Inquiry</option>
                                     <option value="2">Project Quote</option>
                                     <option value="3">Support</option>
                                 </select>
+                                <div class="invalid-feedback">Please select a subject.</div>
                             </div>
                             <div class="col-12">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+                                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Your message..." required minlength="10"></textarea>
+                                <div class="form-text">Minimum 10 characters</div>
+                                <div class="invalid-feedback">Please enter a message (at least 10 characters).</div>
                             </div>
                             <div class="col-12">
                                 <div class="form-check">
@@ -814,7 +812,17 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the terms and conditions <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg me-2">Send Message</button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">Reset</button>
                             </div>
                         </div>
                     </form>
@@ -915,50 +923,209 @@
                     <!-- Validation States -->
                     <div class="mb-4">
                         <label class="form-label d-block">Validation States</label>
-                        <input type="text" class="form-control is-valid mb-2" value="Valid input">
+                        <input type="text" class="form-control is-valid mb-2" value="Valid input" readonly>
                         <div class="valid-feedback d-block mb-2">Looks good!</div>
-                        <input type="text" class="form-control is-invalid" value="Invalid input">
-                        <div class="invalid-feedback d-block">Please provide a valid value.</div>
+                        <input type="text" class="form-control is-invalid mb-2" value="Invalid input" readonly>
+                        <div class="invalid-feedback d-block mb-2">Please provide a valid value.</div>
+                        <input type="text" class="form-control mb-2" placeholder="Neutral state">
+                    </div>
+                    
+                    <!-- Form Ranges -->
+                    <div class="mb-4">
+                        <label for="customRange" class="form-label">Range Slider</label>
+                        <input type="range" class="form-range" id="customRange" min="0" max="100" value="50">
+                        <div class="form-text">Value: <span id="rangeValue">50</span></div>
+                    </div>
+                    
+                    <!-- File Input -->
+                    <div class="mb-4">
+                        <label for="formFile" class="form-label">File Upload</label>
+                        <input class="form-control" type="file" id="formFile">
+                        <div class="form-text">Max file size: 5MB</div>
+                    </div>
+                    
+                    <!-- Disabled State -->
+                    <div class="mb-4">
+                        <label for="disabledInput" class="form-label">Disabled Input</label>
+                        <input type="text" class="form-control" id="disabledInput" placeholder="Disabled" disabled>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Password Matching Example -->
+            <div class="row g-5 mt-3">
+                <div class="col-lg-6">
+                    <h4 class="mb-4">Password Matching Validation</h4>
+                    <form data-validate id="passwordForm">
+                        <div class="mb-3">
+                            <label for="password1" class="form-label">Password <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="password1" required minlength="8">
+                            <div class="form-text">At least 8 characters</div>
+                            <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" id="password2" data-password-match="password1" required>
+                            <div class="valid-feedback">Passwords match!</div>
+                            <div class="invalid-feedback">Passwords do not match.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                
+                <!-- Dark Form Example -->
+                <div class="col-lg-6 bg-dark p-5 rounded">
+                    <h4 class="mb-4 text-white">Dark Theme Form</h4>
+                    <form data-validate>
+                        <div class="mb-3">
+                            <label for="darkName" class="form-label form-label-dark">Name</label>
+                            <input type="text" class="form-control form-control-dark" id="darkName" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="darkEmail" class="form-label form-label-dark">Email</label>
+                            <input type="email" class="form-control form-control-dark" id="darkEmail" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <button type="submit" class="btn btn-light">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Form Validation JavaScript Demo -->
+    <script>
+        // Range slider value display
+        const rangeSlider = document.getElementById('customRange');
+        const rangeValue = document.getElementById('rangeValue');
+        if (rangeSlider && rangeValue) {
+            rangeSlider.addEventListener('input', (e) => {
+                rangeValue.textContent = e.target.value;
+            });
+        }
+        
+        // Contact form submit demo
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('form:valid', (e) => {
+                console.log('Form is valid!', e.detail.formData);
+                alert('Form submitted successfully! (This is a demo)');
+                contactForm.reset();
+                contactForm.classList.remove('was-validated');
+            });
+        }
+        
+        // Password form submit demo
+        const passwordForm = document.getElementById('passwordForm');
+        if (passwordForm) {
+            passwordForm.addEventListener('form:valid', (e) => {
+                alert('Passwords match and form is valid!');
+                passwordForm.reset();
+            });
+        }
+    </script>
+
+    <!-- ==========================================================
+         ENHANCED ACCORDION
+         ========================================================== -->
+    <section id="accordion-enhanced" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Enhanced Accordion</h2>
+            <p class="section-intro text-muted">Accordion with search, expand/collapse all, and progress tracking.</p>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Search -->
+                    <div class="accordion-search">
+                        <i class="bi bi-search accordion-search-icon"></i>
+                        <input type="text" class="accordion-search-input" placeholder="Search FAQ...">
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="accordion-controls">
+                        <button class="accordion-control-btn"><i class="bi bi-arrows-expand"></i> Expand All</button>
+                        <button class="accordion-control-btn"><i class="bi bi-arrows-collapse"></i> Collapse All</button>
+                    </div>
+
+                    <!-- Progress -->
+                    <div class="accordion-progress">
+                        <div class="accordion-progress-bar">
+                            <div class="accordion-progress-fill" style="width: 40%;"></div>
+                        </div>
+                        <span class="accordion-progress-text">2 of 5 viewed</span>
+                    </div>
+
+                    <!-- Accordion -->
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="bi bi-rocket-takeoff me-2 text-primary"></i>How long does a typical project take?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Most projects are completed within 4-8 weeks, depending on complexity. Simple sites can be done in 2-3 weeks, while larger projects with custom features may take 10-12 weeks.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="bi bi-box-seam me-2 text-primary"></i>What's included in web design services?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Custom design, responsive development, SEO optimization, performance tuning, accessibility compliance, and 30 days of post-launch support.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="bi bi-tools me-2 text-primary"></i>Do you offer ongoing maintenance?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Monthly maintenance packages including security updates, backups, performance monitoring, content updates, and priority support starting at $99/month.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="bi bi-code-slash me-2 text-primary"></i>What platforms do you work with?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">WordPress, Shopify, custom solutions, and headless CMS platforms like Contentful and Sanity for maximum flexibility.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="bi bi-chat-dots me-2 text-primary"></i>How do I get started?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Fill out our contact form or schedule a free consultation call. We'll discuss your goals, timeline, and budget, then provide a detailed proposal.</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==========================================================
-         TOASTS & ALERTS
-         ========================================================== -->
-    <section id="alerts" class="py-section">
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
         <div class="container">
-            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">NOTIFICATIONS</div>
-            <h2 class="section-heading text-dark">Alerts</h2>
-            <p class="section-intro text-muted">Bootstrap alerts for notifications and messages.</p>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="alert alert-primary" role="alert">
-                        <i class="bi bi-info-circle me-2"></i>
-                        <strong>Info:</strong> This is a primary alert with important information.
-                    </div>
-                    <div class="alert alert-success" role="alert">
-                        <i class="bi bi-check-circle me-2"></i>
-                        <strong>Success:</strong> Your changes have been saved successfully.
-                    </div>
-                    <div class="alert alert-warning" role="alert">
-                        <i class="bi bi-exclamation-triangle me-2"></i>
-                        <strong>Warning:</strong> Please review the highlighted fields.
-                    </div>
-                    <div class="alert alert-danger" role="alert">
-                        <i class="bi bi-x-circle me-2"></i>
-                        <strong>Error:</strong> Something went wrong. Please try again.
-                    </div>
-                    <div class="alert alert-info alert-dismissible fade show" role="alert">
-                        <i class="bi bi-bell me-2"></i>
-                        <strong>Dismissible:</strong> Click the X to close this alert.
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                </div>
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-sections.html#faq-single" class="btn btn-sm btn-outline-primary">FAQ Sections <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-cards.html#cards-light" class="btn btn-sm btn-outline-primary">Cards in Modals <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-buttons.html#button-variants" class="btn btn-sm btn-outline-primary">Form Buttons <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-badges.html#contextual-badges" class="btn btn-sm btn-outline-primary">Alert Badges <i class="bi bi-arrow-right-short"></i></a>
             </div>
+            <p class="text-muted small mt-2 mb-0">Accordions, modals, and forms compose with components from these pages.</p>
         </div>
     </section>
 
@@ -970,13 +1137,16 @@
                     <p class="mb-2">&copy; 2026 StoneWick Theme</p>
                     <p class="small text-muted mb-0">
                         <a href="kitchen-sink.html">Index</a> · 
-                        <a href="ks-heroes-layout.html">Heroes</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
                         <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
                         <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
                         <a href="ks-data.html">Data</a> · 
                         <a href="ks-interactive.html">Interactive</a> · 
-                        <a href="ks-navigation.html">Navigation</a> · 
-                        <a href="ks-commerce.html">Commerce</a>
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
                     </p>
                 </div>
             </div>
@@ -998,9 +1168,19 @@
         // Range slider value display
         const rangeInput = document.getElementById('rangeWithValue');
         const rangeValueDisplay = document.getElementById('rangeValue');
-        rangeInput.addEventListener('input', function() {
-            rangeValueDisplay.textContent = this.value;
-        });
+        if (rangeInput && rangeValueDisplay) {
+            rangeInput.addEventListener('input', function() {
+                rangeValueDisplay.textContent = this.value;
+            });
+        }
+
+        // Initialize tooltips
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+
+        // Initialize popovers
+        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+        popoverTriggerList.forEach(el => new bootstrap.Popover(el));
     </script>
 </body>
 </html>

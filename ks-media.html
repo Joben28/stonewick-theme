@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media & Video - StoneWick Components</title>
+    <title>Media Components - StoneWick Components</title>
     <meta name="description" content="Video players, channel headers, galleries, and media lists.">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -23,13 +23,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-heroes-layout.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes.html">Heroes</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-badges.html">Badges</a></li>
                         <li class="nav-item"><a class="nav-link active" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-social.html">Social</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
                         <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-navigation.html">Navigation</a></li>
-                        <li class="nav-item"><a class="nav-link" href="ks-commerce.html">Commerce</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
                     </ul>
                 </div>
             </div>
@@ -42,8 +45,200 @@
             <div class="row">
                 <div class="col-lg-10 hero-content">
                     <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
-                    <h1>Media & Video</h1>
-                    <p class="lead">Video players, YouTube channel headers, galleries, and media lists.</p>
+                    <h1>Media Components</h1>
+                    <p class="lead">Video players, channel headers, galleries, and media lists.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BS5: CAROUSEL
+         ============================================================ -->
+    <section id="carousel" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Carousel</h2>
+            <p class="section-intro">A slideshow component for cycling through images or slides of content.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-8">
+                    <h6 class="mb-3">With Controls &amp; Indicators</h6>
+                    <div id="carouselDemo" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/800/400?random=1" class="d-block w-100" alt="Slide 1">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>First Slide</h5>
+                                    <p>Caption text for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/400?random=2" class="d-block w-100" alt="Slide 2">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Second Slide</h5>
+                                    <p>Caption text for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/400?random=3" class="d-block w-100" alt="Slide 3">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Third Slide</h5>
+                                    <p>Caption text for the third slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h6 class="mb-3">Crossfade Transition</h6>
+                    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="https://picsum.photos/800/400?random=4" class="d-block w-100" alt="Fade 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/400?random=5" class="d-block w-100" alt="Fade 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://picsum.photos/800/400?random=6" class="d-block w-100" alt="Fade 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BS5: RESPONSIVE IMAGES
+         ============================================================ -->
+    <section id="images" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Responsive Images</h2>
+            <p class="section-intro">Fluid, thumbnail, and rounded image utilities.</p>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h6 class="mb-2">Fluid (img-fluid)</h6>
+                    <img src="https://picsum.photos/400/300?random=10" class="img-fluid rounded" alt="Fluid image">
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">Thumbnail (img-thumbnail)</h6>
+                    <img src="https://picsum.photos/400/300?random=11" class="img-thumbnail" alt="Thumbnail image">
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">Rounded (rounded-circle)</h6>
+                    <img src="https://picsum.photos/300/300?random=12" class="rounded-circle img-fluid" alt="Circle image" style="max-width: 200px;">
+                </div>
+            </div>
+
+            <h6 class="mb-3">Float Alignment</h6>
+            <div class="clearfix mb-4">
+                <img src="https://picsum.photos/200/200?random=13" class="rounded float-start me-3 mb-2" alt="Float start" style="max-width: 150px;">
+                <p>This paragraph demonstrates a float-start image. The text wraps around the image which is floated to the left. This is useful for article-style layouts where you want text to flow around an image naturally. The clearfix class on the container ensures proper clearing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BS5: FIGURES
+         ============================================================ -->
+    <section id="figures" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Figures</h2>
+            <p class="section-intro">An image with an optional caption, using the figure element.</p>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="https://picsum.photos/400/300?random=14" class="figure-img img-fluid rounded" alt="Figure image">
+                        <figcaption class="figure-caption">A caption for the above image.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="https://picsum.photos/400/300?random=15" class="figure-img img-fluid rounded" alt="Figure image">
+                        <figcaption class="figure-caption text-end">A right-aligned caption.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4">
+                    <figure class="figure">
+                        <img src="https://picsum.photos/400/300?random=16" class="figure-img img-fluid rounded" alt="Figure image">
+                        <figcaption class="figure-caption text-center">A centered caption.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BS5: RATIOS
+         ============================================================ -->
+    <section id="ratios" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Ratios</h2>
+            <p class="section-intro">Aspect ratio helpers for responsive embeds. Works with iframes, videos, and any embedded content.</p>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <h6 class="mb-2">21x9</h6>
+                    <div class="ratio ratio-21x9">
+                        <div class="bg-primary bg-opacity-25 d-flex align-items-center justify-content-center rounded">
+                            <span class="fw-bold">21:9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="mb-2">16x9</h6>
+                    <div class="ratio ratio-16x9">
+                        <div class="bg-success bg-opacity-25 d-flex align-items-center justify-content-center rounded">
+                            <span class="fw-bold">16:9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="mb-2">4x3</h6>
+                    <div class="ratio ratio-4x3">
+                        <div class="bg-warning bg-opacity-25 d-flex align-items-center justify-content-center rounded">
+                            <span class="fw-bold">4:3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="mb-2">1x1</h6>
+                    <div class="ratio ratio-1x1">
+                        <div class="bg-danger bg-opacity-25 d-flex align-items-center justify-content-center rounded">
+                            <span class="fw-bold">1:1</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -447,6 +642,262 @@
                     </div>
                 </article>
             </div>
+
+            <h2 class="section-heading text-dark mt-5">Media List Compact</h2>
+            <p class="section-intro text-muted">Compact vertical list for sidebars and related content sections. Similar to blog-list-compact.</p>
+            
+            <div class="media-list media-list-compact">
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=120&h=120&fit=crop" alt="Podcast Episode">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">38:12</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Episode 147: Biblical Meditation</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Feb 13, 2026</span>
+                            <span><i class="bi bi-headphones"></i> 2.8K plays</span>
+                        </div>
+                        <p class="media-desc">How to slow down and truly hear from God through meditative Scripture reading.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=120&h=120&fit=crop" alt="Video Tutorial">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">12:45</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">CSS Grid Layout Basics</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Feb 10, 2026</span>
+                            <span><i class="bi bi-eye"></i> 15K views</span>
+                        </div>
+                        <p class="media-desc">A beginner-friendly introduction to CSS Grid layout fundamentals.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=120&h=120&fit=crop" alt="Sermon">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">45:00</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">When God Says Wait</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Feb 8, 2026</span>
+                            <span><i class="bi bi-headphones"></i> 4.1K plays</span>
+                        </div>
+                        <p class="media-desc">Finding purpose and peace in seasons of waiting on God's timing.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=120&h=120&fit=crop" alt="Live Stream">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">1:18:32</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Sunday Service Livestream</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Feb 6, 2026</span>
+                            <span><i class="bi bi-eye"></i> 892 watching</span>
+                        </div>
+                        <p class="media-desc">Join us live for our weekly Sunday morning worship service.</p>
+                    </div>
+                </article>
+
+                <article class="media-item">
+                    <div class="media-thumb">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=120&h=120&fit=crop" alt="Teaching">
+                        <div class="media-thumb-play"><i class="bi bi-play-circle-fill"></i></div>
+                        <span class="media-duration">28:15</span>
+                    </div>
+                    <div class="media-content">
+                        <h5 class="media-title"><a href="#">Foundations of Faith</a></h5>
+                        <div class="media-meta">
+                            <span><i class="bi bi-calendar3"></i> Feb 3, 2026</span>
+                            <span><i class="bi bi-headphones"></i> 6.7K plays</span>
+                        </div>
+                        <p class="media-desc">Essential biblical principles for new believers and longtime followers.</p>
+                    </div>
+                </article>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Episode Player Card</h2>
+            <p class="section-intro text-muted">Featured episode player with thumbnail, metadata, and HTML5 audio controls. Perfect for podcast/sermon pages.</p>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="card border shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start gap-3 mb-3">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=120&h=120&fit=crop" 
+                                     class="rounded" alt="Episode 147" style="width: 80px; height: 80px; object-fit: cover;">
+                                <div class="flex-grow-1">
+                                    <h5 class="mb-1">Episode 147: The Art of Biblical Meditation</h5>
+                                    <p class="text-muted small mb-0">Pastor Marcus Chen • Feb 13, 2026 • 38 min</p>
+                                </div>
+                            </div>
+                            <audio controls class="w-100" preload="metadata">
+                                <source src="https://cdn.simplecast.com/audio/cae8b0eb-d9a9-480d-a652-0defcbe047f4/episodes/af52a99b-88c0-4638-b120-d46e142d06d3/audio/500344fb-2e2b-48af-be86-af6ac341a6da/default_tc.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-heading text-dark mt-5">Episode Grid Cards (Compact Horizontal)</h2>
+            <p class="section-intro text-muted">Compact horizontal media cards in a Bootstrap grid. Each <code>.media-item</code> shows a 180×120 thumbnail beside title and metadata. Uses <code>.row.g-4</code> with <code>.col-lg-4.col-md-6</code> columns and <code>.media-item.h-100</code> cards.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <article class="media-item h-100">
+                            <div class="media-thumb">
+                                <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=360&h=240&fit=crop" 
+                                     alt="Episode 147">
+                                <span class="media-duration">38 min</span>
+                            </div>
+                            <div class="media-content">
+                                <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                                    <span class="badge bg-primary">#147</span>
+                                    <span class="badge bg-success">New</span>
+                                </div>
+                                <h5 class="media-title">The Art of Biblical Meditation</h5>
+                                <div class="media-meta">
+                                    <span><i class="bi bi-calendar3"></i> Feb 13, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <article class="media-item h-100">
+                            <div class="media-thumb">
+                                <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?w=360&h=240&fit=crop" 
+                                     alt="Episode 146">
+                                <span class="media-duration">42 min</span>
+                            </div>
+                            <div class="media-content">
+                                <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                                    <span class="badge bg-primary">#146</span>
+                                </div>
+                                <h5 class="media-title">When Your Faith Feels Dry</h5>
+                                <div class="media-meta">
+                                    <span><i class="bi bi-calendar3"></i> Feb 6, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <article class="media-item h-100">
+                            <div class="media-thumb">
+                                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=360&h=240&fit=crop" 
+                                     alt="Episode 145">
+                                <span class="media-duration">45 min</span>
+                            </div>
+                            <div class="media-content">
+                                <div class="d-flex align-items-start justify-content-between gap-2 mb-1">
+                                    <span class="badge bg-primary">#145</span>
+                                </div>
+                                <h5 class="media-title">Loving Difficult People</h5>
+                                <div class="media-meta">
+                                    <span><i class="bi bi-calendar3"></i> Jan 30, 2026</span>
+                                </div>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         VIDEO ITEMS (Up Next Sidebar)
+         ========================================================== -->
+    <section class="py-section bg-dark">
+        <div class="container-narrow">
+            <h2 class="section-heading text-white mt-5">Video Items (Up Next Sidebar)</h2>
+            <p class="section-intro text-white-70">Compact video list items for "Up Next" sidebars. 16:9 thumbnail (120x68px) with title, channel info, and stats. Includes subtle hover lift effect.</p>
+            
+            <div class="d-flex flex-column gap-3" style="max-width: 500px;">
+                <!-- Video Item 1 -->
+                <a href="#" class="text-decoration-none">
+                    <div class="video-item d-flex gap-2 p-2 rounded-3 bg-dark bg-opacity-25 hover-lift">
+                        <div class="video-thumb position-relative flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=240&h=136&fit=crop" 
+                                 alt="Biblical Meditation"
+                                 class="w-100 h-100 object-fit-cover rounded-2">
+                            <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white px-1 m-1 rounded-1" 
+                                 style="font-size: 0.65rem; font-weight: 600;">38:12</div>
+                        </div>
+                        <div class="flex-grow-1 min-w-0">
+                            <h6 class="text-white mb-1 fw-semibold" style="font-size: 0.875rem; line-height: 1.3;">
+                                The Art of Biblical Meditation
+                            </h6>
+                            <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+                                <span class="d-block">Light Bearer Media</span>
+                                <span>8.2K views • 3 days ago</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Video Item 2 -->
+                <a href="#" class="text-decoration-none">
+                    <div class="video-item d-flex gap-2 p-2 rounded-3 bg-dark bg-opacity-25 hover-lift">
+                        <div class="video-thumb position-relative flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=240&h=136&fit=crop" 
+                                 alt="Prayers"
+                                 class="w-100 h-100 object-fit-cover rounded-2">
+                            <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white px-1 m-1 rounded-1" 
+                                 style="font-size: 0.65rem; font-weight: 600;">42:08</div>
+                        </div>
+                        <div class="flex-grow-1 min-w-0">
+                            <h6 class="text-white mb-1 fw-semibold" style="font-size: 0.875rem; line-height: 1.3;">
+                                When Prayers Feel Unanswered
+                            </h6>
+                            <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+                                <span class="d-block">Light Bearer Media</span>
+                                <span>9.7K views • 1 week ago</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Video Item 3 -->
+                <a href="#" class="text-decoration-none">
+                    <div class="video-item d-flex gap-2 p-2 rounded-3 bg-dark bg-opacity-25 hover-lift">
+                        <div class="video-thumb position-relative flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1473172707857-f9e276582ab6?w=240&h=136&fit=crop" 
+                                 alt="Faith"
+                                 class="w-100 h-100 object-fit-cover rounded-2">
+                            <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white px-1 m-1 rounded-1" 
+                                 style="font-size: 0.65rem; font-weight: 600;">35:44</div>
+                        </div>
+                        <div class="flex-grow-1 min-w-0">
+                            <h6 class="text-white mb-1 fw-semibold" style="font-size: 0.875rem; line-height: 1.3;">
+                                Building Faith That Lasts
+                            </h6>
+                            <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+                                <span class="d-block">Light Bearer Media</span>
+                                <span>7.4K views • 2 weeks ago</span>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -604,6 +1055,20 @@
         </div>
     </section>
 
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
+        <div class="container">
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-cards.html#card-media" class="btn btn-sm btn-outline-primary">Media Cards <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-social.html#avatar-system" class="btn btn-sm btn-outline-primary">Channel Avatars <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-sections.html#gallery" class="btn btn-sm btn-outline-primary">Gallery Sections <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-interactive.html#sliders" class="btn btn-sm btn-outline-primary">Sliders & Range <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <p class="text-muted small mt-2 mb-0">Media elements compose with cards, avatars, and section layouts on other pages.</p>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
@@ -612,13 +1077,16 @@
                     <p class="mb-2">&copy; 2026 StoneWick Theme</p>
                     <p class="small text-muted mb-0">
                         <a href="kitchen-sink.html">Index</a> · 
-                        <a href="ks-heroes-layout.html">Heroes</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
                         <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
                         <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
                         <a href="ks-data.html">Data</a> · 
                         <a href="ks-interactive.html">Interactive</a> · 
-                        <a href="ks-navigation.html">Navigation</a> · 
-                        <a href="ks-commerce.html">Commerce</a>
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
                     </p>
                 </div>
             </div>

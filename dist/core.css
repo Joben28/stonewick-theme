@@ -1,5 +1,5 @@
 /* StoneWick Theme - core module */
-/* Generated: 2026-02-02T05:35:32.065Z */
+/* Generated: 2026-02-20T17:39:56.980Z */
 /* === core/_variables.css === */
 /* ===========================================
    THEME VARIABLES
@@ -412,7 +412,12 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
   background: var(--bs-primary);
   border-radius: 2px;
 }
-.text-center .eyebrow::after {
+.eyebrow.text-center {
+  display: block;
+  text-align: center;
+}
+.text-center .eyebrow::after,
+.eyebrow.text-center::after {
   left: 50%;
   transform: translateX(-50%);
 }
@@ -488,6 +493,16 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
 }
 .text-white-70 {
   color: rgba(var(--bs-white-rgb), 0.7) !important;
+}
+.text-white-50 {
+  color: rgba(var(--bs-white-rgb), 0.5) !important;
+}
+/* Primary color opacity variants */
+.text-primary-70 {
+  color: rgba(var(--bs-primary-rgb), 0.7) !important;
+}
+.text-primary-50 {
+  color: rgba(var(--bs-primary-rgb), 0.5) !important;
 }
 /* -------------------------------------------
    BACKGROUND UTILITIES (THEMING)
@@ -665,6 +680,13 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
   max-width: 75ch !important;
 }
 /* -------------------------------------------
+   FONT SIZE UTILITIES
+   Extra-small text utility (BS5 has fs-1 through fs-6, .small)
+   ------------------------------------------- */
+.text-xs {
+  font-size: var(--bs-font-size-xs) !important;
+}
+/* -------------------------------------------
    ASPECT RATIO UTILITIES
    BS5 has .ratio but these are simpler/different
    ------------------------------------------- */
@@ -735,6 +757,19 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
 .hover-lift-shadow:hover {
   transform: translateY(-4px);
   box-shadow: var(--bs-shadow-lg);
+}
+/* Background hover effects */
+.hover-bg-light {
+  transition: background-color 0.2s ease;
+}
+.hover-bg-light:hover {
+  background-color: var(--bs-gray-100);
+}
+.hover-bg-dark {
+  transition: background-color 0.2s ease;
+}
+.hover-bg-dark:hover {
+  background-color: rgba(var(--bs-dark-rgb), 0.05);
 }
 /* -------------------------------------------
    Z-INDEX UTILITIES

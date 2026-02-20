@@ -57,6 +57,14 @@
 }
 
 /* -------------------------------------------
+   FONT SIZE UTILITIES
+   Extra-small text utility (BS5 has fs-1 through fs-6, .small)
+   ------------------------------------------- */
+.text-xs {
+  font-size: var(--bs-font-size-xs) !important;
+}
+
+/* -------------------------------------------
    ASPECT RATIO UTILITIES
    BS5 has .ratio but these are simpler/different
    ------------------------------------------- */
@@ -145,6 +153,23 @@
 .hover-lift-shadow:hover {
   transform: translateY(-4px);
   box-shadow: var(--bs-shadow-lg);
+}
+
+/* Background hover effects */
+.hover-bg-light {
+  transition: background-color 0.2s ease;
+}
+
+.hover-bg-light:hover {
+  background-color: var(--bs-gray-100);
+}
+
+.hover-bg-dark {
+  transition: background-color 0.2s ease;
+}
+
+.hover-bg-dark:hover {
+  background-color: rgba(var(--bs-dark-rgb), 0.05);
 }
 
 /* -------------------------------------------

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social &amp; Micro-Components - StoneWick Components</title>
+    <meta name="description" content="Reusable micro-components: avatars, rating stars, meta rows, and social links.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="kitchen-sink.html">
+                    <span class="brand-text">Components</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-badges.html">Badges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ks-social.html">Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Compact -->
+    <section class="hero hero-compact pt-header">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
+                <h1>Social &amp; <span class="text-highlight">Micro-Components</span></h1>
+                <p class="lead">Reusable building blocks used inside cards, lists, and layouts — avatars, ratings, metadata, and social links.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         AVATAR SYSTEM
+         ============================================================ -->
+    <section id="avatar-system" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">THEME CUSTOM</p>
+            <h2 class="section-heading">Avatar System</h2>
+            <p class="section-intro">Avatar components with 4 size variants, color backgrounds, and support for initials or images.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <h5 class="mb-3">Avatar Sizes (Initials)</h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-sm avatar-primary">
+                            <span class="avatar-initials">SM</span>
+                        </div>
+                        <div class="avatar avatar-md avatar-success">
+                            <span class="avatar-initials">MD</span>
+                        </div>
+                        <div class="avatar avatar-lg avatar-warning">
+                            <span class="avatar-initials">LG</span>
+                        </div>
+                        <div class="avatar avatar-xl avatar-info">
+                            <span class="avatar-initials">XL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="mb-3">Avatar with Images</h5>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="avatar avatar-sm">
+                            <img src="https://i.pravatar.cc/64?img=1" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-md">
+                            <img src="https://i.pravatar.cc/96?img=2" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-lg">
+                            <img src="https://i.pravatar.cc/128?img=3" alt="User" class="avatar-img">
+                        </div>
+                        <div class="avatar avatar-xl">
+                            <img src="https://i.pravatar.cc/160?img=4" alt="User" class="avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Color Variants</h5>
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <div class="avatar avatar-md avatar-primary">
+                    <span class="avatar-initials">P</span>
+                </div>
+                <div class="avatar avatar-md avatar-success">
+                    <span class="avatar-initials">S</span>
+                </div>
+                <div class="avatar avatar-md avatar-warning">
+                    <span class="avatar-initials">W</span>
+                </div>
+                <div class="avatar avatar-md avatar-info">
+                    <span class="avatar-initials">I</span>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Usage Context — Avatar in Card Header</h5>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="avatar avatar-md avatar-primary">
+                                    <span class="avatar-initials">JD</span>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">John Doe</h6>
+                                    <small class="text-muted">Project Lead</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Avatars work great as user indicators in card headers, comment threads, and team listings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="avatar avatar-md">
+                                    <img src="https://i.pravatar.cc/96?img=5" alt="User" class="avatar-img">
+                                </div>
+                                <div>
+                                    <h6 class="mb-0">Sarah Chen</h6>
+                                    <small class="text-muted">Lead Designer</small>
+                                </div>
+                            </div>
+                            <p class="card-text">Image avatars provide a personal touch when profile photos are available.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RATING STARS
+         ============================================================ -->
+    <section id="rating-stars" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">THEME CUSTOM</p>
+            <h2 class="section-heading">Rating Stars</h2>
+            <p class="section-intro">Star rating display component with default and small size variants.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <h6 class="mb-2">5 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">4.5 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">3 Stars</h6>
+                    <div class="rating-stars">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Small Rating Stars</h5>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h6 class="mb-2">5 Stars (sm)</h6>
+                    <div class="rating-stars rating-stars-sm">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">2.5 Stars (sm)</h6>
+                    <div class="rating-stars rating-stars-sm">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="mb-2">1 Star (sm)</h6>
+                    <div class="rating-stars rating-stars-sm">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Usage Context — Rating in Product Card</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Premium Widget</h6>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <div class="rating-stars rating-stars-sm">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                                <small class="text-muted">(4.5) · 128 reviews</small>
+                            </div>
+                            <p class="card-text text-muted">Rating stars pair naturally with review counts inside product or service cards.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         META ROW
+         ============================================================ -->
+    <section id="meta-row" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">THEME CUSTOM</p>
+            <h2 class="section-heading">Meta Row</h2>
+            <p class="section-intro">Icon + text metadata pairs for cards, lists, and content headers.</p>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <h6 class="mb-2">Default Meta Row</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-calendar3"></i> Jan 28, 2026</span>
+                        <span class="meta-item"><i class="bi bi-geo-alt"></i> Portland, OR</span>
+                        <span class="meta-item"><i class="bi bi-clock"></i> 2:00 PM</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="mb-2">Content Meta</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-person"></i> John Doe</span>
+                        <span class="meta-item"><i class="bi bi-eye"></i> 1.2k views</span>
+                        <span class="meta-item"><i class="bi bi-chat"></i> 24 comments</span>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Additional Patterns</h5>
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <h6 class="mb-2">Video/Media Meta</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-play-circle"></i> 45 min</span>
+                        <span class="meta-item"><i class="bi bi-hand-thumbs-up"></i> 2.3k likes</span>
+                        <span class="meta-item"><i class="bi bi-share"></i> 156 shares</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h6 class="mb-2">Event Meta</h6>
+                    <div class="meta-row">
+                        <span class="meta-item"><i class="bi bi-calendar-event"></i> Feb 15, 2026</span>
+                        <span class="meta-item"><i class="bi bi-people"></i> 50 attending</span>
+                        <span class="meta-item"><i class="bi bi-tag"></i> Free</span>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="mb-3">Usage Context — Meta Row in Card</h5>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">Understanding Modern Web Architecture</h6>
+                            <div class="meta-row mb-2">
+                                <span class="meta-item"><i class="bi bi-person"></i> Sarah Chen</span>
+                                <span class="meta-item"><i class="bi bi-calendar3"></i> Jan 15, 2026</span>
+                                <span class="meta-item"><i class="bi bi-clock"></i> 8 min read</span>
+                            </div>
+                            <p class="card-text text-muted">Meta rows provide consistent metadata formatting across blog posts, articles, and content listings.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         META ROW — DARK VARIANT
+         ============================================================ -->
+    <section id="meta-row-dark" class="py-section bg-dark">
+        <div class="container">
+            <p class="eyebrow text-warning">THEME CUSTOM</p>
+            <h2 class="section-heading text-white">Meta Row — Dark Variant</h2>
+            <p class="section-intro text-white-70">Meta rows inherit text color from their parent context, working naturally on dark backgrounds.</p>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="meta-row text-white-70">
+                        <span class="meta-item"><i class="bi bi-calendar3"></i> Jan 28, 2026</span>
+                        <span class="meta-item"><i class="bi bi-geo-alt"></i> Portland, OR</span>
+                        <span class="meta-item"><i class="bi bi-clock"></i> 2:00 PM</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="meta-row text-white-70">
+                        <span class="meta-item"><i class="bi bi-person"></i> John Doe</span>
+                        <span class="meta-item"><i class="bi bi-eye"></i> 1.2k views</span>
+                        <span class="meta-item"><i class="bi bi-chat"></i> 24 comments</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOCIAL LINKS
+         ============================================================ -->
+    <section id="social-links" class="py-section bg-dark-gradient">
+        <div class="container">
+            <p class="eyebrow text-warning">THEME CUSTOM</p>
+            <h2 class="section-heading text-white">Social Links</h2>
+            <p class="section-intro text-white-70">Social media icon link rows for footers, about sections, and contact pages.</p>
+
+            <div class="social-links mb-5">
+                <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+            </div>
+
+            <h5 class="text-white mb-3">Minimal Set</h5>
+            <div class="social-links mb-5">
+                <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            </div>
+
+            <h5 class="text-white mb-3">Usage Context — Footer Social Section</h5>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card bg-dark border-secondary">
+                        <div class="card-body text-center py-4">
+                            <h6 class="text-white mb-1">Connect with Us</h6>
+                            <p class="text-white-70 small mb-3">Follow us on social media for updates and news.</p>
+                            <div class="social-links justify-content-center">
+                                <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="bi bi-github"></i></a>
+                                <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
+        <div class="container">
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-cards.html#testimonials" class="btn btn-sm btn-outline-primary">Testimonial Cards <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-cards.html#blog-cards" class="btn btn-sm btn-outline-primary">Blog Cards <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-media.html#channel-headers" class="btn btn-sm btn-outline-primary">Channel Headers <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-cards.html#event-cards" class="btn btn-sm btn-outline-primary">Event Cards <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <p class="text-muted small mt-2 mb-0">These components use avatars, ratings, and social patterns from this page.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-2">&copy; 2026 StoneWick Theme</p>
+                    <p class="small text-muted mb-0">
+                        <a href="kitchen-sink.html">Index</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
+                        <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
+                        <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
+                        <a href="ks-data.html">Data</a> · 
+                        <a href="ks-interactive.html">Interactive</a> · 
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

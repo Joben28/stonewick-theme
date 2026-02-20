@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give | GracePoint Community Church</title>
+    <meta name="description" content="Support the ministries of GracePoint Community Church through generous giving. Online giving, recurring donations, and more.">
+    
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- StoneWick Theme -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    
+    <!-- Ministry Brand Overrides -->
+    <link rel="stylesheet" href="ministry-brand.css">
+</head>
+<body class="ministry-brand">
+
+<!-- Header Navigation -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="ministries.html" data-bs-toggle="dropdown">Ministries</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ministries.html">All Ministries</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#youth">Youth</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#worship">Worship</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#outreach">Outreach</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sermons.html">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="connect.html">Connect</a>
+                    </li>
+                </ul>
+                <a href="giving.html" class="btn btn-secondary btn-sm rounded-pill px-3">
+                    <i class="bi bi-heart-fill me-1"></i>Give
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero hero-compact pt-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="eyebrow text-secondary mb-3">Support Our Ministry</p>
+                <h1 class="hero-title text-white mb-4">Give Generously</h1>
+                <p class="hero-subtitle text-white-70 mb-4">
+                    "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7
+                </p>
+                <div class="hero-actions d-flex flex-wrap gap-3">
+                    <a href="#give-now" class="btn btn-secondary btn-lg">
+                        Give Now <i class="bi bi-heart ms-2"></i>
+                    </a>
+                    <a href="#ways" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-info-circle me-2"></i>Other Ways to Give
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Give Now Section -->
+<section class="py-section bg-warm" id="give-now">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h2 class="h4 text-white mb-1">Make a Donation</h2>
+                        <p class="text-white-70 small mb-0">Your generosity makes a difference in our community</p>
+                    </div>
+                    <div class="card-body p-4 p-lg-5">
+                        <!-- Giving Type Tabs -->
+                        <ul class="nav nav-pills nav-fill mb-4" id="givingTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="one-time-tab" data-bs-toggle="tab" data-bs-target="#one-time" type="button">
+                                    <i class="bi bi-heart me-1"></i>One-Time
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="recurring-tab" data-bs-toggle="tab" data-bs-target="#recurring" type="button">
+                                    <i class="bi bi-arrow-repeat me-1"></i>Recurring
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="givingTabContent">
+                            <!-- One-Time Giving -->
+                            <div class="tab-pane fade show active" id="one-time" role="tabpanel">
+                                <form>
+                                    <!-- Amount Selection -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Select Amount</label>
+                                        <div class="row g-2">
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amt25" value="25">
+                                                <label class="btn btn-outline-primary w-100" for="amt25">$25</label>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amt50" value="50" checked>
+                                                <label class="btn btn-outline-primary w-100" for="amt50">$50</label>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amt100" value="100">
+                                                <label class="btn btn-outline-primary w-100" for="amt100">$100</label>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amt250" value="250">
+                                                <label class="btn btn-outline-primary w-100" for="amt250">$250</label>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amt500" value="500">
+                                                <label class="btn btn-outline-primary w-100" for="amt500">$500</label>
+                                            </div>
+                                            <div class="col-4 col-md-2">
+                                                <input type="radio" class="btn-check" name="amount" id="amtOther" value="other">
+                                                <label class="btn btn-outline-primary w-100" for="amtOther">Other</label>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div class="input-group">
+                                                <span class="input-group-text">$</span>
+                                                <input type="number" class="form-control form-control-lg" placeholder="Enter custom amount" min="1">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Fund Selection -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Designate Gift To</label>
+                                        <select class="form-select form-select-lg">
+                                            <option value="general">General Fund</option>
+                                            <option value="missions">Missions</option>
+                                            <option value="building">Building Fund</option>
+                                            <option value="youth">Youth Ministry</option>
+                                            <option value="children">Children's Ministry</option>
+                                            <option value="benevolence">Benevolence Fund</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Personal Info -->
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-lock me-2"></i>Give Securely
+                                    </button>
+                                    <p class="text-center text-muted small mt-3 mb-0">
+                                        <i class="bi bi-shield-check me-1"></i>Your information is secure and encrypted
+                                    </p>
+                                </form>
+                            </div>
+
+                            <!-- Recurring Giving -->
+                            <div class="tab-pane fade" id="recurring" role="tabpanel">
+                                <form>
+                                    <!-- Frequency -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Giving Frequency</label>
+                                        <div class="row g-2">
+                                            <div class="col-4">
+                                                <input type="radio" class="btn-check" name="frequency" id="weekly" value="weekly">
+                                                <label class="btn btn-outline-primary w-100" for="weekly">Weekly</label>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="radio" class="btn-check" name="frequency" id="biweekly" value="biweekly">
+                                                <label class="btn btn-outline-primary w-100" for="biweekly">Bi-Weekly</label>
+                                            </div>
+                                            <div class="col-4">
+                                                <input type="radio" class="btn-check" name="frequency" id="monthly" value="monthly" checked>
+                                                <label class="btn btn-outline-primary w-100" for="monthly">Monthly</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Amount Selection -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Amount Per Gift</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text">$</span>
+                                            <input type="number" class="form-control" placeholder="Enter amount" min="1">
+                                        </div>
+                                    </div>
+
+                                    <!-- Fund Selection -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Designate Gift To</label>
+                                        <select class="form-select form-select-lg">
+                                            <option value="general">General Fund</option>
+                                            <option value="missions">Missions</option>
+                                            <option value="building">Building Fund</option>
+                                            <option value="youth">Youth Ministry</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Start Date -->
+                                    <div class="mb-4">
+                                        <label class="form-label fw-semibold">Start Date</label>
+                                        <input type="date" class="form-control form-control-lg">
+                                    </div>
+
+                                    <!-- Personal Info -->
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-md-6">
+                                            <label class="form-label">First Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" required>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-arrow-repeat me-2"></i>Set Up Recurring Gift
+                                    </button>
+                                    <p class="text-center text-muted small mt-3 mb-0">
+                                        <i class="bi bi-shield-check me-1"></i>Cancel or modify anytime
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Ways to Give -->
+<section class="py-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h3 mb-2">Other Ways to Give</h2>
+            <p class="text-muted">Choose the method that works best for you</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="giving-option card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-primary-subtle d-inline-flex align-items-center justify-content-center mb-3" style="width: 72px; height: 72px;">
+                            <i class="bi bi-phone text-primary fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Text to Give</h5>
+                        <p class="text-muted small mb-3">Text any amount to<br><strong class="text-primary fs-5">84321</strong></p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Setup Instructions</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="giving-option card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-secondary-subtle d-inline-flex align-items-center justify-content-center mb-3" style="width: 72px; height: 72px;">
+                            <i class="bi bi-app text-secondary fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Church App</h5>
+                        <p class="text-muted small mb-3">Download our app for easy giving on the go</p>
+                        <div class="d-flex gap-2 justify-content-center">
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-apple"></i></a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="bi bi-google-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="giving-option card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-success-subtle d-inline-flex align-items-center justify-content-center mb-3" style="width: 72px; height: 72px;">
+                            <i class="bi bi-envelope text-success fs-3"></i>
+                        </div>
+                        <h5 class="card-title">Mail a Check</h5>
+                        <p class="text-muted small mb-3">GracePoint Community Church<br>1234 Grace Avenue<br>Springfield, ST 12345</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="giving-option card h-100 border-0 shadow-sm text-center">
+                    <div class="card-body p-4">
+                        <div class="rounded-circle bg-info-subtle d-inline-flex align-items-center justify-content-center mb-3" style="width: 72px; height: 72px;">
+                            <i class="bi bi-box text-info fs-3"></i>
+                        </div>
+                        <h5 class="card-title">In Person</h5>
+                        <p class="text-muted small mb-3">Drop your gift in the offering boxes located at each sanctuary entrance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Where Your Gift Goes -->
+<section class="py-section bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h3 mb-2">Where Your Gift Goes</h2>
+            <p class="text-muted">Every dollar helps us serve our community and spread God's love</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                                <i class="bi bi-people-fill text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Local Ministries</h5>
+                                <span class="text-muted small">45% of giving</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-0">Supporting our children's, youth, and adult ministries, worship team, and pastoral care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                                <i class="bi bi-globe text-dark"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Missions & Outreach</h5>
+                                <span class="text-muted small">25% of giving</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-0">Global missions, local partnerships, food pantry, and community service initiatives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-info d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                                <i class="bi bi-building text-white"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Operations</h5>
+                                <span class="text-muted small">30% of giving</span>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-0">Facility maintenance, staff support, technology, and administrative resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Giving Testimonial -->
+<section class="py-section bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <i class="bi bi-quote display-4 text-secondary mb-3 d-block"></i>
+                <blockquote class="mb-4">
+                    <p class="lead fst-italic mb-3  text-white-70">"Setting up recurring giving was so easy, and it's helped our family become more intentional about generosity. Knowing our gifts support real ministries in our community brings us joy every month."</p>
+                </blockquote>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="rounded-circle bg-white d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px;">
+                        <i class="bi bi-person-fill text-primary"></i>
+                    </div>
+                    <div class="text-start">
+                        <p class="mb-0 fw-semibold">The Martinez Family</p>
+                        <p class="text-white-70 small mb-0">Members since 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-section bg-warm">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="h3 text-center mb-4">Giving FAQ</h2>
+                <div class="accordion" id="givingFaq">
+                    <div class="accordion-item border-0 mb-2">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                Is my donation tax-deductible?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#givingFaq">
+                            <div class="accordion-body">
+                                Yes, GracePoint Community Church is a registered 501(c)(3) non-profit organization. All donations are tax-deductible to the fullest extent allowed by law. You will receive a giving statement at the end of each year for tax purposes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-2">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                How can I change or cancel my recurring gift?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#givingFaq">
+                            <div class="accordion-body">
+                                You can manage your recurring gifts anytime by logging into your giving account or contacting our office. We're happy to help you adjust amounts, frequencies, or cancel whenever needed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-2">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Can I designate my gift to a specific ministry?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#givingFaq">
+                            <div class="accordion-body">
+                                Yes! When giving online, you can select from various funds including the General Fund, Missions, Youth Ministry, Children's Ministry, Building Fund, and Benevolence Fund. Your gift will be directed accordingly.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 mb-2">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                Can I give stocks or other assets?
+                            </button>
+                        </h3>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#givingFaq">
+                            <div class="accordion-body">
+                                Yes, we accept gifts of stocks, bonds, and other appreciated assets. This can often provide tax advantages. Please contact our finance office at finance@gracepoint.church for transfer instructions.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p class="text-muted mb-2">Have more questions about giving?</p>
+                    <a href="connect.html" class="btn btn-outline-primary">Contact Our Team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">
+                        <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint Community Church
+                    </h5>
+                    <p class="text-white-70 mb-3">
+                        A place to belong, believe, and become. Join us as we grow together in faith and community.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-70 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="ministries.html" class="text-white-70 text-decoration-none">Ministries</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white-70 text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="sermons.html" class="text-white-70 text-decoration-none">Sermons</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="connect.html" class="text-white-70 text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="prayer.html" class="text-white-70 text-decoration-none">Prayer Requests</a></li>
+                        <li class="mb-2"><a href="groups.html" class="text-white-70 text-decoration-none">Small Groups</a></li>
+                        <li class="mb-2"><a href="volunteer.html" class="text-white-70 text-decoration-none">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Visit Us</h6>
+                    <ul class="list-unstyled text-white-70">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>123 Faith Avenue<br>
+                            <span class="ms-4">Springfield, ST 12345</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:5551234567" class="text-white-70 text-decoration-none">(555) 123-4567</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:hello@gracepointcc.org" class="text-white-70 text-decoration-none">hello@gracepointcc.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-white border-opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-70 small mb-0">&copy; 2026 GracePoint Community Church. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="faq.html" class="text-white-70 small text-decoration-none me-3">FAQ</a>
+                    <a href="#" class="text-white-70 small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-70 small text-decoration-none">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

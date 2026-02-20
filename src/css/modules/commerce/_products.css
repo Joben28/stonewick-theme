@@ -363,14 +363,12 @@
     align-items: center;
     gap: var(--bs-space-3);
     padding: var(--bs-space-3);
-    background: var(--bs-white);
     border-radius: var(--bs-border-radius);
-    box-shadow: var(--bs-shadow-sm);
-    transition: box-shadow 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .product-list-compact-item:hover {
-    box-shadow: var(--bs-shadow-md);
+    background-color: var(--bs-gray-100);
 }
 
 .product-list-compact-image {

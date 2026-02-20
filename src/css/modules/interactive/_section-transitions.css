@@ -25,7 +25,7 @@
 }
 
 /* Gradient fade divider */
-.section-divider-gradient {
+.section-divider-gradient-primary {
   height: 1px;
   background: linear-gradient(90deg, 
     transparent 0%, 
@@ -35,7 +35,16 @@
   margin: 0;
   opacity: 0.3;
 }
-
+.section-divider-gradient {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--bs-muted, #adadad) 25%, 
+    var(--bs-muted, #adadad) 75%, 
+    transparent 100%);
+  margin: 0;
+  opacity: 0.3;
+}
 .section-divider-gradient.bold {
   height: 2px;
   opacity: 0.5;

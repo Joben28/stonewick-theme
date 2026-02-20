@@ -1,5 +1,5 @@
 /* StoneWick Theme - bootstrap module */
-/* Generated: 2026-02-02T05:35:32.241Z */
+/* Generated: 2026-02-20T17:39:57.242Z */
 /* === bootstrap/_bs5-overrides.css === */
 /* ===========================================
    BOOTSTRAP 5 COMPONENT OVERRIDES
@@ -131,6 +131,7 @@
 .badge {
   font-weight: 600;
   letter-spacing: 0.02em;
+  border-radius: var(--bs-border-radius-lg);
 }
 /* -------------------------------------------
    ALERTS (BS5 Override)

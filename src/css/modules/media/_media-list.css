@@ -4,6 +4,31 @@
    =========================================== */
 
 /* -------------------------------------------
+   BUTTON ICON UTILITIES
+   Icon-only button sizes for media controls
+   ------------------------------------------- */
+.btn-icon-sm {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn-icon-lg {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+/* -------------------------------------------
    MEDIA-LIST (Light Background)
    List of media items (podcasts, videos)
    ------------------------------------------- */
@@ -76,6 +101,22 @@
   filter: drop-shadow(0 2px 4px rgba(var(--bs-black-rgb), 0.3));
 }
 
+/* Play button on thumbnail */
+.media-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 2px 8px rgba(var(--bs-black-rgb), 0.3);
+}
+
+.media-item:hover .media-play-btn,
+.media-thumb:hover .media-play-btn {
+  opacity: 1;
+}
+
 .media-content {
   flex: 1;
   min-width: 0;
@@ -125,11 +166,112 @@
   flex: 1;
 }
 
+/* Audio/Video Player Component */
 .media-player {
   background: var(--bs-gray-100);
   border-radius: var(--bs-border-radius);
-  padding: 0.75rem;
+  padding: 1rem;
   margin-top: auto;
+}
+
+.media-player-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.media-player-btn {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.media-player-title {
+  font-weight: 600;
+  font-size: var(--bs-font-size-sm);
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.media-player-meta {
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-600);
+  margin-bottom: 0;
+}
+
+.media-player-secondary {
+  flex-shrink: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.media-player-secondary .btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-player-progress {
+  height: 6px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.media-player-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--bs-font-size-xs);
+  color: var(--bs-gray-600);
+}
+
+/* Timestamp List Component */
+.timestamp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timestamp-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: var(--bs-border-radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.timestamp-list li:hover {
+  background-color: var(--bs-gray-100);
+  cursor: pointer;
+}
+
+.timestamp-badge {
+  flex-shrink: 0;
+  font-size: var(--bs-font-size-xs);
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.timestamp-list li span:last-child {
+  flex: 1;
+  font-size: var(--bs-font-size-sm);
 }
 
 .media-actions {
@@ -188,22 +330,75 @@
 }
 
 /* Compact variant */
+.media-list.media-list-compact {
+  gap: var(--bs-space-3);
+}
+
 .media-list-compact .media-item {
-  padding: 1rem;
-  gap: 1rem;
+  padding: var(--bs-space-3);
+  gap: var(--bs-space-3);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  border-radius: var(--bs-border-radius);
+  transform: none;
+  transition: background-color 0.2s ease;
+}
+
+.media-list-compact .media-item:hover {
+  background-color: var(--bs-gray-100);
+  border: none;
+  box-shadow: none;
+  transform: none;
+  border-color: transparent;
 }
 
 .media-list-compact .media-thumb {
-  width: 120px;
-  height: 80px;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--bs-border-radius);
+}
+
+.media-list-compact .media-thumb-play {
+  display: none;
+}
+
+.media-list-compact .media-content {
+  flex: 1;
 }
 
 .media-list-compact .media-title {
-  font-size: var(--bs-font-size-h6);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: var(--bs-space-1);
+}
+
+.media-list-compact .media-meta {
+  font-size: 0.875rem;
+  color: var(--bs-gray-600);
+  margin-bottom: var(--bs-space-1);
 }
 
 .media-list-compact .media-desc {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--bs-gray-600);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.media-list-compact .media-actions {
   display: none;
+}
+
+/* Video-proportioned thumbs (16:9 instead of square) */
+.media-list-compact .media-thumb-video {
+  width: 120px;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 /* -------------------------------------------

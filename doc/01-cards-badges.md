@@ -231,6 +231,130 @@ Card components for displaying services, features, benefits, and content. Availa
 | card-glass | 3-4 cols | `col-md-4`, `col-md-3` |
 | card-media | 2-3 cols | `col-md-6`, `col-md-4` |
 | card-resource | Full width or 2 cols | `col-12`, `col-md-6` |
+| card-event | 3 cols | `col-md-4` |
+| card-event-horizontal | Full width | `col-12` |
+| card-event-compact | Full width | `col-12` |
+
+---
+
+## Event Cards
+
+### card-event
+**Description**: Vertical event card with image, date badge, category, and event details.  
+**Usage**: Events, conferences, webinars, meetups.  
+**Background**: Light backgrounds.
+
+```html
+<article class="card-event">
+    <div class="event-image">
+        <img src="event.jpg" alt="Event">
+        <div class="event-date-badge">
+            <span class="event-date-day">15</span>
+            <span class="event-date-month">Mar</span>
+        </div>
+        <span class="event-category">Conference</span>
+    </div>
+    <div class="event-body">
+        <h3 class="event-title"><a href="#">Web Development Summit 2026</a></h3>
+        <p class="event-description">Join industry leaders for insights and innovation.</p>
+        <div class="event-meta">
+            <div class="event-meta-item">
+                <i class="bi bi-clock"></i>
+                <span>9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="event-meta-item">
+                <i class="bi bi-geo-alt"></i>
+                <span>Portland, OR</span>
+            </div>
+        </div>
+        <div class="event-actions">
+            <a href="#" class="btn btn-primary btn-sm">Register</a>
+            <button class="add-to-calendar">
+                <i class="bi bi-calendar-plus"></i>
+                Add to Calendar
+            </button>
+        </div>
+    </div>
+</article>
+```
+
+**Common Grid**: Use `.event-grid` for automatic responsive grid:
+
+```html
+<div class="event-grid">
+    <article class="card-event">...</article>
+    <article class="card-event">...</article>
+    <article class="card-event">...</article>
+</div>
+```
+
+**Featured Modifier**: Add `.featured` class for emphasized border and badge:
+
+```html
+<article class="card-event featured">
+    <!-- Automatically shows "Featured" badge -->
+</article>
+```
+
+---
+
+### card-event-horizontal
+**Description**: Horizontal layout with image on left, content on right.  
+**Usage**: Featured events, header sections.
+
+```html
+<article class="card-event card-event-horizontal">
+    <div class="event-image">
+        <!-- Same as vertical card -->
+    </div>
+    <div class="event-body">
+        <!-- Same as vertical card -->
+    </div>
+</article>
+```
+
+---
+
+### card-event-compact
+**Description**: Compact list format with date badge and minimal info.  
+**Usage**: Sidebar, footer, list of upcoming events.
+
+```html
+<article class="card-event card-event-compact">
+    <div class="event-date-badge">
+        <span class="event-date-day">10</span>
+        <span class="event-date-month">Apr</span>
+    </div>
+    <div class="event-body">
+        <h4 class="event-title"><a href="#">Code Review Best Practices</a></h4>
+        <div class="event-meta">
+            <div class="event-meta-item">
+                <i class="bi bi-clock"></i>
+                <span>2:00 PM</span>
+            </div>
+            <div class="event-meta-item">
+                <i class="bi bi-camera-video"></i>
+                <span>Online</span>
+            </div>
+        </div>
+        <div class="event-actions">
+            <a href="#" class="btn btn-primary btn-sm">RSVP</a>
+            <button class="add-to-calendar">
+                <i class="bi bi-calendar-plus"></i>
+            </button>
+        </div>
+    </div>
+</article>
+```
+
+**Common Grid**: Use `.event-list` for vertical stacking:
+
+```html
+<div class="event-list">
+    <article class="card-event card-event-compact">...</article>
+    <article class="card-event card-event-compact">...</article>
+</div>
+```
 
 ---
 
@@ -242,3 +366,5 @@ Card components for displaying services, features, benefits, and content. Availa
 4. **card-glass** needs dark backgrounds to show glassmorphic effect
 5. Always use **h-100** on cards in rows for equal height
 6. Use **g-4** for consistent gap between cards (`<div class="row g-4">`)
+7. **Event cards** use semantic `<article>` tag
+8. **Event images** should be 600x400 (3:2 aspect ratio) for best results

@@ -1187,6 +1187,217 @@ if (typeof window !== "undefined") {
     Offcanvas.initAll();
   }
 }
+class Forms {
+  constructor(formElement, options = {}) {
+    this.form = typeof formElement === "string" ? document.querySelector(formElement) : formElement;
+    if (!this.form) {
+      throw new Error("Form element not found");
+    }
+    this.options = {
+      validateOnInput: true,
+      validateOnBlur: true,
+      showFeedback: true,
+      ...options
+    };
+    this.init();
+  }
+  init() {
+    this.form.addEventListener("submit", this.handleSubmit.bind(this));
+    if (this.options.validateOnInput) {
+      this.form.querySelectorAll(".form-control, .form-select").forEach((input) => {
+        input.addEventListener("input", () => this.validateField(input));
+      });
+    }
+    if (this.options.validateOnBlur) {
+      this.form.querySelectorAll(".form-control, .form-select").forEach((input) => {
+        input.addEventListener("blur", () => this.validateField(input));
+      });
+    }
+    this.setupCustomValidation();
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (!this.form.checkValidity()) {
+      this.form.classList.add("was-validated");
+      const firstInvalid = this.form.querySelector(".form-control:invalid, .form-select:invalid");
+      if (firstInvalid) {
+        firstInvalid.focus();
+      }
+      return false;
+    }
+    this.form.classList.remove("was-validated");
+    this.form.dispatchEvent(new CustomEvent("form:valid", {
+      detail: { formData: new FormData(this.form) }
+    }));
+    return true;
+  }
+  validateField(input) {
+    const isValid = input.checkValidity();
+    if (isValid) {
+      input.classList.remove("is-invalid");
+      input.classList.add("is-valid");
+      this.hideFeedback(input, "invalid");
+      this.showFeedback(input, "valid");
+    } else {
+      input.classList.remove("is-valid");
+      input.classList.add("is-invalid");
+      this.hideFeedback(input, "valid");
+      this.showFeedback(input, "invalid");
+    }
+    return isValid;
+  }
+  showFeedback(input, type) {
+    if (!this.options.showFeedback) return;
+    const feedback = input.parentElement.querySelector(`.${type}-feedback`);
+    if (feedback) {
+      feedback.style.display = "block";
+    }
+  }
+  hideFeedback(input, type) {
+    const feedback = input.parentElement.querySelector(`.${type}-feedback`);
+    if (feedback) {
+      feedback.style.display = "none";
+    }
+  }
+  setupCustomValidation() {
+    const passwordInputs = this.form.querySelectorAll("[data-password-match]");
+    passwordInputs.forEach((input) => {
+      const targetId = input.dataset.passwordMatch;
+      const targetInput = this.form.querySelector(`#${targetId}`);
+      if (targetInput) {
+        const validateMatch = () => {
+          if (input.value !== targetInput.value) {
+            input.setCustomValidity("Passwords do not match");
+          } else {
+            input.setCustomValidity("");
+          }
+          this.validateField(input);
+        };
+        input.addEventListener("input", validateMatch);
+        targetInput.addEventListener("input", validateMatch);
+      }
+    });
+    const phoneInputs = this.form.querySelectorAll('[type="tel"]');
+    phoneInputs.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        let value = e.target.value.replace(/\D/g, "");
+        if (value.length > 10) value = value.slice(0, 10);
+        if (value.length >= 6) {
+          e.target.value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6)}`;
+        } else if (value.length >= 3) {
+          e.target.value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+        } else {
+          e.target.value = value;
+        }
+      });
+    });
+    const emailInputs = this.form.querySelectorAll('[type="email"]');
+    emailInputs.forEach((input) => {
+      input.addEventListener("blur", () => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (input.value && !emailPattern.test(input.value)) {
+          input.setCustomValidity("Please enter a valid email address");
+        } else {
+          input.setCustomValidity("");
+        }
+        this.validateField(input);
+      });
+    });
+  }
+  reset() {
+    this.form.reset();
+    this.form.classList.remove("was-validated");
+    this.form.querySelectorAll(".form-control, .form-select").forEach((input) => {
+      input.classList.remove("is-valid", "is-invalid");
+    });
+    this.form.querySelectorAll(".valid-feedback, .invalid-feedback").forEach((feedback) => {
+      feedback.style.display = "none";
+    });
+  }
+  /**
+   * Initialize all forms with data-validate attribute
+   */
+  static initAll(options = {}) {
+    const forms2 = document.querySelectorAll("form[data-validate]");
+    const instances = [];
+    forms2.forEach((form) => {
+      const instance = new Forms(form, options);
+      instances.push(instance);
+    });
+    return instances;
+  }
+  /**
+   * Initialize a specific form
+   */
+  static init(selector, options = {}) {
+    return new Forms(selector, options);
+  }
+  /**
+   * Utility: Check if form is valid without submitting
+   */
+  isValid() {
+    return this.form.checkValidity();
+  }
+  /**
+   * Utility: Get form data as object
+   */
+  getData() {
+    const formData = new FormData(this.form);
+    const data = {};
+    for (let [key, value] of formData.entries()) {
+      if (data[key]) {
+        if (!Array.isArray(data[key])) {
+          data[key] = [data[key]];
+        }
+        data[key].push(value);
+      } else {
+        data[key] = value;
+      }
+    }
+    return data;
+  }
+  /**
+   * Utility: Set form data from object
+   */
+  setData(data) {
+    Object.entries(data).forEach(([key, value]) => {
+      const input = this.form.querySelector(`[name="${key}"]`);
+      if (input) {
+        if (input.type === "checkbox" || input.type === "radio") {
+          input.checked = value;
+        } else {
+          input.value = value;
+        }
+      }
+    });
+  }
+  /**
+   * Utility: Disable all form inputs
+   */
+  disable() {
+    this.form.querySelectorAll("input, select, textarea, button").forEach((el) => {
+      el.disabled = true;
+    });
+  }
+  /**
+   * Utility: Enable all form inputs
+   */
+  enable() {
+    this.form.querySelectorAll("input, select, textarea, button").forEach((el) => {
+      el.disabled = false;
+    });
+  }
+}
+if (typeof document !== "undefined") {
+  document.addEventListener("DOMContentLoaded", () => {
+    Forms.initAll();
+  });
+}
+const forms = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  Forms
+}, Symbol.toStringTag, { value: "Module" }));
 const VERSION = "1.0.0";
 function initAll(options = {}) {
   const scope = options.scope ? document.querySelector(options.scope) : document;
@@ -1198,6 +1409,7 @@ function initAll(options = {}) {
   const { Accordion: Accordion2 } = require("./modules/accordion.js");
   const { Navbar: Navbar2 } = require("./modules/navbar.js");
   const { Offcanvas: Offcanvas2 } = require("./modules/offcanvas.js");
+  const { Forms: Forms2 } = require("./modules/forms.js");
   instances.comparisonSliders = ComparisonSlider2.initAll(".comparison-slider", scope);
   instances.videoTheaters = VideoTheater2.initAll(".video-theater", scope);
   instances.modals = Modal2.initAll(".modal-custom", scope);
@@ -1205,6 +1417,7 @@ function initAll(options = {}) {
   instances.accordions = Accordion2.initAll(".accordion", scope);
   instances.navbars = Navbar2.initAll(".navbar", scope);
   instances.offcanvas = Offcanvas2.initAll(".offcanvas-navbar", scope);
+  instances.forms = Forms2.initAll("form[data-validate]", scope);
   console.log("[StoneWick] Initialized components:", {
     comparisonSliders: instances.comparisonSliders.length,
     videoTheaters: instances.videoTheaters.length,
@@ -1212,7 +1425,8 @@ function initAll(options = {}) {
     sliders: instances.sliders.length,
     accordions: instances.accordions.length,
     navbars: instances.navbars.length,
-    offcanvas: instances.offcanvas.length
+    offcanvas: instances.offcanvas.length,
+    forms: instances.forms.length
   });
   return instances;
 }
@@ -1232,11 +1446,13 @@ if (typeof window !== "undefined") {
   Promise.resolve().then(() => modals).then((m) => window.StoneWick.Modal = m.Modal);
   Promise.resolve().then(() => slider).then((m) => window.StoneWick.Slider = m.Slider);
   Promise.resolve().then(() => accordion).then((m) => window.StoneWick.Accordion = m.Accordion);
+  Promise.resolve().then(() => forms).then((m) => window.StoneWick.Forms = m.Forms);
   Promise.resolve().then(() => utils$1).then((m) => window.StoneWick.utils = m.default);
 }
 export {
   Accordion,
   ComparisonSlider,
+  Forms,
   Modal,
   Navbar,
   Offcanvas,

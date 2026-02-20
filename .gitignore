@@ -1,8 +1,15 @@
 # Dependencies
 node_modules/
 
-# Build output (kept for library distribution)
-# dist/
+# Build output
+dist/
+
+# Generated demo CSS (built from src/)
+css/theme.css
+
+# Old/duplicate output folders (should not exist)
+public/css/
+public/dist/
 
 # IDE
 .vscode/
@@ -12,7 +19,7 @@ node_modules/
 
 # OS
 .DS_Store
-Thumbs.db
+Thums.db
 
 # Logs
 *.log

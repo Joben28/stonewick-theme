@@ -1,5 +1,5 @@
 /* StoneWick Theme - navigation module */
-/* Generated: 2026-02-02T05:35:32.506Z */
+/* Generated: 2026-02-20T17:39:57.623Z */
 /* === modules/navigation/_navbar.css === */
 /* ==========================================================================
    NAVBAR COMPONENT
@@ -158,6 +158,15 @@
 }
 .navbar-autohide.hidden {
     transform: translateY(-100%);
+}
+/* -----------------------------------------------------------------------------
+   Dropdown Gap Fix
+   Zero out BS5's dropdown-spacer so menus sit flush against the navbar
+   ----------------------------------------------------------------------------- */
+.navbar .dropdown-menu {
+    --bs-dropdown-spacer: 0;
+    margin-top: 0;
+    top: 100%;
 }
 /* -----------------------------------------------------------------------------
    Mega Menu

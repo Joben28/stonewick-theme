@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer & Support | GracePoint Community Church</title>
+    <meta name="description" content="Submit a prayer request or find prayer support at GracePoint Community Church. Join our prayer team and find pastoral care.">
+    
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- StoneWick Theme -->
+    <link rel="stylesheet" href="../../css/theme.css">
+    
+    <!-- Ministry Brand Overrides -->
+    <link rel="stylesheet" href="ministry-brand.css">
+</head>
+<body class="ministry-brand">
+
+<!-- Header Navigation -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="ministries.html" data-bs-toggle="dropdown">Ministries</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ministries.html">All Ministries</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#youth">Youth</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#worship">Worship</a></li>
+                            <li><a class="dropdown-item" href="ministries.html#outreach">Outreach</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sermons.html">Sermons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="connect.html">Connect</a>
+                    </li>
+                </ul>
+                <a href="giving.html" class="btn btn-secondary btn-sm rounded-pill px-3">
+                    <i class="bi bi-heart-fill me-1"></i>Give
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero hero-compact pt-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <p class="eyebrow text-secondary mb-3">We're Here For You</p>
+                <h1 class="hero-title text-white mb-4">Prayer & Support</h1>
+                <p class="hero-subtitle text-white-70 mb-4">
+                    "Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God." — Philippians 4:6
+                </p>
+                <div class="hero-actions d-flex flex-wrap gap-3">
+                    <a href="#request" class="btn btn-secondary btn-lg">
+                        Submit Prayer Request <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <a href="tel:5551237729" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-telephone me-2"></i>Prayer Line
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Prayer Request Form -->
+<section class="py-section bg-warm" id="request">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <i class="bi bi-hands-praying display-6 mb-2 d-block"></i>
+                        <h2 class="h4 text-white mb-1">Submit a Prayer Request</h2>
+                        <p class="text-white-70 small mb-0">Our prayer team commits to pray for every request we receive</p>
+                    </div>
+                    <div class="card-body p-4 p-lg-5">
+                        <form class="prayer-form">
+                            <!-- Who is this for? -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Who is this prayer for?</label>
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <input type="radio" class="btn-check" name="prayerFor" id="forMe" value="me" checked>
+                                        <label class="btn btn-outline-primary w-100" for="forMe">Myself</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="radio" class="btn-check" name="prayerFor" id="forFamily" value="family">
+                                        <label class="btn btn-outline-primary w-100" for="forFamily">Family</label>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="radio" class="btn-check" name="prayerFor" id="forOther" value="other">
+                                        <label class="btn btn-outline-primary w-100" for="forOther">Someone Else</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Prayer Type -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Type of Prayer Request</label>
+                                <div class="row g-2">
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="health" value="health">
+                                            <label class="form-check-label" for="health">
+                                                <i class="bi bi-heart-pulse me-1"></i>Health/Healing
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="family-prayer" value="family">
+                                            <label class="form-check-label" for="family-prayer">
+                                                <i class="bi bi-house-heart me-1"></i>Family
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="financial" value="financial">
+                                            <label class="form-check-label" for="financial">
+                                                <i class="bi bi-wallet2 me-1"></i>Financial
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="work" value="work">
+                                            <label class="form-check-label" for="work">
+                                                <i class="bi bi-briefcase me-1"></i>Work/Career
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="relationships" value="relationships">
+                                            <label class="form-check-label" for="relationships">
+                                                <i class="bi bi-people me-1"></i>Relationships
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="spiritual" value="spiritual">
+                                            <label class="form-check-label" for="spiritual">
+                                                <i class="bi bi-brightness-high me-1"></i>Spiritual Growth
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="grief" value="grief">
+                                            <label class="form-check-label" for="grief">
+                                                <i class="bi bi-flower3 me-1"></i>Grief/Loss
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="praise" value="praise">
+                                            <label class="form-check-label" for="praise">
+                                                <i class="bi bi-emoji-smile me-1"></i>Praise Report
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 col-md-4">
+                                        <div class="form-check prayer-type">
+                                            <input class="form-check-input" type="checkbox" id="other-type" value="other">
+                                            <label class="form-check-label" for="other-type">
+                                                <i class="bi bi-three-dots me-1"></i>Other
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Prayer Request -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Your Prayer Request <span class="text-danger">*</span></label>
+                                <textarea class="form-control" rows="5" required placeholder="Please share what's on your heart. Our prayer team will lift your request to God with care and confidentiality."></textarea>
+                            </div>
+
+                            <!-- Privacy Options -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Privacy Preference</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="privacy" id="private" value="private" checked>
+                                    <label class="form-check-label" for="private">
+                                        <strong>Private</strong> — Only the prayer team will see this request
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="privacy" id="shared" value="shared">
+                                    <label class="form-check-label" for="shared">
+                                        <strong>Church Wide</strong> — Share with our church family for broader prayer support
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="privacy" id="anonymous" value="anonymous">
+                                    <label class="form-check-label" for="anonymous">
+                                        <strong>Anonymous</strong> — Share my request without my name
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Contact Info -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">Your Information (Optional)</label>
+                                <p class="text-muted small mb-3">Provide your info if you'd like us to follow up or send encouragement.</p>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control" placeholder="Phone">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-select">
+                                            <option value="">Preferred contact method</option>
+                                            <option value="email">Email</option>
+                                            <option value="phone">Phone</option>
+                                            <option value="text">Text</option>
+                                            <option value="none">No follow-up needed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="bi bi-send me-2"></i>Submit Prayer Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Prayer Opportunities -->
+<section class="py-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h3 mb-2">Other Ways to Pray</h2>
+            <p class="text-muted">Join our community in prayer throughout the week</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-sunrise text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Morning Prayer</h5>
+                                <small class="text-muted">Tuesdays, 6:30 AM</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">Start your day with a time of focused prayer. Join us in the chapel for 30 minutes of Scripture reading and prayer.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-people-fill text-dark fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Prayer Team</h5>
+                                <small class="text-muted">After every service</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">Our trained prayer team is available after each service to pray with you about any need. Look for the "Prayer Team" signs near the altar.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-info d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-moon-stars text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Prayer Night</h5>
+                                <small class="text-muted">First Friday, 7 PM</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">A dedicated evening of worship and extended prayer. An opportunity to seek God together as a church family.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-success d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-phone text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Prayer Line</h5>
+                                <small class="text-muted">24/7 Available</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">Call our prayer line anytime to leave a prayer request or speak with a prayer partner: <strong>(555) 123-PRAY</strong></p>
+                        <a href="tel:5551237729" class="btn btn-outline-primary btn-sm">Call Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-warning d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-door-open text-dark fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Prayer Room</h5>
+                                <small class="text-muted">Open during office hours</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">Our prayer room is open whenever the building is open. A quiet space for personal prayer and reflection.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="rounded-circle bg-danger d-flex align-items-center justify-content-center me-3" style="width: 56px; height: 56px;">
+                                <i class="bi bi-journal-text text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Prayer Journal</h5>
+                                <small class="text-muted">Daily emails</small>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-3">Subscribe to receive daily prayer prompts and church prayer requests in your inbox each morning.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Subscribe</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Care & Support -->
+<section class="py-section bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="h3 mb-3">Pastoral Care & Support</h2>
+                <p class="text-muted mb-4">Beyond prayer, we're here to walk with you through life's challenges. Our pastoral team and care ministries are ready to support you in practical ways.</p>
+                <ul class="list-unstyled">
+                    <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                        <div>
+                            <strong>Hospital & Home Visits</strong>
+                            <p class="text-muted small mb-0">Our pastors are available to visit you during hospitalization or recovery at home.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                        <div>
+                            <strong>Counseling Referrals</strong>
+                            <p class="text-muted small mb-0">We can connect you with trusted Christian counselors in our community.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                        <div>
+                            <strong>Grief Support</strong>
+                            <p class="text-muted small mb-0">Join our GriefShare group or meet one-on-one with a care team member.</p>
+                        </div>
+                    </li>
+                    <li class="d-flex align-items-start mb-3">
+                        <i class="bi bi-check-circle-fill text-primary me-3 mt-1"></i>
+                        <div>
+                            <strong>Benevolence Assistance</strong>
+                            <p class="text-muted small mb-0">Practical help for those facing financial hardship — food, utilities, and more.</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="connect.html" class="btn btn-primary">
+                    <i class="bi bi-envelope me-2"></i>Contact Pastoral Care
+                </a>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-5 bg-primary text-white text-center">
+                        <i class="bi bi-telephone display-4 mb-3 d-block"></i>
+                        <h3 class="h4 mb-3">Need to Talk to Someone?</h3>
+                        <p class="text-white-70 mb-4">Our pastoral staff is available for conversations about faith, life struggles, or spiritual questions. We're here for you.</p>
+                        <a href="tel:5551234567" class="btn btn-light btn-lg">
+                            <i class="bi bi-telephone me-2"></i>(555) 123-4567
+                        </a>
+                        <p class="text-white-70 small mt-3 mb-0">Office hours: Mon-Fri 9am-5pm<br>For after-hours emergencies, leave a message</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scripture Encouragement -->
+<section class="py-section bg-primary text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <i class="bi bi-book display-4 text-secondary mb-3 d-block"></i>
+                <h2 class="h3 text-white mb-4">Promises for Prayer</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <blockquote class="mb-3">
+                            <p class="fst-italic">"Ask and it will be given to you; seek and you will find; knock and the door will be opened to you."</p>
+                            <footer class="text-secondary">— Matthew 7:7</footer>
+                        </blockquote>
+                    </div>
+                    <div class="col-md-6">
+                        <blockquote class="mb-3">
+                            <p class="fst-italic">"The prayer of a righteous person is powerful and effective."</p>
+                            <footer class="text-secondary">— James 5:16</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">
+                        <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint Community Church
+                    </h5>
+                    <p class="text-white-70 mb-3">
+                        A place to belong, believe, and become. Join us as we grow together in faith and community.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-70 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="ministries.html" class="text-white-70 text-decoration-none">Ministries</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white-70 text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="sermons.html" class="text-white-70 text-decoration-none">Sermons</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="connect.html" class="text-white-70 text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="prayer.html" class="text-white-70 text-decoration-none">Prayer Requests</a></li>
+                        <li class="mb-2"><a href="groups.html" class="text-white-70 text-decoration-none">Small Groups</a></li>
+                        <li class="mb-2"><a href="volunteer.html" class="text-white-70 text-decoration-none">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Visit Us</h6>
+                    <ul class="list-unstyled text-white-70">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>123 Faith Avenue<br>
+                            <span class="ms-4">Springfield, ST 12345</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:5551234567" class="text-white-70 text-decoration-none">(555) 123-4567</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:hello@gracepointcc.org" class="text-white-70 text-decoration-none">hello@gracepointcc.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-white border-opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-70 small mb-0">&copy; 2026 GracePoint Community Church. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="faq.html" class="text-white-70 small text-decoration-none me-3">FAQ</a>
+                    <a href="#" class="text-white-70 small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-70 small text-decoration-none">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

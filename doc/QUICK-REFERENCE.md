@@ -99,6 +99,63 @@
   <div class="channel-info">...</div>
   <div class="channel-actions">...</div>
 </div>
+
+<!-- Episode Player Card -->
+<div class="card border shadow-sm">
+  <div class="card-body">
+    <div class="d-flex align-items-start gap-3 mb-3">
+      <img src="thumb.jpg" class="rounded" alt="Episode" width="80" height="80">
+      <div class="flex-grow-1">
+        <h5 class="mb-1">Episode Title</h5>
+        <p class="text-muted small mb-0">Host • Date • Duration</p>
+      </div>
+    </div>
+    <audio controls class="w-100" preload="metadata">
+      <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<!-- Episode Grid Cards (Compact Horizontal) -->
+<div class="row g-4">
+  <div class="col-lg-4 col-md-6">
+    <a href="#" class="text-decoration-none">
+      <article class="media-item h-100">
+        <div class="media-thumb">
+          <img src="thumb.jpg" alt="Episode">
+          <span class="media-duration">38 min</span>
+        </div>
+        <div class="media-content">
+          <span class="badge bg-primary">#147</span>
+          <h5 class="media-title">Title</h5>
+          <div class="media-meta">
+            <span><i class="bi bi-calendar3"></i> Date</span>
+          </div>
+        </div>
+      </article>
+    </a>
+  </div>
+</div>
+<!-- CSS: .media-item (compact horizontal card, hover lift+shadow+primary border) -->
+
+<!-- Video Item (Up Next Sidebar) -->
+<a href="#" class="text-decoration-none">
+  <div class="video-item d-flex gap-2 p-2 rounded-3 bg-dark bg-opacity-25 hover-lift">
+    <div class="video-thumb position-relative flex-shrink-0">
+      <img src="thumb.jpg" class="w-100 h-100 object-fit-cover rounded-2">
+      <div class="position-absolute bottom-0 end-0 bg-dark bg-opacity-75 text-white px-1 m-1 rounded-1" 
+           style="font-size: 0.65rem; font-weight: 600;">38:12</div>
+    </div>
+    <div class="flex-grow-1 min-w-0">
+      <h6 class="text-white mb-1 fw-semibold" style="font-size: 0.875rem; line-height: 1.3;">Title</h6>
+      <p class="text-white-50 mb-0" style="font-size: 0.75rem;">
+        <span class="d-block">Channel</span>
+        <span>8.2K views • 3 days ago</span>
+      </p>
+    </div>
+  </div>
+</a>
+<!-- CSS: .video-item (hover: lift, bg lightening), .video-thumb (120x68px 16:9) -->
 ```
 
 ---

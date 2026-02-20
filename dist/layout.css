@@ -1,5 +1,5 @@
 /* StoneWick Theme - layout module */
-/* Generated: 2026-02-02T05:35:32.326Z */
+/* Generated: 2026-02-20T17:39:57.370Z */
 /* === layout/_layout.css === */
 /* ===========================================
    LAYOUT
@@ -93,37 +93,13 @@
 }
 /* Main header implementation */
 .main-header .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--navbar-text-color, rgba(255, 255, 255, 0.8));
   font-weight: 500;
   padding: 0.5rem 1rem;
-  position: relative;
   transition: all 0.3s ease;
 }
 .main-header .navbar-nav .nav-link:hover {
-  color: #ffffff !important;
-}
-.main-header .navbar-nav .nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 1rem;
-  right: 1rem;
-  height: 2px;
-  background: linear-gradient(135deg, var(--bs-primary), var(--bs-warning));
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-.main-header .navbar-nav .nav-link:hover::after {
-  transform: scaleX(1);
-}
-.nav-cta {
-  margin-left: 1rem;
-  padding: 0.5rem 1.5rem !important;
-  border-radius: 25px;
-}
-.nav-cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.3);
+  color: var(--navbar-text-hover, #ffffff);
 }
 /* -------------------------------------------
    SECTION SPACING
@@ -856,7 +832,7 @@ footer::before {
     gap: var(--bs-space-2);
   }
 
-  /* Tab Navigation */
+  /* Tab Navigation - Scroll on mobile */
   .nav-tabs,
   .nav-pills,
   .nav-underline {
@@ -865,6 +841,7 @@ footer::before {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    gap: var(--bs-space-1);
   }
 
   .nav-tabs::-webkit-scrollbar,
@@ -877,6 +854,7 @@ footer::before {
   .nav-pills .nav-link,
   .nav-underline .nav-link {
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   /* Vertical Tabs to Horizontal on Mobile */
@@ -1021,6 +999,99 @@ footer::before {
     height: 64px;
     font-size: 1.75rem;
   }
+  
+  /* Tab Navigation - Prevent overflow on tablets */
+  .nav-tabs,
+  .nav-pills,
+  .nav-underline {
+    flex-wrap: wrap;
+    gap: var(--bs-space-2);
+  }
+
+  .nav-tabs .nav-link,
+  .nav-pills .nav-link,
+  .nav-underline .nav-link {
+    white-space: nowrap;
+  }
+  
+  /* Channel Header Compact - Stack and adjust for tablets */
+  .channel-header-compact,
+  .channel-header-compact-dark {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--bs-space-4);
+    gap: var(--bs-space-3);
+  }
+  
+  .channel-header-compact .channel-actions,
+  .channel-header-compact-dark .channel-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .channel-header-compact .channel-btn-visit,
+  .channel-header-compact .channel-btn-subscribe,
+  .channel-header-compact-dark .channel-btn-visit,
+  .channel-header-compact-dark .channel-btn-subscribe {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .channel-header-compact .channel-avatar,
+  .channel-header-compact-dark .channel-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .channel-header-compact .channel-name,
+  .channel-header-compact-dark .channel-name {
+    font-size: 1.25rem;
+  }
+
+  .channel-header-compact .channel-stats,
+  .channel-header-compact-dark .channel-stats {
+    font-size: 0.8125rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Channel Header Full - Stack and adjust for tablets */
+  .channel-header-full .channel-content,
+  .channel-header-full-dark .channel-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .channel-header-full .channel-avatar,
+  .channel-header-full-dark .channel-avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+  
+  .channel-header-full .channel-stats,
+  .channel-header-full-dark .channel-stats {
+    justify-content: center;
+  }
+  
+  .channel-header-full .channel-actions,
+  .channel-header-full-dark .channel-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .channel-header-full .channel-btn-visit,
+  .channel-header-full .channel-btn-subscribe,
+  .channel-header-full-dark .channel-btn-visit,
+  .channel-header-full-dark .channel-btn-subscribe {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .channel-header-full .channel-name,
+  .channel-header-full-dark .channel-name {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 480px) {
   .video-theater-play-btn {
@@ -1106,65 +1177,6 @@ footer::before {
     background: #f5f5f5;
     color: #000;
     border: 1px solid #ccc;
-  }
-  
-  /* Channel Header Compact - Stack on mobile */
-  .channel-header-compact {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .channel-header-compact .channel-actions {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .channel-header-compact .channel-btn-visit,
-  .channel-header-compact .channel-btn-subscribe {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .channel-stats {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Channel Header Full - Stack on mobile */
-  .channel-header-full .channel-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .channel-header-full .channel-avatar {
-    margin-top: -40px;
-  }
-  
-  .channel-header-full .channel-stats {
-    justify-content: center;
-  }
-  
-  .channel-header-full .channel-actions {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .channel-header-full .channel-btn-visit,
-  .channel-header-full .channel-btn-subscribe {
-    width: 100%;
-    justify-content: center;
-  }
-}
-/* Tablet - Adjust channel header sizing */
-@media (max-width: 992px) and (min-width: 769px) {
-  .channel-header-full .channel-avatar {
-    width: 100px;
-    height: 100px;
-    margin-top: -50px;
-  }
-  
-  .channel-header-full .channel-name {
-    font-size: 1.5rem;
   }
 }
 /* -------------------------------------------

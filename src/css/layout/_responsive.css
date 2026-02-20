@@ -481,7 +481,7 @@
     gap: var(--bs-space-2);
   }
 
-  /* Tab Navigation */
+  /* Tab Navigation - Scroll on mobile */
   .nav-tabs,
   .nav-pills,
   .nav-underline {
@@ -490,6 +490,7 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    gap: var(--bs-space-1);
   }
 
   .nav-tabs::-webkit-scrollbar,
@@ -502,6 +503,7 @@
   .nav-pills .nav-link,
   .nav-underline .nav-link {
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   /* Vertical Tabs to Horizontal on Mobile */
@@ -648,6 +650,99 @@
     height: 64px;
     font-size: 1.75rem;
   }
+  
+  /* Tab Navigation - Prevent overflow on tablets */
+  .nav-tabs,
+  .nav-pills,
+  .nav-underline {
+    flex-wrap: wrap;
+    gap: var(--bs-space-2);
+  }
+
+  .nav-tabs .nav-link,
+  .nav-pills .nav-link,
+  .nav-underline .nav-link {
+    white-space: nowrap;
+  }
+  
+  /* Channel Header Compact - Stack and adjust for tablets */
+  .channel-header-compact,
+  .channel-header-compact-dark {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--bs-space-4);
+    gap: var(--bs-space-3);
+  }
+  
+  .channel-header-compact .channel-actions,
+  .channel-header-compact-dark .channel-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .channel-header-compact .channel-btn-visit,
+  .channel-header-compact .channel-btn-subscribe,
+  .channel-header-compact-dark .channel-btn-visit,
+  .channel-header-compact-dark .channel-btn-subscribe {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .channel-header-compact .channel-avatar,
+  .channel-header-compact-dark .channel-avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .channel-header-compact .channel-name,
+  .channel-header-compact-dark .channel-name {
+    font-size: 1.25rem;
+  }
+
+  .channel-header-compact .channel-stats,
+  .channel-header-compact-dark .channel-stats {
+    font-size: 0.8125rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Channel Header Full - Stack and adjust for tablets */
+  .channel-header-full .channel-content,
+  .channel-header-full-dark .channel-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .channel-header-full .channel-avatar,
+  .channel-header-full-dark .channel-avatar {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+  }
+  
+  .channel-header-full .channel-stats,
+  .channel-header-full-dark .channel-stats {
+    justify-content: center;
+  }
+  
+  .channel-header-full .channel-actions,
+  .channel-header-full-dark .channel-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .channel-header-full .channel-btn-visit,
+  .channel-header-full .channel-btn-subscribe,
+  .channel-header-full-dark .channel-btn-visit,
+  .channel-header-full-dark .channel-btn-subscribe {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .channel-header-full .channel-name,
+  .channel-header-full-dark .channel-name {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -737,67 +832,9 @@
     color: #000;
     border: 1px solid #ccc;
   }
-  
-  /* Channel Header Compact - Stack on mobile */
-  .channel-header-compact {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .channel-header-compact .channel-actions {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .channel-header-compact .channel-btn-visit,
-  .channel-header-compact .channel-btn-subscribe {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .channel-stats {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Channel Header Full - Stack on mobile */
-  .channel-header-full .channel-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .channel-header-full .channel-avatar {
-    margin-top: -40px;
-  }
-  
-  .channel-header-full .channel-stats {
-    justify-content: center;
-  }
-  
-  .channel-header-full .channel-actions {
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .channel-header-full .channel-btn-visit,
-  .channel-header-full .channel-btn-subscribe {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
-/* Tablet - Adjust channel header sizing */
-@media (max-width: 992px) and (min-width: 769px) {
-  .channel-header-full .channel-avatar {
-    width: 100px;
-    height: 100px;
-    margin-top: -50px;
-  }
-  
-  .channel-header-full .channel-name {
-    font-size: 1.5rem;
-  }
-}
+
 
 /* -------------------------------------------
    REDUCED MOTION

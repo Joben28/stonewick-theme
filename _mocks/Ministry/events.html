@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Calendar | GracePoint Community Church</title>
+    <meta name="description"
+        content="See what's happening at GracePoint Community Church. Upcoming events, services, workshops, and opportunities to connect.">
+
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- StoneWick Theme -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- Ministry Brand Overrides -->
+    <link rel="stylesheet" href="ministry-brand.css">
+</head>
+
+<body class="ministry-brand">
+
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="ministries.html" data-bs-toggle="dropdown">Ministries</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ministries.html">All Ministries</a></li>
+                                <li><a class="dropdown-item" href="ministries.html#youth">Youth</a></li>
+                                <li><a class="dropdown-item" href="ministries.html#worship">Worship</a></li>
+                                <li><a class="dropdown-item" href="ministries.html#outreach">Outreach</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="events.html">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sermons.html">Sermons</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="connect.html">Connect</a>
+                        </li>
+                    </ul>
+                    <a href="giving.html" class="btn btn-secondary btn-sm rounded-pill px-3">
+                        <i class="bi bi-heart-fill me-1"></i>Give
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero hero-compact pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="eyebrow text-secondary mb-3">What's Happening</p>
+                    <h1 class="hero-title text-white mb-4">Events & Calendar</h1>
+                    <p class="hero-subtitle text-white-70 mb-4">
+                        From weekly services to special events, there's always something happening at GracePoint. 
+                        Find opportunities to connect, grow, and serve.
+                    </p>
+                    <div class="hero-actions d-flex flex-wrap gap-3">
+                        <a href="#upcoming" class="btn btn-secondary btn-lg">
+                            View All Events <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#host" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-calendar-plus me-2"></i>Host an Event
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Filters -->
+    <section class="py-4 bg-light border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <button class="btn btn-primary btn-sm">All Events</button>
+                <button class="btn btn-outline-primary btn-sm">This Week</button>
+                <button class="btn btn-outline-primary btn-sm">Worship</button>
+                <button class="btn btn-outline-primary btn-sm">Kids & Youth</button>
+                <button class="btn btn-outline-primary btn-sm">Adults</button>
+                <button class="btn btn-outline-primary btn-sm">Outreach</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Event -->
+    <section class="py-section bg-warm">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700&h=500&fit=crop&q=80"
+                         alt="Women's Conference"
+                         class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <span class="badge bg-secondary mb-3">Featured Event</span>
+                    <h2 class="section-title mb-3">Women's Conference 2026</h2>
+                    <p class="lead text-muted mb-4">
+                        "Rooted & Rising" — A day of worship, teaching, and connection for women of all ages. 
+                        Guest speaker Dr. Sarah Williams shares insights on growing deeper in faith during 
+                        life's changing seasons.
+                    </p>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-calendar3 text-primary fs-5"></i>
+                                <div>
+                                    <div class="small text-muted">Date</div>
+                                    <div class="fw-bold">Saturday, March 1, 2026</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-clock text-primary fs-5"></i>
+                                <div>
+                                    <div class="small text-muted">Time</div>
+                                    <div class="fw-bold">9:00 AM - 4:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-geo-alt text-primary fs-5"></i>
+                                <div>
+                                    <div class="small text-muted">Location</div>
+                                    <div class="fw-bold">Main Sanctuary</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-currency-dollar text-primary fs-5"></i>
+                                <div>
+                                    <div class="small text-muted">Cost</div>
+                                    <div class="fw-bold">$35 (includes lunch)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-primary btn-lg">
+                        Register Now <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="py-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="eyebrow">Coming Up</p>
+                <h2 class="section-title">Upcoming Events</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Event 1 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">15</div>
+                                <div class="month">Feb</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Men's Breakfast</h5>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Men</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Join us for breakfast, fellowship, and a short devotional. Great opportunity 
+                                    to connect with other men in the church.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>8:00 AM - 10:00 AM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Fellowship Hall</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">19</div>
+                                <div class="month">Feb</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Youth Game Night</h5>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Youth</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Middle and high school students—bring your friends for an epic night of 
+                                    games, snacks, and fun!
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>6:30 PM - 9:00 PM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Youth Building</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">22</div>
+                                <div class="month">Feb</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Family Movie Night</h5>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Family</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Bring the whole family for a free movie, popcorn, and fun! Appropriate 
+                                    for all ages. Doors open at 5:30 PM.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>6:00 PM - 9:00 PM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Main Auditorium</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">26</div>
+                                <div class="month">Feb</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">New Member Class</h5>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Grow</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Interested in membership? Learn about our church's vision, beliefs, and 
+                                    how to get connected. Lunch provided.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>12:30 PM - 2:30 PM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Room 201</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">01</div>
+                                <div class="month">Mar</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Women's Conference</h5>
+                                    <span class="badge bg-secondary text-white">Featured</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    "Rooted & Rising" — A full day of worship, teaching, and connection for women.
+                                    Registration required.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>9:00 AM - 4:00 PM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Main Sanctuary</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 6 -->
+                <div class="col-lg-6">
+                    <div class="event-card">
+                        <div class="d-flex">
+                            <div class="event-card-date">
+                                <div class="day">08</div>
+                                <div class="month">Mar</div>
+                            </div>
+                            <div class="p-4 flex-grow-1">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Neighbor Day</h5>
+                                    <span class="badge bg-primary bg-opacity-10 text-primary">Outreach</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Join us as we serve our community through yard work, home repairs, and 
+                                    practical help for neighbors in need.
+                                </p>
+                                <div class="d-flex flex-wrap gap-3 text-muted small">
+                                    <span><i class="bi bi-clock me-1"></i>8:00 AM - 12:00 PM</span>
+                                    <span><i class="bi bi-geo-alt me-1"></i>Meet at Church</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary">
+                    Load More Events <i class="bi bi-chevron-down ms-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Schedule -->
+    <section class="py-section bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="eyebrow">Every Week</p>
+                <h2 class="section-title">Regular Schedule</h2>
+                <p class="section-intro text-muted">Ongoing services and gatherings</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <h5 class="text-center mb-4">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Sunday</span>
+                        </h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Traditional Service</span>
+                                <span class="text-muted">9:00 AM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Sunday School</span>
+                                <span class="text-muted">10:00 AM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span class="fw-medium">Contemporary Service</span>
+                                <span class="text-muted">11:00 AM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <h5 class="text-center mb-4">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Wednesday</span>
+                        </h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Midweek Bible Study</span>
+                                <span class="text-muted">6:30 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Youth Group</span>
+                                <span class="text-muted">6:30 PM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span class="fw-medium">Kids AWANA</span>
+                                <span class="text-muted">6:30 PM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-4 border-0 shadow-sm">
+                        <h5 class="text-center mb-4">
+                            <span class="badge bg-primary rounded-pill px-3 py-2">Throughout Week</span>
+                        </h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Small Groups</span>
+                                <span class="text-muted">Various</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2 border-bottom">
+                                <span class="fw-medium">Food Pantry (Sat)</span>
+                                <span class="text-muted">9:00 AM</span>
+                            </li>
+                            <li class="d-flex justify-content-between py-2">
+                                <span class="fw-medium">Prayer Meeting (Thu)</span>
+                                <span class="text-muted">7:00 AM</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Host an Event -->
+    <section class="py-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <p class="eyebrow">Have an Idea?</p>
+                    <h2 class="section-title mb-4">Host an Event</h2>
+                    <p class="lead mb-4">
+                        Want to organize a ministry event, small group gathering, or community outreach? 
+                        We're here to help you make it happen.
+                    </p>
+                    <p class="text-muted mb-4">
+                        Whether you need space, resources, or support, our events team can help you plan 
+                        and execute meaningful gatherings that serve our community.
+                    </p>
+                    <a href="connect.html" class="btn btn-primary">
+                        Submit Event Request <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1540317580384-e5d43616b9aa?w=700&h=500&fit=crop&q=80"
+                         alt="Event planning"
+                         class="img-fluid rounded-3 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <p class="eyebrow text-secondary">Stay Connected</p>
+                <h2 class="text-white">Never Miss an Event</h2>
+                <p>Subscribe to our weekly newsletter for event updates, announcements, and church news.</p>
+                <div class="cta-buttons">
+                    <a href="connect.html" class="btn btn-secondary btn-lg">Subscribe to Newsletter</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-calendar-plus me-2"></i>Add to Calendar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-3">
+                        <i class="bi bi-brightness-high me-2 text-secondary"></i>GracePoint Community Church
+                    </h5>
+                    <p class="text-white-70 mb-3">
+                        A place to belong, believe, and become. Join us as we grow together in faith and community.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-youtube fs-5"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-70 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="ministries.html" class="text-white-70 text-decoration-none">Ministries</a></li>
+                        <li class="mb-2"><a href="events.html" class="text-white-70 text-decoration-none">Events</a></li>
+                        <li class="mb-2"><a href="sermons.html" class="text-white-70 text-decoration-none">Sermons</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white mb-3">Connect</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="connect.html" class="text-white-70 text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="prayer.html" class="text-white-70 text-decoration-none">Prayer Requests</a></li>
+                        <li class="mb-2"><a href="groups.html" class="text-white-70 text-decoration-none">Small Groups</a></li>
+                        <li class="mb-2"><a href="volunteer.html" class="text-white-70 text-decoration-none">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white mb-3">Visit Us</h6>
+                    <ul class="list-unstyled text-white-70">
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>123 Faith Avenue<br>
+                            <span class="ms-4">Springfield, ST 12345</span>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:5551234567" class="text-white-70 text-decoration-none">(555) 123-4567</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:hello@gracepointcc.org" class="text-white-70 text-decoration-none">hello@gracepointcc.org</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 border-white border-opacity-10">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-white-70 small mb-0">&copy; 2026 GracePoint Community Church. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="faq.html" class="text-white-70 small text-decoration-none me-3">FAQ</a>
+                    <a href="#" class="text-white-70 small text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-70 small text-decoration-none">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

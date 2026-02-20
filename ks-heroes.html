@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heroes - StoneWick Components</title>
+    <meta name="description" content="All hero section variants for page headers and landing areas.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="kitchen-sink.html">
+                    <span class="brand-text">Components</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ks-heroes.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-badges.html">Badges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-social.html">Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==========================================================
+         HERO SECTIONS
+         ========================================================== -->
+    
+    <!-- Hero Default (Dark) -->
+    <section id="hero-default" class="hero pt-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO DEFAULT</p>
+                    <h1>Build Something <span class="text-warning">Amazing</span></h1>
+                    <p class="lead">This is the default hero style with dark gradient background.</p>
+                    <p class="subtitle">Additional subtitle text for the hero section.</p>
+                    <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Light -->
+    <section id="hero-light" class="hero hero-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO LIGHT</p>
+                    <h1>Light Hero Variant</h1>
+                    <p class="lead">This hero has a lighter background for contrast.</p>
+                    <p class="subtitle">Light variant for different page contexts.</p>
+                    <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                    <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Centered -->
+    <section id="hero-centered" class="hero hero-centered">
+        <div class="container">
+            <div class="hero-content text-center mx-auto" style="max-width: 800px;">
+                <p class="eyebrow text-primary">HERO CENTERED</p>
+                <h1>Centered Hero</h1>
+                <p class="lead">All content is centered in this variant.</p>
+                <p class="subtitle">Centered layout for emphasis and focus.</p>
+                <a href="#" class="btn btn-primary btn-lg me-3">Get Started</a>
+                <a href="#" class="btn btn-outline-light btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Compact -->
+    <section id="hero-compact" class="hero hero-compact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 hero-content">
+                    <p class="eyebrow text-primary">HERO COMPACT</p>
+                    <h1>Compact Hero</h1>
+                    <p class="lead">Smaller padding for compact page layouts.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Service Landing -->
+    <section id="hero-service-landing" class="hero pt-header has-grain">
+        <div class="container">
+            <div class="mb-3">
+                <span class="glass-badge me-2">Serving Portland Since 2009</span>
+                <span class="glass-badge">2,847 Jobs Completed</span>
+            </div>
+
+            <h1 class="headline-tight text-white mb-4">Home Repairs<br><span class="hero-highlight">Done Right</span></h1>
+            <p class="lead text-white mb-5" style="max-width: 700px;">Licensed. Insured. Zero callbacks on electrical work in 18 months. We fix it once.</p>
+
+            <div class="d-flex flex-column flex-sm-row gap-3 mb-4">
+                <a href="tel:5551234567" class="btn btn-primary btn-lg">
+                    <i class="bi bi-telephone-fill me-2"></i>Call (555) 123-4567
+                </a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">Request a Quote</a>
+            </div>
+
+            <p class="hero-urgency mb-0">
+                <i class="bi bi-lightning-fill me-2"></i>
+                Same-day service available for emergencies
+            </p>
+        </div>
+    </section>
+
+    <!-- Hero Service Detail -->
+    <section id="hero-service-detail" class="hero hero-compact pt-header">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="services.html" class="text-white text-decoration-none opacity-75">
+                    <i class="bi bi-arrow-left"></i> Back to All Services
+                </a>
+            </div>
+            <div class="service-icon d-inline-block mb-3">
+                <i class="bi bi-hammer"></i>
+            </div>
+            <h1 class="text-white mb-3">General <span>Repairs</span></h1>
+            <p class="lead mx-auto max-w-wide mb-4">Professional solutions for all your everyday home repair needs. From drywall patches to furniture assembly, we fix it right the first time.</p>
+
+            <!-- Service Navigation Cards -->
+            <div class="row g-3 mt-4 justify-content-center">
+                <div class="col-6 col-sm-6 col-md-4 col-lg">
+                    <a href="#drywall" class="card h-100 text-decoration-none border-0 shadow-sm bg-white bg-opacity-10 text-white">
+                        <div class="card-body text-center py-3">
+                            <i class="bi bi-grid-3x3-gap fs-3 d-block mb-2"></i>
+                            <div class="small fw-semibold">Drywall<br>Repair</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg">
+                    <a href="#deck-fence" class="card h-100 text-decoration-none border-0 shadow-sm bg-white bg-opacity-10 text-white">
+                        <div class="card-body text-center py-3">
+                            <i class="bi bi-columns-gap fs-3 d-block mb-2"></i>
+                            <div class="small fw-semibold">Deck &amp;<br>Fence</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg">
+                    <a href="#door-window" class="card h-100 text-decoration-none border-0 shadow-sm bg-white bg-opacity-10 text-white">
+                        <div class="card-body text-center py-3">
+                            <i class="bi bi-door-open fs-3 d-block mb-2"></i>
+                            <div class="small fw-semibold">Doors &amp;<br>Windows</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg">
+                    <a href="#furniture" class="card h-100 text-decoration-none border-0 shadow-sm bg-white bg-opacity-10 text-white">
+                        <div class="card-body text-center py-3">
+                            <i class="bi bi-box-seam fs-3 d-block mb-2"></i>
+                            <div class="small fw-semibold">Furniture<br>Assembly</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg">
+                    <a href="#additional" class="card h-100 text-decoration-none border-0 shadow-sm bg-white bg-opacity-10 text-white">
+                        <div class="card-body text-center py-3">
+                            <i class="bi bi-plus-circle fs-3 d-block mb-2"></i>
+                            <div class="small fw-semibold">More<br>Services</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
+        <div class="container">
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-buttons.html#button-variants" class="btn btn-sm btn-outline-primary">Hero CTA Buttons <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-badges.html#glass-badge" class="btn btn-sm btn-outline-primary">Hero Badges <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-layout.html#typography" class="btn btn-sm btn-outline-primary">Typography <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-layout.html#breadcrumbs" class="btn btn-sm btn-outline-primary">Breadcrumbs <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <p class="text-muted small mt-2 mb-0">Heroes use buttons, badges, and typography from other pages.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-2">&copy; 2026 StoneWick Theme</p>
+                    <p class="small text-muted mb-0">
+                        <a href="kitchen-sink.html">Index</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
+                        <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
+                        <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
+                        <a href="ks-data.html">Data</a> · 
+                        <a href="ks-interactive.html">Interactive</a> · 
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

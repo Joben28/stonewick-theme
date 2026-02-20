@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badges &amp; Markers - StoneWick Components</title>
+    <meta name="description" content="All badge variants: BS5 contextual, pill, positioned, plus theme gradient, icon, and glass badges.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/theme.css?v=5">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="kitchen-sink.html">
+                    <span class="brand-text">Components</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="kitchen-sink.html">Index</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-heroes.html">Heroes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-cards.html">Cards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-buttons.html">Buttons</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="ks-badges.html">Badges</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-media.html">Media</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-social.html">Social</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-data.html">Data</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-interactive.html">Interactive</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-layout.html">Layout</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ks-sections.html">Sections</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Compact -->
+    <section class="hero hero-compact pt-header">
+        <div class="container">
+            <div class="hero-content">
+                <p class="eyebrow text-primary">COMPONENT LIBRARY</p>
+                <h1>Badges &amp; <span class="text-highlight">Markers</span></h1>
+                <p class="lead">BS5 contextual badges, pills, positioned indicators — plus theme gradient, icon, and glass badge components.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONTEXTUAL BADGES
+         ============================================================ -->
+    <section id="contextual-badges" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Contextual Badges</h2>
+            <p class="section-intro">All 8 contextual badge colors using text-bg-* utilities.</p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge text-bg-primary">Primary</span>
+                <span class="badge text-bg-secondary">Secondary</span>
+                <span class="badge text-bg-success">Success</span>
+                <span class="badge text-bg-danger">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+                <span class="badge text-bg-info">Info</span>
+                <span class="badge text-bg-light">Light</span>
+                <span class="badge text-bg-dark">Dark</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PILL BADGES
+         ============================================================ -->
+    <section id="pill-badges" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Pill Badges</h2>
+            <p class="section-intro">Rounded-pill modifier for a more rounded badge shape.</p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge rounded-pill text-bg-primary">Primary</span>
+                <span class="badge rounded-pill text-bg-secondary">Secondary</span>
+                <span class="badge rounded-pill text-bg-success">Success</span>
+                <span class="badge rounded-pill text-bg-danger">Danger</span>
+                <span class="badge rounded-pill text-bg-warning">Warning</span>
+                <span class="badge rounded-pill text-bg-info">Info</span>
+                <span class="badge rounded-pill text-bg-light">Light</span>
+                <span class="badge rounded-pill text-bg-dark">Dark</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         POSITIONED BADGES
+         ============================================================ -->
+    <section id="positioned-badges" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Positioned Badges</h2>
+            <p class="section-intro">Notification count indicators positioned on buttons and icons.</p>
+
+            <div class="d-flex flex-wrap gap-4 align-items-center mb-4">
+                <button type="button" class="btn btn-primary position-relative">
+                    Inbox
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </button>
+
+                <button type="button" class="btn btn-primary position-relative">
+                    Notifications
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </button>
+
+                <button type="button" class="btn btn-outline-secondary position-relative">
+                    <i class="bi bi-bell fs-5"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        3
+                        <span class="visually-hidden">notifications</span>
+                    </span>
+                </button>
+
+                <button type="button" class="btn btn-outline-secondary position-relative">
+                    <i class="bi bi-cart fs-5"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+                        5
+                        <span class="visually-hidden">items in cart</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BADGES IN BUTTONS
+         ============================================================ -->
+    <section id="badges-in-buttons" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Badges in Buttons</h2>
+            <p class="section-intro">Inline badges used as count indicators inside buttons.</p>
+
+            <div class="d-flex flex-wrap gap-3">
+                <button type="button" class="btn btn-primary">
+                    Messages <span class="badge text-bg-light">4</span>
+                </button>
+                <button type="button" class="btn btn-success">
+                    Updates <span class="badge text-bg-dark">12</span>
+                </button>
+                <button type="button" class="btn btn-outline-primary">
+                    Alerts <span class="badge text-bg-danger">3</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BADGES IN HEADINGS
+         ============================================================ -->
+    <section id="badges-headings" class="py-section">
+        <div class="container">
+            <p class="eyebrow text-primary">BS5 STANDARD</p>
+            <h2 class="section-heading">Headings with Badges</h2>
+            <p class="section-intro">Inline badges inside heading elements h1–h6.</p>
+
+            <h1>Heading 1 <span class="badge text-bg-secondary">New</span></h1>
+            <h2>Heading 2 <span class="badge text-bg-secondary">New</span></h2>
+            <h3>Heading 3 <span class="badge text-bg-secondary">New</span></h3>
+            <h4>Heading 4 <span class="badge text-bg-secondary">New</span></h4>
+            <h5>Heading 5 <span class="badge text-bg-secondary">New</span></h5>
+            <h6>Heading 6 <span class="badge text-bg-secondary">New</span></h6>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BADGE GRADIENT (Theme Custom — Light BG)
+         ============================================================ -->
+    <section id="badge-gradient" class="py-section bg-light">
+        <div class="container">
+            <p class="eyebrow text-primary">THEME CUSTOM</p>
+            <h2 class="section-heading text-dark">Badge Gradient</h2>
+            <p class="section-intro text-muted">Circular gradient badges for light backgrounds.</p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <div class="badge-gradient"><i class="bi bi-check-lg"></i></div>
+                <div class="badge-gradient"><i class="bi bi-star-fill"></i></div>
+                <div class="badge-gradient"><i class="bi bi-lightning-fill"></i></div>
+                <div class="badge-gradient"><i class="bi bi-heart-fill"></i></div>
+                <div class="badge-gradient"><i class="bi bi-trophy-fill"></i></div>
+            </div>
+
+            <h6 class="mt-4 mb-3">Numbered Variants</h6>
+            <div class="d-flex flex-wrap gap-3">
+                <div class="badge-gradient">1</div>
+                <div class="badge-gradient">2</div>
+                <div class="badge-gradient">3</div>
+                <div class="badge-gradient">4</div>
+                <div class="badge-gradient">5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ICON BADGE (Theme Custom — Dark BG)
+         ============================================================ -->
+    <section id="icon-badge" class="py-section bg-dark">
+        <div class="container">
+            <p class="eyebrow text-warning">THEME CUSTOM</p>
+            <h2 class="section-heading text-white">Icon Badges</h2>
+            <p class="section-intro text-white-70">Colored icon containers for dark backgrounds. Available in 6 color modifiers.</p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <div class="icon-badge blue"><i class="bi bi-code-slash"></i></div>
+                <div class="icon-badge teal"><i class="bi bi-database"></i></div>
+                <div class="icon-badge purple"><i class="bi bi-cloud"></i></div>
+                <div class="icon-badge amber"><i class="bi bi-lightning-fill"></i></div>
+                <div class="icon-badge green"><i class="bi bi-check-lg"></i></div>
+                <div class="icon-badge gray"><i class="bi bi-gear"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         GLASS BADGE (Theme Custom — Dark BG)
+         ============================================================ -->
+    <section id="glass-badge" class="py-section bg-dark-gradient">
+        <div class="container">
+            <p class="eyebrow text-warning">THEME CUSTOM</p>
+            <h2 class="section-heading text-white">Glass Badges</h2>
+            <p class="section-intro text-white-70">Glassmorphic translucent pill badges for dark backgrounds. Available in 5 color modifiers.</p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4">
+                <span class="glass-badge blue"><i class="bi bi-braces"></i> TypeScript</span>
+                <span class="glass-badge teal"><i class="bi bi-server"></i> PostgreSQL</span>
+                <span class="glass-badge purple"><i class="bi bi-cloud-check"></i> AWS</span>
+                <span class="glass-badge amber"><i class="bi bi-lightning-fill"></i> Fast</span>
+                <span class="glass-badge green"><i class="bi bi-check-circle"></i> Verified</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BS5 BADGES ON DARK (Comparison)
+         ============================================================ -->
+    <section id="bs5-badges-dark" class="py-section bg-dark">
+        <div class="container">
+            <p class="eyebrow text-warning">BS5 STANDARD</p>
+            <h2 class="section-heading text-white">BS5 Badges on Dark</h2>
+            <p class="section-intro text-white-70">Standard Bootstrap badges shown on dark backgrounds for comparison with theme custom variants above.</p>
+
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge bg-primary">Primary</span>
+                <span class="badge bg-secondary">Secondary</span>
+                <span class="badge bg-success">Success</span>
+                <span class="badge bg-danger">Danger</span>
+                <span class="badge bg-warning text-dark">Warning</span>
+                <span class="badge bg-info text-dark">Info</span>
+                <span class="badge bg-light text-dark">Light</span>
+                <span class="badge bg-dark">Dark</span>
+            </div>
+
+            <h6 class="text-white mt-4 mb-3">Pill Variants on Dark</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <span class="badge rounded-pill bg-primary">Primary</span>
+                <span class="badge rounded-pill bg-secondary">Secondary</span>
+                <span class="badge rounded-pill bg-success">Success</span>
+                <span class="badge rounded-pill bg-danger">Danger</span>
+                <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+                <span class="badge rounded-pill bg-info text-dark">Info</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Components -->
+    <section class="py-4 bg-light border-top">
+        <div class="container">
+            <h6 class="text-uppercase fw-bold text-primary small mb-3"><i class="bi bi-signpost-split me-1"></i> Related Components</h6>
+            <div class="d-flex flex-wrap gap-2">
+                <a href="ks-cards.html#cards-dark" class="btn btn-sm btn-outline-primary">Badges in Dark Cards <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-buttons.html#button-variants" class="btn btn-sm btn-outline-primary">Badges in Buttons <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-layout.html#nav-tabs" class="btn btn-sm btn-outline-primary">Badges on Nav Tabs <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-data.html#list-groups" class="btn btn-sm btn-outline-primary">Badges in List Groups <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+            <p class="text-muted small mt-2 mb-0">Badges appear as sub-elements inside these components on other pages.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-2">&copy; 2026 StoneWick Theme</p>
+                    <p class="small text-muted mb-0">
+                        <a href="kitchen-sink.html">Index</a> · 
+                        <a href="ks-heroes.html">Heroes</a> · 
+                        <a href="ks-cards.html">Cards</a> · 
+                        <a href="ks-buttons.html">Buttons</a> · 
+                        <a href="ks-badges.html">Badges</a> · 
+                        <a href="ks-media.html">Media</a> · 
+                        <a href="ks-social.html">Social</a> · 
+                        <a href="ks-data.html">Data</a> · 
+                        <a href="ks-interactive.html">Interactive</a> · 
+                        <a href="ks-layout.html">Layout</a> · 
+                        <a href="ks-sections.html">Sections</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

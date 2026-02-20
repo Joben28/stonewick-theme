@@ -24,6 +24,7 @@ export { Slider } from './modules/slider.js';
 export { Accordion } from './modules/accordion.js';
 export { Navbar } from './modules/navbar.js';
 export { Offcanvas } from './modules/offcanvas.js';
+export { Forms } from './modules/forms.js';
 
 // Version
 export const VERSION = '1.0.0';
@@ -46,6 +47,7 @@ export function initAll(options = {}) {
   const { Accordion } = require('./modules/accordion.js');
   const { Navbar } = require('./modules/navbar.js');
   const { Offcanvas } = require('./modules/offcanvas.js');
+  const { Forms } = require('./modules/forms.js');
   
   // Initialize each component type
   instances.comparisonSliders = ComparisonSlider.initAll('.comparison-slider', scope);
@@ -55,6 +57,7 @@ export function initAll(options = {}) {
   instances.accordions = Accordion.initAll('.accordion', scope);
   instances.navbars = Navbar.initAll('.navbar', scope);
   instances.offcanvas = Offcanvas.initAll('.offcanvas-navbar', scope);
+  instances.forms = Forms.initAll('form[data-validate]', scope);
   
   console.log('[StoneWick] Initialized components:', {
     comparisonSliders: instances.comparisonSliders.length,
@@ -63,7 +66,8 @@ export function initAll(options = {}) {
     sliders: instances.sliders.length,
     accordions: instances.accordions.length,
     navbars: instances.navbars.length,
-    offcanvas: instances.offcanvas.length
+    offcanvas: instances.offcanvas.length,
+    forms: instances.forms.length
   });
   
   return instances;
@@ -88,5 +92,6 @@ if (typeof window !== 'undefined') {
   import('./modules/modals.js').then(m => window.StoneWick.Modal = m.Modal);
   import('./modules/slider.js').then(m => window.StoneWick.Slider = m.Slider);
   import('./modules/accordion.js').then(m => window.StoneWick.Accordion = m.Accordion);
+  import('./modules/forms.js').then(m => window.StoneWick.Forms = m.Forms);
   import('./core/utils.js').then(m => window.StoneWick.utils = m.default);
 }

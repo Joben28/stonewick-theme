@@ -1,0 +1,503 @@
+/* ===========================================
+   MEDIA MINISTRY BRAND CUSTOMIZATIONS
+   Light Bearer Media Ministry
+   
+   Cinematic · Minimal · Premium · Dark-first
+   =========================================== */
+
+/* -------------------------------------------
+   BRAND TOKENS
+   ------------------------------------------- */
+.media-ministry-brand {
+  /* Primary = Slate Blue */
+  --bs-primary: #1e293b;
+  --bs-primary-rgb: 30, 41, 59;
+  
+  /* Secondary = Platinum */
+  --bs-secondary: #e2e8f0;
+  --bs-secondary-rgb: 226, 232, 240;
+  
+  /* Accent = Charcoal */
+  --bs-accent: #475569;
+  --bs-accent-rgb: 71, 85, 105;
+  
+  /* Stage palette */
+  --media-bg-dark: #0A0A0A;
+  --media-bg-stage: #1A1A1A;
+  
+  /* Text */
+  --media-text-warm: #374151;
+  --media-heading-color: #111827;
+  
+  /* Channel colors (used by btn-discord, icon references) */
+  --media-discord: #5865f2;
+}
+
+/* -------------------------------------------
+   CUSTOM BACKGROUNDS
+   ------------------------------------------- */
+.media-ministry-brand .bg-stage {
+  background-color: var(--media-bg-stage);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(226, 232, 240, 0.08) 0%, transparent 50%);
+}
+
+/* -------------------------------------------
+   TYPOGRAPHY
+   ------------------------------------------- */
+.media-ministry-brand h1,
+.media-ministry-brand h2,
+.media-ministry-brand h3,
+.media-ministry-brand .section-title {
+  color: var(--media-heading-color);
+  font-weight: 700;
+}
+
+.media-ministry-brand .eyebrow {
+  color: var(--bs-accent);
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+.media-ministry-brand .display-verse {
+  font-style: italic;
+  color: var(--bs-primary);
+  border-left: 4px solid var(--bs-secondary);
+  padding-left: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.media-ministry-brand .verse-reference {
+  font-size: 0.875rem;
+  color: var(--bs-secondary);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* -------------------------------------------
+   BUTTONS
+   ------------------------------------------- */
+.media-ministry-brand .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.media-ministry-brand .btn-primary {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #fff;
+  box-shadow: 0 4px 14px 0 rgba(30, 41, 59, 0.35);
+}
+
+.media-ministry-brand .btn-primary:hover,
+.media-ministry-brand .btn-primary:focus {
+  background: #334155;
+  border-color: #334155;
+  color: #fff;
+  box-shadow: 0 6px 20px 0 rgba(30, 41, 59, 0.45);
+  transform: translateY(-1px);
+}
+
+.media-ministry-brand .btn-secondary {
+  background: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: #1e293b;
+  box-shadow: 0 4px 14px 0 rgba(226, 232, 240, 0.3);
+}
+
+.media-ministry-brand .btn-secondary:hover {
+  background: #f8fafc;
+  border-color: #f8fafc;
+  color: #1e293b;
+  box-shadow: 0 6px 20px 0 rgba(226, 232, 240, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Channel button */
+.media-ministry-brand .btn-discord {
+  background: var(--media-discord);
+  border-color: var(--media-discord);
+  color: #fff;
+}
+
+.media-ministry-brand .btn-discord:hover {
+  background: #4752c4;
+  border-color: #4752c4;
+  color: #fff;
+}
+
+/* -------------------------------------------
+   HERO CUSTOMIZATION (Stage Spotlight Effect)
+   ------------------------------------------- */
+.media-ministry-brand .hero {
+  background: linear-gradient(180deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+  position: relative;
+}
+
+.media-ministry-brand .hero::before {
+  background: 
+    radial-gradient(ellipse 800px 600px at 50% 30%, rgba(30, 41, 59, 0.12) 0%, transparent 50%),
+    radial-gradient(circle 400px at 20% 80%, rgba(226, 232, 240, 0.08) 0%, transparent 50%),
+    radial-gradient(circle 400px at 80% 60%, rgba(30, 41, 59, 0.06) 0%, transparent 50%);
+}
+
+/* Spotlight effect overlay */
+.media-ministry-brand .hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 60% 40% at 50% 30%, transparent 0%, rgba(10, 10, 10, 0.7) 70%);
+  pointer-events: none;
+}
+
+.media-ministry-brand .hero-content h1 {
+  color: #fff;
+}
+
+.media-ministry-brand .hero-content .lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* -------------------------------------------
+   CARDS
+   ------------------------------------------- */
+.media-ministry-brand .card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.media-ministry-brand .card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.media-ministry-brand .card-title {
+  color: var(--media-heading-color);
+}
+
+/* Media Thumbnails */
+.media-ministry-brand .media-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.media-ministry-brand .media-thumb img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.media-ministry-brand .media-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+
+
+/* -------------------------------------------
+   CHANNEL STATS (watch.html hero)
+   ------------------------------------------- */
+.media-ministry-brand .channel-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.media-ministry-brand .channel-stat-item {
+  text-align: center;
+}
+
+.media-ministry-brand .channel-stat-value {
+  display: block;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.media-ministry-brand .channel-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* -------------------------------------------
+   NAVBAR
+   ------------------------------------------- */
+.media-ministry-brand .navbar {
+  background: rgba(10, 10, 10, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.1);
+}
+
+.media-ministry-brand .navbar-brand {
+  font-weight: 700;
+  color: #fff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.media-ministry-brand .nav-link {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.media-ministry-brand .nav-link:hover,
+.media-ministry-brand .nav-link.active {
+  color: var(--bs-secondary) !important;
+}
+
+/* -------------------------------------------
+   FOOTER
+   ------------------------------------------- */
+.media-ministry-brand .footer {
+  background: var(--media-bg-dark);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.media-ministry-brand .footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.media-ministry-brand .footer a:hover {
+  color: var(--bs-secondary);
+}
+
+.media-ministry-brand .footer h5,
+.media-ministry-brand .footer h6 {
+  color: #fff;
+}
+
+/* -------------------------------------------
+   CTA SECTION
+   ------------------------------------------- */
+.media-ministry-brand .cta-section {
+  background: linear-gradient(135deg, #0A0A0A 0%, var(--bs-primary) 50%, #1A1A1A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.media-ministry-brand .cta-section::before {
+  background: 
+    radial-gradient(ellipse 60% 50% at 30% 50%, rgba(var(--bs-secondary-rgb), 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(30, 41, 59, 0.1) 0%, transparent 50%);
+}
+
+/* Spotlight bars effect */
+.media-ministry-brand .cta-section::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -10%;
+  right: -10%;
+  bottom: -50%;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+/* -------------------------------------------
+   FORMS
+   ------------------------------------------- */
+.media-ministry-brand .form-control,
+.media-ministry-brand .form-select {
+  border-radius: 8px;
+  border: 2px solid var(--bs-border-color);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-ministry-brand .form-control:focus,
+.media-ministry-brand .form-select:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.15);
+}
+
+.media-ministry-brand .form-label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--media-heading-color);
+  margin-bottom: 0.5rem;
+}
+
+/* -------------------------------------------
+   SUBSCRIBER FORM
+   ------------------------------------------- */
+.media-ministry-brand .subscribe-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 500px;
+}
+
+.media-ministry-brand .subscribe-form .form-control {
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.media-ministry-brand .subscribe-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.media-ministry-brand .subscribe-form .form-control:focus {
+  border-color: var(--bs-secondary);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 3px rgba(var(--bs-secondary-rgb), 0.25);
+}
+
+/* -------------------------------------------
+   HERO BACKGROUND IMAGES
+   Each page gets its own class; shared gradient overlay + sizing.
+   ------------------------------------------- */
+.media-ministry-brand .hero-bg {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.media-ministry-brand .hero-bg-home {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-watch {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-listen {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-about {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-community {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-support {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=1920&h=1080&fit=crop&q=80');
+}
+
+.media-ministry-brand .hero-bg-connect {
+  background-image:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.88) 100%),
+    url('https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1920&h=1080&fit=crop&q=80');
+}
+
+/* -------------------------------------------
+   STAT LABELS (letter-spacing for stat bars)
+   ------------------------------------------- */
+.media-ministry-brand .stat-label {
+  letter-spacing: 0.08em;
+}
+
+/* -------------------------------------------
+   ICON CIRCLE BUTTON (social links in hero)
+   ------------------------------------------- */
+.media-ministry-brand .btn-icon-circle {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------------------------------------
+   HERO THEATER & CINEMATIC EFFECTS (index.html)
+   ------------------------------------------- */
+.media-ministry-brand .hero-theater-frame {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(226, 232, 240, 0.15) 0%,
+    rgba(15, 23, 42, 0.95) 70%
+  );
+}
+
+.media-ministry-brand .media-cinematic {
+  filter: brightness(0.85) contrast(1.1);
+}
+
+.media-ministry-brand .media-cinematic-soft {
+  filter: brightness(0.9) contrast(1.05);
+}
+
+.media-ministry-brand .media-cinematic-subtle {
+  filter: brightness(0.95) contrast(1.05);
+}
+
+.media-ministry-brand .hero-spotlight-overlay {
+  background: radial-gradient(
+    ellipse at 50% 40%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.6) 80%
+  );
+  pointer-events: none;
+}
+
+.media-ministry-brand .hero-bottom-fade {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.media-ministry-brand .media-caption-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* -------------------------------------------
+   GUIDELINE NUMBER (community.html)
+   ------------------------------------------- */
+.media-ministry-brand .guideline-number {
+  width: 28px;
+}
+
+/* -------------------------------------------
+   CUSTOM UTILITIES
+   ------------------------------------------- */
+.media-ministry-brand .hover-lift:hover {
+  background: rgba(var(--bs-white-rgb), 0.15) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--bs-black-rgb), 0.3);
+}
+
+/* -------------------------------------------
+   RESPONSIVE
+   ------------------------------------------- */
+@media (max-width: 768px) {
+  .media-ministry-brand .subscribe-form {
+    flex-direction: column;
+  }
+  
+  .media-ministry-brand .channel-stats {
+    justify-content: center;
+  }
+}

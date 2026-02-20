@@ -1,0 +1,371 @@
+/* ===========================================
+   HANDYMAN BRAND CUSTOMIZATIONS
+   Pro Fix Handyman — Portland, Oregon
+   
+   Brand: Reliable, professional, trustworthy,
+   hardworking, local expertise
+   
+   APPROACH: Override variables only, let theme do the work
+   =========================================== */
+
+/* -------------------------------------------
+   BRAND TOKENS
+   Override base theme variables
+   ------------------------------------------- */
+.handyman-brand {
+  /* Primary = Deep Tool Blue (trust, professionalism) */
+  --bs-primary: #1e40af;
+  --bs-primary-rgb: 30, 64, 175;
+  
+  /* Secondary = Safety Orange (energy, action, CTA) */
+  --bs-secondary: #ea580c;
+  --bs-secondary-rgb: 234, 88, 12;
+  
+  /* Accent = Work Green (reliability, completion) */
+  --bs-teal: #059669;
+  --bs-teal-rgb: 5, 150, 105;
+  
+  /* Slightly warmer light bg */
+  --bs-light: #f8fafc;
+  --bs-light-rgb: 248, 250, 252;
+  
+  /* Professional shadows */
+  --bs-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --bs-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --bs-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+  
+  /* Sturdy, slightly less rounded corners */
+  --bs-border-radius: 0.375rem;
+  --bs-border-radius-lg: 0.5rem;
+  --bs-border-radius-xl: 0.75rem;
+  
+  /* Glass effect */
+  --bs-glass-bg: rgba(255, 255, 255, 0.98);
+  --bs-glass-bg-dark: rgba(255, 255, 255, 0.98);
+  --bs-glass-border: rgba(0, 0, 0, 0.06);
+}
+
+/* -------------------------------------------
+   BACKGROUND UTILITIES
+   Brand-specific section backgrounds
+   ------------------------------------------- */
+.handyman-brand .bg-warm {
+  background-color: #fefce8;
+}
+
+.handyman-brand .bg-slate {
+  background-color: #f1f5f9;
+}
+
+/* -------------------------------------------
+   HEADER
+   Light professional header
+   ------------------------------------------- */
+.handyman-brand .main-header {
+  position: sticky;
+  --navbar-text-color: var(--bs-gray-700);
+  --navbar-text-hover: var(--bs-secondary);
+  background: var(--bs-glass-bg);
+  border-bottom: 1px solid var(--bs-glass-border);
+}
+
+.handyman-brand .navbar-brand {
+  color: var(--bs-primary);
+}
+
+.handyman-brand .navbar-brand i {
+  color: var(--bs-secondary);
+}
+
+.handyman-brand .nav-link.active {
+  color: var(--bs-secondary) !important;
+}
+
+/* -------------------------------------------
+   INFO STRIP
+   Top utility bar with contact info
+   ------------------------------------------- */
+.handyman-brand .info-strip {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.handyman-brand .info-strip a {
+  color: var(--bs-white);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.handyman-brand .info-strip a:hover {
+  color: var(--bs-secondary);
+}
+
+.handyman-brand .info-strip-item {
+  padding: 0 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.handyman-brand .info-strip-item:last-child {
+  border-right: none;
+}
+
+/* -------------------------------------------
+   HERO
+   Background image with professional overlay
+   ------------------------------------------- */
+.handyman-brand .hero {
+  background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.handyman-brand .hero::before {
+  background:
+    linear-gradient(135deg, 
+      rgba(15, 23, 42, 0.88) 0%, 
+      rgba(15, 23, 42, 0.78) 50%,
+      rgba(15, 23, 42, 0.88) 100%
+    ),
+    radial-gradient(ellipse at 70% 20%, rgba(var(--bs-secondary-rgb), 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 80%, rgba(var(--bs-teal-rgb), 0.08) 0%, transparent 60%);
+}
+
+.handyman-brand .hero-highlight {
+  color: var(--bs-secondary);
+}
+
+/* -------------------------------------------
+   BUTTONS
+   Orange secondary buttons for strong CTAs
+   ------------------------------------------- */
+.handyman-brand .btn-secondary {
+  background: linear-gradient(135deg, var(--bs-secondary), #f97316);
+  border-color: transparent;
+  color: var(--bs-white);
+  font-weight: 700;
+}
+
+.handyman-brand .btn-secondary:hover {
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  color: var(--bs-white);
+}
+
+/* -------------------------------------------
+   CARDS
+   Hover accent border
+   ------------------------------------------- */
+.handyman-brand .card:hover,
+.handyman-brand .card-service:hover,
+.handyman-brand .card-feature:hover {
+  border-color: rgba(var(--bs-secondary-rgb), 0.2);
+}
+
+/* -------------------------------------------
+   EYEBROW
+   Orange accent color
+   ------------------------------------------- */
+.handyman-brand .eyebrow {
+  color: var(--bs-secondary);
+}
+
+/* -------------------------------------------
+   TRUST BADGES
+   Credential display for service companies
+   ------------------------------------------- */
+.handyman-brand .trust-badge-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: var(--bs-shadow-sm);
+  border: 1px solid var(--bs-border-color);
+}
+
+.handyman-brand .trust-badge-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(var(--bs-teal-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.75rem;
+  color: var(--bs-teal);
+  font-size: 1.25rem;
+}
+
+/* -------------------------------------------
+   PROCESS STEPS
+   How-it-works numbered steps
+   ------------------------------------------- */
+.handyman-brand .process-step {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.handyman-brand .process-step-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bs-primary), var(--bs-teal));
+  color: var(--bs-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+/* -------------------------------------------
+   SERVICE DETAIL CARDS
+   Sub-service items within a category  
+   ------------------------------------------- */
+.handyman-brand .service-detail-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--bs-border-color);
+  box-shadow: var(--bs-shadow-sm);
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.handyman-brand .service-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-md);
+}
+
+.handyman-brand .service-detail-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--bs-border-radius-lg);
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* -------------------------------------------
+   PORTFOLIO PROJECT CARDS
+   Before/after style project cards
+   ------------------------------------------- */
+.handyman-brand .project-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bs-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.handyman-brand .project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-md);
+}
+
+.handyman-brand .project-card-image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.handyman-brand .project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.handyman-brand .project-card:hover .project-card-image img {
+  transform: scale(1.05);
+}
+
+.handyman-brand .project-card-body {
+  padding: 1.5rem;
+}
+
+.handyman-brand .project-card-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(var(--bs-primary-rgb), 0.1);
+  color: var(--bs-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+/* -------------------------------------------
+   BLOG CARDS
+   Article preview cards
+   ------------------------------------------- */
+.handyman-brand .blog-card {
+  background: var(--bs-white);
+  border-radius: var(--bs-border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--bs-shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.handyman-brand .blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--bs-shadow-md);
+}
+
+.handyman-brand .blog-card-image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.handyman-brand .blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.handyman-brand .blog-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------
+   FOOTER
+   Dark professional footer with orange accent
+   ------------------------------------------- */
+.handyman-brand .footer {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.handyman-brand .footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--bs-primary), var(--bs-secondary), var(--bs-teal));
+}
+
+/* -------------------------------------------
+   RESPONSIVE OVERRIDES
+   ------------------------------------------- */
+@media (max-width: 768px) {
+  .handyman-brand .info-strip-item {
+    padding: 0 0.5rem;
+    border-right: none;
+    font-size: 0.8125rem;
+  }
+}
