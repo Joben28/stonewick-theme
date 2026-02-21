@@ -1115,6 +1115,364 @@
         </div>
     </section>
 
+    <!-- ==========================================================
+         FORM FILLOUTS - SERVICE QUOTE REQUEST
+         Full page-width service request form (real-world usage pattern)
+         ========================================================== -->
+    <section id="form-quote" class="py-section">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Service Quote Request Form</h2>
+            <p class="section-intro text-muted">Full-width service intake form. Suitable for quote requests, bookings, and service sign-ups.</p>
+
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <form data-validate id="quoteForm">
+                        <!-- Service Details -->
+                        <h5 class="mb-3 pb-2 border-bottom">Service Details</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="qServiceType" class="form-label">Service Type <span class="text-danger">*</span></label>
+                                <select class="form-select" id="qServiceType" required>
+                                    <option value="">Select a service...</option>
+                                    <option>General Repairs</option>
+                                    <option>Plumbing</option>
+                                    <option>Electrical</option>
+                                    <option>Painting</option>
+                                    <option>Carpentry</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service type.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qUrgency" class="form-label">Urgency</label>
+                                <select class="form-select" id="qUrgency">
+                                    <option value="">Select urgency...</option>
+                                    <option>Emergency (same day)</option>
+                                    <option>Urgent (within 2 days)</option>
+                                    <option>Standard (within a week)</option>
+                                    <option>Flexible / Not urgent</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="qDescription" class="form-label">Describe the Work Needed <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="qDescription" rows="4" placeholder="Please describe the issue or work needed in as much detail as possible..." required minlength="20"></textarea>
+                                <div class="form-text">Minimum 20 characters. More detail = more accurate quote.</div>
+                                <div class="invalid-feedback">Please describe the work needed (at least 20 characters).</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qBudget" class="form-label">Estimated Budget</label>
+                                <select class="form-select" id="qBudget">
+                                    <option value="">Select a range...</option>
+                                    <option>Under $200</option>
+                                    <option>$200 – $500</option>
+                                    <option>$500 – $1,000</option>
+                                    <option>$1,000 – $2,500</option>
+                                    <option>$2,500+</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qPreferredDate" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="qPreferredDate">
+                            </div>
+                            <div class="col-12">
+                                <label for="qPhotos" class="form-label">Upload Photos <span class="text-muted fw-normal">(optional)</span></label>
+                                <input class="form-control" type="file" id="qPhotos" multiple accept="image/*">
+                                <div class="form-text">Upload up to 5 photos. JPG, PNG or HEIC. Max 10MB each.</div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <h5 class="mb-3 pb-2 border-bottom">Contact Information</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="qFirstName" class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="qFirstName" placeholder="Jane" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qLastName" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="qLastName" placeholder="Smith" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="qEmail" placeholder="jane@example.com" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="qPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="qPhone" placeholder="(555) 123-4567" required>
+                                <div class="invalid-feedback">Please enter your phone number.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="qAddress" class="form-label">Service Address <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="qAddress" placeholder="123 Main St, Portland, OR 97201" required>
+                                <div class="invalid-feedback">Please enter the service address.</div>
+                            </div>
+                        </div>
+
+                        <!-- Preferences -->
+                        <h5 class="mb-3 pb-2 border-bottom">Preferences</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-12">
+                                <label class="form-label d-block">Preferred Contact Method</label>
+                                <div class="d-flex flex-wrap gap-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="qContactMethod" id="qContactPhone" value="phone" checked>
+                                        <label class="form-check-label" for="qContactPhone"><i class="bi bi-telephone me-1"></i>Phone</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="qContactMethod" id="qContactEmail" value="email">
+                                        <label class="form-check-label" for="qContactEmail"><i class="bi bi-envelope me-1"></i>Email</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="qContactMethod" id="qContactText" value="text">
+                                        <label class="form-check-label" for="qContactText"><i class="bi bi-chat-dots me-1"></i>Text</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="qUpdates">
+                                    <label class="form-check-label" for="qUpdates">
+                                        Send me updates and maintenance tips by email
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="qTerms" required>
+                                    <label class="form-check-label" for="qTerms">
+                                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="bi bi-send me-2"></i>Submit Quote Request
+                            </button>
+                            <button type="reset" class="btn btn-outline-secondary btn-lg">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card border-0 bg-light rounded-3 p-4 mb-4">
+                        <h6 class="fw-bold mb-3"><i class="bi bi-lightning-charge-fill text-warning me-2"></i>What Happens Next?</h6>
+                        <ol class="ps-3 mb-0 text-muted small">
+                            <li class="mb-2">We review your request within 2 hours</li>
+                            <li class="mb-2">A tech calls to confirm details and schedule</li>
+                            <li class="mb-2">We provide a written quote before any work starts</li>
+                            <li>You approve — we show up on time and get it done</li>
+                        </ol>
+                    </div>
+                    <div class="card border-0 bg-light rounded-3 p-4 mb-4">
+                        <h6 class="fw-bold mb-3"><i class="bi bi-shield-check text-success me-2"></i>Our Guarantee</h6>
+                        <p class="text-muted small mb-0">All work is backed by our 90-day workmanship warranty. If something isn't right, we fix it — free of charge.</p>
+                    </div>
+                    <div class="card border-0 bg-primary text-white rounded-3 p-4">
+                        <h6 class="fw-bold mb-2">Need urgent help?</h6>
+                        <p class="small mb-3 text-white opacity-75">Skip the form — call us directly for same-day emergency service.</p>
+                        <a href="tel:5551234567" class="btn btn-light btn-sm">
+                            <i class="bi bi-telephone-fill me-2"></i>(555) 123-4567
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         FORM FILLOUTS - LEAD CAPTURE VARIANTS
+         Compact embedded forms for newsletters, callbacks, and opt-ins
+         ========================================================== -->
+    <section id="form-lead-capture" class="py-section bg-light">
+        <div class="container">
+            <div class="text-primary fw-bold text-uppercase fs-6 mb-3 eyebrow">THEME CUSTOM</div>
+            <h2 class="section-heading text-dark">Lead Capture & Opt-In Forms</h2>
+            <p class="section-intro text-muted">Compact embedded forms for newsletters, callback requests, and quick sign-ups.</p>
+
+            <div class="row g-4 mb-5">
+
+                <!-- Newsletter — Inline dark -->
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Newsletter Opt-In (Dark)</h5>
+                    <div class="bg-dark rounded-3 p-4 p-lg-5">
+                        <p class="eyebrow text-warning mb-2">STAY IN THE KNOW</p>
+                        <h4 class="text-white mb-2">Get Home Maintenance Tips</h4>
+                        <p class="text-white opacity-75 small mb-4">Monthly tips, seasonal checklists, and exclusive offers. No spam, ever.</p>
+                        <form data-validate id="newsletterForm" class="d-flex flex-column flex-sm-row gap-2">
+                            <div class="flex-grow-1">
+                                <input type="email" class="form-control form-control-dark" placeholder="your@email.com" required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <button type="submit" class="btn btn-warning flex-shrink-0">Subscribe</button>
+                        </form>
+                        <p class="text-white opacity-50 mt-2 mb-0" style="font-size: 0.75rem;">By subscribing you agree to our Privacy Policy. Unsubscribe anytime.</p>
+                    </div>
+                </div>
+
+                <!-- Callback Request — Card -->
+                <div class="col-lg-6">
+                    <h5 class="mb-3">Callback Request</h5>
+                    <div class="bg-white border rounded-3 p-4 p-lg-5 h-100">
+                        <h4 class="mb-1">Request a Callback</h4>
+                        <p class="text-muted small mb-4">Leave your number and we'll call you within the hour during business hours.</p>
+                        <form data-validate id="callbackForm">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="cbName" class="form-label">Your Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="cbName" placeholder="Jane Smith" required>
+                                    <div class="invalid-feedback">Name is required.</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="cbPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="cbPhone" placeholder="(555) 000-0000" required>
+                                    <div class="invalid-feedback">Phone number is required.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="cbTime" class="form-label">Best Time to Call</label>
+                                    <select class="form-select" id="cbTime">
+                                        <option value="">Anytime during business hours</option>
+                                        <option>Morning (8am – 12pm)</option>
+                                        <option>Afternoon (12pm – 5pm)</option>
+                                        <option>Evening (5pm – 8pm)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        <i class="bi bi-telephone-fill me-2"></i>Request Callback
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Second row -->
+            <div class="row g-4">
+
+                <!-- Inline one-liner strip (horizontal CTA bar) -->
+                <div class="col-12">
+                    <h5 class="mb-3">Inline Strip (CTA Bar)</h5>
+                    <div class="bg-primary rounded-3 px-4 py-4">
+                        <div class="row align-items-center g-3">
+                            <div class="col-lg-6">
+                                <h5 class="text-white mb-1">Get Your Free Estimate Today</h5>
+                                <p class="text-white opacity-75 small mb-0">No obligation. No surprise fees. Just honest pricing.</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <form data-validate id="stripForm" class="d-flex flex-column flex-sm-row gap-2">
+                                    <input type="email" class="form-control flex-grow-1" placeholder="Enter your email..." required>
+                                    <input type="tel" class="form-control" style="max-width: 180px;" placeholder="Phone number" required>
+                                    <button type="submit" class="btn btn-warning flex-shrink-0 fw-semibold">Get Quote</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Minimal floating label sign-up -->
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Floating Label Sign-Up</h5>
+                    <div class="card border-0 shadow-sm p-4">
+                        <form data-validate id="signupForm">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="slFullName" placeholder="Full Name" required>
+                                <label for="slFullName">Full Name</label>
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="slEmail" placeholder="Email" required>
+                                <label for="slEmail">Email Address</label>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="slService">
+                                    <option value="">Choose service...</option>
+                                    <option>General Repairs</option>
+                                    <option>Plumbing</option>
+                                    <option>Electrical</option>
+                                    <option>Painting</option>
+                                </select>
+                                <label for="slService">Service Needed</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Get Started</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Two-field quick contact -->
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Minimal Quick Contact</h5>
+                    <div class="card border-0 shadow-sm p-4">
+                        <h6 class="fw-bold mb-1">Have a question?</h6>
+                        <p class="text-muted small mb-3">We'll get back to you within 1 business hour.</p>
+                        <form data-validate id="quickContactForm">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control" placeholder="Your name" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" placeholder="Your email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="Your question..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary w-100">Send Question</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Donation / payment amount selector -->
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Amount Selector Form</h5>
+                    <div class="card border-0 shadow-sm p-4">
+                        <h6 class="fw-bold mb-1">Make a Contribution</h6>
+                        <p class="text-muted small mb-3">Choose an amount or enter your own.</p>
+                        <form data-validate id="amountForm">
+                            <div class="btn-group w-100 mb-3" role="group" aria-label="Preset amounts">
+                                <input type="radio" class="btn-check" name="amount" id="amt25" value="25" checked>
+                                <label class="btn btn-outline-primary" for="amt25">$25</label>
+                                <input type="radio" class="btn-check" name="amount" id="amt50" value="50">
+                                <label class="btn btn-outline-primary" for="amt50">$50</label>
+                                <input type="radio" class="btn-check" name="amount" id="amt100" value="100">
+                                <label class="btn btn-outline-primary" for="amt100">$100</label>
+                                <input type="radio" class="btn-check" name="amount" id="amtOther" value="other">
+                                <label class="btn btn-outline-primary" for="amtOther">Other</label>
+                            </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" placeholder="Custom amount" min="1">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email for receipt" required>
+                                <div class="invalid-feedback">Email required for receipt.</div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100 fw-semibold">
+                                <i class="bi bi-heart-fill me-2"></i>Contribute
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Related Components -->
     <section class="py-4 bg-light border-top">
         <div class="container">

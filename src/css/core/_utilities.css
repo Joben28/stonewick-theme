@@ -638,3 +638,152 @@
 .overlay-none::before {
   display: none !important;
 }
+
+/* -------------------------------------------
+   TEXTURE UTILITIES
+   Pure-CSS background texture patterns.
+   Add alongside any bg-* class — textures
+   sit in background-image above background-color.
+
+   Default ink: dark lines (light backgrounds).
+   For dark/colored backgrounds, add modifier:
+     .texture-ink-light  → white/light lines
+     .texture-ink-dark   → back to dark lines
+
+   Usage:
+     <section class="bg-light texture-linen">
+     <section class="bg-dark texture-hairline texture-ink-light">
+     <section class="bg-trust texture-grit texture-ink-light">
+   ------------------------------------------- */
+
+:root {
+  --texture-ink: 0, 0, 0;
+}
+
+.texture-ink-light { --texture-ink: 255, 255, 255; }
+.texture-ink-dark  { --texture-ink: 0, 0, 0; }
+
+/* LINEN — woven crosshatch fabric */
+.texture-linen {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(var(--texture-ink), 0.04) 0px,
+      rgba(var(--texture-ink), 0.04) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      135deg,
+      rgba(var(--texture-ink), 0.04) 0px,
+      rgba(var(--texture-ink), 0.04) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}
+
+/* GRIT — concrete dust dot noise */
+.texture-grit {
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--texture-ink), 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 3px 3px;
+}
+
+/* BRUSHED — subtle vertical strokes */
+.texture-brushed {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(var(--texture-ink), 0.05) 0px,
+      rgba(var(--texture-ink), 0.05) 1px,
+      transparent 1px,
+      transparent 7px
+    );
+}
+
+/* BLUEPRINT — technical grid lines */
+.texture-blueprint {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(var(--texture-ink), 0.07) 0px,
+      rgba(var(--texture-ink), 0.07) 1px,
+      transparent 1px,
+      transparent 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(var(--texture-ink), 0.07) 0px,
+      rgba(var(--texture-ink), 0.07) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+}
+
+/* FIBER — diagonal paper grain */
+.texture-fiber {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      rgba(var(--texture-ink), 0.05) 0px,
+      rgba(var(--texture-ink), 0.05) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(var(--texture-ink), 0.025) 0px,
+      rgba(var(--texture-ink), 0.025) 1px,
+      transparent 1px,
+      transparent 16px
+    );
+}
+
+/* CLOUDMIST — soft radial fog blooms */
+.texture-cloudmist {
+  background-image:
+    radial-gradient(ellipse at 15% 20%, rgba(var(--texture-ink), 0.06) 0%, transparent 45%),
+    radial-gradient(ellipse at 78% 65%, rgba(var(--texture-ink), 0.04) 0%, transparent 40%),
+    radial-gradient(ellipse at 48% 95%, rgba(var(--texture-ink), 0.03) 0%, transparent 35%);
+}
+
+/* HAIRLINE — fine open square grid */
+.texture-hairline {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(var(--texture-ink), 0.06) 0px,
+      rgba(var(--texture-ink), 0.06) 1px,
+      transparent 1px,
+      transparent 14px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(var(--texture-ink), 0.06) 0px,
+      rgba(var(--texture-ink), 0.06) 1px,
+      transparent 1px,
+      transparent 14px
+    );
+}
+
+/* MICROGRID — dense fine square grid */
+.texture-microgrid {
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(var(--texture-ink), 0.07) 0px,
+      rgba(var(--texture-ink), 0.07) 1px,
+      transparent 1px,
+      transparent 5px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(var(--texture-ink), 0.07) 0px,
+      rgba(var(--texture-ink), 0.07) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+}

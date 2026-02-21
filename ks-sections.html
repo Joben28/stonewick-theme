@@ -1453,6 +1453,409 @@
         </div>
     </section>
 
+    <!-- ==========================================================
+         23. CONTACT US SECTION
+         Classic two-column: form left, contact details right
+         ========================================================== -->
+    <section id="contact-form-section" class="py-section bg-light">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <!-- Form -->
+                <div class="col-lg-7">
+                    <p class="eyebrow text-primary">CONTACT US</p>
+                    <h2 class="section-heading">Send Us a Message</h2>
+                    <p class="section-intro text-muted mb-4">Have a question or ready to get started? Fill out the form and we'll get back to you within one business day.</p>
+
+                    <form data-validate id="contactSectionForm">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="csFirst" class="form-label">First Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="csFirst" placeholder="Jane" required>
+                                <div class="invalid-feedback">Please enter your first name.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="csLast" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="csLast" placeholder="Smith" required>
+                                <div class="invalid-feedback">Please enter your last name.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="csEmail" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="csEmail" placeholder="jane@example.com" required>
+                                <div class="invalid-feedback">Please enter a valid email address.</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="csPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="csPhone" placeholder="(555) 123-4567">
+                            </div>
+                            <div class="col-12">
+                                <label for="csSubject" class="form-label">Subject <span class="text-danger">*</span></label>
+                                <select class="form-select" id="csSubject" required>
+                                    <option value="">What can we help you with?</option>
+                                    <option>General Inquiry</option>
+                                    <option>Request a Quote</option>
+                                    <option>Schedule Service</option>
+                                    <option>Billing Question</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a subject.</div>
+                            </div>
+                            <div class="col-12">
+                                <label for="csMessage" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="csMessage" rows="5" placeholder="Tell us more about what you need..." required minlength="10"></textarea>
+                                <div class="form-text">Minimum 10 characters.</div>
+                                <div class="invalid-feedback">Please enter a message (at least 10 characters).</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="csConsent" required>
+                                    <label class="form-check-label" for="csConsent">
+                                        I agree to the <a href="#">Privacy Policy</a> <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="invalid-feedback">You must agree before submitting.</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg me-2">Send Message</button>
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-5">
+                    <div class="ps-lg-4 pt-lg-5 mt-lg-4">
+                        <h5 class="fw-bold mb-4">Other Ways to Reach Us</h5>
+
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center" style="width:48px;height:48px;">
+                                    <i class="bi bi-telephone-fill text-primary fs-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Phone</div>
+                                <a href="tel:5551234567" class="text-muted text-decoration-none">(555) 123-4567</a>
+                                <div class="text-muted small">Mon–Fri 7am–6pm, Sat 8am–4pm</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center" style="width:48px;height:48px;">
+                                    <i class="bi bi-envelope-fill text-primary fs-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Email</div>
+                                <a href="mailto:hello@example.com" class="text-muted text-decoration-none">hello@example.com</a>
+                                <div class="text-muted small">We reply within 1 business day</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-4">
+                            <div class="flex-shrink-0">
+                                <div class="bg-primary bg-opacity-10 rounded-2 d-flex align-items-center justify-content-center" style="width:48px;height:48px;">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-5"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="fw-semibold">Service Area</div>
+                                <div class="text-muted small">Portland Metro &amp; surrounding areas<br>within 30 miles of downtown</div>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="alert alert-warning d-flex gap-3 align-items-start border-0 rounded-3">
+                            <i class="bi bi-lightning-charge-fill fs-5 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <div class="fw-semibold mb-1">Emergency Service?</div>
+                                <div class="small">For urgent repairs, call us directly — we have technicians available same-day.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         24. QUOTE REQUEST FORM SECTION
+         Centered intro, full-width form below on dark trust background
+         ========================================================== -->
+    <section id="quote-form-section" class="py-section bg-trust texture-linen texture-ink-light">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <p class="eyebrow text-warning">FREE ESTIMATE</p>
+                <h2 class="section-heading text-white">Request a Project Quote</h2>
+                <p class="section-intro text-white-70">No obligation. We'll review your request and send a detailed written estimate within 24 hours.</p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="bg-white rounded-3 p-4 p-lg-5 shadow">
+                        <form data-validate id="quoteSectionForm">
+                            <div class="row g-4">
+                                <!-- Col 1 -->
+                                <div class="col-md-6">
+                                    <label for="qsFirst" class="form-label">First Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="qsFirst" placeholder="Jane" required>
+                                    <div class="invalid-feedback">First name required.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsLast" class="form-label">Last Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="qsLast" placeholder="Smith" required>
+                                    <div class="invalid-feedback">Last name required.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="qsEmail" placeholder="jane@example.com" required>
+                                    <div class="invalid-feedback">Valid email required.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsPhone" class="form-label">Phone <span class="text-danger">*</span></label>
+                                    <input type="tel" class="form-control" id="qsPhone" placeholder="(555) 123-4567" required>
+                                    <div class="invalid-feedback">Phone number required.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsService" class="form-label">Service Needed <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="qsService" required>
+                                        <option value="">Select a service...</option>
+                                        <option>General Repairs</option>
+                                        <option>Plumbing</option>
+                                        <option>Electrical</option>
+                                        <option>Painting</option>
+                                        <option>Carpentry</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a service.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsAddress" class="form-label">Service Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="qsAddress" placeholder="123 Main St, Portland, OR" required>
+                                    <div class="invalid-feedback">Address required.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="qsDetails" class="form-label">Describe the Work Needed <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="qsDetails" rows="4" placeholder="Describe what needs to be done. Include size, existing materials, or any relevant details..." required minlength="20"></textarea>
+                                    <div class="form-text">The more detail you provide, the faster we can give you an accurate quote.</div>
+                                    <div class="invalid-feedback">Please describe the work (at least 20 characters).</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsBudget" class="form-label">Approximate Budget</label>
+                                    <select class="form-select" id="qsBudget">
+                                        <option value="">Not sure yet</option>
+                                        <option>Under $500</option>
+                                        <option>$500 – $1,000</option>
+                                        <option>$1,000 – $3,000</option>
+                                        <option>$3,000 – $10,000</option>
+                                        <option>$10,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="qsTimeline" class="form-label">Desired Timeline</label>
+                                    <select class="form-select" id="qsTimeline">
+                                        <option value="">Flexible</option>
+                                        <option>As soon as possible</option>
+                                        <option>Within 2 weeks</option>
+                                        <option>Within a month</option>
+                                        <option>Just planning ahead</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="qsTerms" required>
+                                        <label class="form-check-label" for="qsTerms">
+                                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a> <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex flex-wrap gap-3 align-items-center">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-send me-2"></i>Submit Quote Request
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-secondary btn-lg">Clear</button>
+                                    <span class="text-muted small ms-auto"><i class="bi bi-lock me-1"></i>Your info is never sold or shared.</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust strip below form -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="row g-4 text-center">
+                        <div class="col-6 col-md-3">
+                            <i class="bi bi-shield-check text-warning fs-3 d-block mb-2"></i>
+                            <div class="text-white fw-semibold small">Licensed &amp; Insured</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <i class="bi bi-clock text-warning fs-3 d-block mb-2"></i>
+                            <div class="text-white fw-semibold small">Reply Within 24hrs</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <i class="bi bi-cash-stack text-warning fs-3 d-block mb-2"></i>
+                            <div class="text-white fw-semibold small">No Hidden Fees</div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <i class="bi bi-patch-check text-warning fs-3 d-block mb-2"></i>
+                            <div class="text-white fw-semibold small">90-Day Guarantee</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         25. NEWSLETTER SECTION
+         Standalone email opt-in used between page sections
+         ========================================================== -->
+    <section id="newsletter-section" class="py-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center">
+                    <p class="eyebrow text-primary">STAY IN THE LOOP</p>
+                    <h2 class="section-heading">Get Monthly Home Maintenance Tips</h2>
+                    <p class="section-intro text-muted mb-5">Seasonal checklists, DIY advice, and exclusive offers delivered once a month. No spam, ever — unsubscribe anytime.</p>
+
+                    <form data-validate id="newsletterSectionForm" class="d-flex flex-column flex-sm-row gap-2 justify-content-center mb-3">
+                        <div class="flex-grow-1" style="max-width: 380px;">
+                            <input type="email" class="form-control form-control-lg" placeholder="Enter your email address" required>
+                            <div class="invalid-feedback text-start">Please enter a valid email address.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg flex-shrink-0">Subscribe Free</button>
+                    </form>
+
+                    <p class="text-muted small mb-5">
+                        <i class="bi bi-lock me-1"></i>We respect your privacy. No spam. Unsubscribe at any time.
+                    </p>
+
+                    <div class="d-flex flex-wrap justify-content-center gap-4 text-muted small">
+                        <span><i class="bi bi-people me-1 text-primary"></i>12,400 subscribers</span>
+                        <span><i class="bi bi-star-fill me-1 text-warning"></i>4.9 / 5 rating</span>
+                        <span><i class="bi bi-calendar3 me-1 text-primary"></i>Sent once a month</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         26. BACKGROUND TEXTURES
+         Texture utilities layered on bg-* classes
+         ========================================================== -->
+    <section class="py-section bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="eyebrow text-primary">SECTION BLUEPRINT</p>
+                <h2 class="section-heading">Background Textures</h2>
+                <p class="section-intro text-muted">Add <code>.texture-*</code> alongside any <code>bg-*</code> class. Use <code>.texture-ink-light</code> on dark backgrounds.</p>
+            </div>
+
+            <!-- Light background swatches -->
+            <h6 class="text-uppercase fw-bold small text-muted mb-3">On light backgrounds (default ink)</h6>
+            <div class="row g-3 mb-5">
+                <div class="col-6 col-md-3">
+                    <div class="texture-linen bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Linen</div>
+                        <code class="small text-muted">texture-linen</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-grit bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Grit</div>
+                        <code class="small text-muted">texture-grit</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-brushed bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Brushed</div>
+                        <code class="small text-muted">texture-brushed</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-blueprint bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Blueprint</div>
+                        <code class="small text-muted">texture-blueprint</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-fiber bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Fiber</div>
+                        <code class="small text-muted">texture-fiber</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-cloudmist bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Cloudmist</div>
+                        <code class="small text-muted">texture-cloudmist</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-hairline bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Hairline</div>
+                        <code class="small text-muted">texture-hairline</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-microgrid bg-light rounded-3 p-4 text-center" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Microgrid</div>
+                        <code class="small text-muted">texture-microgrid</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark background swatches with ink-light -->
+            <h6 class="text-uppercase fw-bold small text-muted mb-3">On dark backgrounds (<code>+ texture-ink-light</code>)</h6>
+            <div class="row g-3 mb-5">
+                <div class="col-6 col-md-3">
+                    <div class="texture-linen texture-ink-light bg-dark rounded-3 p-4 text-center text-white" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Linen</div>
+                        <code class="small opacity-50">bg-dark</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-grit texture-ink-light bg-trust rounded-3 p-4 text-center text-white" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Grit</div>
+                        <code class="small opacity-50">bg-trust</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-blueprint texture-ink-light bg-primary rounded-3 p-4 text-center text-white" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Blueprint</div>
+                        <code class="small opacity-50">bg-primary</code>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="texture-hairline texture-ink-light bg-secondary rounded-3 p-4 text-center text-white" style="min-height:120px;">
+                        <div class="fw-semibold mb-1">Hairline</div>
+                        <code class="small opacity-50">bg-secondary</code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Usage snippet -->
+            <div class="bg-light rounded-3 p-4">
+                <p class="fw-semibold mb-2 small">Usage</p>
+                <pre class="mb-0 small text-muted"><code>&lt;!-- Light background --&gt;
+&lt;section class="py-section bg-light texture-linen"&gt;...&lt;/section&gt;
+
+&lt;!-- Dark background — add texture-ink-light --&gt;
+&lt;section class="py-section bg-trust texture-grit texture-ink-light"&gt;...&lt;/section&gt;
+
+&lt;!-- Override ink color directly --&gt;
+&lt;section class="py-section bg-warning texture-microgrid" style="--texture-ink: 100, 50, 0"&gt;...&lt;/section&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
     <!-- Related Components -->
     <section class="py-4 bg-light border-top">
         <div class="container">
@@ -1461,6 +1864,10 @@
                 <a href="ks-cards.html#cards-light" class="btn btn-sm btn-outline-primary">Card Components <i class="bi bi-arrow-right-short"></i></a>
                 <a href="ks-heroes.html#hero-default" class="btn btn-sm btn-outline-primary">Hero Sections <i class="bi bi-arrow-right-short"></i></a>
                 <a href="ks-interactive.html#accordion" class="btn btn-sm btn-outline-primary">Accordion <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-sections.html#contact-form-section" class="btn btn-sm btn-outline-primary">Contact Form Section <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-sections.html#quote-form-section" class="btn btn-sm btn-outline-primary">Quote Request Section <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-sections.html#newsletter-section" class="btn btn-sm btn-outline-primary">Newsletter Section <i class="bi bi-arrow-right-short"></i></a>
+                <a href="ks-interactive.html#form-quote" class="btn btn-sm btn-outline-primary">Form Fillout Components <i class="bi bi-arrow-right-short"></i></a>
                 <a href="ks-data.html#metrics" class="btn btn-sm btn-outline-primary">Metrics & Timelines <i class="bi bi-arrow-right-short"></i></a>
                 <a href="ks-buttons.html#cta" class="btn btn-sm btn-outline-primary">CTA Buttons <i class="bi bi-arrow-right-short"></i></a>
             </div>
