@@ -1,5 +1,5 @@
 /* StoneWick Theme - core module */
-/* Generated: 2026-02-21T05:33:12.864Z */
+/* Generated: 2026-02-21T06:19:06.510Z */
 /* === core/_variables.css === */
 /* ===========================================
    THEME VARIABLES
@@ -1202,23 +1202,36 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
    ------------------------------------------- */
 :root {
   --texture-ink: 0, 0, 0;
+  --texture-opacity: 0.06; /* base strength — overridden by intensity modifiers */
 }
+/* --- Ink modifiers --- */
 .texture-ink-light { --texture-ink: 255, 255, 255; }
 .texture-ink-dark  { --texture-ink: 0, 0, 0; }
+/* --- Intensity modifiers ---
+   Combine with any texture class:
+   <section class="bg-light texture-linen texture-faint">
+   <section class="bg-trust texture-grit texture-ink-light texture-hard">
+   --texture-opacity drives primary layer; echo layers auto-scale via calc().
+*/
+.texture-faint  { --texture-opacity: 0.02; }
+.texture-soft   { --texture-opacity: 0.04; }
+/* (default: 0.06 from :root) */
+.texture-strong { --texture-opacity: 0.10; }
+.texture-hard   { --texture-opacity: 0.18; }
 /* LINEN — woven crosshatch fabric */
 .texture-linen {
   background-image:
     repeating-linear-gradient(
       45deg,
-      rgba(var(--texture-ink), 0.04) 0px,
-      rgba(var(--texture-ink), 0.04) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 5px
     ),
     repeating-linear-gradient(
       135deg,
-      rgba(var(--texture-ink), 0.04) 0px,
-      rgba(var(--texture-ink), 0.04) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 5px
     );
@@ -1227,7 +1240,7 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
 .texture-grit {
   background-image: radial-gradient(
     circle,
-    rgba(var(--texture-ink), 0.08) 1px,
+    rgba(var(--texture-ink), var(--texture-opacity)) 1px,
     transparent 1px
   );
   background-size: 3px 3px;
@@ -1237,8 +1250,8 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
   background-image:
     repeating-linear-gradient(
       90deg,
-      rgba(var(--texture-ink), 0.05) 0px,
-      rgba(var(--texture-ink), 0.05) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 7px
     );
@@ -1248,58 +1261,58 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(var(--texture-ink), 0.07) 0px,
-      rgba(var(--texture-ink), 0.07) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 28px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(var(--texture-ink), 0.07) 0px,
-      rgba(var(--texture-ink), 0.07) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 28px
     );
 }
-/* FIBER — diagonal paper grain */
+/* FIBER — diagonal paper grain (primary + half-strength echo) */
 .texture-fiber {
   background-image:
     repeating-linear-gradient(
       135deg,
-      rgba(var(--texture-ink), 0.05) 0px,
-      rgba(var(--texture-ink), 0.05) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 8px
     ),
     repeating-linear-gradient(
       45deg,
-      rgba(var(--texture-ink), 0.025) 0px,
-      rgba(var(--texture-ink), 0.025) 1px,
+      rgba(var(--texture-ink), calc(var(--texture-opacity) * 0.5)) 0px,
+      rgba(var(--texture-ink), calc(var(--texture-opacity) * 0.5)) 1px,
       transparent 1px,
       transparent 16px
     );
 }
-/* CLOUDMIST — soft radial fog blooms */
+/* CLOUDMIST — soft radial fog blooms (primary + 0.65 + 0.5 echo) */
 .texture-cloudmist {
   background-image:
-    radial-gradient(ellipse at 15% 20%, rgba(var(--texture-ink), 0.06) 0%, transparent 45%),
-    radial-gradient(ellipse at 78% 65%, rgba(var(--texture-ink), 0.04) 0%, transparent 40%),
-    radial-gradient(ellipse at 48% 95%, rgba(var(--texture-ink), 0.03) 0%, transparent 35%);
+    radial-gradient(ellipse at 15% 20%, rgba(var(--texture-ink), var(--texture-opacity)) 0%, transparent 45%),
+    radial-gradient(ellipse at 78% 65%, rgba(var(--texture-ink), calc(var(--texture-opacity) * 0.65)) 0%, transparent 40%),
+    radial-gradient(ellipse at 48% 95%, rgba(var(--texture-ink), calc(var(--texture-opacity) * 0.5)) 0%, transparent 35%);
 }
 /* HAIRLINE — fine open square grid */
 .texture-hairline {
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(var(--texture-ink), 0.06) 0px,
-      rgba(var(--texture-ink), 0.06) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 14px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(var(--texture-ink), 0.06) 0px,
-      rgba(var(--texture-ink), 0.06) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 14px
     );
@@ -1309,15 +1322,15 @@ h6, .h6 { font-size: var(--bs-font-size-h6); }
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(var(--texture-ink), 0.07) 0px,
-      rgba(var(--texture-ink), 0.07) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 5px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(var(--texture-ink), 0.07) 0px,
-      rgba(var(--texture-ink), 0.07) 1px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 0px,
+      rgba(var(--texture-ink), var(--texture-opacity)) 1px,
       transparent 1px,
       transparent 5px
     );

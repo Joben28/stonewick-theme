@@ -15,9 +15,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 # ── helpers ──────────────────────────────────────────────────
-function Write-Step { param([string]$Msg) Write-Host "`n▸ $Msg" -ForegroundColor Cyan }
-function Write-Ok   { param([string]$Msg) Write-Host "  ✓ $Msg" -ForegroundColor Green }
-function Write-Fail { param([string]$Msg) Write-Host "  ✗ $Msg" -ForegroundColor Red; exit 1 }
+function Write-Step { param([string]$Msg) Write-Host "`n>> $Msg" -ForegroundColor Cyan }
+function Write-Ok   { param([string]$Msg) Write-Host "  [OK] $Msg" -ForegroundColor Green }
+function Write-Fail { param([string]$Msg) Write-Host "  [FAIL] $Msg" -ForegroundColor Red; exit 1 }
 
 # ── root guard ───────────────────────────────────────────────
 $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -54,7 +54,7 @@ if ($Bump -match '^\d+\.\d+\.\d+$') {
 Write-Ok "New version: v$New"
 
 # ── confirm ───────────────────────────────────────────────────
-$Confirm = Read-Host "`n  Release v$Current → v$New? [Y/n]"
+$Confirm = Read-Host "`n  Release v$Current -> v${New}? [Y/n]"
 if ($Confirm -ne "" -and $Confirm -notmatch '^[Yy]') {
     Write-Host "  Aborted." -ForegroundColor Yellow
     exit 0
@@ -65,7 +65,7 @@ Write-Step "Updating package.json"
 $PkgRaw = Get-Content "package.json" -Raw
 $PkgRaw = $PkgRaw -replace '"version": "' + [regex]::Escape($Current) + '"', '"version": "' + $New + '"'
 Set-Content "package.json" $PkgRaw -NoNewline
-Write-Ok "package.json → v$New"
+Write-Ok "package.json -> v$New"
 
 # ── build CSS ─────────────────────────────────────────────────
 Write-Step "Building CSS"
@@ -95,4 +95,4 @@ git push origin main
 git push origin "v$New"
 if ($LASTEXITCODE -ne 0) { Write-Fail "git push failed." }
 
-Write-Host "`n✅ v$New released successfully!`n" -ForegroundColor Green
+Write-Host "`n[DONE] v$New released successfully!`n" -ForegroundColor Green

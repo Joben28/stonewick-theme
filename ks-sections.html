@@ -1812,6 +1812,46 @@
                 </div>
             </div>
 
+            <!-- Intensity scale -->
+            <h6 class="text-uppercase fw-bold small text-muted mb-3">Intensity modifiers — linen example</h6>
+            <div class="row g-3 mb-5">
+                <div class="col-6 col-md">
+                    <div class="texture-linen texture-faint bg-white border rounded-3 p-4 text-center" style="min-height:110px;">
+                        <div class="fw-semibold small mb-1">Faint</div>
+                        <code class="text-muted" style="font-size:0.7rem;">texture-faint</code>
+                        <div class="text-muted mt-1" style="font-size:0.65rem;">opacity: 0.02</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="texture-linen texture-soft bg-white border rounded-3 p-4 text-center" style="min-height:110px;">
+                        <div class="fw-semibold small mb-1">Soft</div>
+                        <code class="text-muted" style="font-size:0.7rem;">texture-soft</code>
+                        <div class="text-muted mt-1" style="font-size:0.65rem;">opacity: 0.04</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="texture-linen bg-white border border-primary rounded-3 p-4 text-center" style="min-height:110px;">
+                        <div class="fw-semibold small mb-1">Default</div>
+                        <code class="text-muted" style="font-size:0.7rem;">(no modifier)</code>
+                        <div class="text-muted mt-1" style="font-size:0.65rem;">opacity: 0.06</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="texture-linen texture-strong bg-white border rounded-3 p-4 text-center" style="min-height:110px;">
+                        <div class="fw-semibold small mb-1">Strong</div>
+                        <code class="text-muted" style="font-size:0.7rem;">texture-strong</code>
+                        <div class="text-muted mt-1" style="font-size:0.65rem;">opacity: 0.10</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md">
+                    <div class="texture-linen texture-hard bg-white border rounded-3 p-4 text-center" style="min-height:110px;">
+                        <div class="fw-semibold small mb-1">Hard</div>
+                        <code class="text-muted" style="font-size:0.7rem;">texture-hard</code>
+                        <div class="text-muted mt-1" style="font-size:0.65rem;">opacity: 0.18</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Dark background swatches with ink-light -->
             <h6 class="text-uppercase fw-bold small text-muted mb-3">On dark backgrounds (<code>+ texture-ink-light</code>)</h6>
             <div class="row g-3 mb-5">
@@ -1850,8 +1890,14 @@
 &lt;!-- Dark background — add texture-ink-light --&gt;
 &lt;section class="py-section bg-trust texture-grit texture-ink-light"&gt;...&lt;/section&gt;
 
-&lt;!-- Override ink color directly --&gt;
-&lt;section class="py-section bg-warning texture-microgrid" style="--texture-ink: 100, 50, 0"&gt;...&lt;/section&gt;</code></pre>
+&lt;!-- Intensity modifiers (faint / soft / default / strong / hard) --&gt;
+&lt;section class="py-section bg-light texture-linen texture-faint"&gt;...&lt;/section&gt;
+&lt;section class="py-section bg-light texture-linen texture-soft"&gt;...&lt;/section&gt;
+&lt;section class="py-section bg-light texture-linen texture-strong"&gt;...&lt;/section&gt;
+&lt;section class="py-section bg-trust texture-microgrid texture-ink-light texture-hard"&gt;...&lt;/section&gt;
+
+&lt;!-- Arbitrary strength via CSS property --&gt;
+&lt;section class="py-section bg-warning texture-microgrid" style="--texture-ink: 100, 50, 0; --texture-opacity: 0.07"&gt;...&lt;/section&gt;</code></pre>
             </div>
         </div>
     </section>
