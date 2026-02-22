@@ -14,18 +14,21 @@
  */
 
 // Core utilities
-export { default as utils } from './core/utils.js';
+import utils from './core/utils.js';
+export { utils };
 
-// Components
-export { ComparisonSlider } from './modules/comparison-slider.js';
-export { Lightbox } from './modules/lightbox.js';
-export { VideoTheater } from './modules/video-theater.js';
-export { Modal } from './modules/modals.js';
-export { Slider } from './modules/slider.js';
-export { Accordion } from './modules/accordion.js';
-export { Navbar } from './modules/navbar.js';
-export { Offcanvas } from './modules/offcanvas.js';
-export { Forms } from './modules/forms.js';
+// Components — imported here so initAll() can reference them directly
+import { ComparisonSlider } from './modules/comparison-slider.js';
+import { Lightbox }         from './modules/lightbox.js';
+import { VideoTheater }     from './modules/video-theater.js';
+import { Modal }            from './modules/modals.js';
+import { Slider }           from './modules/slider.js';
+import { Accordion }        from './modules/accordion.js';
+import { Navbar }           from './modules/navbar.js';
+import { Offcanvas }        from './modules/offcanvas.js';
+import { Forms }            from './modules/forms.js';
+
+export { ComparisonSlider, Lightbox, VideoTheater, Modal, Slider, Accordion, Navbar, Offcanvas, Forms };
 
 // Version
 export const VERSION = '1.0.0';
@@ -39,65 +42,41 @@ export const VERSION = '1.0.0';
 export function initAll(options = {}) {
   const scope = options.scope ? document.querySelector(options.scope) : document;
   const instances = {};
-  
-  // Import components dynamically to avoid issues if DOM isn't ready
-  const { ComparisonSlider } = require('./modules/comparison-slider.js');
-  const { Lightbox } = require('./modules/lightbox.js');
-  const { VideoTheater } = require('./modules/video-theater.js');
-  const { Modal } = require('./modules/modals.js');
-  const { Slider } = require('./modules/slider.js');
-  const { Accordion } = require('./modules/accordion.js');
-  const { Navbar } = require('./modules/navbar.js');
-  const { Offcanvas } = require('./modules/offcanvas.js');
-  const { Forms } = require('./modules/forms.js');
-  
-  // Initialize each component type
+
   instances.comparisonSliders = ComparisonSlider.initAll('.comparison-slider', scope);
-  instances.lightboxes = Lightbox.initAll('.gallery-grid, .gallery-list, [data-lightbox]', scope);
-  instances.videoTheaters = VideoTheater.initAll('.video-theater', scope);
-  instances.modals = Modal.initAll('.modal-custom', scope);
-  instances.sliders = Slider.initAll('.carousel-thumbnails', scope);
-  instances.accordions = Accordion.initAll('.accordion', scope);
-  instances.navbars = Navbar.initAll('.navbar', scope);
-  instances.offcanvas = Offcanvas.initAll('.offcanvas-navbar', scope);
-  instances.forms = Forms.initAll('form[data-validate]', scope);
-  
-  console.log('[StoneWick] Initialized components:', {
-    comparisonSliders: instances.comparisonSliders.length,
-    lightboxes: instances.lightboxes.length,
-    videoTheaters: instances.videoTheaters.length,
-    modals: instances.modals.length,
-    sliders: instances.sliders.length,
-    accordions: instances.accordions.length,
-    navbars: instances.navbars.length,
-    offcanvas: instances.offcanvas.length,
-    forms: instances.forms.length
-  });
-  
+  instances.lightboxes        = Lightbox.initAll('.gallery-grid, .gallery-list, [data-lightbox]', scope);
+  instances.videoTheaters     = VideoTheater.initAll('.video-theater', scope);
+  instances.modals            = Modal.initAll('.modal-custom', scope);
+  instances.sliders           = Slider.initAll('.carousel-thumbnails', scope);
+  instances.accordions        = Accordion.initAll('.accordion', scope);
+  instances.navbars           = Navbar.initAll('.navbar', scope);
+  instances.offcanvas         = Offcanvas.initAll('.offcanvas-navbar', scope);
+  instances.forms             = Forms.initAll('form[data-validate]', scope);
+
   return instances;
 }
 
-// Auto-expose to window for non-module usage
+// Auto-expose to window for non-module / plain <script> usage
 if (typeof window !== 'undefined') {
   window.StoneWick = {
     VERSION,
     initAll,
-    ComparisonSlider: null,
-    Lightbox: null,
-    VideoTheater: null,
-    Modal: null,
-    Slider: null,
-    Accordion: null,
-    utils: null
+    ComparisonSlider,
+    Lightbox,
+    VideoTheater,
+    Modal,
+    Slider,
+    Accordion,
+    Navbar,
+    Offcanvas,
+    Forms,
+    utils,
   };
-  
-  // Lazy load components to window when accessed
-  import('./modules/comparison-slider.js').then(m => window.StoneWick.ComparisonSlider = m.ComparisonSlider);
-  import('./modules/lightbox.js').then(m => window.StoneWick.Lightbox = m.Lightbox);
-  import('./modules/video-theater.js').then(m => window.StoneWick.VideoTheater = m.VideoTheater);
-  import('./modules/modals.js').then(m => window.StoneWick.Modal = m.Modal);
-  import('./modules/slider.js').then(m => window.StoneWick.Slider = m.Slider);
-  import('./modules/accordion.js').then(m => window.StoneWick.Accordion = m.Accordion);
-  import('./modules/forms.js').then(m => window.StoneWick.Forms = m.Forms);
-  import('./core/utils.js').then(m => window.StoneWick.utils = m.default);
+
+  // Auto-init when the DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() { initAll(); });
+  } else {
+    initAll();
+  }
 }
