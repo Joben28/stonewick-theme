@@ -18,6 +18,7 @@ export { default as utils } from './core/utils.js';
 
 // Components
 export { ComparisonSlider } from './modules/comparison-slider.js';
+export { Lightbox } from './modules/lightbox.js';
 export { VideoTheater } from './modules/video-theater.js';
 export { Modal } from './modules/modals.js';
 export { Slider } from './modules/slider.js';
@@ -41,6 +42,7 @@ export function initAll(options = {}) {
   
   // Import components dynamically to avoid issues if DOM isn't ready
   const { ComparisonSlider } = require('./modules/comparison-slider.js');
+  const { Lightbox } = require('./modules/lightbox.js');
   const { VideoTheater } = require('./modules/video-theater.js');
   const { Modal } = require('./modules/modals.js');
   const { Slider } = require('./modules/slider.js');
@@ -51,6 +53,7 @@ export function initAll(options = {}) {
   
   // Initialize each component type
   instances.comparisonSliders = ComparisonSlider.initAll('.comparison-slider', scope);
+  instances.lightboxes = Lightbox.initAll('.gallery-grid, .gallery-list, [data-lightbox]', scope);
   instances.videoTheaters = VideoTheater.initAll('.video-theater', scope);
   instances.modals = Modal.initAll('.modal-custom', scope);
   instances.sliders = Slider.initAll('.carousel-thumbnails', scope);
@@ -61,6 +64,7 @@ export function initAll(options = {}) {
   
   console.log('[StoneWick] Initialized components:', {
     comparisonSliders: instances.comparisonSliders.length,
+    lightboxes: instances.lightboxes.length,
     videoTheaters: instances.videoTheaters.length,
     modals: instances.modals.length,
     sliders: instances.sliders.length,
@@ -79,6 +83,7 @@ if (typeof window !== 'undefined') {
     VERSION,
     initAll,
     ComparisonSlider: null,
+    Lightbox: null,
     VideoTheater: null,
     Modal: null,
     Slider: null,
@@ -88,6 +93,7 @@ if (typeof window !== 'undefined') {
   
   // Lazy load components to window when accessed
   import('./modules/comparison-slider.js').then(m => window.StoneWick.ComparisonSlider = m.ComparisonSlider);
+  import('./modules/lightbox.js').then(m => window.StoneWick.Lightbox = m.Lightbox);
   import('./modules/video-theater.js').then(m => window.StoneWick.VideoTheater = m.VideoTheater);
   import('./modules/modals.js').then(m => window.StoneWick.Modal = m.Modal);
   import('./modules/slider.js').then(m => window.StoneWick.Slider = m.Slider);

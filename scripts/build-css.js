@@ -72,6 +72,7 @@ const config = {
       files: [
         'modules/media/_hero.css',
         'modules/media/_gallery.css',
+        'modules/media/_lightbox.css',
         'modules/media/_media-list.css',
         'modules/media/_video-theater.css',
         'modules/media/_channel-header.css'
